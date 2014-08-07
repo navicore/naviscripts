@@ -14,3 +14,9 @@ personal scripts for vim and tmux and anything else I use
 `git commit -a -m np`
 
 `git push`
+
+* create tar for non-git install (remote)
+
+`tar_dot_files.sh`
+
+look for the tar in ~
