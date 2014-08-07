@@ -1,6 +1,14 @@
 personal scripts for vim and tmux and anything else I use
 ------------
 
+# INSTALL
+
+`git clone git@github.com:navicore/naviscripts.git`
+
+* look at the start of the vimrc script to get vundle going
+* cd into .vim/bundle/YouCompleteMe and run install
+
+
 * install or update after doing a git pull
 
 `git pull`
