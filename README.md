@@ -1,7 +1,7 @@
 personal scripts for vim and tmux and anything else I use
 ------------
 
-# INSTALL
+## INSTALL
 
 `git clone git@github.com:navicore/naviscripts.git`
 
@@ -9,13 +9,13 @@ personal scripts for vim and tmux and anything else I use
 * cd into .vim/bundle/YouCompleteMe and run install
 
 
-* install or update after doing a git pull
+## install or update after doing a git pull
 
 `git pull`
 
 `./install.sh`
 
-* update the repo from the installed files
+## update the repo from the installed files
 
 `./update_git.sh`
 
@@ -23,7 +23,7 @@ personal scripts for vim and tmux and anything else I use
 
 `git push`
 
-* create tar for non-git install (remote)
+## create tar for non-git install (remote)
 
 `tar_dot_files.sh`
 
