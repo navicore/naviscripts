@@ -1,21 +1,16 @@
-personal_desktop_scripts
-========================
+personal scripts for vim and tmux and anything else I use
+------------
 
-profile and vim settings and background I use everywhere
+* install or update after doing a git pull
 
-On OSX install:
-
-brew install macvim --with-cscope --with-lua --HEAD
-
-run:
+`git pull`
 
 `./install.sh`
 
-to backup run:
+* update the repo from the installed files
 
 `./update_git.sh`
 
-to create a tar of dot files:
+`git commit -a -m np`
 
-`./tar_dot_files.sh`
-
+`git push`
