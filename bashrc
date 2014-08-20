@@ -69,7 +69,8 @@ elif [[ $platform == 'osx' ]]; then
   export LSCOLORS=GxFxCxDxBxegedabagaced
   function vim { /usr/local/bin/vim $*; }
   export JAVA_HOME="$(/usr/libexec/java_home)"
-  export GIT_EDITOR="gvim -g -f"
+  #export GIT_EDITOR="gvim -g -f"
+  export GIT_EDITOR="vim -f"
   #Qt
   export QT_HOME=~/Qt/5.2.0/clang_64
   export PATH=$PATH:$QT_HOME/bin:$HOME/scala/bin
