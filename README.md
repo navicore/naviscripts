@@ -28,3 +28,6 @@ personal scripts for vim and tmux and anything else I use
 `tar_dot_files.sh`
 
 look for the tar in ~
+
+--------
+brew install macvim --with-cscope --with-lua --HEAD
