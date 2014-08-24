@@ -2,6 +2,7 @@
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " 2) restart vim
 " 3) :BundleInstall
+" 4) build ~/.vim/bundle/YouCompleteMe with './install.sh --clang-completer'
 
 "set term=builtin_ansi
 syntax on
