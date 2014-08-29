@@ -41,6 +41,7 @@ alias cdo='cd $HOME/git/navicore/oescript;pwd'
 alias cdt='cd $HOME/git/navicore/tercel;pwd'
 alias cdi='cd $HOME/git/navicore/infra;pwd'
 alias cda='cd $HOME/git/navicore/insight;pwd'
+alias cdu='cd $HOME/git/navicore/ungulate;pwd'
 
 #to add upstream master:
 #git remote add upstream htps://github.com/octocat/Spoon-Knife.git
