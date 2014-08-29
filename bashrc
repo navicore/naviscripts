@@ -16,14 +16,10 @@ export ANDROID_SDK="$HOME/android-studio/sdk"
 export ANDROID_HOME=$ANDROID_SDK
 
 #antlr
-export CLASSPATH=".:/usr/local/lib/antlr-4.2.2-complete.jar:$CLASSPATH"
-alias antlr4='java -jar /usr/local/lib/antlr-4.2.2-complete.jar'
+export CLASSPATH=".:/usr/local/lib/antlr-4.4-complete.jar:$CLASSPATH"
+alias antlr4='java -jar /usr/local/lib/antlr-4.4-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
-alias vimenc="vim -u ~/.encrypted_vim_rc -x"
-alias ksub="~/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic"
 
-#export PS1="\h$ "
-#export PS1="$ "
 export PS1='[\u@\h \W]\$ '
 export PS2="# "
 export PS3="> "
@@ -38,6 +34,8 @@ EDITOR=vim; export EDITOR
 
 alias cdm='cd $HOME/git/navicore/oemap;pwd'
 alias cdo='cd $HOME/git/navicore/oescript;pwd'
+
+#todo: source a .local_bash file for work laptop
 alias cdt='cd $HOME/git/navicore/tercel;pwd'
 alias cdi='cd $HOME/git/navicore/infra;pwd'
 alias cda='cd $HOME/git/navicore/insight;pwd'
