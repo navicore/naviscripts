@@ -19,45 +19,34 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-if ( has('lua') && (v:version > 703 || v:version == 703 && has('patch885')) )
-  "Bundle 'Shougo/neocomplete.vim'
-end
-"Bundle 'ervandew/supertab'
-
-Bundle 'derekwyatt/vim-scala'
-
 Bundle 'Valloric/YouCompleteMe'
-
-"clojure
-Bundle 'tpope/vim-fireplace'
-Bundle 'guns/vim-clojure-static'
-
-Bundle 'morhetz/gruvbox'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround.git'
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-markdown'
 Bundle 'blinks/vim-antlr.git'
-Bundle 'navicore/vis.vim'
-Bundle 'navicore/vissort.vim'
-Bundle 'tpope/vim-fugitive'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'ervandew/screen'
+Bundle 'gmarik/vundle'
+Bundle 'godlygeek/tabular'
+Bundle 'guns/vim-clojure-static'
+Bundle 'jcfaria/Vim-R-plugin'
+Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
-Bundle 'ervandew/screen'
-Bundle 'jcfaria/Vim-R-plugin'
+Bundle 'morhetz/gruvbox'
+Bundle 'navicore/vis.vim'
+Bundle 'navicore/vissort.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'tfnico/vim-gradle'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-surround.git'
+Bundle 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
 
 let g:EclimCompletionMethod = 'omnifunc'
 set completeopt-=preview
-"let g:SuperTabDefaultCompletionType = 'context'
 
 let g:syntastic_javascript_checkers = ['jslint']
 
@@ -94,12 +83,8 @@ function SetIDEOptions()
 endfunction
 
 autocmd vimenter * if !argc() | call SetIDEOptions() | endif
-"NERDTree stuff
-"autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
-"Tagbar stuff
-"autocmd vimenter * if !argc() | Tagbar | endif
 map <C-t> :TagbarToggle<CR>
 
 "set the source for autocomplete
@@ -108,7 +93,6 @@ set complete=.,w,b,u,t,i
 set tags=.tags
 
 let g:syntastic_java_javac_config_file_enabled=1
-"let g:gruvbox_contrast="hard"
 
 set spell
 set spelllang=en_us
