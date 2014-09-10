@@ -20,7 +20,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'blinks/vim-antlr.git'
+Bundle 'rollxx/vim-antlr'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'ervandew/screen'
 Bundle 'gmarik/vundle'
