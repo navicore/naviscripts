@@ -17,6 +17,7 @@ export ANDROID_HOME=$ANDROID_SDK
 
 #antlr
 export CLASSPATH=".:/usr/local/lib/antlr-4.4-complete.jar:$CLASSPATH"
+export CLASSPATH=".:/usr/local/lib/ST-4.0.8.jar:$CLASSPATH"
 alias antlr4='java -jar /usr/local/lib/antlr-4.4-complete.jar'
 alias grun='java org.antlr.v4.runtime.misc.TestRig'
 
@@ -96,4 +97,15 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #write Xs:
 #printf "%0.sE" {1..20000} | java -jar gram.jar -P
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f $HOME/google-cloud-sdk/path.bash.inc ]; then
+  source "$HOME/google-cloud-sdk/path.bash.inc"
+fi
+
+# The next line enables bash completion for gcloud.
+if [ -f $HOME/google-cloud-sdk/completion.bash.inc ]; then
+  source "$HOME/google-cloud-sdk/completion.bash.inc"
+fi
 
