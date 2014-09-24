@@ -19,21 +19,29 @@ root: ~/git/navicore
 # tmux_command: byobu
 
 windows:
-  - infra:
+  - INFRA:
       layout: main-vertical
       panes:
         - cd infra && vim
         - cd infra && pwd
         - cd infra && pwd
-  - insight:
+  - INSIGHT:
       layout: main-vertical
       panes:
         - cd insight && vim
         - cd insight && pwd
         - cd insight && pwd
-  - tercel:
+  - TERCEL:
       layout: main-vertical
       panes:
         - cd tercel && vim
         - cd tercel && pwd
         - cd tercel && pwd
+
+  - UNGULATE:
+      layout: main-vertical
+      panes:
+        - cd ungulate && vim
+        - cd ungulate && pwd
+        - cd ungulate && pwd
+
