@@ -25,7 +25,7 @@ export PS1='[\u@\h \W]\$ '
 export PS2="# "
 export PS3="> "
 
-export PATH="$SLICKEDIT_HOME/bin:$HOME/bin:/usr/local/bin:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH:$HOME/npm/bin"
+export PATH="$SLICKEDIT_HOME/bin:$HOME/bin:/usr/local/bin:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH:$HOME/npm/bin:$HOME/scala/bin"
 
 BLOCKSIZE=K;	export BLOCKSIZE
 VISUAL=vi;    export VISUAL
@@ -57,7 +57,6 @@ if [[ $platform == 'linux' ]]; then
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
-  export PATH=$PATH:$QT_HOME/bin:$HOME/scala/bin
 elif [[ $platform == 'osx' ]]; then
   export TERM="screen-256color"
   #R for rJava
@@ -71,9 +70,7 @@ elif [[ $platform == 'osx' ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
   #export GIT_EDITOR="gvim -g -f"
   export GIT_EDITOR="vim -f"
-  #Qt
-  export QT_HOME=~/Qt/5.2.0/clang_64
-  export PATH=$PATH:$QT_HOME/bin:$HOME/scala/bin:/usr/local/sbin
+  export PATH=$PATH:/Applications/antlrworks2/bin
 fi 
 
 source ~/.tmuxinator.bash
