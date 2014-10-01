@@ -80,22 +80,6 @@ source ~/.tmuxinator.bash
 #\curl -sSL https://get.rvm.io | bash -s stable
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-#
-# example commands:
-#
-
-# increment version
-#$ v=1.2.13
-#$ echo "${v%.*}.$((${v##*.}+1))"
-#1.2.14
-
-# rsync -rav --partial --progress . /Volumes/music/amazon/
-# git remote add upstream git@github.com:falkonry/infra.git
-
-#write Xs:
-#printf "%0.sE" {1..20000} | java -jar gram.jar -P
-
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f $HOME/google-cloud-sdk/path.bash.inc ]; then
   source "$HOME/google-cloud-sdk/path.bash.inc"
@@ -105,4 +89,23 @@ fi
 if [ -f $HOME/google-cloud-sdk/completion.bash.inc ]; then
   source "$HOME/google-cloud-sdk/completion.bash.inc"
 fi
+
+#
+# example commands:
+#
+#---------------------------------------------------------
+# increment version
+#$ v=1.2.13
+#$ echo "${v%.*}.$((${v##*.}+1))"
+#1.2.14
+#---------------------------------------------------------
+# rsync -rav --partial --progress . /Volumes/music/amazon/
+# git remote add upstream git@github.com:falkonry/infra.git
+#---------------------------------------------------------
+#write Xs:
+#printf "%0.sE" {1..20000} | java -jar gram.jar -P
+#---------------------------------------------------------
+#git prune
+#git remote prune origin --dry-run
+#---------------------------------------------------------
 
