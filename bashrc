@@ -73,7 +73,7 @@ elif [[ $platform == 'osx' ]]; then
   export GIT_EDITOR="vim -f"
   #Qt
   export QT_HOME=~/Qt/5.2.0/clang_64
-  export PATH=$PATH:$QT_HOME/bin:$HOME/scala/bin:/usr/local/sbin
+  export PATH=$PATH:$QT_HOME/bin:/usr/local/sbin
 fi 
 
 source ~/.tmuxinator.bash
