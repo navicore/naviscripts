@@ -25,7 +25,7 @@ export PS1='[\u@\h \W]\$ '
 export PS2="# "
 export PS3="> "
 
-export PATH="$SLICKEDIT_HOME/bin:$HOME/bin:/usr/local/bin:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH:$HOME/npm/bin"
+export PATH="$SLICKEDIT_HOME/bin:$HOME/bin:/usr/local/bin:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH:$HOME/npm/bin:$HOME/scala/bin"
 
 BLOCKSIZE=K;	export BLOCKSIZE
 VISUAL=vi;    export VISUAL
@@ -57,7 +57,6 @@ if [[ $platform == 'linux' ]]; then
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
-  export PATH=$PATH:$QT_HOME/bin:$HOME/scala/bin
 elif [[ $platform == 'osx' ]]; then
   export TERM="screen-256color"
   #R for rJava
@@ -71,9 +70,7 @@ elif [[ $platform == 'osx' ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
   #export GIT_EDITOR="gvim -g -f"
   export GIT_EDITOR="vim -f"
-  #Qt
-  export QT_HOME=~/Qt/5.2.0/clang_64
-  export PATH=$PATH:$QT_HOME/bin:/usr/local/sbin
+  export PATH=$PATH:/Applications/antlrworks2/bin
 fi 
 
 source ~/.tmuxinator.bash
@@ -82,22 +79,6 @@ source ~/.tmuxinator.bash
 # to install rvm
 #\curl -sSL https://get.rvm.io | bash -s stable
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-#
-# example commands:
-#
-
-# increment version
-#$ v=1.2.13
-#$ echo "${v%.*}.$((${v##*.}+1))"
-#1.2.14
-
-# rsync -rav --partial --progress . /Volumes/music/amazon/
-# git remote add upstream git@github.com:falkonry/infra.git
-
-#write Xs:
-#printf "%0.sE" {1..20000} | java -jar gram.jar -P
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f $HOME/google-cloud-sdk/path.bash.inc ]; then
@@ -108,4 +89,23 @@ fi
 if [ -f $HOME/google-cloud-sdk/completion.bash.inc ]; then
   source "$HOME/google-cloud-sdk/completion.bash.inc"
 fi
+
+#
+# example commands:
+#
+#---------------------------------------------------------
+# increment version
+#$ v=1.2.13
+#$ echo "${v%.*}.$((${v##*.}+1))"
+#1.2.14
+#---------------------------------------------------------
+# rsync -rav --partial --progress . /Volumes/music/amazon/
+# git remote add upstream git@github.com:falkonry/infra.git
+#---------------------------------------------------------
+#write Xs:
+#printf "%0.sE" {1..20000} | java -jar gram.jar -P
+#---------------------------------------------------------
+#git prune
+#git remote prune origin --dry-run
+#---------------------------------------------------------
 
