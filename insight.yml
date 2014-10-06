@@ -44,4 +44,12 @@ windows:
         - cd ungulate && vim
         - cd ungulate && pwd
         - cd ungulate && pwd
+  
+  - GET:
+      layout: main-vertical
+      panes:
+        - cd get && vim
+        - cd get && pwd
+        - cd get && pwd
+
 
