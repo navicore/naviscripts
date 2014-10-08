@@ -4,8 +4,12 @@ if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
     . ~/.bashrc
   fi
+  if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+  fi
 fi
 
 mesg n
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
