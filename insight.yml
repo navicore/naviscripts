@@ -37,14 +37,6 @@ windows:
         - cd tercel && vim
         - cd tercel && pwd
         - cd tercel && pwd
-
-  - UNGULATE:
-      layout: main-vertical
-      panes:
-        - cd ungulate && vim
-        - cd ungulate && pwd
-        - cd ungulate && pwd
-  
   - GET:
       layout: main-vertical
       panes:
