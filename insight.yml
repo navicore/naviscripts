@@ -40,8 +40,8 @@ windows:
   - GET:
       layout: main-vertical
       panes:
-        - cd reliable && vim
-        - cd reliable && pwd
-        - cd reliable && pwd
+        - cd ext-GET && vim
+        - cd ext-GET && pwd
+        - cd ext-GET && pwd
 
 
