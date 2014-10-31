@@ -61,7 +61,8 @@ nmap <F4> :w<CR>:make<CR>:copen<CR>
 if has('gui_running')
   set background=dark
 else
-  set background=light
+  "set background=light
+  set background=dark
 endif
 colorscheme gruvbox
 map <F5> :call ToggleBg()<CR>
