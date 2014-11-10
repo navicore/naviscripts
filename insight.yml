@@ -37,11 +37,10 @@ windows:
         - cd tercel && vim
         - cd tercel && pwd
         - cd tercel && pwd
-  - GET:
+  - OTHER:
       layout: main-vertical
       panes:
-        - cd ext-GET && vim
-        - cd ext-GET && pwd
-        - cd ext-GET && pwd
-
+        - cd && vim
+        - cd && pwd
+        - cd && pwd
 
