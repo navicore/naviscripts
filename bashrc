@@ -101,8 +101,13 @@ fi
 #git prune
 #git remote prune origin --dry-run
 #---------------------------------------------------------
-#
-# stop all docker containers:
+# DOCKER:
+# stop all containers:
 # docker stop $(docker ps -a -q)
+#
+# remove all untagged images:
+# docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+#
+#---------------------------------------------------------
 #
 
