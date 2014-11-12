@@ -49,31 +49,25 @@ alias mergeupstream='git merge upstream/master'
 ulimit -n 4096
 
 if [[ $platform == 'linux' ]]; then
-  #export TERM="xterm-256color"
   export TERM="screen-256color"
   alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
-  #~/.vim/bundle/gruvbox/gruvbox_256palette.sh
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
 elif [[ $platform == 'osx' ]]; then
+  alias docker='/usr/local/bin/docker --tls'
   export TERM="screen-256color"
-  #R for rJava
-  #alias R='unset JAVA_HOME && R'  #bettter solution is add 
-  #                                #'unset JAVA_HOME' to /usr/bin/R
   alias rstudio='unset JAVA_HOME && LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/server: open -a /Applications/RStudio/RStudio.app/Contents/MacOS/RStudio'
   alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   function vim { /usr/local/bin/vim $*; }
   export JAVA_HOME="$(/usr/libexec/java_home)"
-  #export GIT_EDITOR="gvim -g -f"
   export GIT_EDITOR="vim -f"
   export PATH=$PATH:/Applications/antlrworks2/bin
 fi 
 
 source ~/.tmuxinator.bash
-#export TUTIL_LOG_DIR=/var/log/insight
 
 # to install rvm
 #\curl -sSL https://get.rvm.io | bash -s stable
@@ -111,3 +105,4 @@ fi
 # stop all docker containers:
 # docker stop $(docker ps -a -q)
 #
+
