@@ -46,10 +46,12 @@ Plugin 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
 
-let g:EclimCompletionMethod = 'omnifunc'
 set completeopt-=preview
 
 let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_mode_map = { "mode": "active"}
+"                           \ "active_filetypes": ["ruby", "java", "python", "javascript"],
+"                           \ "passive_filetypes": ["puppet"] }
 
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 let g:ctrlp_max_files=0
