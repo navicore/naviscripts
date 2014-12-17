@@ -60,7 +60,6 @@ if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'osx' ]]; then
   alias docker='/usr/local/bin/docker --tls'
   export TERM="screen-256color"
-  alias rstudio='unset JAVA_HOME && LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/jre/lib/server: open -a /Applications/RStudio/RStudio.app/Contents/MacOS/RStudio'
   alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
