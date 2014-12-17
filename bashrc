@@ -44,6 +44,10 @@ alias cdt='cd $HOME/git/navicore/tercel;pwd'
 alias cdi='cd $HOME/git/navicore/infra;pwd'
 alias cda='cd $HOME/git/navicore/insight;pwd'
 
+#docker
+alias dockerstopall='docker stop $(docker ps -a -q)'
+alias dockerrmall='docker rm $(docker ps -a -q)'
+
 #to add upstream master:
 #git remote add upstream htps://github.com/octocat/Spoon-Knife.git
 alias fetchupstream='git fetch upstream'
