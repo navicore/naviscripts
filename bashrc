@@ -44,25 +44,23 @@ alias cdt='cd $HOME/git/navicore/tercel;pwd'
 alias cdi='cd $HOME/git/navicore/infra;pwd'
 alias cda='cd $HOME/git/navicore/insight;pwd'
 
-#docker
-alias dockerstopall='docker stop $(docker ps -a -q)'
-alias dockerrmall='docker rm $(docker ps -a -q)'
-
-#to add upstream master:
-#git remote add upstream htps://github.com/octocat/Spoon-Knife.git
 alias fetchupstream='git fetch upstream'
 alias mergeupstream='git merge upstream/master'
 
 ulimit -n 4096
 
 if [[ $platform == 'linux' ]]; then
+  alias dockerrm='sudo docker rm $(sudo docker ps -a -q)'
+  alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
   export TERM="screen-256color"
   alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
 elif [[ $platform == 'osx' ]]; then
-  alias docker='/usr/local/bin/docker --tls'
+  alias dockerrm='docker rm $(docker ps -a -q)'
+  alias dockerstop='docker stop $(docker ps -a -q)'
+  #alias docker='/usr/local/bin/docker --tls'
   export TERM="screen-256color"
   alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   export CLICOLOR=1
@@ -116,3 +114,4 @@ fi
 #
 #---------------------------------------------------------
 #
+
