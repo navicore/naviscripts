@@ -37,7 +37,7 @@ PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
 alias cdm='cd $HOME/git/navicore/oemap;pwd'
-alias cdo='cd $HOME/git/navicore/oescript;pwd'
+alias cdo='cd $HOME/git/navicore/OeScript;pwd'
 
 #todo: source a .local_bash file for work laptop
 alias cdt='cd $HOME/git/navicore/tercel;pwd'
