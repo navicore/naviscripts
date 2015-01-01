@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 
+mkdir -p ~/bin/
 cp ./lein ~/bin/
 mkdir -p ~/.lein
 cp ./profiles.clj ~/.lein/
