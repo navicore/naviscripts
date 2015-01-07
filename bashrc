@@ -52,6 +52,8 @@ ulimit -n 4096
 if [[ $platform == 'linux' ]]; then
   alias dockerrm='sudo docker rm $(sudo docker ps -a -q)'
   alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
+  alias dockerrmi='sudo docker rmi $(sudo docker images -q)'
+  alias dockeruntagged='sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")'
   export TERM="screen-256color"
   alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   alias gvim='UBUNTU_MENUPROXY= gvim'
@@ -60,7 +62,8 @@ if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'osx' ]]; then
   alias dockerrm='docker rm $(docker ps -a -q)'
   alias dockerstop='docker stop $(docker ps -a -q)'
-  #alias docker='/usr/local/bin/docker --tls'
+  alias dockerrmi='docker rmi $(docker images -q)'
+  alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
   export TERM="screen-256color"
   alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   export CLICOLOR=1
