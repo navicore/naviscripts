@@ -14,6 +14,7 @@ cp ~/.vimrc ./vimrc
 cp ~/.bashrc ./bashrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.tmuxinator/insight.yml ./insight.yml
+cp ~/.tmuxinator/amaret.yml ./amaret.yml
 cp ~/.tmuxinator.bash ./tmuxinator.bash
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile
