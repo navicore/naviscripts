@@ -19,18 +19,18 @@ root: ~/git/navicore
 # tmux_command: byobu
 
 windows:
-  - POLLENC:
+  - ACC.GATEWAY:
       layout: main-vertical
       panes:
-        - cd pollenc.server && vim
-        - cd pollenc.server && pwd
-        - cd pollenc.server && pwd
-  - WIND.COMPILE:
+        - cd acc.gateway && vim
+        - cd acc.gateway && pwd
+        - cd acc.gateway && pwd
+  - ACC.WORKER:
       layout: main-vertical
       panes:
-        - cd wind.compile && vim
-        - cd wind.compile && pwd
-        - cd wind.compile && pwd
+        - cd acc.worker && vim
+        - cd acc.worker && pwd
+        - cd acc.worker && pwd
   - OTHER:
       layout: main-vertical
       panes:
