@@ -31,6 +31,12 @@ windows:
         - cd acc.worker && vim
         - cd acc.worker && pwd
         - cd acc.worker && pwd
+  - ACC.MONITOR:
+      layout: main-vertical
+      panes:
+        - cd acc.monitor && vim
+        - cd acc.monitor && pwd
+        - cd acc.monitor && pwd
   - OTHER:
       layout: main-vertical
       panes:
