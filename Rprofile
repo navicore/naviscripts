@@ -1,7 +1,7 @@
 options(editor="vim")
-#library(gramr)
 
 if(interactive()){
+  options(vimcom.verbose = 2)
   library(vimcom)
 }
 
