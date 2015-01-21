@@ -18,6 +18,7 @@ cp ./tmux.conf ~/.tmux.conf
 mkdir -p ~/.tmuxinator
 cp ./insight.yml ~/.tmuxinator/
 cp ./amaret.yml ~/.tmuxinator/
+cp ./R.yml ~/.tmuxinator/
 cp ./tmuxinator.bash ~/.tmuxinator.bash
 cp ./inputrc ~/.inputrc
 cp ./Rprofile ~/.Rprofile

@@ -15,6 +15,7 @@ cp ~/.bashrc ./bashrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.tmuxinator/insight.yml ./insight.yml
 cp ~/.tmuxinator/amaret.yml ./amaret.yml
+cp ~/.tmuxinator/R.yml ./R.yml
 cp ~/.tmuxinator.bash ./tmuxinator.bash
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile

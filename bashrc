@@ -28,7 +28,7 @@ export PS1='[\u@\h \W]\$ '
 export PS2="# "
 export PS3="> "
 
-export PATH="$SLICKEDIT_HOME/bin:$HOME/bin:/usr/local/bin:$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH:$HOME/npm/bin:$HOME/scala/bin"
+#export PATH="$PATH:$HOME/scala/bin"
 
 BLOCKSIZE=K;	export BLOCKSIZE
 VISUAL=vi;    export VISUAL

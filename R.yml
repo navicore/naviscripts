@@ -1,7 +1,7 @@
 # ~/.tmuxinator/amaret.yml
 
-name: amaret
-root: ~/git/navicore
+name: R
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,30 +19,12 @@ root: ~/git/navicore
 # tmux_command: byobu
 
 windows:
-  - ACC.GATEWAY:
+  - INTROSTAT:
       layout: main-vertical
       panes:
-        - cd acc.gateway && vim
-        - cd acc.gateway && pwd
-        - cd acc.gateway && pwd
-  - ACC.WORKER:
-      layout: main-vertical
-      panes:
-        - cd acc.worker && vim
-        - cd acc.worker && pwd
-        - cd acc.worker && pwd
-  - ACC.MONITOR:
-      layout: main-vertical
-      panes:
-        - cd acc.monitor && vim
-        - cd acc.monitor && pwd
-        - cd acc.monitor && pwd
-  - ACC.CLIENT:
-      layout: main-vertical
-      panes:
-        - cd acc.client && vim
-        - cd acc.client && pwd
-        - cd acc.client && pwd
+        - cd classes/introstat && vim
+        - cd classes/introstat && pwd
+        - cd classes/introstat && pwd
   - OTHER:
       layout: main-vertical
       panes:
