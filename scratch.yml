@@ -1,0 +1,52 @@
+# ~/.tmuxinator/scratch.yml
+
+name: scratch
+root: ~/git/navicore/scratch
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - SCALA:
+      layout: main-vertical
+      panes:
+        - cd scala && vim
+        - cd scala && pwd
+        - cd scala && pwd
+  - CLOJURE:
+      layout: main-vertical
+      panes:
+        - cd clojure && vim
+        - cd clojure && pwd
+        - cd clojure && pwd
+  - PYTHON:
+      layout: main-vertical
+      panes:
+        - cd python && vim
+        - cd python && pwd
+        - cd python && pwd
+  - JAVA:
+      layout: main-vertical
+      panes:
+        - cd java && vim
+        - cd java && pwd
+        - cd java && pwd
+  - BASH:
+      layout: main-vertical
+      panes:
+        - cd bash && vim
+        - cd bash && pwd
+        - cd bash && pwd
+
