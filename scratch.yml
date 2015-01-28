@@ -23,7 +23,7 @@ windows:
       layout: main-vertical
       panes:
         - cd scala && vim
-        - cd scala && pwd
+        - cd scala && pwd && sbt
         - cd scala && pwd
   - CLOJURE:
       layout: main-vertical
@@ -35,7 +35,7 @@ windows:
       layout: main-vertical
       panes:
         - cd python && vim
-        - cd python && pwd
+        - cd python && pwd && python
         - cd python && pwd
   - JAVA:
       layout: main-vertical
@@ -43,6 +43,12 @@ windows:
         - cd java && vim
         - cd java && pwd
         - cd java && pwd
+  - GUILE:
+      layout: main-vertical
+      panes:
+        - cd guile && vim
+        - cd guile && pwd && guile
+        - cd guile && pwd
   - BASH:
       layout: main-vertical
       panes:
