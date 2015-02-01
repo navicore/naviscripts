@@ -44,6 +44,7 @@ windows:
         - cd acc.client && pwd
         - cd acc.client && pwd
   - OTHER:
+      root: ~
       layout: main-vertical
       panes:
         - cd ~ && vim
