@@ -49,6 +49,12 @@ windows:
         - cd guile && vim
         - cd guile && pwd && guile
         - cd guile && pwd
+  - NODEJS:
+      layout: main-vertical
+      panes:
+        - cd nodejs && vim
+        - cd nodejs && pwd && node
+        - cd nodejs && pwd
   - BASH:
       layout: main-vertical
       panes:

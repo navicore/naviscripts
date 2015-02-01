@@ -46,7 +46,7 @@ windows:
   - OTHER:
       layout: main-vertical
       panes:
-        - cd && vim
-        - cd && pwd
-        - cd && pwd
+        - cd ~ && vim
+        - cd ~ && pwd
+        - cd ~ && pwd
 
