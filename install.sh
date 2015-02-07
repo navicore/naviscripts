@@ -16,11 +16,7 @@ cp ./vimrc ~/.vimrc
 cp ./bashrc ~/.bashrc
 cp ./tmux.conf ~/.tmux.conf
 mkdir -p ~/.tmuxinator
-cp ./insight.yml ~/.tmuxinator/
-cp ./amaret.yml ~/.tmuxinator/
-cp ./coinbase.yml ~/.coinbase/
-cp ./scratch.yml ~/.tmuxinator/
-cp ./R.yml ~/.tmuxinator/
+cp ./tmuxinator/*.yml ~/.tmuxinator/
 cp ./tmuxinator.bash ~/.tmuxinator.bash
 cp ./inputrc ~/.inputrc
 cp ./Rprofile ~/.Rprofile
