@@ -55,6 +55,12 @@ windows:
         - cd nodejs && vim
         - cd nodejs && pwd && node
         - cd nodejs && pwd
+  - R:
+      layout: main-vertical
+      panes:
+        - cd R && vim
+        - cd R && pwd && R
+        - cd R && pwd
   - BASH:
       layout: main-vertical
       panes:
