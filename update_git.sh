@@ -16,6 +16,7 @@ cp ~/.tmux.conf ./tmux.conf
 cp ~/.tmuxinator/scratch.yml ./scratch.yml
 cp ~/.tmuxinator/insight.yml ./insight.yml
 cp ~/.tmuxinator/amaret.yml ./amaret.yml
+cp ~/.tmuxinator/coinbase.yml ./coinbase.yml
 cp ~/.tmuxinator/R.yml ./R.yml
 cp ~/.tmuxinator.bash ./tmuxinator.bash
 cp ~/.inputrc ./inputrc

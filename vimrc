@@ -19,11 +19,10 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'fatih/vim-go'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'rollxx/vim-antlr'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ervandew/screen'
+Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 Plugin 'guns/vim-clojure-static'
@@ -35,6 +34,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
+Plugin 'rollxx/vim-antlr'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tfnico/vim-gradle'
@@ -42,11 +42,16 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround.git'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
 
 set completeopt-=preview
+
+"turn off pandoc folding
+let g:pandoc#modules#disabled = ["folding"]
 
 let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_mode_map = { "mode": "active"}

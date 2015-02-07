@@ -1,0 +1,47 @@
+# ~/.tmuxinator/amaret.yml
+
+name: coinbase
+root: ~/git/navicore
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - COINBASE-NODE:
+      layout: main-vertical
+      panes:
+        - cd coinbase-node && vim
+        - cd coinbase-node && pwd
+        - cd coinbase-node && pwd
+  - COINBASE-R:
+      layout: main-vertical
+      panes:
+        - cd coinbase-R && vim
+        - cd coinbase-R && pwd
+        - cd coinbase-R && pwd
+  - COINBASE-PYTHON:
+      layout: main-vertical
+      panes:
+        - cd coinbase-python && vim
+        - cd coinbase-python && pwd
+        - cd coinbase-python && pwd
+  - OTHER:
+      root: ~
+      layout: main-vertical
+      panes:
+        - cd ~ && vim
+        - cd ~ && pwd
+        - cd ~ && pwd
+
