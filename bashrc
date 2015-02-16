@@ -72,6 +72,7 @@ elif [[ $platform == 'osx' ]]; then
   export JAVA_HOME="$(/usr/libexec/java_home)"
   export GIT_EDITOR="vim -f"
   export PATH=$PATH:/Applications/antlrworks2/bin
+  export PATH=/usr/local/sbin:$PATH
 fi 
 
 source ~/.tmuxinator.bash

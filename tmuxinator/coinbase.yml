@@ -25,6 +25,12 @@ windows:
         - cd coinbase-node && vim
         - cd coinbase-node && pwd
         - cd coinbase-node && pwd
+  - COINBASE-NODE-DEMO:
+      layout: main-vertical
+      panes:
+        - cd coinbase-node-demo && vim
+        - cd coinbase-node-demo && pwd
+        - cd coinbase-node-demo && pwd
   - COINBASE-R:
       layout: main-vertical
       panes:
