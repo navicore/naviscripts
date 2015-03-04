@@ -128,9 +128,13 @@ set colorcolumn=81
 "highlight ColorColumn ctermbg=magenta
 "call matchadd('ColorColumn', '\%81v', 100)
 
-"hightlight real tabs and trailing whitespace
-set listchars=tab:>~,nbsp:_,trail:.
-set list
+command Whitespace :call Whitespace()<CR>
+map <F6> :call Whitespace()<CR>
+function! Whitespace()
+  "hightlight real tabs and trailing whitespace
+  set listchars=tab:>~,nbsp:_,trail:.
+  set list
+endfunc
 
 xnoremap . :normal .<CR>
 
