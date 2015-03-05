@@ -4,7 +4,9 @@ personal scripts for vim and tmux and anything else I use
 ### INSTALL
 
 `git clone git@github.com:navicore/naviscripts.git`
+
 `cd naviscripts`
+
 `./install.sh`
 
 * look at the start of the vimrc script to get vundle going
