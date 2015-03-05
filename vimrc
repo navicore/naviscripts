@@ -44,8 +44,6 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
@@ -103,6 +101,9 @@ map <C-t> :TagbarToggle<CR>
 
 "set the source for autocomplete
 set complete=.,w,b,u,t,i
+
+"golang
+let g:go_fmt_command = "goimports"
 
 set tags=.tags
 
