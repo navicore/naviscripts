@@ -88,10 +88,11 @@ endfunc
 "set nu
 
 function SetIDEOptions()
-  "NERDTree
-  "Tagbar
   if isdirectory('.git')
-    CtrlP
+    "CtrlP
+    NERDTree
+    "Tagbar
+    "set bg=light
   endif
 endfunction
 

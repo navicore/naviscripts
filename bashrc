@@ -55,7 +55,8 @@ if [[ $platform == 'linux' ]]; then
   alias dockerrmi='sudo docker rmi $(sudo docker images -q)'
   alias dockeruntagged='sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")'
   export TERM="screen-256color"
-  alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
+  #alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
+  alias mytags='ctags -R -f .tags --exclude=node_modules *'
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
@@ -65,7 +66,8 @@ elif [[ $platform == 'osx' ]]; then
   alias dockerrmi='docker rmi $(docker images -q)'
   alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
   export TERM="screen-256color"
-  alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
+  #alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
+  alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules *'
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   function vim { /usr/local/bin/vim $*; }

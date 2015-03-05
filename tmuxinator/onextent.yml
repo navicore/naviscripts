@@ -7,9 +7,15 @@ windows:
   - OESCRIPT:
       layout: main-vertical
       panes:
-        - cd OeScript && vim
+        - cd OeScript && mytags && vim
         - cd OeScript && pwd
         - cd OeScript && pwd
+  - OESCRIPT_GO:
+      layout: main-vertical
+      panes:
+        - cd OeScript_go && mytags && vim
+        - cd OeScript_go && pwd
+        - cd OeScript_go && pwd
   - OTHER:
       root: ~
       layout: main-vertical
