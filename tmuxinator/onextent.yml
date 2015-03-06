@@ -10,12 +10,13 @@ windows:
         - cd OeScript && mytags && vim
         - cd OeScript && pwd
         - cd OeScript && pwd
-  - OESCRIPT_GO:
+  - GOWORKSPACE:
       layout: main-vertical
+      root: ~/go
       panes:
-        - cd OeScript_go && mytags && vim
-        - cd OeScript_go && pwd
-        - cd OeScript_go && pwd
+        - vim
+        - cd src/github.com/navicore/oescriptgo && pwd
+        - cd src/github.com/navicore/oescriptgo && pwd
   - OTHER:
       root: ~
       layout: main-vertical
