@@ -12,6 +12,7 @@ export CLASSPATH=""
 
 #this is idiotic
 export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 export NODE_PATH=.:/usr/local/lib/node_modules
 export SLICKEDIT_HOME=$HOME/vs
