@@ -4,6 +4,18 @@ name: amaret
 root: ~/git/navicore
 
 windows:
+  - POLLEN:
+      layout: main-vertical
+      panes:
+        - cd pollen && vim
+        - cd pollen && pwd
+        - cd pollen && pwd
+  - POLLEN-TEST:
+      layout: main-vertical
+      panes:
+        - cd pollen-test && vim
+        - cd pollen-test && pwd
+        - cd pollen-test && pwd
   - ACC.GATEWAY:
       layout: main-vertical
       panes:

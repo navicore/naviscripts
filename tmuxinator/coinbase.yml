@@ -10,6 +10,14 @@ windows:
         - cd coinbase-node && vim
         - cd coinbase-node && pwd
         - cd coinbase-node && pwd
+  - COINBASE-GO:
+      layout: main-vertical
+      root: ~/go
+      panes:
+        - vim
+        - cd src/github.com/navicore/coinbase-go && pwd
+        - cd src/github.com/navicore/coinbase-go && pwd
+
   - COINBASE-NODE-DEMO:
       layout: main-vertical
       panes:
