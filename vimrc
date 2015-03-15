@@ -147,3 +147,9 @@ nmap <C-j> ddp
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
+"macros
+"quote words
+nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
+nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
+nnoremap json ::%!python -m json.tool
+
