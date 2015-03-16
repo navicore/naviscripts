@@ -151,5 +151,5 @@ vmap <C-j> xp`[V`]
 "quote words
 nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
 nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
-nnoremap json ::%!python -m json.tool
+nnoremap qj ::%!python -m json.tool
 
