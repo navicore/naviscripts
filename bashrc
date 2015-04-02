@@ -66,6 +66,7 @@ elif [[ $platform == 'osx' ]]; then
   alias dockerstop='docker stop $(docker ps -a -q)'
   alias dockerrmi='docker rmi $(docker images -q)'
   alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+  #export TERM="xterm-256color"
   export TERM="screen-256color"
   #alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules *'
@@ -76,6 +77,7 @@ elif [[ $platform == 'osx' ]]; then
   export GIT_EDITOR="vim -f"
   export PATH=$PATH:/Applications/antlrworks2/bin
   export PATH=/usr/local/sbin:$PATH
+  export PATH=$PATH:$HOME/Library/Python/2.7/bin
 fi 
 
 source ~/.tmuxinator.bash

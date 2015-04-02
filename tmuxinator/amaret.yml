@@ -10,12 +10,6 @@ windows:
         - cd pollen && vim
         - cd pollen && pwd
         - cd pollen && pwd
-  - POLLEN-TEST:
-      layout: main-vertical
-      panes:
-        - cd pollen-test && vim
-        - cd pollen-test && pwd
-        - cd pollen-test && pwd
   - ACC.GATEWAY:
       layout: main-vertical
       panes:
@@ -28,18 +22,24 @@ windows:
         - cd acc.worker && vim
         - cd acc.worker && pwd
         - cd acc.worker && pwd
-  - ACC.MONITOR:
+  - POLLENC:
       layout: main-vertical
       panes:
-        - cd acc.monitor && vim
-        - cd acc.monitor && pwd
-        - cd acc.monitor && pwd
-  - ACC.CLIENT:
+        - cd pollenc && vim
+        - cd pollenc && pwd
+        - cd pollenc && pwd
+  - WIND.GATEWAY:
       layout: main-vertical
       panes:
-        - cd acc.client && vim
-        - cd acc.client && pwd
-        - cd acc.client && pwd
+        - cd wind.gateway && vim
+        - cd wind.gateway && pwd
+        - cd wind.gateway && pwd
+  - WIND.UTIL:
+      layout: main-vertical
+      panes:
+        - cd wind.util && vim
+        - cd wind.util && pwd
+        - cd wind.util && pwd
   - OTHER:
       root: ~
       layout: main-vertical
