@@ -18,6 +18,7 @@ set shiftwidth=2
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'digitaltoad/vim-jade'
