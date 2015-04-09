@@ -1,6 +1,6 @@
-# ~/.tmuxinator/falkonry.yml
+# ~/.tmuxinator/insight.yml
 
-name: falkonry
+name: insight
 root: ~/git/navicore
 
 # Optional tmux socket
@@ -19,18 +19,24 @@ root: ~/git/navicore
 # tmux_command: byobu
 
 windows:
-  - TERCEL:
+  - INFRA:
       layout: main-vertical
       panes:
-        - cd tercel && vim
-        - cd tercel && pwd
-        - cd tercel && pwd
+        - cd infra && vim
+        - cd infra && pwd
+        - cd infra && pwd
   - INSIGHT:
       layout: main-vertical
       panes:
         - cd insight && vim
         - cd insight && pwd
         - cd insight && pwd
+  - TERCEL:
+      layout: main-vertical
+      panes:
+        - cd tercel && vim
+        - cd tercel && pwd
+        - cd tercel && pwd
   - OTHER:
       layout: main-vertical
       panes:
