@@ -98,6 +98,7 @@ fi
 
 #
 # example commands:
+# foo > stdout.txt 2> stderr.txt
 #
 #---------------------------------------------------------
 # increment version
