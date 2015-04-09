@@ -18,6 +18,7 @@ set shiftwidth=2
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 Plugin 'scrooloose/syntastic'
 Plugin 'rust-lang/rust.vim'
 Plugin 'digitaltoad/vim-jade'
@@ -45,6 +46,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
+Plugin 'tpope/vim-unimpaired'
 
 filetype plugin indent on     " required!
 
@@ -57,8 +59,10 @@ let g:syntastic_javascript_checkers = ['jslint']
 "let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_mode_map = { "mode": "active"}
-"                           \ "active_filetypes": ["ruby", "java", "python", "javascript"],
-"                           \ "passive_filetypes": ["puppet"] }
+"                           \ "active_filetypes": ["ruby", "java", "python", "javascript", "scala"],
+"                           \ "passive_filetypes": [] }
+
+let g:syntastic_aggregate_errors = 1
 
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 let g:ctrlp_max_files=0
