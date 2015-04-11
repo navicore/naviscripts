@@ -59,8 +59,6 @@ let g:syntastic_javascript_checkers = ['jslint']
 "let g:syntastic_javascript_checkers = ['jshint']
 
 let g:syntastic_mode_map = { "mode": "active"}
-"                           \ "active_filetypes": ["ruby", "java", "python", "javascript", "scala"],
-"                           \ "passive_filetypes": [] }
 
 let g:syntastic_aggregate_errors = 1
 
@@ -156,5 +154,6 @@ vmap <C-j> xp`[V`]
 nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
 nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
 nnoremap qj ::%!python -m json.tool
-let g:syntastic_python_checkers = ['pylint']
+
+let g:syntastic_python_checkers = ['pylint', 'pep8']
 
