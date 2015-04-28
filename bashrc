@@ -86,16 +86,6 @@ source ~/.tmuxinator.bash
 #\curl -sSL https://get.rvm.io | bash -s stable
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/google-cloud-sdk/path.bash.inc ]; then
-  source "$HOME/google-cloud-sdk/path.bash.inc"
-fi
-
-# The next line enables bash completion for gcloud.
-if [ -f $HOME/google-cloud-sdk/completion.bash.inc ]; then
-  source "$HOME/google-cloud-sdk/completion.bash.inc"
-fi
-
 #
 # example commands:
 # foo > stdout.txt 2> stderr.txt
