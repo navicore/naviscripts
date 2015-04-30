@@ -90,6 +90,9 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # example commands:
 # foo > stdout.txt 2> stderr.txt
 #
+# do something n times
+# n=0; while [[ $n -lt 10 ]]; do some_command; n=$((n+1)); done 
+#
 #---------------------------------------------------------
 # increment version
 #$ v=1.2.13
@@ -113,5 +116,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
 #
 #---------------------------------------------------------
-#
 
