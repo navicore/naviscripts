@@ -51,9 +51,8 @@ set completeopt-=preview
 let g:pandoc#modules#disabled = ["folding"]
 
 let g:syntastic_javascript_checkers = ['jslint']
-"let g:syntastic_javascript_checkers = ['jshint']
 
-let g:syntastic_mode_map = { "mode": "active"}
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
 
 let g:syntastic_aggregate_errors = 1
 
