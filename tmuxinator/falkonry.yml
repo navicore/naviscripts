@@ -31,6 +31,13 @@ windows:
         - cd insight && vim
         - cd insight && pwd
         - cd insight && pwd
+  - SPLUNK:
+      layout: main-vertical
+      panes:
+        - cd splunk && vim
+        - cd splunk && pwd
+        - cd splunk && pwd
+
   - OTHER:
       layout: main-vertical
       panes:
