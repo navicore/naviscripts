@@ -101,7 +101,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #1.2.14
 #---------------------------------------------------------
 # rsync -rav --partial --progress . /Volumes/music/amazon/
-# git remote add upstream git@github.com:falkonry/infra.git
+# git remote add upstream git@github.com:amaret/pollen.git
 #---------------------------------------------------------
 #write Xs:
 #printf "%0.sE" {1..20000} | java -jar gram.jar -P
