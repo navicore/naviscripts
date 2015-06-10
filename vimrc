@@ -19,6 +19,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'diepm/vim-rest-console'
