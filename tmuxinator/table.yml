@@ -7,9 +7,16 @@ windows:
   - UI:
       layout: main-vertical
       panes:
-        - cd table_ui && vim
-        - cd table_ui && pwd
-        - cd table_ui && pwd
+        - cd ui && vim
+        - cd ui && pwd
+        - cd ui && pwd
+  - DOCS:
+      layout: main-vertical
+      panes:
+        - cd tabledoc && vim
+        - cd tabledoc && pwd
+        - cd tabledoc && pwd
+
   - OTHER:
       root: ~
       layout: main-vertical
