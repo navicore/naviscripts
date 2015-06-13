@@ -10,13 +10,78 @@ windows:
         - cd ui && vim
         - cd ui && pwd
         - cd ui && pwd
+  - TABLESVC:
+      layout: main-vertical
+      panes:
+        - cd tablesvc && vim
+        - cd tablesvc && pwd
+        - cd tablesvc && pwd
+  - MESSAGESVC:
+      layout: main-vertical
+      panes:
+        - cd messagesvc && vim
+        - cd messagesvc && pwd
+        - cd messagesvc && pwd
+  - MAILSVC:
+      layout: main-vertical
+      panes:
+        - cd mailsvc && vim
+        - cd mailsvc && pwd
+        - cd mailsvc && pwd
+  - FILESVC:
+      layout: main-vertical
+      panes:
+        - cd filesvc && vim
+        - cd filesvc && pwd
+        - cd filesvc && pwd
+  - PIECESVC:
+      layout: main-vertical
+      panes:
+        - cd piecesvc && vim
+        - cd piecesvc && pwd
+        - cd piecesvc && pwd
+  - POSTSVC:
+      layout: main-vertical
+      panes:
+        - cd postsvc && vim
+        - cd postsvc && pwd
+        - cd postsvc && pwd
+  - REVIEWSVC:
+      layout: main-vertical
+      panes:
+        - cd reviewsvc && vim
+        - cd reviewsvc && pwd
+        - cd reviewsvc && pwd
+  - ROOMSVC:
+      layout: main-vertical
+      panes:
+        - cd roomsvc && vim
+        - cd roomsvc && pwd
+        - cd roomsvc && pwd
+  - EXPERTISESVC:
+      layout: main-vertical
+      panes:
+        - cd expertisesvc && vim
+        - cd expertisesvc && pwd
+        - cd expertisesvc && pwd
+  - SKILLSVC:
+      layout: main-vertical
+      panes:
+        - cd skillsvc && vim
+        - cd skillsvc && pwd
+        - cd skillsvc && pwd
+  - PROJECTSVC:
+      layout: main-vertical
+      panes:
+        - cd projectsvc && vim
+        - cd projectsvc && pwd
+        - cd projectsvc && pwd
   - DOCS:
       layout: main-vertical
       panes:
         - cd tabledoc && vim
         - cd tabledoc && pwd
         - cd tabledoc && pwd
-
   - OTHER:
       root: ~
       layout: main-vertical
