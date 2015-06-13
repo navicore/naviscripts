@@ -16,6 +16,12 @@ windows:
         - cd tablesvc && vim
         - cd tablesvc && pwd
         - cd tablesvc && pwd
+  - PROFILESVC:
+      layout: main-vertical
+      panes:
+        - cd profilesvc && vim
+        - cd profilesvc && pwd
+        - cd profilesvc && pwd
   - MESSAGESVC:
       layout: main-vertical
       panes:
