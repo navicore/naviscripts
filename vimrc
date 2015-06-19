@@ -19,6 +19,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'simonhicks/gradle-vim-syntastic-plugin'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -163,4 +164,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 set clipboard=unnamed
+
+if filereadable(glob('./.vimrc.local'))
+     so ./.vimrc.local
+endif
 
