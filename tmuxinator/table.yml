@@ -22,6 +22,11 @@ windows:
         - cd tabledoc && vim
         - cd tabledoc && pwd
         - cd tabledoc && pwd
+  - REST:
+      root: ~/rest
+      layout: main-vertical
+      panes:
+        - cd ~/rest && vim
   - OTHER:
       root: ~
       layout: main-vertical
