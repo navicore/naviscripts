@@ -10,12 +10,18 @@ windows:
         - cd ui && vim
         - cd ui && pwd
         - cd ui && pwd
-  - TABLESVC:
+  - PROFILESVC:
       layout: main-vertical
       panes:
-        - cd tablesvc && vim
-        - cd tablesvc && pwd
-        - cd tablesvc && pwd
+        - cd profilesvc && vim
+        - cd profilesvc && pwd
+        - cd profilesvc && pwd
+  - AUTHSVC:
+      layout: main-vertical
+      panes:
+        - cd authsvc && vim
+        - cd authsvc && pwd
+        - cd authsvc && pwd
   - DOCS:
       layout: main-vertical
       panes:
