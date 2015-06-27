@@ -169,3 +169,9 @@ if filereadable(glob('./.vimrc.local'))
      so ./.vimrc.local
 endif
 
+"
+" commands:
+"
+" json pretty print:  :%!python -m json.tool
+"
+vnoremap <leader>j :!python -mjson.tool<cr>
