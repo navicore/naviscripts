@@ -10,13 +10,19 @@ windows:
         - cd ui && vim
         - cd ui && pwd
         - cd ui && pwd
-  - PROFILESVC:
+  - TABLE:
+      layout: main-vertical
+      panes:
+        - cd tablesvc && vim
+        - cd tablesvc && pwd
+        - cd tablesvc && pwd
+  - PROFILE:
       layout: main-vertical
       panes:
         - cd profilesvc && vim
         - cd profilesvc && pwd
         - cd profilesvc && pwd
-  - AUTHSVC:
+  - AUTH:
       layout: main-vertical
       panes:
         - cd authsvc && vim
@@ -29,10 +35,10 @@ windows:
         - cd tabledoc && pwd
         - cd tabledoc && pwd
   - REST:
-      root: ~/rest
-      layout: main-vertical
+      layout: main-horizontal
       panes:
-        - cd ~/rest && vim
+        - cd scratch/restvim && ls
+        - cd scratch/restvim && vim
   - OTHER:
       root: ~
       layout: main-vertical

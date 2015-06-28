@@ -163,6 +163,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
+
 set clipboard=unnamed
 
 if filereadable(glob('./.vimrc.local'))
