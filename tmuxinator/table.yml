@@ -28,12 +28,12 @@ windows:
         - cd authsvc && vim
         - cd authsvc && pwd
         - cd authsvc && pwd
-  - DOCS:
+  - MEMBER:
       layout: main-vertical
       panes:
-        - cd tabledoc && vim
-        - cd tabledoc && pwd
-        - cd tabledoc && pwd
+        - cd membersvc && vim
+        - cd membersvc && pwd
+        - cd membersvc && pwd
   - REST:
       layout: main-horizontal
       panes:
