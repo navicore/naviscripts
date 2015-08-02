@@ -28,17 +28,6 @@ windows:
         - cd authsvc && vim
         - cd authsvc && pwd
         - cd authsvc && pwd
-  - MEMBER:
-      layout: main-vertical
-      panes:
-        - cd membersvc && vim
-        - cd membersvc && pwd
-        - cd membersvc && pwd
-  - REST:
-      layout: main-horizontal
-      panes:
-        - cd scratch/restvim && ls
-        - cd scratch/restvim && vim
   - OTHER:
       root: ~
       layout: main-vertical
