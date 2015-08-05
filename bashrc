@@ -10,11 +10,6 @@ fi
 
 export CLASSPATH=""
 
-#this is idiotic
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-
 export NODE_PATH=.:/usr/local/lib/node_modules
 export SLICKEDIT_HOME=$HOME/vs
 export ANDROID_SDK="$HOME/android-studio/sdk"
