@@ -116,8 +116,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #presumes you have: 
 # 1) brew cask install dockertoolbox
 # 2) docker-machine create --driver virtualbox default
+# 3) docker-machine env default >> .bashrc_local
 #eval "$(docker-machine env default)"
-
 #---------------------------------------------------------
 
 
