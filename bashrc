@@ -59,6 +59,9 @@ if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
 elif [[ $platform == 'osx' ]]; then
+  #presumes you have: 
+  # 1) brew cask install dockertoolbox
+  # 2) docker-machine create --driver virtualbox default
   eval "$(docker-machine env default)"
   alias dockerrm='docker rm $(docker ps -a -q)'
   alias dockerstop='docker stop $(docker ps -a -q)'
