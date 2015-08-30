@@ -51,6 +51,7 @@ if [[ $platform == 'linux' ]]; then
   alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
   alias dockerkill='sudo docker kill $(sudo docker ps -a -q)'
   alias dockerrmi='sudo docker rmi $(sudo docker images -q)'
+  alias dockerrmif='sudo docker rmi -f $(sudo docker images -q)'
   alias dockeruntagged='sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")'
   export TERM="screen-256color"
   #alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
@@ -63,6 +64,7 @@ elif [[ $platform == 'osx' ]]; then
   alias dockerstop='docker stop $(docker ps -a -q)'
   alias dockerkill='docker kill $(docker ps -a -q)'
   alias dockerrmi='docker rmi $(docker images -q)'
+  alias dockerrmif='docker rmi -f $(docker images -q)'
   alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
   #export TERM="xterm-256color"
   export TERM="screen-256color"
