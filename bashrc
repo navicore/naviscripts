@@ -53,6 +53,7 @@ if [[ $platform == 'linux' ]]; then
   alias dockerrmi='sudo docker rmi $(sudo docker images -q)'
   alias dockerrmif='sudo docker rmi -f $(sudo docker images -q)'
   alias dockeruntagged='sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")'
+  alias dockerdangle='sudo docker rmi $(docker images -q --filter dangling=true)'
   export TERM="screen-256color"
   #alias mytags='ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'
   alias mytags='ctags -R -f .tags --exclude=node_modules *'
@@ -66,6 +67,7 @@ elif [[ $platform == 'osx' ]]; then
   alias dockerrmi='docker rmi $(docker images -q)'
   alias dockerrmif='docker rmi -f $(docker images -q)'
   alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+  alias dockerdangle='docker rmi $(docker images -q --filter dangling=true)'
   #export TERM="xterm-256color"
   export TERM="screen-256color"
   #alias mytags='/usr/local/bin/ctags -R -f .tags --exclude=node_modules * $JAVA_HOME/src'

@@ -22,12 +22,12 @@ windows:
         - cd profilesvc && vim
         - cd profilesvc && pwd
         - cd profilesvc && pwd
-  - AUTH:
+  - PIECE:
       layout: main-vertical
       panes:
-        - cd authsvc && vim
-        - cd authsvc && pwd
-        - cd authsvc && pwd
+        - cd piecesvc && vim
+        - cd piecesvc && pwd
+        - cd piecesvc && pwd
   - OTHER:
       root: ~
       root: ~/git/navicore
