@@ -8,7 +8,6 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 
-cp ~/bin/lein ./
 cp ~/.lein/profiles.clj ./profiles.clj
 cp ~/.vimrc ./vimrc
 cp ~/.bashrc ./bashrc

@@ -107,22 +107,19 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #---------------------------------------------------------
 #git prune
 #git remote prune origin --dry-run
+
 #---------------------------------------------------------
-# DOCKER:
-# stop all containers:
-# docker stop $(docker ps -a -q)
-#
-# remove all untagged images:
-# docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
-#
-#presumes you have: 
+#DOCKER
 # 1) brew cask install dockertoolbox
-# 2) docker-machine create --driver virtualbox default
+# 2) docker-machine create --driver=virtualbox --virtualbox-memory=8192 default
 # 3) docker-machine env default >> .bashrc_local
 #eval "$(docker-machine env default)"
 #---------------------------------------------------------
 
-
+# find all swp files:
+#find . -name ".*.swp" -exec ls {} \;
+# rm all swp files:
+#find . -name ".*.swp" -exec rm -rf {} \;
 
 #
 # remove local storage

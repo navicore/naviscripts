@@ -9,9 +9,6 @@ cd "$(dirname "$0")"
 ####################################################################
 
 mkdir -p ~/bin/
-cp ./lein ~/bin/
-mkdir -p ~/.lein
-cp ./profiles.clj ~/.lein/
 cp ./vimrc ~/.vimrc
 cp ./bashrc ~/.bashrc
 cp ./tmux.conf ~/.tmux.conf
