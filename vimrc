@@ -19,6 +19,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'derekwyatt/vim-scala'
 Plugin 'simonhicks/gradle-vim-syntastic-plugin'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'wannesm/wmgraphviz.vim'
