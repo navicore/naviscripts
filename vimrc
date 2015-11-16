@@ -3,6 +3,10 @@
 " 2) restart vim
 " 3) :BundleInstall
 " 4) build ~/.vim/bundle/YouCompleteMe with './install.sh --clang-completer'
+" 5) npm install -g eslint
+" 6) npm install -g babel-eslint
+" 7) npm install -g eslint-plugin-react
+" 8) npm install -g jslint
 
 "set term=builtin_ansi
 syntax on
@@ -56,6 +60,7 @@ set completeopt-=preview
 let g:pandoc#modules#disabled = ["folding"]
 
 let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_jslint_args = ['--edition=es6']
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
 

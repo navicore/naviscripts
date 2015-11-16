@@ -10,6 +10,7 @@ cd "$(dirname "$0")"
 
 mkdir -p ~/bin/
 cp ./vimrc ~/.vimrc
+cp ./eslintrc ~/.eslintrc
 cp ./bashrc ~/.bashrc
 cp ./tmux.conf ~/.tmux.conf
 mkdir -p ~/.tmuxinator
