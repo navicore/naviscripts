@@ -51,6 +51,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'tomtom/tcomment_vim'
 
 filetype plugin indent on     " required!
 
