@@ -8,10 +8,10 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 
-cp ~/.lein/profiles.clj ./profiles.clj
 cp ~/.vimrc ./vimrc
 #cp ~/.eslintrc ./eslintrc
 cp ~/.bashrc ./bashrc
+cp ~/.zshrc ./zshrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.tmuxinator/*.yml ./tmuxinator/ && git add ./tmuxinator/*.yml
 cp ~/.tmuxinator.bash ./tmuxinator.bash

@@ -12,6 +12,7 @@ mkdir -p ~/bin/
 cp ./vimrc ~/.vimrc
 #cp ./eslintrc ~/.eslintrc
 cp ./bashrc ~/.bashrc
+cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 mkdir -p ~/.tmuxinator
 cp ./tmuxinator/*.yml ~/.tmuxinator/
