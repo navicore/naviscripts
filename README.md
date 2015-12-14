@@ -21,4 +21,12 @@ personal scripts for vim and tmux and anything else I use
 `git push`
 
 --------
+```
 brew install macvim --with-cscope --with-lua --HEAD
+```
+
+install oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
