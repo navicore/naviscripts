@@ -9,9 +9,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
 fi
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/navicore/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -70,8 +67,6 @@ plugins=(git vi-mode)
 export PATH="/Users/navicore/google-cloud-sdk/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/antlrworks2/bin:/Users/navicore/Library/Python/2.7/bin:/Users/navicore/.rvm/bin:/Users/navicore/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -111,6 +106,7 @@ alias mergeupstream='git merge upstream/master'
 ulimit -n 4096
 
 if [[ $platform == 'linux' ]]; then
+  export ZSH=/home/navicore/.oh-my-zsh # Path to your oh-my-zsh installation.
   alias dockerrm='sudo docker rm $(sudo docker ps -a -q)'
   alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
   alias dockerkill='sudo docker kill $(sudo docker ps -a -q)'
@@ -125,6 +121,7 @@ if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
 elif [[ $platform == 'osx' ]]; then
+  export ZSH=/Users/navicore/.oh-my-zsh # Path to your oh-my-zsh installation.
   alias dockerrm='docker rm $(docker ps -a -q)'
   alias dockerstop='docker stop $(docker ps -a -q)'
   alias dockerkill='docker kill $(docker ps -a -q)'
@@ -146,6 +143,7 @@ elif [[ $platform == 'osx' ]]; then
   export PATH=$PATH:$HOME/Library/Python/2.7/bin
 fi 
 
+source $ZSH/oh-my-zsh.sh
 if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
