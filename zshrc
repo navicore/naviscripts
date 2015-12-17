@@ -148,3 +148,5 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
+setopt APPEND_HISTORY
+
