@@ -9,9 +9,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
 fi
 
-export NVM_DIR="/usr/local/opt/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -123,6 +120,8 @@ if [[ $platform == 'linux' ]]; then
   alias gvim='UBUNTU_MENUPROXY= gvim'
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
   export GIT_EDITOR="vim -f"
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 elif [[ $platform == 'osx' ]]; then
   export ZSH=/Users/navicore/.oh-my-zsh # Path to your oh-my-zsh installation.
   alias dockerrm='docker rm $(docker ps -a -q)'
@@ -144,6 +143,8 @@ elif [[ $platform == 'osx' ]]; then
   export PATH=$PATH:/Applications/antlrworks2/bin
   export PATH=/usr/local/sbin:$PATH
   export PATH=$PATH:$HOME/Library/Python/2.7/bin
+  export NVM_DIR=~/.nvm
+  . $(brew --prefix nvm)/nvm.sh
 fi 
 
 source $ZSH/oh-my-zsh.sh
@@ -153,6 +154,3 @@ fi
 
 setopt APPEND_HISTORY
 
-
-export NVM_DIR="/home/navicore/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
