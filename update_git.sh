@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 
+cp ~/.nvmrc ./nvmrc
 cp ~/.vimrc ./vimrc
 #cp ~/.eslintrc ./eslintrc
 cp ~/.bashrc ./bashrc
