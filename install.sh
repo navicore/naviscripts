@@ -10,6 +10,7 @@ cd "$(dirname "$0")"
 
 mkdir -p ~/bin/
 cp ./nvmrc ~/.nvmrc
+cp ./eslintrc ~/.eslintrc
 cp ./vimrc ~/.vimrc
 #cp ./eslintrc ~/.eslintrc
 cp ./bashrc ~/.bashrc
