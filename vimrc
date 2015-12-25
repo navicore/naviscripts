@@ -7,6 +7,7 @@
 " 6) npm install -g babel-eslint
 " 7) npm install -g eslint-plugin-react
 " 8) npm install -g jslint
+" 9) npm install -g eslint
 
 "set term=builtin_ansi
 syntax on
@@ -60,7 +61,8 @@ set completeopt-=preview
 "turn off pandoc folding
 let g:pandoc#modules#disabled = ["folding"]
 
-let g:syntastic_javascript_checkers = ['jslint']
+"let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jslint_args = ['--edition=es6']
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
