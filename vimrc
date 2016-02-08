@@ -24,11 +24,9 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'derekwyatt/vim-scala'
-Plugin 'simonhicks/gradle-vim-syntastic-plugin'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ervandew/screen'
@@ -40,6 +38,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'mbbill/undotree'
 Plugin 'morhetz/gruvbox'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
@@ -47,12 +46,14 @@ Plugin 'rollxx/vim-antlr'
 Plugin 'rust-lang/rust.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'simonhicks/gradle-vim-syntastic-plugin'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'tomtom/tcomment_vim'
+Plugin 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
 
@@ -140,7 +141,7 @@ set colorcolumn=81
 "call matchadd('ColorColumn', '\%81v', 100)
 
 command Whitespace :call Whitespace()<CR>
-map <F6> :call Whitespace()<CR>
+"map <F6> :call Whitespace()<CR>
 function! Whitespace()
   "hightlight real tabs and trailing whitespace
   set listchars=tab:>~,nbsp:_,trail:.
@@ -186,3 +187,11 @@ endif
 " json pretty print:  :%!python -m json.tool
 "
 vnoremap <leader>j :!python -mjson.tool<cr>
+
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif
+
+nnoremap <F6> :UndotreeToggle<cr>
+
