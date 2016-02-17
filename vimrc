@@ -2,7 +2,8 @@
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " 2) restart vim
 " 3) :BundleInstall
-" 4) build ~/.vim/bundle/YouCompleteMe with './install.sh --clang-completer'
+" 4) build ~/.vim/bundle/YouCompleteMe with:
+" ./install.py --clang-completer --gocode-completer --tern-completer
 " 5) npm install -g eslint
 " 6) npm install -g babel-eslint
 " 7) npm install -g eslint-plugin-react

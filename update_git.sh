@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 
+cp ~/.tern-config ./tern-config
 cp ~/.nvmrc ./nvmrc
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.eslintrc.yml ./eslintrc.yml
