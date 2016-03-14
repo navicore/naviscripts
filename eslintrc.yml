@@ -1,17 +1,24 @@
+parser: babel-eslint
+extends: airbnb/base
+
 rules:
-  indent:
+  semi:
     - 2
-    - 2
+    - never
   quotes:
     - 2
     - double
-  linebreak-style:
+  new-cap:
+    - 0
+  no-param-reassign:
     - 2
-    - unix
-  semi:
+    - props: false
+  indent:
     - 2
-    - always
-env:
-  es6: true
-  node: true
-extends: 'eslint:recommended'
+    - 2
+    - SwitchCase: 0
+  no-unused-vars:
+    - 1
+    - vars: "all"
+      args: "after-used"
+
