@@ -4,12 +4,12 @@ name: table
 root: ~/git/navicore
 
 windows:
-  - UI:
+  - FRANK:
       layout: main-vertical
       panes:
-        - cd ui && vim
-        - cd ui && pwd
-        - cd ui && pwd
+        - cd frank && vim
+        - cd frank && pwd
+        - cd frank && pwd
   - TABLE:
       layout: main-vertical
       panes:
@@ -22,12 +22,12 @@ windows:
         - cd profilesvc && vim
         - cd profilesvc && pwd
         - cd profilesvc && pwd
-  - PIECE:
+  - GRAPEVINE:
       layout: main-vertical
       panes:
-        - cd piecesvc && vim
-        - cd piecesvc && pwd
-        - cd piecesvc && pwd
+        - cd grapevine && vim
+        - cd grapevine && pwd
+        - cd grapevine && pwd
   - OTHER:
       root: ~
       root: ~/git/navicore
