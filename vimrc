@@ -1,14 +1,16 @@
-" 1) install vundle:
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" 2) restart vim
-" 3) :BundleInstall
-" 4) build ~/.vim/bundle/YouCompleteMe with:
-" ./install.py --clang-completer --gocode-completer --tern-completer
-" 5) npm install -g eslint
-" 6) npm install -g babel-eslint
-" 7) npm install -g eslint-plugin-react
-" 8) npm install -g jslint
-" 9) npm install -g eslint
+"  1) install vundle:
+"  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"  2) restart vim
+"  3) :BundleInstall
+"  4) build ~/.vim/bundle/YouCompleteMe with:
+"    ./install.py --clang-completer --gocode-completer --tern-completer
+"  5) npm install -g eslint
+"  6) npm install -g babel-eslint
+"  7) npm install -g eslint-plugin-react
+"  8) npm install -g jslint
+"  9) npm install -g eslint
+" 10) mkdir ~/.zsh/completion
+" 11) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
 
 "set term=builtin_ansi
 syntax on

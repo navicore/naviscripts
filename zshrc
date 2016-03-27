@@ -152,8 +152,10 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
 setopt APPEND_HISTORY
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
