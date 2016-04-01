@@ -73,6 +73,27 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
 
 let g:syntastic_aggregate_errors = 1
 
+let g:syntastic_java_javac_config_file_enabled=1
+
+let g:syntastic_python_checkers = ['pylint', 'pep8']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 5
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
@@ -120,8 +141,6 @@ let g:go_fmt_command = "goimports"
 
 set tags=.tags
 
-let g:syntastic_java_javac_config_file_enabled=1
-
 set spell
 set spelllang=en_us
 
@@ -165,16 +184,6 @@ vmap <C-j> xp`[V`]
 nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
 nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
 nnoremap qj ::%!python -m json.tool
-
-let g:syntastic_python_checkers = ['pylint', 'pep8']
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 
