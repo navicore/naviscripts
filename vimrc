@@ -1,23 +1,21 @@
-"  1) install vundle:
+" 01) install vundle:
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-"  2) restart vim
-"  3) :BundleInstall
-"  4) build ~/.vim/bundle/YouCompleteMe with:
+" 02) restart vim
+" 03) :BundleInstall
+" 04) build ~/.vim/bundle/YouCompleteMe with:
 "    ./install.py --clang-completer --gocode-completer --tern-completer
-"  5) npm install -g eslint
-"  6) npm install -g babel-eslint
-"  7) npm install -g eslint-plugin-react
-"  8) npm install -g jslint
-"  9) npm install -g eslint
-" 10) mkdir ~/.zsh/completion
-" 11) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+" 05) npm install -g eslint babel-eslint eslint-plugin-react jslint
+" 06) mkdir -p ~/.zsh/completion
+" 07) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
+" 08) mkdir -p ~/.vim/swapfiles
 
-"set term=builtin_ansi
 syntax on
 
 :set nu
-set nocompatible              " be iMproved
-filetype off                  " required!
+set nocompatible " be iMproved
+filetype off     " required!
+
+set directory=~/.vim/swapfiles// 
 
 set hidden
 set expandtab
@@ -65,7 +63,6 @@ set completeopt-=preview
 "turn off pandoc folding
 let g:pandoc#modules#disabled = ["folding"]
 
-"let g:syntastic_javascript_checkers = ['jslint']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jslint_args = ['--edition=es6']
 
@@ -175,15 +172,25 @@ xnoremap . :normal .<CR>
 "buble single line
 nmap <C-k> ddkP
 nmap <C-j> ddp
+
 "buble multiple lines
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
-"macros
+" ********************* "
+"     begin macros      "
+" ********************* "
+
 "quote words
 nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
 nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
+
+"pretty format json
 nnoremap qj ::%!python -m json.tool
+
+" ******************* "
+"     end macros      "
+" ******************* "
 
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 
@@ -192,13 +199,6 @@ set clipboard=unnamed
 if filereadable(glob('./.vimrc.local'))
      so ./.vimrc.local
 endif
-
-"
-" commands:
-"
-" json pretty print:  :%!python -m json.tool
-"
-vnoremap <leader>j :!python -mjson.tool<cr>
 
 if has("persistent_undo")
     set undodir=~/.undodir/
