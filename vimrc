@@ -4,7 +4,7 @@
 " 03) :BundleInstall
 " 04) build ~/.vim/bundle/YouCompleteMe with:
 "    ./install.py --clang-completer --gocode-completer --tern-completer
-" 05) npm install -g eslint babel-eslint eslint-plugin-react jslint
+" 05) npm install -g eslint babel-eslint eslint-plugin-react jslint eslint-config-airbnb
 " 06) mkdir -p ~/.zsh/completion
 " 07) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
 " 08) mkdir -p ~/.vim/swapfiles
