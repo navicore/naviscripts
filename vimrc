@@ -1,3 +1,4 @@
+" 00) apt-get install build-essential python-dev cmake
 " 01) install vundle:
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " 02) restart vim
