@@ -1,7 +1,7 @@
 # ~/.tmuxinator/amaret.yml
 
 name: table
-root: ~/git/navicore
+root: ~/git/tableco
 
 windows:
   - FRANK:
@@ -30,7 +30,7 @@ windows:
         - cd grapevine && pwd
   - OTHER:
       root: ~
-      root: ~/git/navicore
+      root: ~/git/tableco
       layout: main-vertical
       panes:
         - vim
