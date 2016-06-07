@@ -1,0 +1,21 @@
+# ~/.tmuxinator/sb.yml
+
+name: starbucks
+root: ~/git/sb
+
+windows:
+  - BITS:
+      layout: main-vertical
+      panes:
+        - cd bits && vim
+        - cd bits && pwd
+        - cd bits && pwd
+  - OTHER:
+      root: ~
+      root: ~/git/tableco
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
+
