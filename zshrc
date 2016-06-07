@@ -64,7 +64,7 @@ plugins=(git vi-mode)
 
 # User configuration
 
-export PATH="/Users/navicore/google-cloud-sdk/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/antlrworks2/bin:/Users/navicore/Library/Python/2.7/bin:/Users/navicore/.rvm/bin:/Users/navicore/.rvm/bin"
+export PATH="~/google-cloud-sdk/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/antlrworks2/bin:~/Library/Python/2.7/bin:~/.rvm/bin:~/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -123,7 +123,7 @@ if [[ $platform == 'linux' ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 elif [[ $platform == 'osx' ]]; then
-  export ZSH=/Users/navicore/.oh-my-zsh # Path to your oh-my-zsh installation.
+  export ZSH=~/.oh-my-zsh # Path to your oh-my-zsh installation.
   alias dockerrm='docker rm $(docker ps -a -q)'
   alias dockerstop='docker stop $(docker ps -a -q)'
   alias dockerkill='docker kill $(docker ps -a -q)'
