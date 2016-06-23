@@ -1,18 +1,18 @@
 # ~/.tmuxinator/sb.yml
 
 name: starbucks
-root: ~/git/sb
+root: ~/git/esweeney
 
 windows:
-  - BITS:
+  - SBITS-POS:
+      root: ~/git/esweeney/sbits-pos
       layout: main-vertical
       panes:
-        - cd bits && vim
-        - cd bits && pwd
-        - cd bits && pwd
+        - vim
+        - pwd
+        - pwd
   - OTHER:
-      root: ~
-      root: ~/git/tableco
+      root: ~/git/esweeney
       layout: main-vertical
       panes:
         - vim
