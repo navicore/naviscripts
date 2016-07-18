@@ -11,6 +11,7 @@ cd "$(dirname "$0")"
 cp ~/.tern-config ./tern-config
 cp ~/.nvmrc ./nvmrc
 cp ~/.vim/scripts.vim ./scripts.vim
+cp ~/.ssh/config ./ssh/
 cp ~/.eslintrc.yml ./eslintrc.yml
 cp ~/.vimrc ./vimrc
 #cp ~/.eslintrc ./eslintrc
