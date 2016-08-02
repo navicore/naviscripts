@@ -106,7 +106,7 @@ alias mergeupstream='git merge upstream/master'
 ulimit -n 4096
 
 if [[ $platform == 'linux' ]]; then
-  export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh installation.
+  export ZSH=~/.oh-my-zsh # Path to your oh-my-zsh installation.
   alias dockerrm='sudo docker rm $(sudo docker ps -a -q)'
   alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
   alias dockerkill='sudo docker kill $(sudo docker ps -a -q)'
