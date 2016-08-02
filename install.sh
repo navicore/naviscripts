@@ -34,5 +34,6 @@ cp ./encrypted_vim_rc ~/.encrypted_vim_rc
 cp ./ideavimrc ~/.ideavimrc
 cp ./irbrc ~/.irbrc
 cp ./guile ~/.guile
+mkdir -p ~/.ssh
 cp ./ssh/config ~/.ssh/
 
