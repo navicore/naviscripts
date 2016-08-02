@@ -159,3 +159,4 @@ setopt APPEND_HISTORY
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
