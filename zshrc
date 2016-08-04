@@ -80,3 +80,4 @@ antigen theme robbyrussell/oh-my-zsh themes/kolo
 # Tell antigen that you're done.
 antigen apply
 
+

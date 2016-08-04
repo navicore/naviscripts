@@ -10,7 +10,8 @@
 " 07) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
 " 08) mkdir -p ~/.vim/swapfiles
 " install zsh oh my https://github.com/robbyrussell/oh-my-zsh
-
+" git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+"
 syntax on
 
 :set nu
