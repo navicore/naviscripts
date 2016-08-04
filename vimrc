@@ -1,17 +1,11 @@
-" 00) apt-get install build-essential python-dev cmake zsh
-" 01) install vundle:
-"  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" 02) restart vim
-" 03) :BundleInstall
-" 04) build ~/.vim/bundle/YouCompleteMe with:
-"    ./install.py --clang-completer --gocode-completer --tern-completer
-" 05) npm install -g eslint babel-eslint eslint-plugin-react jslint eslint-config-airbnb
-" 06) mkdir -p ~/.zsh/completion
-" 07) curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/zsh/_docker-compose > ~/.zsh/completion/_docker-compose
-" 08) mkdir -p ~/.vim/swapfiles
-" install zsh oh my https://github.com/robbyrussell/oh-my-zsh
-" git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-"
+" git clone git@github.com:zsh-users/antigen.git .antigen/git/
+" apt-get install build-essential python-dev cmake zsh
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" npm install -g eslint babel-eslint eslint-plugin-react jslint eslint-config-airbnb
+" mkdir -p ~/.vim/swapfiles
+" restart vim :BundleInstall
+" build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
+
 syntax on
 
 :set nu
