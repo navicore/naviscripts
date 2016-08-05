@@ -24,6 +24,7 @@ call vundle#rc()
 
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
 Plugin 'digitaltoad/vim-jade'
