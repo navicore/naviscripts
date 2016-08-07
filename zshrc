@@ -72,7 +72,7 @@ antigen bundle vi-mode
 antigen bundle command-not-found
 antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-syntax-highlighting
-#antigen bundle EslamElHusseiny/aws_manager_plugin
+antigen bundle EslamElHusseiny/aws_manager_plugin
 
 # Load the theme.
 #antigen theme robbyrussell
@@ -81,5 +81,6 @@ antigen theme robbyrussell/oh-my-zsh themes/kolo
 # Tell antigen that you're done.
 antigen apply
 
-#export PATH=$PATH:/usr/local/aws/bin
+export PATH=$PATH:/usr/local/aws/bin
+source /usr/local/aws/bin/aws_zsh_completer.sh
 
