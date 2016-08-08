@@ -72,7 +72,7 @@ antigen bundle vi-mode
 antigen bundle command-not-found
 antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle EslamElHusseiny/aws_manager_plugin
+#antigen bundle EslamElHusseiny/aws_manager_plugin
 
 # Load the theme.
 #antigen theme robbyrussell
