@@ -18,6 +18,13 @@ windows:
         - vim
         - pwd
         - pwd
+  - ASP:
+      root: ~/git/esweeney/asp
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
   - EHCONSUMER:
       root: ~/git/esweeney/EhReceiver
       layout: main-vertical
