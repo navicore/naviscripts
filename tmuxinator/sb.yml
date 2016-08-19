@@ -4,15 +4,36 @@ name: starbucks
 root: ~/git/esweeney
 
 windows:
-  - SBITS-POS:
-      root: ~/git/esweeney/sbits-pos
+  - TPLANARCHIVER:
+      root: ~/git/esweeney/TplanArchiver
       layout: main-vertical
       panes:
         - vim
         - pwd
         - pwd
-  - OTHER:
-      root: ~/git/esweeney
+  - EVENTPROCESSOR:
+      root: ~/git/esweeney/EventProcessor
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
+  - ASP:
+      root: ~/git/esweeney/asp
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
+  - EHCONSUMER:
+      root: ~/git/esweeney/EhReceiver
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
+  - DEVOPS:
+      root: ~/git/bits/devops
       layout: main-vertical
       panes:
         - vim
