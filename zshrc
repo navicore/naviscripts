@@ -84,3 +84,4 @@ antigen apply
 export PATH=$PATH:/usr/local/aws/bin
 source /usr/local/aws/bin/aws_zsh_completer.sh
 
+export PATH="/usr/local/sbin:$PATH"
