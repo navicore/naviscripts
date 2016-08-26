@@ -24,6 +24,7 @@ alias mergeupstream='git merge upstream/master'
 ulimit -n 4096
 
 if [[ $platform == 'linux' ]]; then
+  source /usr/local/bin/aws_zsh_completer.sh
   alias dockerrm='sudo docker rm $(sudo docker ps -a -q)'
   alias dockerstop='sudo docker stop $(sudo docker ps -a -q)'
   alias dockerkill='sudo docker kill $(sudo docker ps -a -q)'
@@ -37,6 +38,8 @@ if [[ $platform == 'linux' ]]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 elif [[ $platform == 'osx' ]]; then
+  export PATH=$PATH:/usr/local/aws/bin
+  source /usr/local/aws/bin/aws_zsh_completer.sh
   alias dockerrm='docker rm $(docker ps -a -q)'
   alias dockerstop='docker stop $(docker ps -a -q)'
   alias dockerkill='docker kill $(docker ps -a -q)'
@@ -80,8 +83,5 @@ antigen theme robbyrussell/oh-my-zsh themes/kolo
 
 # Tell antigen that you're done.
 antigen apply
-
-export PATH=$PATH:/usr/local/aws/bin
-source /usr/local/aws/bin/aws_zsh_completer.sh
 
 export PATH="/usr/local/sbin:$PATH"
