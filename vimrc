@@ -46,7 +46,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-scripts/vis'
+Plugin 'navicore/vis.vim'
+Plugin 'navicore/vissort.vim'
 Plugin 'wannesm/wmgraphviz.vim'
 
 filetype plugin indent on     " required!
