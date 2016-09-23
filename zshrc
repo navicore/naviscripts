@@ -57,11 +57,8 @@ antigen apply
 export PATH="/usr/local/sbin:$PATH"
 
 if [[ $platform == 'linux' ]]; then
-  source /usr/local/bin/aws_zsh_completer.sh
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
 elif [[ $platform == 'osx' ]]; then
-  export PATH=/usr/local/aws/bin:$PATH
-  source /usr/local/aws/bin/aws_zsh_completer.sh
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   export JAVA_HOME="$(/usr/libexec/java_home)"
