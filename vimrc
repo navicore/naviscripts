@@ -1,4 +1,5 @@
 " git clone git@github.com:zsh-users/antigen.git .antigen/git/
+" pip install websocket-client sexpdata
 " apt-get install build-essential python-dev cmake zsh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " npm install -g eslint babel-eslint eslint-plugin-react jslint eslint-config-airbnb
@@ -22,17 +23,15 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'Chiel92/vim-autoformat'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'ensime/ensime-vim'
 Plugin 'ervandew/screen'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
@@ -202,4 +201,7 @@ if has("persistent_undo")
 endif
 
 nnoremap <F6> :UndotreeToggle<cr>
+
+autocmd BufWritePost *.scala silent :EnTypeCheck
+nnoremap <localleader>t :EnTypeCheck<CR>
 
