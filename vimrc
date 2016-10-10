@@ -24,10 +24,9 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-sbt'
 Plugin 'diepm/vim-rest-console'
-Plugin 'ensime/ensime-vim'
 Plugin 'ervandew/screen'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
@@ -202,6 +201,5 @@ endif
 
 nnoremap <F6> :UndotreeToggle<cr>
 
-autocmd BufWritePost *.scala silent :EnTypeCheck
-nnoremap <localleader>t :EnTypeCheck<CR>
+au BufRead,BufNewFile *.sbt set filetype=sbt
 
