@@ -38,6 +38,8 @@ source ~/.antigen/git/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle docker
+antigen bundle terraform
 antigen bundle tmux
 antigen bundle brew
 antigen bundle git
