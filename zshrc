@@ -48,6 +48,7 @@ antigen bundle vi-mode
 antigen bundle command-not-found
 antigen bundle lukechilds/zsh-nvm
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
 
 # Load the theme.
 #antigen theme robbyrussell
