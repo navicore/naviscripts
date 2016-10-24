@@ -65,6 +65,7 @@ elif [[ $platform == 'osx' ]]; then
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   export JAVA_HOME="$(/usr/libexec/java_home)"
+  export PATH="$PATH:/usr/local/texlive/2016/bin/x86_64-darwin"
 fi 
 
 if [ -f ~/.zshrc_local ]; then
