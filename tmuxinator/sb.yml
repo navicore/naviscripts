@@ -1,39 +1,18 @@
 # ~/.tmuxinator/sb.yml
 
 name: starbucks
-root: ~/git/esweeney
+root: ~/git/sbbits
 
 windows:
-  - IPLANARCHIVER:
-      root: ~/git/bits/IplanArchiver
-      layout: main-vertical
-      panes:
-        - vim
-        - pwd
-        - pwd
-  - EVENTPROCESSOR:
-      root: ~/git/esweeney/EventProcessor
-      layout: main-vertical
-      panes:
-        - vim
-        - pwd
-        - pwd
-  - API:
-      root: ~/git/esweeney/espresso-api
-      layout: main-vertical
-      panes:
-        - vim
-        - pwd
-        - pwd
   - ASP:
-      root: ~/git/esweeney/asp
+      root: ~/git/sbbits/asp
       layout: main-vertical
       panes:
         - vim
         - pwd
         - pwd
   - EHCONSUMER:
-      root: ~/git/esweeney/EhReceiver
+      root: ~/git/sbbits/EhReceiver
       layout: main-vertical
       panes:
         - vim
