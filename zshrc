@@ -72,3 +72,5 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
+export ZADDR='zc8hjmTLhaAAYqMiJ2QhhuU4DFZeKRnQRKEFC39hCyA3VJhxDBC1ziXpMV2n78cysgtUGedK71j68zuXhyV5Apyd6CKwTNf'
+
