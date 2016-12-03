@@ -36,4 +36,5 @@ cp ./irbrc ~/.irbrc
 cp ./guile ~/.guile
 mkdir -p ~/.ssh
 cp ./ssh/config ~/.ssh/
+cp ./haskeline ~/.haskeline
 
