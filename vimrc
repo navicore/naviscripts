@@ -6,6 +6,12 @@
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
+" build ~/.vim/bundle/vimproc.vim with: make
+" brew install haskell-stack
+" stack setup
+" stack install hlint
+" stack --no-system-ghc --install-ghc build ghc-mod
+" stack --no-system-ghc --install-ghc install ghc-mod
 
 syntax on
 
@@ -23,10 +29,13 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'derekwyatt/vim-sbt'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
+Plugin 'eagletmt/ghcmod-vim.git'
+Plugin 'eagletmt/neco-ghc'
 Plugin 'ervandew/screen'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
@@ -56,6 +65,8 @@ set completeopt-=preview
 
 "turn off pandoc folding
 let g:pandoc#modules#disabled = ["folding"]
+
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_jslint_args = ['--edition=es6']

@@ -57,7 +57,7 @@ antigen theme robbyrussell/oh-my-zsh themes/kolo
 # Tell antigen that you're done.
 antigen apply
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
 
 if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
