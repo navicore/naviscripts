@@ -9,6 +9,7 @@ cd "$(dirname "$0")"
 ####################################################################
 
 mkdir -p ~/bin/
+cp ./bin/* ~/bin/
 cp ./tern-config ~/.tern-config
 cp ./nvmrc ~/.nvmrc
 mkdir -p ~/.vim

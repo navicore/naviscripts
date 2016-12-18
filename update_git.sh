@@ -34,3 +34,6 @@ cp ~/.irbrc ./irbrc
 cp ~/.guile ./guile
 cp ~/.haskeline ./haskeline
 
+mkdir -p ./bin
+cp ~/bin/* ./bin/
+
