@@ -31,9 +31,6 @@ export GIT_EDITOR="vim -f"
 
 setopt APPEND_HISTORY
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-
 source ~/.antigen/git/antigen.zsh
 antigen use oh-my-zsh
 
