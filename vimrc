@@ -2,7 +2,7 @@
 " pip install websocket-client sexpdata
 " apt-get install build-essential python-dev cmake zsh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" npm install -g eslint babel-eslint eslint-plugin-react jslint eslint-config-airbnb
+" npm install standard --global
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
@@ -68,8 +68,9 @@ let g:pandoc#modules#disabled = ["folding"]
 
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_jslint_args = ['--edition=es6']
+let g:syntastic_javascript_checkers = ['standard']
+autocmd bufwritepost *.js silent !standard --fix %
+set autoread
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
 
