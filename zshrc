@@ -35,17 +35,18 @@ source ~/.antigen/git/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle docker
-antigen bundle terraform
-antigen bundle tmux
 antigen bundle brew
+antigen bundle command-not-found
+antigen bundle docker
 antigen bundle git
 antigen bundle git-flow
-antigen bundle vi-mode
-antigen bundle command-not-found
+antigen bundle kubectl
 antigen bundle lukechilds/zsh-nvm
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
+antigen bundle terraform
+antigen bundle tmux
+antigen bundle vi-mode
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 #antigen theme robbyrussell
