@@ -44,7 +44,6 @@ antigen bundle kubectl
 antigen bundle lukechilds/zsh-nvm
 antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
 antigen bundle terraform
-antigen bundle tmux
 antigen bundle vi-mode
 antigen bundle zsh-users/zsh-syntax-highlighting
 
@@ -69,6 +68,4 @@ fi
 if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
-
-export ZADDR='zc8hjmTLhaAAYqMiJ2QhhuU4DFZeKRnQRKEFC39hCyA3VJhxDBC1ziXpMV2n78cysgtUGedK71j68zuXhyV5Apyd6CKwTNf'
 
