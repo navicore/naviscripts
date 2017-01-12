@@ -117,8 +117,6 @@ let g:ScreenImpl = 'Tmux'
 
 nmap <F4> :w<CR>:make<CR>:copen<CR>
 
-map <C-F12> :!ctags -R -f ./.git/tags .<CR>
-
 if has('gui_running')
   set background=dark
 else
@@ -156,7 +154,10 @@ set complete=.,w,b,u,t,i
 "golang
 let g:go_fmt_command = "goimports"
 
-set tags=./tags;,tags;
+"map <F12> :!ctags -R -f ./.git/tags .<CR>
+map <F12> :!ctags -R -f ./.tags .<CR>
+
+set tags=./.tags;,.tags;
 
 set spell
 set spelllang=en_us
