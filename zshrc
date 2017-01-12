@@ -15,6 +15,8 @@ set -o vi
 PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
+alias mytags='ctags -R -f ./.git/tags .'
+
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerstop='docker stop $(docker ps -a -q)'
 alias dockerkill='docker kill $(docker ps -a -q)'

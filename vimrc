@@ -1,17 +1,28 @@
+" --------- OSX ---------
+" brew install haskell-stack
+" brew install the_silver_searcher
+" brew install ctags-exuberant
+" --------- LNX --------- (debian-based)
+" curl -sSL https://get.haskellstack.org/ | sh
+" sudo apt install exuberant-ctags
+" sudo apt install silversearcher-ag
+" apt install build-essential python-dev cmake zsh
+" --------- ALL ---------
+" curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 " git clone git@github.com:zsh-users/antigen.git .antigen/git/
 " pip install websocket-client sexpdata
-" apt-get install build-essential python-dev cmake zsh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " npm install standard --global
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
 " build ~/.vim/bundle/vimproc.vim with: make
-" brew install haskell-stack
 " stack setup
 " stack install hlint
 " stack --no-system-ghc --install-ghc build ghc-mod
 " stack --no-system-ghc --install-ghc install ghc-mod
+
+" in each proj: ctags -R -f ./.git/tags .
 
 syntax on
 
@@ -29,6 +40,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-sbt'
@@ -105,6 +117,8 @@ let g:ScreenImpl = 'Tmux'
 
 nmap <F4> :w<CR>:make<CR>:copen<CR>
 
+map <C-F12> :!ctags -R -f ./.git/tags .<CR>
+
 if has('gui_running')
   set background=dark
 else
@@ -142,7 +156,7 @@ set complete=.,w,b,u,t,i
 "golang
 let g:go_fmt_command = "goimports"
 
-set tags=.tags
+set tags=./tags;,tags;
 
 set spell
 set spelllang=en_us
@@ -150,6 +164,9 @@ set spelllang=en_us
 "hit enter after search to remove highlights
 set hlsearch
 nnoremap <CR> :nohlsearch<CR><CR>
+
+" search project for word under *
+nnoremap <Leader>* :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "let g:gist_show_privates = 1
 
@@ -214,4 +231,16 @@ endif
 nnoremap <F6> :UndotreeToggle<cr>
 
 au BufRead,BufNewFile *.sbt set filetype=sbt
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
