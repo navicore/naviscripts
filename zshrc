@@ -8,6 +8,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
 fi
 
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
+
 ulimit -n 4096
 BLOCKSIZE=K;	export BLOCKSIZE
 VISUAL=vi;    export VISUAL
@@ -33,6 +35,8 @@ export GIT_EDITOR="vim -f"
 
 setopt APPEND_HISTORY
 
+autoload bashcompinit
+bashcompinit
 source ~/.antigen/git/antigen.zsh
 antigen use oh-my-zsh
 
@@ -55,8 +59,6 @@ antigen theme robbyrussell/oh-my-zsh themes/kolo
 
 # Tell antigen that you're done.
 antigen apply
-
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
 
 if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
