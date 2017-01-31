@@ -19,6 +19,11 @@ EDITOR=vim; export EDITOR
 
 alias mytags='ctags -R -f ./.git/tags .'
 
+alias acs-engine='docker run -v `pwd`:/files -it navicore/acs-engine'
+alias az='docker run --entrypoint /usr/local/bin/az -v `echo $HOME/.azure`:/root/.azure -v `pwd`:/files -it navicore/acs-engine'
+#bug! the above 2 commands work but not the kubectl below ?????????? zsh never starts
+#alias kubectl='docker run --entrypoint /usr/local/bin/kubectl -v `echo $HOME/.kube`:/root/.kube -v `pwd`:/files -it navicore/acs-engine'
+
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerstop='docker stop $(docker ps -a -q)'
 alias dockerkill='docker kill $(docker ps -a -q)'
