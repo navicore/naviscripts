@@ -1,4 +1,5 @@
 " --------- OSX ---------
+" brew install olafurpg/scalafmt/scalafmt
 " brew install haskell-stack
 " brew install the_silver_searcher
 " brew install ctags-exuberant
@@ -40,6 +41,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'aklt/plantuml-syntax'
@@ -246,4 +248,9 @@ endif
 
 "plantuml
 autocmd BufWritePost,FileWritePost *.uml :silent make
+
+"autofmt scala
+noremap <F3> :Autoformat<CR>
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
 
