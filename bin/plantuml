@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-java -jar $HOME/bin/plantuml-8054-SNAPSHOT.jar $@
+java -jar $HOME/bin/plantuml-8058-SNAPSHOT.jar $@
 

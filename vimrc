@@ -82,7 +82,7 @@ let g:pandoc#modules#disabled = ["folding"]
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 let g:syntastic_javascript_checkers = ['standard']
-autocmd bufwritepost *.js silent !standard --fix %
+"autocmd bufwritepost *.js silent !standard --fix %
 set autoread
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}

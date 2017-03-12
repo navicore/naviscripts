@@ -1,25 +1,25 @@
 # ~/.tmuxinator/sb.yml
 
 name: starbucks
-root: ~/git/sbbits
+root: ~
 
 windows:
-  - ASP:
-      root: ~/git/sbbits/asp
-      layout: main-vertical
-      panes:
-        - vim
-        - pwd
-        - pwd
-  - EHCONSUMER:
-      root: ~/git/sbbits/EhReceiver
+  - K8S:
+      root: ~/.kube
       layout: main-vertical
       panes:
         - vim
         - pwd
         - pwd
   - DEVOPS:
-      root: ~/git/bits/devops
+      root: ~/git/sbbits/devops
+      layout: main-vertical
+      panes:
+        - vim
+        - pwd
+        - pwd
+  - microbits:
+      root: ~/git/navicore/microbits
       layout: main-vertical
       panes:
         - vim
