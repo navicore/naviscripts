@@ -76,6 +76,11 @@ filetype plugin indent on     " required!
 
 set completeopt-=preview
 
+"dot / graphiz
+let g:WMGraphviz_dot = 'dot'
+let g:WMGraphviz_output = 'png'
+let g:WMGraphviz_viewer = 'open'
+
 "turn off pandoc folding
 let g:pandoc#modules#disabled = ["folding"]
 

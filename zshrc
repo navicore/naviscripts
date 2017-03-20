@@ -19,7 +19,7 @@ EDITOR=vim; export EDITOR
 
 alias mytags='ctags -R -f ./.git/tags .'
 
-alias acs-engine='docker run -v `pwd`:/files -it navicore/acs-engine'
+alias acs-engine='docker run -v `pwd`:/files -it navicore/acs-engine:03162017'
 # no tab-complete for az this way
 #alias az='docker run --entrypoint /usr/local/bin/az -v `echo $HOME`:/root -v `pwd`:/files -it navicore/acs-engine'
 #bug! the above 2 commands work but not the kubectl below ?????????? zsh never starts
