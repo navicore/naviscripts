@@ -47,15 +47,14 @@ source ~/.antigen/git/antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle yarn
 antigen bundle brew
 antigen bundle command-not-found
 antigen bundle docker
 antigen bundle git
-antigen bundle git-flow
 antigen bundle kubectl
 antigen bundle lukechilds/zsh-nvm
 antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
-antigen bundle terraform
 antigen bundle vi-mode
 antigen bundle zsh-users/zsh-syntax-highlighting
 

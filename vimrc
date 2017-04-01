@@ -71,6 +71,10 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'wannesm/wmgraphviz.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
+
+let NERDTreeShowHidden=1
 
 filetype plugin indent on     " required!
 
