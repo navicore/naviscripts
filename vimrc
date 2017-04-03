@@ -9,6 +9,7 @@
 " sudo apt install silversearcher-ag
 " apt install build-essential python-dev cmake zsh
 " --------- ALL ---------
+" npm install -g eslint
 " curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 " git clone git@github.com:zsh-users/antigen.git .antigen/git/
 " pip install websocket-client sexpdata
