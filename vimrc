@@ -13,7 +13,6 @@
 " git clone git@github.com:zsh-users/antigen.git .antigen/git/
 " pip install websocket-client sexpdata
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" npm install standard --global
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
@@ -72,7 +71,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'flowtype/vim-flow.git'
 
 let NERDTreeShowHidden=1
 
@@ -90,8 +91,13 @@ let g:pandoc#modules#disabled = ["folding"]
 
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
-let g:syntastic_javascript_checkers = ['standard']
-"autocmd bufwritepost *.js silent !standard --fix %
+let g:syntastic_javascript_eslint_exe = 'node_modules/.bin/eslint'
+let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:flow#autoclose=1
+let g:flow#flowpath='node_modules/.bin/flow'
+let g:eslint#autoclose=1
+let g:eslint#eslintpath='node_modules/.bin/eslint'
+
 set autoread
 
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes':['go']}
