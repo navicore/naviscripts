@@ -493,6 +493,8 @@
 	<integer>0</integer>
 	<key>HotkeyCode</key>
 	<integer>0</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>0</integer>
 	<key>IRMemory</key>
@@ -552,21 +554,29 @@
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
 	<string>974 932 616 174 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>1402 1227 384 129 0 0 2560 1417 </string>
+	<string>1375 1272 400 129 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>972 768 620 392 0 0 2560 1417 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>1035 492 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1815 447 570 452 0 0 2560 1417 </string>
+	<string>1327 535 570 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1433 351 570 452 0 0 2560 1417 </string>
+	<string>594 844 570 452 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1803 198 570 452 0 0 2560 1417 </string>
+	<string>1422 241 570 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1912 139 570 452 0 0 2560 1417 </string>
+	<string>1867 715 570 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1383 828 570 452 0 0 2560 1417 </string>
+	<string>1565 161 570 452 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>1663 455 570 452 0 0 2560 1417 </string>
+	<string>830 466 570 452 0 0 2560 1440 </string>
+	<key>NSWindow Frame iTerm Window 6</key>
+	<string>1707 824 570 452 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>637 846 570 452 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1369,7 +1379,7 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUAutomaticallyUpdate</key>
-	<true/>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1379,7 +1389,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-10T14:59:18Z</date>
+	<date>2017-06-27T19:59:27Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1427,6 +1437,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.1.beta.5</string>
 </dict>
 </plist>
