@@ -41,6 +41,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'hashivim/vim-terraform'
 Plugin 'fleischie/vim-styled-components'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'Shougo/vimproc.vim.git'
