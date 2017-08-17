@@ -78,3 +78,6 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
+# fix ^M issue in sbt interactive mode
+stty icrnl
+
