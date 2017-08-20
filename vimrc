@@ -203,8 +203,12 @@ noremap <F3> :Autoformat<CR>
 let g:formatdef_scalafmt = '"scalafmt --stdin 2>/dev/null"'
 let g:formatters_scala = ['scalafmt']
 
+" can't turn this on until scalafmt respects akka http dsl
 " augroup fmt
 "   autocmd!
 "   autocmd BufWritePre * undojoin | Neoformat
 " augroup END
-"
+
+" in anticipation of the idiotic removal of the esc key from apple hardware
+"inoremap <silent> jj <C-c>:stopinsert<cr>l
+
