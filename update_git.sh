@@ -14,14 +14,12 @@ cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.eslintrc.yml ./eslintrc.yml
 cp ~/.vimrc ./vimrc
 #cp ~/.eslintrc ./eslintrc
-cp ~/.bashrc ./bashrc
 cp ~/.zshrc ./zshrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.tmuxinator/*.yml ./tmuxinator/ && git add ./tmuxinator/*.yml
 cp ~/.tmuxinator.bash ./tmuxinator.bash
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile
-cp ~/.profile ./profile
 cp ~/.gvimrc ./gvimrc
 
 cp ~/.ctags ./ctags
