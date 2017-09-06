@@ -17,7 +17,6 @@ cp ./scripts.vim ~/.vim/scripts.vim
 cp ./eslintrc.yml ~/.eslintrc.yml
 cp ./vimrc ~/.vimrc
 #cp ./eslintrc ~/.eslintrc
-cp ./bashrc ~/.bashrc
 cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 mkdir -p ~/.tmuxinator
@@ -25,7 +24,6 @@ cp ./tmuxinator/*.yml ~/.tmuxinator/
 cp ./tmuxinator.bash ~/.tmuxinator.bash
 cp ./inputrc ~/.inputrc
 cp ./Rprofile ~/.Rprofile
-cp ./profile ~/.profile
 cp ./gvimrc ~/.gvimrc
 #note, if you add more langs, do a rm ~/.ctags and cat or echo each file
 cp ./ctags ~/.ctags
