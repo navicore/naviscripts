@@ -38,6 +38,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'ensime/ensime-vim'
 Plugin 'google/vim-jsonnet'
 Plugin 'fleischie/vim-styled-components'
 Plugin 'Chiel92/vim-autoformat'
