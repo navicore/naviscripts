@@ -156,10 +156,8 @@ if has('gui_running')
   set background=dark
   colorscheme flattened_dark
 else
-  "set background=light
-  "colorscheme flattened_light
-  set background=dark
-  colorscheme flattened_dark
+  set background=light
+  colorscheme flattened_light
 endif
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
