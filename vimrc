@@ -1,26 +1,15 @@
 " --------- OSX ---------
 " brew install olafurpg/scalafmt/scalafmt
-" brew install haskell-stack
-" brew install ctags-exuberant
 " --------- LNX --------- (debian-based)
-" curl -sSL https://get.haskellstack.org/ | sh
-" sudo apt install exuberant-ctags
 " apt install build-essential python-dev cmake zsh
 " --------- ALL ---------
-" brew install yarn
-" yarn global add prettier eslint
+" install https://github.com/romainl/flattened
 " git clone git@github.com:zsh-users/antigen.git .antigen/git/
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
 " build ~/.vim/bundle/vimproc.vim with: make
-" stack setup
-" stack install hlint
-" stack --no-system-ghc --install-ghc build ghc-mod
-" stack --no-system-ghc --install-ghc install ghc-mod
-
-" in each proj: ctags -R -f ./.git/tags .
 
 syntax on
 
@@ -56,7 +45,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'scrooloose/nerdtree'
@@ -102,29 +90,14 @@ let g:ScreenImpl = 'Tmux'
 
 nmap <F4> :w<CR>:make<CR>:copen<CR>
 
-if has('gui_running')
-  set background=dark
-else
-  "set background=light
-  set background=dark
-endif
-colorscheme gruvbox
-map <F5> :call ToggleBg()<CR>
-function! ToggleBg()
-  if &background == 'dark'
-    set bg=light
-  else
-    set bg=dark
-  endif
-endfunc
-"set nu
+colorscheme flattened_dark
+"colorscheme flattened_light
 
 function SetIDEOptions()
   if isdirectory('.git')
     "CtrlP
     NERDTree
     "Tagbar
-    "set bg=light
   endif
 endfunction
 
