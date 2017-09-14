@@ -74,8 +74,6 @@ let g:WMGraphviz_dot = 'dot'
 let g:WMGraphviz_output = 'png'
 let g:WMGraphviz_viewer = 'open'
 
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-
 let g:flow#autoclose=1
 let g:flow#flowpath='node_modules/.bin/flow'
 let g:eslint#autoclose=1
@@ -89,9 +87,6 @@ set statusline+=%*
 let g:ScreenImpl = 'Tmux'
 
 nmap <F4> :w<CR>:make<CR>:copen<CR>
-
-colorscheme flattened_dark
-"colorscheme flattened_light
 
 function SetIDEOptions()
   if isdirectory('.git')
@@ -123,8 +118,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-let g:solarized_termcolors=256
-
 set colorcolumn=81
 
 set listchars=tab:>~,nbsp:_,trail:.
@@ -140,18 +133,6 @@ nmap <C-j> ddp
 vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
-" ********************* "
-"     begin macros      "
-" ********************* "
-
-"quote words
-nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
-nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
-
-" ******************* "
-"     end macros      "
-" ******************* "
-
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 
 set clipboard=unnamed
@@ -165,12 +146,32 @@ if has("persistent_undo")
     set undofile
 endif
 
-nnoremap <F6> :UndotreeToggle<cr>
-
 au BufRead,BufNewFile *.sbt set filetype=sbt
 
 "plantuml
 autocmd BufWritePost,FileWritePost *.uml :silent make
+
+" START color toggle
+if has('gui_running')
+  set background=dark
+  colorscheme flattened_dark
+else
+  "set background=light
+  "colorscheme flattened_light
+  set background=dark
+  colorscheme flattened_dark
+endif
+map <F5> :call ToggleBg()<CR>
+function! ToggleBg()
+  if &background == 'dark'
+    set bg=light
+    colorscheme flattened_light
+  else
+    set bg=dark
+    colorscheme flattened_dark
+  endif
+endfunc
+" END color toggle
 
 "autofmt scala
 noremap <F3> :Autoformat<CR>
