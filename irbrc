@@ -1,2 +1,0 @@
-require 'interactive_editor'
-
