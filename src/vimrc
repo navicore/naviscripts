@@ -1,5 +1,5 @@
 " --------- OSX ---------
-" brew install olafurpg/scalafmt/scalafmt
+" brew install --HEAD olafurpg/scalafmt/scalafmt
 " brew install reattach-to-user-namespace
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
@@ -28,22 +28,19 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'itchyny/lightline.vim'
 Plugin 'ensime/ensime-vim'
 Plugin 'google/vim-jsonnet'
 Plugin 'fleischie/vim-styled-components'
-Plugin 'Chiel92/vim-autoformat'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
-Plugin 'eagletmt/ghcmod-vim.git'
-Plugin 'eagletmt/neco-ghc'
 Plugin 'ervandew/screen'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
@@ -59,14 +56,9 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'w0rp/ale'
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/yajs.vim'
-Plugin 'maxmellon/vim-jsx-pretty'
-
 Plugin 'sbdchd/neoformat'
 
-autocmd BufWritePre *.js Neoformat
+"autocmd BufWritePre *.js Neoformat
 
 let NERDTreeShowHidden=1
 
