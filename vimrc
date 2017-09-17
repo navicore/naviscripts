@@ -1,5 +1,6 @@
 " --------- OSX ---------
 " brew install olafurpg/scalafmt/scalafmt
+" brew install reattach-to-user-namespace
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
 " --------- ALL ---------
