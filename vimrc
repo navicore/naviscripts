@@ -27,6 +27,9 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
 Plugin 'ensime/ensime-vim'
 Plugin 'google/vim-jsonnet'
