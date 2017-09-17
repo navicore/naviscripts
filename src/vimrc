@@ -5,7 +5,7 @@
 " apt install build-essential python-dev cmake zsh
 " --------- ALL ---------
 " install https://github.com/romainl/flattened
-" git clone git@github.com:zsh-users/antigen.git .antigen/git/
+" mkdir .antigen && curl -L git.io/antigen > .antigen/antigen.zsh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
