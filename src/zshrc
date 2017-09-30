@@ -39,9 +39,7 @@ bashcompinit
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
 if [[ $platform == 'linux' ]]; then
-  echo "linux antigen setup"
   source <(kubectl completion bash)
 elif [[ $platform == 'osx' ]]; then
   antigen bundle brew
