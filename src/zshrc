@@ -40,11 +40,12 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 if [[ $platform == 'linux' ]]; then
-  echo "still trying to kubectl zc on linux"
-  #source <(kubectl completion zsh)
+  antigen theme robbyrussell # can't get kolo to work on alpine
+  source <(kubectl completion zsh)
 elif [[ $platform == 'osx' ]]; then
   antigen bundle brew
   source <(kubectl completion zsh)
+  antigen theme kolo
 fi 
 
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -53,11 +54,6 @@ antigen bundle caarlos0/git-add-remote
 antigen bundle git
 antigen bundle vi-mode
 antigen bundle docker
-
-# Load the theme.
-antigen theme robbyrussell
-#antigen theme kolo
-#antigen theme robbyrussell/oh-my-zsh themes/kolo
 
 # Tell antigen that you're done.
 antigen apply
