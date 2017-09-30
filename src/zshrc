@@ -53,13 +53,13 @@ if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'osx' ]]; then
   echo "osx antigen setup"
   antigen bundle brew
-  antigen bundle git
-  antigen bundle kubectl
   antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
-  antigen bundle zsh-users/zsh-syntax-highlighting
   antigen bundle caarlos0/git-add-remote
 fi 
 
+antigen bundle kubectl
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle git
 antigen bundle vi-mode
 antigen bundle docker
 
