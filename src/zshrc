@@ -60,7 +60,8 @@ antigen bundle caarlos0/git-add-remote
 antigen bundle git
 antigen bundle vi-mode
 antigen bundle docker
-antigen bundle kubectl
+
+source <(kubectl completion zsh)
 
 # Load the theme.
 #antigen theme robbyrussell
