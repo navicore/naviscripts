@@ -51,7 +51,6 @@ antigen use oh-my-zsh
 if [[ $platform == 'linux' ]]; then
   echo "linux antigen setup"
 elif [[ $platform == 'osx' ]]; then
-  antigen bundle kubectl
   antigen bundle brew
 fi 
 
@@ -61,6 +60,7 @@ antigen bundle caarlos0/git-add-remote
 antigen bundle git
 antigen bundle vi-mode
 antigen bundle docker
+antigen bundle kubectl
 
 # Load the theme.
 #antigen theme robbyrussell
