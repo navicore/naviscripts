@@ -40,7 +40,8 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 if [[ $platform == 'linux' ]]; then
-  source <(kubectl completion bash)
+  echo "still trying to kubectl zc on linux"
+  #source <(kubectl completion zsh)
 elif [[ $platform == 'osx' ]]; then
   antigen bundle brew
   source <(kubectl completion zsh)
@@ -75,7 +76,6 @@ fi
 
 # fix ^M issue in sbt interactive mode
 stty icrnl
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
