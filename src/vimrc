@@ -76,8 +76,8 @@ let g:WMGraphviz_viewer = 'open'
 
 let g:flow#autoclose=1
 let g:flow#flowpath='node_modules/.bin/flow'
-let g:eslint#autoclose=1
-let g:eslint#eslintpath='node_modules/.bin/eslint'
+"let g:eslint#autoclose=1
+"let g:eslint#eslintpath='node_modules/.bin/eslint'
 
 set autoread
 
