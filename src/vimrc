@@ -66,6 +66,9 @@ filetype plugin indent on     " required!
 
 set completeopt-=preview
 
+" ale airline text
+let g:airline#extensions#ale#enabled = 1
+
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
 let g:WMGraphviz_output = 'png'
