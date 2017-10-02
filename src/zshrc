@@ -40,12 +40,12 @@ source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
 if [[ $platform == 'linux' ]]; then
-  antigen theme robbyrussell # can't get kolo to work on alpine
+  antigen theme cloud
   source <(kubectl completion zsh)
 elif [[ $platform == 'osx' ]]; then
   antigen bundle brew
   source <(kubectl completion zsh)
-  antigen theme kolo
+  antigen theme cloud
 fi 
 
 antigen bundle zsh-users/zsh-syntax-highlighting
