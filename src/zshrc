@@ -81,7 +81,7 @@ export NVM_DIR="$HOME/.nvm"
 
 
 #
-# Custom Cloud Theme
+# Custom Cloud Theme with insane git prompt (really, I just want separate dirty and untracked indicators)
 #
 
 if [[ -z $ZSH_THEME_CLOUD_PREFIX ]]; then
@@ -93,11 +93,19 @@ if [[ $platform == 'linux' ]]; then
   PROMPT_PRE='%n@%m'
 fi
 
-PROMPT='${PROMPT_PRE}%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX %{$fg_bold[green]%}%p %{$fg[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)$(git_prompt_status)%{$fg_bold[blue]%}% %{$reset_color%}'
+source ~/tmp/zsh-git-prompt/zshrc.sh
+PROMPT='${PROMPT_PRE}%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX %{$fg[green]%}%p %{$fg[green]%}%c %{$fg[cyan]%}$(git_super_status)%{$fg_bold[blue]%}% %{$reset_color%}'
 
-DISABLE_UNTRACKED_FILES_DIRTY=true
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}%{$fg[yellow]%}⚡ ] %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}] "
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[cyan]%}] "
+
+ZSH_THEME_GIT_PROMPT_SEPARATOR=" "
+ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[red]%}%{●%G%}"
+ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{✖%G%}"
+ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[blue]%}%{✚%G%}"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{↓%G%}"
+ZSH_THEME_GIT_PROMPT_AHEAD="%{↑%G%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
 
