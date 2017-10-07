@@ -11,6 +11,7 @@
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
 " build ~/.vim/bundle/vimproc.vim with: make
+" git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 
 syntax on
 
