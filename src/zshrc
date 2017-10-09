@@ -110,3 +110,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 #ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+# see instructions at https://github.com/olivierverdier/zsh-git-prompt
+GIT_PROMPT_EXECUTABLE="haskell"
+
