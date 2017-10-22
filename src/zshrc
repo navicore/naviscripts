@@ -40,24 +40,15 @@ bashcompinit
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
 
-if [[ $platform == 'linux' ]]; then
-  antigen theme cloud
-  source <(kubectl completion zsh)
-elif [[ $platform == 'osx' ]]; then
-  antigen bundle brew
-  source <(kubectl completion zsh)
-  antigen theme cloud
-fi 
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle sbodiu-pivotal/fly-zsh-autocomplete-plugin
+antigen theme cloud
 antigen bundle caarlos0/git-add-remote
 antigen bundle git
 antigen bundle vi-mode
-antigen bundle docker
 
 # Tell antigen that you're done.
 antigen apply
+
+source <(kubectl completion zsh)
 
 if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
@@ -107,7 +98,6 @@ ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[gray]%}%{ ✚%G%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
-#ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # see instructions at https://github.com/olivierverdier/zsh-git-prompt
