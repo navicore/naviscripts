@@ -54,6 +54,7 @@ Plugin 'navicore/vissort.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
@@ -136,6 +137,12 @@ vmap <C-k> xkP`[V`]
 vmap <C-j> xp`[V`]
 
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
+let g:vrc_curl_opts = {
+  \ '--connect-timeout' : 5,
+  \ '--max-time': 60,
+  \ '--ipv4': '',
+  \ '-ks': '',
+\}
 
 set clipboard=unnamed
 
