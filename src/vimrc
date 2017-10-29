@@ -30,7 +30,6 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'Chiel92/vim-autoformat'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -61,8 +60,6 @@ Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'w0rp/ale'
 Plugin 'sbdchd/neoformat'
 
-"autocmd BufWritePre *.js Neoformat
-
 let NERDTreeShowHidden=1
 
 filetype plugin indent on     " required!
@@ -76,11 +73,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:WMGraphviz_dot = 'dot'
 let g:WMGraphviz_output = 'png'
 let g:WMGraphviz_viewer = 'open'
-
-let g:flow#autoclose=1
-let g:flow#flowpath='node_modules/.bin/flow'
-"let g:eslint#autoclose=1
-"let g:eslint#eslintpath='node_modules/.bin/eslint'
 
 set autoread
 
@@ -180,17 +172,28 @@ function! ToggleBg()
 endfunc
 " END color toggle
 
-"autofmt scala
 noremap <F3> :Autoformat<CR>
-let g:formatdef_scalafmt = '"scalafmt --stdin 2>/dev/null"'
-let g:formatters_scala = ['scalafmt']
 
-" can't turn this on until scalafmt respects akka http dsl
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre * undojoin | Neoformat
-" augroup END
+let g:neoformat_scala_scalafmt = {
+      \ 'exe': 'scalafmt',
+      \ 'args': ['--stdin', '2>/dev/null'],
+      \ 'replace': 0,
+      \ 'stdin': 1,
+      \ 'no_append': 1,
+      \ }
+let g:neoformat_enabled_scala = ['scalafmt']
 
-" in anticipation of the idiotic removal of the esc key from apple hardware
-"inoremap <silent> jj <C-c>:stopinsert<cr>l
+let g:neoformat_java_google = {
+      \ 'exe': 'java',
+      \ 'args': ['-jar', '~/bin/google-java-format-1.5-all-deps.jar', '-'],
+      \ 'replace': 0,
+      \ 'stdin': 1,
+      \ 'no_append': 1,
+      \ }
+let g:neoformat_enabled_java = ['google']
+
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
