@@ -48,7 +48,7 @@ antigen bundle vi-mode
 # Tell antigen that you're done.
 antigen apply
 
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)
 
 if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
