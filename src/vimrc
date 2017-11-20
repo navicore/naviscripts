@@ -153,13 +153,8 @@ au BufRead,BufNewFile *.sbt set filetype=sbt
 autocmd BufWritePost,FileWritePost *.uml :silent make
 
 " START color toggle
-if has('gui_running')
-  set background=dark
-  colorscheme flattened_dark
-else
-  set background=light
-  colorscheme flattened_light
-endif
+set background=dark
+colorscheme flattened_dark
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
   if &background == 'dark'
