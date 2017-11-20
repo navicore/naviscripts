@@ -192,10 +192,10 @@ let g:neoformat_java_google = {
       \ }
 let g:neoformat_enabled_java = ['google']
 
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre * undojoin | Neoformat
-" augroup END
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
 " unfortunately this only helps vim.  doesn't fix the bazillion other *nix
 " shells I use VI mode with :|   not happy with post '15 apple
