@@ -159,6 +159,7 @@ autocmd BufWritePost,FileWritePost *.uml :silent make
 " START color toggle
 set background=dark
 colorscheme flattened_dark
+
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
   if &background == 'dark'
@@ -203,8 +204,7 @@ inoremap jj <Esc>`^
 
 " START for devicons
 set encoding=utf8
-"set guifont=DroidSansMono_Nerd_Font:h11
-"set guifont=DroidSansMono\ Nerd\ Font:h11
+set guifont=DroidSansMono\ Nerd\ Font:h11
 let g:airline_powerline_fonts = 1
 set macligatures
 set guifont=Fira\ Code:h12
