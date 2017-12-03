@@ -14,6 +14,9 @@
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
 
+" nerd fonts
+" https://github.com/ryanoasis/nerd-fonts#option-3-install-script
+
 syntax on
 
 :set nu
@@ -59,6 +62,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'w0rp/ale'
 Plugin 'sbdchd/neoformat'
+Plugin 'ryanoasis/vim-devicons'
 
 let NERDTreeShowHidden=1
 
@@ -196,4 +200,14 @@ let g:neoformat_enabled_java = ['google']
 " unfortunately this only helps vim.  doesn't fix the bazillion other *nix
 " shells I use VI mode with :|   not happy with post '15 apple
 inoremap jj <Esc>`^
+
+" START for devicons
+set encoding=utf8
+"set guifont=DroidSansMono_Nerd_Font:h11
+"set guifont=DroidSansMono\ Nerd\ Font:h11
+let g:airline_powerline_fonts = 1
+set macligatures
+set guifont=Fira\ Code:h12
+
+" END for devicons
 

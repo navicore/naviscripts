@@ -8,6 +8,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
 fi
 
+export LANG=en_US.UTF-8
+
 export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
 
 ulimit -n 4096
