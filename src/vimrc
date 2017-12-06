@@ -33,11 +33,9 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ensime/ensime-vim'
-Plugin 'google/vim-jsonnet'
 Plugin 'fleischie/vim-styled-components'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
@@ -55,8 +53,6 @@ Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
@@ -204,10 +200,9 @@ inoremap jj <Esc>`^
 
 " START for devicons
 set encoding=utf8
-set guifont=DroidSansMono\ Nerd\ Font:h11
+"set guifont=DroidSansMono\ Nerd\ Font:h11
 let g:airline_powerline_fonts = 1
-set macligatures
+"set macligatures
 set guifont=Fira\ Code:h12
-
 " END for devicons
 
