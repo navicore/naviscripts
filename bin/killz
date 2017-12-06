@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+antigen-reset () {
+	[[ -f "$ANTIGEN_CACHE" ]] && rm -f "$ANTIGEN_CACHE"
+	echo 'Done. Please open a new shell to see the changes.'
+}
+
+antigen-reset
+rm -f ~/.antigen/.zcom*
+
