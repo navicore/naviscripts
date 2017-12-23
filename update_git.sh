@@ -15,6 +15,7 @@ cp ~/.zshrc ./zshrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile
+cp ~/.config/nvim/init.vim ./init.vim
 
 mkdir -p ./bin
 cp ~/bin/* ./bin/
