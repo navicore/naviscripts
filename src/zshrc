@@ -109,4 +109,5 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
+alias iex='rlwrap -a foo iex'
 alias zfix='source $HOME/.zshrc_local'
