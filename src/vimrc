@@ -59,6 +59,8 @@ Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'w0rp/ale'
 Plugin 'sbdchd/neoformat'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'elixir-editors/vim-elixir'
 
 let NERDTreeShowHidden=1
 
