@@ -10,7 +10,8 @@ fi
 
 export LANG=en_US.UTF-8
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
+#export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
 
 ulimit -n 4096
 BLOCKSIZE=K;	export BLOCKSIZE
@@ -64,10 +65,6 @@ elif [[ $platform == 'osx' ]]; then
   export PATH="$PATH:/usr/local/texlive/2016/bin/x86_64-darwin"
 fi 
 
-if [ -f ~/.zshrc_local ]; then
-  . ~/.zshrc_local
-fi
-
 # fix ^M issue in sbt interactive mode
 stty icrnl
 
@@ -108,3 +105,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # see instructions at https://github.com/olivierverdier/zsh-git-prompt
 GIT_PROMPT_EXECUTABLE="haskell"
 
+if [ -f ~/.zshrc_local ]; then
+  . ~/.zshrc_local
+fi
+
+alias zfix='source $HOME/.zshrc_local'
