@@ -56,11 +56,15 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
-Plugin 'w0rp/ale'
 Plugin 'sbdchd/neoformat'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'w0rp/ale'
+
+let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
+let g:alchemist_tag_map = '<C-]>'
+let g:alchemist_tag_stack_map = '<C-T>'
 
 let NERDTreeShowHidden=1
 
