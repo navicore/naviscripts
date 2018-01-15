@@ -36,7 +36,6 @@ call vundle#rc()
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ensime/ensime-vim'
-Plugin 'fleischie/vim-styled-components'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'aklt/plantuml-syntax'
@@ -54,9 +53,7 @@ Plugin 'navicore/vissort.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
 Plugin 'wannesm/wmgraphviz.vim'
-Plugin 'sbdchd/neoformat'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'elixir-editors/vim-elixir'
@@ -175,30 +172,6 @@ endfunc
 " END color toggle
 
 noremap <F3> :Autoformat<CR>
-
-let g:neoformat_scala_scalafmt = {
-      \ 'exe': 'scalafmt',
-      \ 'args': ['--stdin', '2>/dev/null'],
-      \ 'replace': 0,
-      \ 'stdin': 1,
-      \ 'no_append': 1,
-      \ }
-let g:neoformat_enabled_scala = ['scalafmt']
-
-let g:neoformat_java_google = {
-      \ 'exe': 'java',
-      \ 'args': ['-jar', '~/bin/google-java-format-1.5-all-deps.jar', '-'],
-      \ 'replace': 0,
-      \ 'stdin': 1,
-      \ 'no_append': 1,
-      \ }
-let g:neoformat_enabled_java = ['google']
-
-" CAUSES MORE TROUBLE THAN IT IS WORTH
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre * undojoin | Neoformat
-" augroup END
 
 " unfortunately this only helps vim.  doesn't fix the bazillion other *nix
 " shells I use VI mode with :|   not happy with post '15 apple
