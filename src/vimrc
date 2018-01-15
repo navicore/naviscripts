@@ -171,8 +171,6 @@ function! ToggleBg()
 endfunc
 " END color toggle
 
-noremap <F3> :Autoformat<CR>
-
 " unfortunately this only helps vim.  doesn't fix the bazillion other *nix
 " shells I use VI mode with :|   not happy with post '15 apple
 inoremap jj <Esc>`^
