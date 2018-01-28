@@ -18,5 +18,6 @@ cp ~/.Rprofile ./Rprofile
 cp ~/.config/nvim/init.vim ./init.vim
 
 mkdir -p ./bin
-cp ~/bin/* ./bin/
+cp ~/bin/plant* ./bin/
+cp ~/bin/killz ./bin/
 

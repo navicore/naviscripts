@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-java -jar $HOME/bin/plantuml-1.2017.19-SNAPSHOT.jar $@
+java -jar $HOME/bin/plantuml-1.2018.1-SNAPSHOT.jar $@
 
