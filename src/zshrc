@@ -112,3 +112,6 @@ fi
 
 alias iexvi='rlwrap -a foo iex'
 alias fixz='source $HOME/.zshrc_local'
+
+export GOPATH=~/go
+
