@@ -31,6 +31,7 @@ alias dockerrmi='docker rmi $(docker images -q)'
 alias dockerrmif='docker rmi -f $(docker images -q)'
 alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias dockerdangle='docker rmi $(docker images -q --filter dangling=true)'
+alias dockerk8s='rm -f ~/.kube/config && cp ~/.kube/config_docker-for-desktop ~/.kube/config'
 
 alias fetchupstream='git fetch upstream'
 alias mergeupstream='git merge upstream/master'
