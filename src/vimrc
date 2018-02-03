@@ -119,8 +119,8 @@ map <C-l> <C-w>l
 
 set colorcolumn=81
 
-set listchars=tab:>~,nbsp:_,trail:.
-set list
+"set listchars=tab:>~,nbsp:_,trail:.
+"set list
 
 xnoremap . :normal .<CR>
 
@@ -184,6 +184,7 @@ let g:airline_powerline_fonts = 1
 set guifont=Fira\ Code:h12
 " END for devicons
 
+"golang stuff...
 let mapleader = ","
 " save when :make is called
 set autowrite
