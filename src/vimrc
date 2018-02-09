@@ -4,6 +4,7 @@
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
 " --------- ALL ---------
+" curl https://sh.rustup.rs -sSf | sh
 " install https://github.com/romainl/flattened
 " mkdir .antigen && curl -L git.io/antigen > .antigen/antigen.zsh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -59,6 +60,7 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'w0rp/ale'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
@@ -202,3 +204,6 @@ endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports"
+
+let g:rustfmt_autosave = 1
+
