@@ -86,6 +86,9 @@ fi
 PROMPT_PRE=''
 if [[ $platform == 'linux' ]]; then
   PROMPT_PRE='%n@%m'
+else
+  # see instructions at https://github.com/olivierverdier/zsh-git-prompt
+  GIT_PROMPT_EXECUTABLE="haskell"
 fi
 
 source ~/tmp/zsh-git-prompt/zshrc.sh
@@ -103,9 +106,6 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-
-# see instructions at https://github.com/olivierverdier/zsh-git-prompt
-GIT_PROMPT_EXECUTABLE="haskell"
 
 if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
