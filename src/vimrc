@@ -36,7 +36,7 @@ call vundle#rc()
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ensime/ensime-vim'
+"Plugin 'ensime/ensime-vim'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'aklt/plantuml-syntax'
