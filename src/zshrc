@@ -55,6 +55,7 @@ antigen bundle vi-mode
 
 # Tell antigen that you're done.
 antigen apply
+autoload -Uz compinit && compinit
 
 #source <(kubectl completion zsh)
 
