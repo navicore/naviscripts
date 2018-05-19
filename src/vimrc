@@ -61,6 +61,7 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'w0rp/ale'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
+Plugin 'christoomey/vim-tmux-navigator'
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
