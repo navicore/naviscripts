@@ -10,7 +10,8 @@
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
-" build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer
+" build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer
+" rustup component add rust-src
 " build ~/.vim/bundle/vimproc.vim with: make
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
