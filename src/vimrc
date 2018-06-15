@@ -13,6 +13,7 @@
 " build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer
 " rustup component add rust-src
 " build ~/.vim/bundle/vimproc.vim with: make
+" curl -sSL https://get.haskellstack.org/ | sh
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
 
