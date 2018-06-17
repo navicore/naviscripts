@@ -16,7 +16,8 @@
 " curl -sSL https://get.haskellstack.org/ | sh
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
-
+" sudo pip install flake8
+" sudo pip3 install flake8
 " nerd fonts
 " https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 
