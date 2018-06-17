@@ -51,6 +51,7 @@ antigen theme cloud
 antigen bundle caarlos0/git-add-remote
 antigen bundle git
 antigen bundle mix
+antigen bundle cargo
 antigen bundle vi-mode
 
 # Tell antigen that you're done.
