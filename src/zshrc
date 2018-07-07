@@ -24,6 +24,7 @@ alias sz='source ~/.zshrc'
 alias uvim='vim -u NONE'
 
 alias k='kubectl'
+alias kctx='kubectx'
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerstop='docker stop $(docker ps -a -q)'
 alias dockerkill='docker kill $(docker ps -a -q)'
