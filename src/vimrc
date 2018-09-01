@@ -6,7 +6,9 @@
 " --------- ALL ---------
 " curl https://sh.rustup.rs -sSf | sh
 " install https://github.com/romainl/flattened
-" mkdir .antigen && curl -L git.io/antigen > .antigen/antigen.zsh
+" install antibody:
+"   osx: brew install getantibody/tap/antibody
+"   linux: curl -sL git.io/antibody | sh -s
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
