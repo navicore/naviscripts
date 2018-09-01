@@ -15,6 +15,7 @@ mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./vimrc ~/.vimrc
 cp ./zshrc ~/.zshrc
+cp ./zsh_plugins.txt ~/.zsh_plugins.txt
 cp ./tmux.conf ~/.tmux.conf
 cp ./inputrc ~/.inputrc
 cp ./Rprofile ~/.Rprofile

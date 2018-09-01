@@ -1,0 +1,5 @@
+caarlos0/git-add-remote
+robbyrussell/oh-my-zsh folder:plugins/git
+robbyrussell/oh-my-zsh folder:plugins/mix
+robbyrussell/oh-my-zsh folder:plugins/cargo
+robbyrussell/oh-my-zsh folder:plugins/vi-mode
