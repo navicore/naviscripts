@@ -9,6 +9,9 @@
 " install antibody:
 "   osx: brew install getantibody/tap/antibody
 "   linux: curl -sL git.io/antibody | sh -s
+" then on all platforms:
+"   antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
+"   source ~/.zsh_plugins.sh
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
