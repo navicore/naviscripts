@@ -119,3 +119,6 @@ alias fixz='source $HOME/.zshrc_local'
 
 export GOPATH=~/go
 
+source ~/.zsh_plugins.sh
+
+
