@@ -40,6 +40,9 @@ alias mergeupstream='git merge upstream/master'
 export TERM="screen-256color"
 export GIT_EDITOR="vim -f"
 
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
 setopt APPEND_HISTORY
 
 if [[ $platform == 'linux' ]]; then
@@ -103,6 +106,7 @@ export GOPATH=~/go
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
 # zplug "plugins/git",   from:oh-my-zsh
 # zplug "plugins/mix",   from:oh-my-zsh
