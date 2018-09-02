@@ -12,7 +12,6 @@ cp ~/.tern-config ./tern-config
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
 cp ~/.zshrc ./zshrc
-cp ~/.zsh_plugins.txt ./zsh_plugins.txt
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile
