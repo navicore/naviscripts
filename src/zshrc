@@ -119,6 +119,23 @@ alias fixz='source $HOME/.zshrc_local'
 
 export GOPATH=~/go
 
-source ~/.zsh_plugins.sh
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
+zplug "caarlos0/git-add-remote"
+# zplug "plugins/git",   from:oh-my-zsh
+# zplug "plugins/mix",   from:oh-my-zsh
+zplug "plugins/cargo",   from:oh-my-zsh
+zplug "plugins/vi-mode",   from:oh-my-zsh
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+eval "$(register-python-argcomplete az)"
 
