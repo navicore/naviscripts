@@ -10,7 +10,6 @@ fi
 
 export LANG=en_US.UTF-8
 
-#export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:$HOME/.local/bin"
 export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
 
 ulimit -n 4096
@@ -94,10 +93,6 @@ ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-if [ -f ~/.zshrc_local ]; then
-  . ~/.zshrc_local
-fi
-
 alias iexvi='rlwrap -a foo iex'
 alias fixz='source $HOME/.zshrc_local'
 
@@ -128,5 +123,7 @@ eval "$(register-python-argcomplete az)"
 
 source $HOME/.cargo/env
 
-export GOPATH=$HOME/go
+if [ -f ~/.zshrc_local ]; then
+  . ~/.zshrc_local
+fi
 
