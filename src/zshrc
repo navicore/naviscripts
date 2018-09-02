@@ -124,3 +124,5 @@ eval "$(register-python-argcomplete az)"
 
 source $HOME/.cargo/env
 
+export GOPATH=$HOME/go
+
