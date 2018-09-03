@@ -104,7 +104,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
 # zplug "plugins/git",   from:oh-my-zsh
-# zplug "plugins/mix",   from:oh-my-zsh
+zplug "plugins/mix",   from:oh-my-zsh
 zplug "plugins/cargo",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 # Install plugins if there are plugins that have not been installed
