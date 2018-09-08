@@ -107,6 +107,8 @@ zplug "caarlos0/git-add-remote"
 zplug "plugins/mix",   from:oh-my-zsh
 zplug "plugins/cargo",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
+zplug "lib/completion", from:oh-my-zsh
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
