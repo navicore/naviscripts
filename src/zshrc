@@ -19,11 +19,11 @@ set -o vi
 PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
+alias iex='rlwrap -a foo iex'
 alias sz='source ~/.zshrc'
 alias uvim='vim -u NONE'
 
 alias k='kubectl'
-alias kctx='kubectx'
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerstop='docker stop $(docker ps -a -q)'
 alias dockerkill='docker kill $(docker ps -a -q)'
@@ -31,7 +31,6 @@ alias dockerrmi='docker rmi $(docker images -q)'
 alias dockerrmif='docker rmi -f $(docker images -q)'
 alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias dockerdangle='docker rmi $(docker images -q --filter dangling=true)'
-alias dockerk8s='rm -f ~/.kube/config && cp ~/.kube/config_docker-for-desktop ~/.kube/config'
 
 alias fetchupstream='git fetch upstream'
 alias mergeupstream='git merge upstream/master'
@@ -94,7 +93,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 alias iexvi='rlwrap -a foo iex'
-alias fixz='source $HOME/.zshrc_local'
 
 export GOPATH=~/go
 
