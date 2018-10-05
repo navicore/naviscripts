@@ -39,8 +39,9 @@ alias mergeupstream='git merge upstream/master'
 export TERM="screen-256color"
 export GIT_EDITOR="vim -f"
 
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+export HISTFILE=~/.zsh_history
+export HISTSIZE=999999
+export SAVEHIST=1000
 
 setopt APPEND_HISTORY
 
