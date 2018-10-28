@@ -1,4 +1,10 @@
 " --------- OSX ---------
+"
+" brew reinstall vim --HEAD --with-cscope --with-lua --override-system-vim
+" brew reinstall macvim --HEAD --with-cscope --with-lua --override-system-vim
+" brew install neovim/neovim/neovim
+" pip3 install neovim --upgrade
+"
 " brew install --HEAD olafurpg/scalafmt/scalafmt
 " brew install reattach-to-user-namespace
 " --------- LNX --------- (debian-based)
