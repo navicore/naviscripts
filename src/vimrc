@@ -48,37 +48,37 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'ensime/ensime-vim'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'aklt/plantuml-syntax'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'diepm/vim-rest-console'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'ervandew/screen'
+Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'wannesm/wmgraphviz.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'w0rp/ale'
-Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
-Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'scrooloose/nerdtree'
+Plugin 'slashmili/alchemist.vim'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fireplace.git'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'w0rp/ale'
+Plugin 'wannesm/wmgraphviz.vim'
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
@@ -228,6 +228,8 @@ let g:go_textobj_include_function_doc = 0
 
 let g:rustfmt_autosave = 1
 
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " --column: Show column number
 " --line-number: Show line number
