@@ -79,6 +79,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'wannesm/wmgraphviz.vim'
+Plugin 'Chiel92/vim-autoformat'
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
@@ -181,6 +182,10 @@ autocmd BufWritePost,FileWritePost *.uml :silent make
 " START color toggle
 set background=dark
 colorscheme flattened_dark
+
+noremap <F3> :Autoformat<CR>
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
 
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
