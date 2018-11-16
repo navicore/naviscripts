@@ -1,8 +1,8 @@
 " --------- OSX ---------
+" brew cask install alacritty
 " brew install python3
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
-"
 " brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 " brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 " brew install neovim/neovim/neovim
