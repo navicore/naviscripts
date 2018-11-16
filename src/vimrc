@@ -4,12 +4,10 @@
 " brew install python3
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
-" brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
-" brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
-" brew install neovim/neovim/neovim
 " brew install fzf
 " brew install ripgrep
-" pip3 install neovim --upgrade
+" DEPRECATE brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
+" DEPRECATE brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 "
 " brew install --HEAD olafurpg/scalafmt/scalafmt
 " brew install reattach-to-user-namespace
