@@ -1,7 +1,10 @@
 " --------- OSX ---------
+" brew install python3
+" pip3 install neovim --upgrade
+" brew install neovim/neovim/neovim
 "
-" brew reinstall vim --HEAD --with-cscope --with-lua --override-system-vim
-" brew reinstall macvim --HEAD --with-cscope --with-lua --override-system-vim
+" brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
+" brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 " brew install neovim/neovim/neovim
 " brew install fzf
 " brew install ripgrep
@@ -240,4 +243,6 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+
+let g:python3_host_prog = '/usr/local/bin/python3'
 
