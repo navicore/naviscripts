@@ -21,4 +21,5 @@ cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
-
+mkdir -p ~/.config/alacritty/
+cp ./alacritty.yml ~/.config/alacritty/alacritty.yml

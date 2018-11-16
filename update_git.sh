@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 # remember to edit install.sh, update_git.sh, and tar_dot_files.sh #
 #                                                                  #
 ####################################################################
-
+cp ~/.config/alacritty/alacritty.yml .
 cp ~/.tern-config ./tern-config
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
