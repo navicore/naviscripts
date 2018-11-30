@@ -108,6 +108,7 @@ zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
 # zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/mix",   from:oh-my-zsh
+#zplug "plugins/helm",   from:oh-my-zsh
 zplug "plugins/cargo",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
@@ -122,6 +123,11 @@ fi
 
 # Then, source plugins and add commands to $PATH
 zplug load
+
+# unsure why ohmy doesn't load
+if [ $commands[helm] ]; then
+  source <(helm completion zsh)
+fi
 
 autoload -U +X bashcompinit; bashcompinit
 eval "$(register-python-argcomplete az)"
