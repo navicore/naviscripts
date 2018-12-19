@@ -10,7 +10,6 @@
 " DEPRECATE brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 "
 " brew install --HEAD olafurpg/scalafmt/scalafmt
-" https://scalameta.org/metals/docs/editors/vim.html
 " brew install reattach-to-user-namespace
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
@@ -60,7 +59,6 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'natebosch/vim-lsc'
 Plugin 'diepm/vim-rest-console'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'ervandew/screen'
@@ -248,15 +246,3 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-" for scala
-" Configuration for vim-scala
-au BufRead,BufNewFile *.sbt set filetype=scala
-
-" Configuration for vim-lsc
-let g:lsc_enable_autocomplete = v:false
-let g:lsc_server_commands = {
-  \ 'scala': 'metals-vim'
-  \}
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': 'gd',
-    \}
