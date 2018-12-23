@@ -261,6 +261,5 @@ let g:lsc_auto_map = {
     \ 'GoToDefinition': 'gd',
     \}
 
-
-let maplocalleader = ','
-
+vmap <Space> <Plug>RDSendSelection
+nmap <Space> <Plug>RDSendLine
