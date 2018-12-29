@@ -109,7 +109,7 @@ set completeopt-=preview
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_linters_explicit = 1
-let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint']}
+let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr']}
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
