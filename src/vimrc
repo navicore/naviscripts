@@ -9,6 +9,8 @@
 " DEPRECATE brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 " DEPRECATE brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
 "
+" npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
+"
 " in R:
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
@@ -106,7 +108,8 @@ set completeopt-=preview
 " ale airline text
 let g:airline#extensions#ale#enabled = 1
 
-let g:ale_linters = {'rust': ['rls']}
+let g:ale_linters_explicit = 1
+let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint']}
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'

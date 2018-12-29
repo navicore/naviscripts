@@ -1,16 +1,8 @@
 {
   "libs": [
-    "browser",
-    "jquery",
-    "react"
+  ],
+  "loadEagerly": [
   ],
   "plugins": {
-      "angular": {},
-      "doc_comment": null,
-      "es_modules": {},
-      "node": {}
-  },
-  "dontLoad": [
-      "node_modules/**"
-  ]
+  }
 }
