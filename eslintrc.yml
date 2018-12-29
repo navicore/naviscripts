@@ -1,0 +1,24 @@
+parser: babel-eslint
+extends: airbnb/base
+
+rules:
+  no-console: 'off'
+  semi:
+    - 2
+    - never
+  quotes:
+    - 2
+    - single
+  new-cap:
+    - 0
+  no-param-reassign:
+    - 2
+    - props: false
+  indent:
+    - 2
+    - 2
+    - SwitchCase: 0
+  no-unused-vars:
+    - 1
+    - vars: "all"
+      args: "after-used"
