@@ -1,43 +1,61 @@
 " --------- OSX ---------
 " brew cask install alacritty
-" brew install exa
-" brew install python3
+" brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
-" brew install fzf
-" brew install ripgrep
-" DEPRECATE brew reinstall vim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
-" DEPRECATE brew reinstall macvim --HEAD --with-cscope --with-lua --with-override-system-vim --with-python2
+" brew install --HEAD olafurpg/scalafmt/scalafmt
+"
+" --------- LNX --------- (debian-based)
+" apt install build-essential python-dev cmake zsh
+"
+" --------- ALL ---------
 "
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 "
-" in R:
+" BEGIN R:
+"
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
-" brew install --HEAD olafurpg/scalafmt/scalafmt
-" https://scalameta.org/metals/docs/editors/vim.html
-" brew install reattach-to-user-namespace
-" --------- LNX --------- (debian-based)
-" apt install build-essential python-dev cmake zsh
-" --------- ALL ---------
-" curl https://sh.rustup.rs -sSf | sh
-" install https://github.com/romainl/flattened
-" brew install zplug
-" brew install zsh-history-substring-search
+" END R:
+"
+" BEGIN VUNDLE:
+"
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " build ~/.vim/bundle/YouCompleteMe with: PYTHON_CONFIGURE_OPTS="--enable-framework" ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer
+"
+" END VUNDLE:
+"
+" BEGIN RUST:
+"
+" curl https://sh.rustup.rs -sSf | sh
 " rustup component add rls-preview rust-analysis rust-src
 " rustup component add rustfmt-preview
 "
-" build ~/.vim/bundle/vimproc.vim with: make
+" END RUST:
+"
+" BEGIN HASKELL:
+"
 " curl -sSL https://get.haskellstack.org/ | sh
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
+"
+" END HASKELL:
+"
+" BEGIN PYTHON:
+"
 " sudo pip install flake8 jedi
 " sudo pip3 install flake8 jedi
+"
+" END PYTHON:
+"
+" https://scalameta.org/metals/docs/editors/vim.html
+" install https://github.com/romainl/flattened
+"
+" build ~/.vim/bundle/vimproc.vim with: make
+"
 " nerd fonts
 " https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 
@@ -57,7 +75,7 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Plugin 'Chiel92/vim-autoformat'
+Plugin 'sbdchd/neoformat'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -94,46 +112,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'wannesm/wmgraphviz.vim'
-" Plugin 'ncm2/ncm2'
-" Plugin 'roxma/nvim-yarp'
-" Plugin 'gaalcaras/ncm-R'
-" Plugin 'ncm2/ncm2-bufword'
-" Plugin 'ncm2/ncm2-tmux'
-" Plugin 'ncm2/ncm2-path'
-" Plugin 'ncm2/ncm2-tern'
-" Plugin 'ncm2/ncm2-jedi'
-" Plugin 'ncm2/ncm2-racer'
-" Plugin 'ncm2/ncm2-go'
-
-"
-" BEGIN ncm2 setup
-"
-"
-" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-"   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-" filetype plugin on
-"
-" autocmd BufEnter * call ncm2#enable_for_buffer()
-" set completeopt=noinsert,menuone,noselect
-"
-" " supress the annoying 'match x of y', 'The only match' and 'Patter not found'
-" " messages
-" " set shortmess+=c
-"
-" " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
-" inoremap <c-c> <ESC>
-"
-" " When the <Enter> key is pressed while the popup menu is visible, it only
-" " hides the menu. Use this mapping to close the menu and also start a new line
-" inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-"
-" " use <TAB> to select the popup menu:
-" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-"
-" END ncm2 setup
 "
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
@@ -149,7 +127,7 @@ set completeopt-=preview
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_linters_explicit = 1
-let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr']}
+let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc']}
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
@@ -238,10 +216,6 @@ autocmd BufWritePost,FileWritePost *.uml :silent make
 set background=dark
 colorscheme flattened_dark
 
-noremap <F3> :Autoformat<CR>
-let g:formatdef_scalafmt = "'scalafmt --stdin'"
-let g:formatters_scala = ['scalafmt']
-
 map <F5> :call ToggleBg()<CR>
 function! ToggleBg()
   if &background == 'dark'
@@ -307,6 +281,8 @@ let g:lsc_server_commands = {
 let g:lsc_auto_map = {
     \ 'GoToDefinition': 'gd',
     \}
+
+noremap <F3> :Neoformat<CR>
 
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
