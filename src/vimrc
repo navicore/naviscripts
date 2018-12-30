@@ -130,7 +130,7 @@ set completeopt-=preview
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_linters_explicit = 1
-let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc']}
+let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8']}
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
