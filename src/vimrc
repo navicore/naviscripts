@@ -12,7 +12,7 @@
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 "
 " in R:
-" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr")
+" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
 " brew install --HEAD olafurpg/scalafmt/scalafmt
