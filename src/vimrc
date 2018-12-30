@@ -1,9 +1,11 @@
 " --------- OSX ---------
-" brew cask install alacritty
 " brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
 " brew install --HEAD olafurpg/scalafmt/scalafmt
+" THIS nonsense fixes the python3 host load bug that shows on both vim and nvim.
+" pip install --no-cache-dir --upgrade --force-reinstall neovim
+" pip3 install --no-cache-dir --upgrade --force-reinstall neovim
 "
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
