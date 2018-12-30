@@ -10,6 +10,7 @@ cd "$(dirname "$0")"
 cp ~/.config/alacritty/alacritty.yml .
 cp ~/.tern-config ./tern-config
 cp ~/.eslintrc.yml ./eslintrc.yml
+cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
 cp ~/.zshrc ./zshrc
