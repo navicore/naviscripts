@@ -12,7 +12,7 @@
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 "
 " in R:
-" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools")
+" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
 " brew install --HEAD olafurpg/scalafmt/scalafmt
@@ -94,7 +94,47 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'wannesm/wmgraphviz.vim'
+" Plugin 'ncm2/ncm2'
+" Plugin 'roxma/nvim-yarp'
+" Plugin 'gaalcaras/ncm-R'
+" Plugin 'ncm2/ncm2-bufword'
+" Plugin 'ncm2/ncm2-tmux'
+" Plugin 'ncm2/ncm2-path'
+" Plugin 'ncm2/ncm2-tern'
+" Plugin 'ncm2/ncm2-jedi'
+" Plugin 'ncm2/ncm2-racer'
+" Plugin 'ncm2/ncm2-go'
 
+"
+" BEGIN ncm2 setup
+"
+"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+"   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" filetype plugin on
+"
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+" set completeopt=noinsert,menuone,noselect
+"
+" " supress the annoying 'match x of y', 'The only match' and 'Patter not found'
+" " messages
+" " set shortmess+=c
+"
+" " CTRL-C doesn't trigger the InsertLeave autocmd . map to <ESC> instead.
+" inoremap <c-c> <ESC>
+"
+" " When the <Enter> key is pressed while the popup menu is visible, it only
+" " hides the menu. Use this mapping to close the menu and also start a new line
+" inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+"
+" " use <TAB> to select the popup menu:
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"
+" END ncm2 setup
+"
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
 let g:alchemist_tag_stack_map = '<C-T>'
