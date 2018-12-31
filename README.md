@@ -1,6 +1,21 @@
 personal scripts for vim and tmux and anything else I use
 ------------
 
+Messy - created slowly over many years.  I'm not even sure what most of them
+even do but I can't live without them all.
+
+* More vim8 than nvim but I use both and the setup works for both.
+* More osx than Linux but I use both and the setup works for both.
+* zsh
+* vundle
+* tmux
+* nerd fonts
+* YouCompleteMe - brittle pain but still works best for me
+* linting for es6, rust, scala, R, python
+
+I periodically once every year or two try to move to better parts and I usually
+revert.
+
 ### INSTALL
 
 `git clone git@github.com:navicore/naviscripts.git`
@@ -9,8 +24,7 @@ personal scripts for vim and tmux and anything else I use
 
 `./install.sh`
 
-* look at the start of the vimrc script to get vundle going
-* cd into .vim/bundle/YouCompleteMe and run install
+* follow the tedious instructions at the top of src/vimrc to finish the setup
 
 ### update the repo from the installed files
 
@@ -21,12 +35,4 @@ personal scripts for vim and tmux and anything else I use
 `git push`
 
 --------
-```
-brew install macvim --with-cscope --with-lua --HEAD
-```
-
-install oh-my-zsh
-```
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
 
