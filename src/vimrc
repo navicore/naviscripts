@@ -12,6 +12,8 @@
 " apt install build-essential python-dev cmake zsh
 "
 " --------- ALL ---------
+"  NOTE: not sure when but I started aliasing vim to nvim and didn't notice
+"  for many weeks.  must be fine to only use nvim!
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
