@@ -12,7 +12,8 @@
 " apt install build-essential python-dev cmake zsh
 "
 " --------- ALL ---------
-"
+" nvm install stable
+" nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 "
 " BEGIN R:
@@ -106,7 +107,6 @@ Plugin 'navicore/vissort.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdtree'
-Plugin 'sirver/UltiSnips'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-fireplace.git'
