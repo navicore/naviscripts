@@ -25,3 +25,5 @@ mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
 mkdir -p ~/.config/alacritty/
 cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
+mkdir -p ~/.cargo
+cp ./cargo/env ~/.cargo/env

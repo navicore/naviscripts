@@ -19,6 +19,7 @@ cp ~/.inputrc ./inputrc
 cp ~/.ctags ./ctags
 cp ~/.Rprofile ./Rprofile
 cp ~/.config/nvim/init.vim ./init.vim
+cp ~/.cargo/env ./cargo/env
 
 mkdir -p ./bin
 cp ~/bin/plant* ./bin/
