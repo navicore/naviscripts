@@ -9,6 +9,7 @@ cd "$(dirname "$0")"
 ####################################################################
 cp ~/.config/alacritty/alacritty.yml .
 cp ~/.tern-config ./tern-config
+cp ~/.gitconfig ./gitconfig
 cp ~/.eslintrc.yml ./eslintrc.yml
 cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim

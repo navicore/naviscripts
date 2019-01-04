@@ -1,0 +1,12 @@
+[push]
+	default = simple
+[user]
+	name = Ed Sweeney
+	email = ed@onextent.com
+[github]
+  user = navicore
+[commit]
+  template = ~/.gitmessage
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
