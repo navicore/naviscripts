@@ -60,11 +60,6 @@ fi
 # fix ^M issue in sbt interactive mode
 stty icrnl
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 #
 # Custom Cloud Theme with insane git prompt (really, I just want separate dirty and untracked indicators)
 #
@@ -150,3 +145,11 @@ export PIP_SHIMS_BASE_MODULE=pipenv.patched.notpip
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
+export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
