@@ -1,4 +1,5 @@
 " --------- OSX ---------
+" defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun zsh cmake tmux sbt graphviz
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
