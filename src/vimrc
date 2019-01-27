@@ -298,3 +298,7 @@ noremap <F3> :Neoformat<CR>
 
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
+
+let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#syntax#conceal#use = 0
+
