@@ -105,7 +105,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
-Plugin 'natebosch/vim-lsc'
+"Plugin 'natebosch/vim-lsc'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'rust-lang/rust.vim'
@@ -286,13 +286,13 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 " Configuration for vim-lsc
-let g:lsc_enable_autocomplete = v:false
-let g:lsc_server_commands = {
-  \ 'scala': 'metals-vim'
-  \}
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': 'gd',
-    \}
+" let g:lsc_enable_autocomplete = v:false
+" let g:lsc_server_commands = {
+"   \ 'scala': 'metals-vim'
+"   \}
+" let g:lsc_auto_map = {
+"     \ 'GoToDefinition': 'gd',
+"     \}
 
 noremap <F3> :Neoformat<CR>
 
