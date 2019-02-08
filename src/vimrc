@@ -31,6 +31,8 @@
 " git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
+" eval `ssh-agent -s`
+" ssh-add
 " build ~/.vim/bundle/YouCompleteMe with: PYTHON_CONFIGURE_OPTS="--enable-framework" ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer
 "
 " END VUNDLE:
