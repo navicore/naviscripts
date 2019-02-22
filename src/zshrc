@@ -19,6 +19,7 @@ set -o vi
 PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
+alias busybox='kubectl run -i --tty busybox --image=busybox --restart=Never -- sh'
 alias vim='nvim'
 alias vim8='/usr/local/bin/vim'
 alias l='exa'
