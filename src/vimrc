@@ -126,6 +126,7 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-rmarkdown'
 Plugin 'w0rp/ale'
 Plugin 'wannesm/wmgraphviz.vim'
+Plugin 'neovimhaskell/haskell-vim'
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
