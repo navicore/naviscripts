@@ -22,6 +22,7 @@ EDITOR=vim; export EDITOR
 alias busybox='kubectl run -i --tty busybox --image=busybox --restart=Never -- sh'
 alias vim='nvim'
 alias vim8='/usr/local/bin/vim'
+alias vi='nvim'
 alias l='exa'
 alias ll='exa -l --header --git'
 alias iex='rlwrap -a foo iex'
