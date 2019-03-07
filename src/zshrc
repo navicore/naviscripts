@@ -19,7 +19,10 @@ set -o vi
 PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
-alias busybox='kubectl run -i --tty busybox --image=busybox --restart=Never -- sh'
+alias busybox='kubectl run -i --tty $USER-busybox --image=busybox --restart=Never -- sh'
+alias centos='kubectl run -i --tty $USER-centos --image=centos --restart=Never -- sh'
+alias alpine='kubectl run -i --tty $USER-alpine --image=alpine --restart=Never -- sh'
+alias ubuntu='kubectl run -i --tty $USER-ubuntu --image=ubuntu --restart=Never -- sh'
 alias vim='nvim'
 alias vim8='/usr/local/bin/vim'
 alias l='exa'
