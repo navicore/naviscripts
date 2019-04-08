@@ -25,4 +25,5 @@ cp ~/.cargo/env ./cargo/env
 mkdir -p ./bin
 cp ~/bin/plant* ./bin/
 cp ~/bin/killz ./bin/
+cp ~/bin/pg* ./bin/
 
