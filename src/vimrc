@@ -118,7 +118,7 @@ Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'sbdchd/neoformat'
+"Plugin 'sbdchd/neoformat'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -148,6 +148,7 @@ let g:airline#extensions#ale#enabled = 1
 
 let g:ale_linters_explicit = 1
 let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8']}
+let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], }
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
@@ -302,7 +303,7 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 "     \ 'GoToDefinition': 'gd',
 "     \}
 
-noremap <F3> :Neoformat<CR>
+"noremap <F3> :Neoformat<CR>
 
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
