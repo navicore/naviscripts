@@ -25,6 +25,7 @@ alias alpine='kubectl run -i --tty $USER-alpine --image=alpine --restart=Never -
 alias ubuntu='kubectl run -i --tty $USER-ubuntu --image=ubuntu --restart=Never -- sh'
 alias vim='nvim'
 alias vim8='/usr/local/bin/vim'
+alias code='/Applications/"Visual Studio Code.app"/Contents/Resources/app/bin/code'
 alias vi='nvim'
 alias l='exa'
 alias ll='exa -l --header --git'
