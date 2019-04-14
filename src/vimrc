@@ -35,7 +35,7 @@
 " restart vim :BundleInstall
 " eval `ssh-agent -s`
 " ssh-add
-" build ~/.vim/bundle/YouCompleteMe with: PYTHON_CONFIGURE_OPTS="--enable-framework" ./install.py --clang-completer --gocode-completer --tern-completer --rust-completer
+" build ~/.vim/bundle/YouCompleteMe with: PYTHON_CONFIGURE_OPTS="--enable-framework" ./install.py --clang-completer --gocode-completer --js-completer --rust-completer
 "
 " END VUNDLE:
 "
@@ -89,6 +89,10 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'flowtype/vim-flow.git'
+Plugin 'mxw/vim-jsx'
+Plugin 'prettier/prettier'
+Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
