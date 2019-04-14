@@ -172,6 +172,8 @@ function SetIDEOptions()
   endif
 endfunction
 
+map <leader>f :ALEFix<CR>
+
 autocmd vimenter * if !argc() | call SetIDEOptions() | endif
 map <C-n> :NERDTreeToggle<CR>
 
