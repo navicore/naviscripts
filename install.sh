@@ -16,7 +16,6 @@ mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./vimrc ~/.vimrc
 cp ./scalafmt ~/.scalafmt
-cp ./eslintrc.yml ~/.eslintrc.yml
 cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 cp ./inputrc ~/.inputrc
