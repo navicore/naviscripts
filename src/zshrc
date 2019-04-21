@@ -2,10 +2,17 @@ platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
+   export ZPLUG_HOME=$HOME/.zplug
+   alias vim8='/usr/bin/vim'
+   source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
    platform='freebsd'
+   export ZPLUG_HOME=$HOME/.zplug
+   source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
+   export ZPLUG_HOME=/usr/local/opt/zplug
+   alias vim8='/usr/local/bin/vim'
 fi
 
 export LANG=en_US.UTF-8
@@ -24,7 +31,6 @@ alias centos='kubectl run -i --tty $USER-centos --image=centos --restart=Never -
 alias alpine='kubectl run -i --tty $USER-alpine --image=alpine --restart=Never -- sh'
 alias ubuntu='kubectl run -i --tty $USER-ubuntu --image=ubuntu --restart=Never -- sh'
 alias vim='nvim'
-alias vim8='/usr/local/bin/vim'
 alias code='/Applications/"Visual Studio Code.app"/Contents/Resources/app/bin/code'
 alias vi='nvim'
 alias l='exa'
@@ -53,11 +59,10 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=999999
 export SAVEHIST=1000
 
-setopt APPEND_HISTORY
-
 if [[ $platform == 'linux' ]]; then
   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
 elif [[ $platform == 'osx' ]]; then
+  setopt APPEND_HISTORY
   export CLICOLOR=1
   export LSCOLORS=GxFxCxDxBxegedabagaced
   export JAVA_HOME="$(/usr/libexec/java_home)"
@@ -103,7 +108,6 @@ alias iexvi='rlwrap -a foo iex'
 
 export GOPATH=~/go
 
-export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
