@@ -19,6 +19,7 @@ cp ~/.tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
 cp ~/.ctags ./ctags
 cp ~/.Rprofile ./Rprofile
+cp ~/.Renviron ./Renviron
 cp ~/.config/nvim/init.vim ./init.vim
 cp ~/.cargo/env ./cargo/env
 
