@@ -35,7 +35,8 @@
 " restart vim :BundleInstall
 " eval `ssh-agent -s`
 " ssh-add
-" build ~/.vim/bundle/YouCompleteMe with: PYTHON_CONFIGURE_OPTS="--enable-framework" ./install.py --clang-completer --gocode-completer --js-completer --rust-completer
+" clean ~/.vim/bundle/YouCompleteMe with: rm -rf third_party/ycmd/third_party/tern_runtime/node_modules 
+" build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --ts-completer --rust-completer
 "
 " END VUNDLE:
 "
@@ -89,6 +90,12 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
+Plugin 'leafgarland/typescript-vim'
 Plugin 'flowtype/vim-flow.git'
 Plugin 'mxw/vim-jsx'
 Plugin 'prettier/prettier'
