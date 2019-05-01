@@ -154,8 +154,8 @@ set completeopt-=preview
 let g:airline#extensions#ale#enabled = 1
 
 let g:ale_linters_explicit = 1
-let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8']}
-let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], 'r': ['styler']}
+let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8'], 'typescript': ['tslint'] }
+let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], 'r': ['styler'], 'typescript': ['tslint'] }
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
