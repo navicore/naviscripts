@@ -126,7 +126,7 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
-
+#zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 # Then, source plugins and add commands to $PATH
 zplug load
 
