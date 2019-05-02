@@ -95,6 +95,9 @@ if !exists("g:ycm_semantic_triggers")
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
 
+Plugin 'ervandew/supertab'
+Plugin 'SirVer/ultisnips'
+Plugin 'mlaursen/vim-react-snippets'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'flowtype/vim-flow.git'
 Plugin 'mxw/vim-jsx'
@@ -125,7 +128,6 @@ Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ryanoasis/vim-devicons'
-"Plugin 'sbdchd/neoformat'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -139,6 +141,16 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'w0rp/ale'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'neovimhaskell/haskell-vim'
+
+" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+" (via http://stackoverflow.com/a/22253548/1626737)
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger           = '<tab>'
+let g:UltiSnipsJumpForwardTrigger      = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
 let g:alchemist#elixir_erlang_src = "/Users/navicore/tmp/sources"
 let g:alchemist_tag_map = '<C-]>'
