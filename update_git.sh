@@ -10,7 +10,6 @@ cd "$(dirname "$0")"
 cp ~/.config/alacritty/alacritty.yml .
 cp ~/.tern-config ./tern-config
 cp ~/.gitconfig ./gitconfig
-cp ~/.eslintrc.yml ./eslintrc.yml
 cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
@@ -22,6 +21,10 @@ cp ~/.Rprofile ./Rprofile
 cp ~/.Renviron ./Renviron
 cp ~/.config/nvim/init.vim ./init.vim
 cp ~/.cargo/env ./cargo/env
+
+mkdir -p ./UltiSnips
+cp ~/.vim/UltiSnips/* ./UltiSnips/
+git add ./UltiSnips/
 
 mkdir -p ./bin
 cp ~/bin/plant* ./bin/
