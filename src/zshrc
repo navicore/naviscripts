@@ -4,9 +4,8 @@ if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
    export ZPLUG_HOME=$HOME/.zplug
    alias vim8='/usr/bin/vim'
-   # I fucking give up - can't get nvim working without pytyon errors on Ubuntu
-   alias vim='/usr/bin/vim'
-   alias vi='/usr/bin/vim'
+   alias vim='nvim'
+   alias vi='nvim'
    source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
    platform='freebsd'
