@@ -18,7 +18,12 @@
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
-"
+
+" let s:uname = system("echo -n \"$(uname)\"")
+" if !v:shell_error && s:uname == "Linux"
+"   let g:python3_host_prog = "/usr/bin/python3"
+" endif
+
 " BEGIN R:
 "
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes")
