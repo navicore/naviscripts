@@ -83,8 +83,16 @@ if [[ -z $ZSH_THEME_CLOUD_PREFIX ]]; then
     ZSH_THEME_CLOUD_PREFIX='☁'
 fi
 
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  SESSION_TYPE=remote/ssh
+else
+  case $(ps -o comm= -p $PPID) in
+    sshd|*/sshd) SESSION_TYPE=remote/ssh;;
+  esac
+fi
+
 PROMPT_PRE=''
-if [[ $platform == 'linux' ]]; then
+if [[ $SESSION_TYPE == 'remote/ssh' ]]; then
   PROMPT_PRE='%n@%m'
 else
   # see instructions at https://github.com/olivierverdier/zsh-git-prompt
