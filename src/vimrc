@@ -19,10 +19,11 @@
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 
-" let s:uname = system("echo -n \"$(uname)\"")
-" if !v:shell_error && s:uname == "Linux"
-"   let g:python3_host_prog = "/usr/bin/python3"
-" endif
+let g:python3_host_prog = '/usr/local/bin/python3'
+let s:uname = system("echo -n \"$(uname)\"")
+if !v:shell_error && s:uname == "Linux"
+  let g:python3_host_prog = "/usr/bin/python3"
+endif
 
 " BEGIN R:
 "
@@ -315,8 +316,6 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-
-let g:python3_host_prog = '/usr/local/bin/python3'
 
 " for scala
 " Configuration for vim-scala
