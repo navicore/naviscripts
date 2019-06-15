@@ -122,10 +122,10 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
-# zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/mix",   from:oh-my-zsh
 zplug "plugins/helm",   from:oh-my-zsh
 zplug "plugins/cargo",   from:oh-my-zsh
+zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
 
@@ -174,7 +174,3 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
-
-
-eval "$(hub alias -s)"
-
