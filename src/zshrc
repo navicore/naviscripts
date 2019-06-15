@@ -174,3 +174,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
+
+
+eval "$(hub alias -s)"
+
