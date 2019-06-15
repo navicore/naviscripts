@@ -51,6 +51,7 @@ endif
 " curl https://sh.rustup.rs -sSf | sh
 " rustup component add rls-preview rust-analysis rust-src
 " rustup component add rustfmt-preview
+" ssh-add -K ~/.ssh/id_rsa
 "
 " END RUST:
 "
