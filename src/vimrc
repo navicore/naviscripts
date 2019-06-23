@@ -338,3 +338,5 @@ let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#syntax#conceal#use = 0
 let R_assign = 0
 
+set clipboard+=unnamedplus
+

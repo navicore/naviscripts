@@ -156,4 +156,7 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 run '~/.tmux/plugins/tpm/tpm'
 set-option -g default-shell $SHELL
 #set-option -g default-command "reattach-to-user-namespace -l zsh"
+#
+
+bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 
