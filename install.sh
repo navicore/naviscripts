@@ -27,6 +27,7 @@ mkdir -p ~/.config/alacritty/
 cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
 mkdir -p ~/.cargo
 cp ./cargo/env ~/.cargo/env
+cp ./cargo/config ~/.cargo/config
 
 mkdir -p ~/.vim/UltiSnips
 cp ./UltiSnips/* ~/.vim/UltiSnips/

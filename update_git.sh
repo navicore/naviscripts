@@ -20,7 +20,10 @@ cp ~/.ctags ./ctags
 cp ~/.Rprofile ./Rprofile
 cp ~/.Renviron ./Renviron
 cp ~/.config/nvim/init.vim ./init.vim
+
+mkdir -p ./cargo
 cp ~/.cargo/env ./cargo/env
+cp ~/.cargo/config ./cargo/config
 
 mkdir -p ./UltiSnips
 cp ~/.vim/UltiSnips/* ./UltiSnips/
