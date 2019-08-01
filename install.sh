@@ -19,6 +19,7 @@ cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc
 cp ./tmux.conf ~/.tmux.conf
 cp ./inputrc ~/.inputrc
+cp ./Renviron ~/.Renviron
 cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
