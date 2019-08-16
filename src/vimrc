@@ -145,7 +145,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax' 
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'neovimhaskell/haskell-vim'
 
