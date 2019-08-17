@@ -177,7 +177,7 @@ let g:airline#extensions#ale#enabled = 1
 "let g:ale_rust_rls_toolchain = 'stable' " this is needed, otherwise rls uses nightly toolchain
 let g:ale_rust_rls_toolchain = ''
 let g:ale_linters_explicit = 1
-"let g:ale_linter_aliases = {'r': ['r', 'rmd']}
+let g:ale_linter_aliases = {'r': ['r', 'rmd']}
 let g:ale_linters = {'rust': ['rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8'], 'typescript': ['tslint'] }
 let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], 'r': ['styler'], 'typescript': ['tslint'] }
 
