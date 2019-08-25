@@ -11,21 +11,19 @@ cd "$(dirname "$0")"
 mkdir -p ~/bin/
 cp ./bin/* ~/bin/
 cp ./tern-config ~/.tern-config
-cp ./gitconfig ~/.gitconfig
+cp -n ./gitconfig ~/.gitconfig
 mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./vimrc ~/.vimrc
 cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc
-cp ./tmux.conf ~/.tmux.conf
+cp -n ./tmux.conf ~/.tmux.conf
 cp ./inputrc ~/.inputrc
 cp ./Renviron ~/.Renviron
 cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
-mkdir -p ~/.config/alacritty/
-cp ./alacritty.yml ~/.config/alacritty/alacritty.yml
 mkdir -p ~/.cargo
 cp ./cargo/env ~/.cargo/env
 cp ./cargo/config ~/.cargo/config
