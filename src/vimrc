@@ -343,3 +343,5 @@ let R_assign = 0
 
 set clipboard+=unnamedplus
 
+let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
+nnoremap <Leader>] :YcmCompleter GoTo<CR>
