@@ -160,3 +160,5 @@ set-option -g default-shell $SHELL
 
 #bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 
+bind '%' split-window -h -c '#{pane_current_path}'  # Split panes horizontal
+bind '"' split-window -v -c '#{pane_current_path}'  # Split panes vertically
