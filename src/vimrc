@@ -8,6 +8,8 @@
 " pip install --no-cache-dir --upgrade --force-reinstall neovim
 " pip3 install --no-cache-dir --upgrade --force-reinstall neovim
 " brew install macvim --HEAD --with-override-system-vim --with-lua --with-python3
+" brew install readline xz
+" brew install pyenv pyenv-virtualenv
 "
 " --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
