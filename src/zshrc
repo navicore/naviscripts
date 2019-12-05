@@ -174,3 +174,5 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
+
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
