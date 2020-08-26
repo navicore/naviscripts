@@ -116,6 +116,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/vimproc.vim.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -136,7 +137,6 @@ Plugin 'mattn/webapi-vim'
 Plugin 'navicore/vis.vim'
 Plugin 'navicore/vissort.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdtree'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'tomtom/tcomment_vim'
@@ -317,7 +317,8 @@ let g:go_fmt_command = "goimports"
 let g:go_textobj_include_function_doc = 0
 
 let g:rustfmt_autosave = 1
-
+let g:NERDTreeGitStatusLogLevel = 3
+let g:NERDTreeGitStatusUseNerdFonts = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
