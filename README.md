@@ -1,11 +1,10 @@
 personal scripts for vim and tmux and anything else I use
 ------------
 
-Messy - created slowly over many years.  I'm not even sure what most of them
-even do but I can't live without them all.
+Messy - created slowly over many years.  I'm not sure what some of parts even do but I can't live without it all.
 
 * More vim8 than nvim but I use both and the setup works for both.
-* More osx than Linux but I use both and the setup works for both.
+* Equally OSX and Linux - I use both and most of the setup works for both.
 * zsh
 * vundle
 * tmux
@@ -13,8 +12,8 @@ even do but I can't live without them all.
 * YouCompleteMe - brittle pain but still works best for me
 * linting for es6, rust, scala, R, python
 
-I periodically once every year or two try to move to better parts and I usually
-revert.
+I periodically try other more product-like solutions and always
+revert to this set of scripts.
 
 ### INSTALL
 
