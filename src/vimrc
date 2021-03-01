@@ -1,18 +1,18 @@
+" --------- LNX --------- (debian-based)
+" apt install build-essential python-dev cmake zsh
+" apt install neovim
+"
 " --------- OSX ---------
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun zsh cmake tmux sbt graphviz pandoc hub
 " pip3 install neovim --upgrade
 " brew install neovim/neovim/neovim
-" brew install --HEAD olafurpg/scalafmt/scalafmt
 " THIS nonsense fixes the python3 host load bug that shows on both vim and nvim.
 " pip install --no-cache-dir --upgrade --force-reinstall neovim
 " pip3 install --no-cache-dir --upgrade --force-reinstall neovim
 " brew install macvim --HEAD --with-override-system-vim --with-lua --with-python3
 " brew install readline xz
 " brew install pyenv pyenv-virtualenv
-"
-" --------- LNX --------- (debian-based)
-" apt install build-essential python-dev cmake zsh
 "
 " --------- ALL ---------
 "  NOTE: not sure when but I started aliasing vim to nvim and didn't notice
