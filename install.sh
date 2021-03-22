@@ -11,6 +11,7 @@ cd "$(dirname "$0")"
 mkdir -p ~/bin/
 cp ./bin/* ~/bin/
 cp ./tern-config ~/.tern-config
+cp ./guile ~/.guile
 cp -n ./gitconfig ~/.gitconfig
 mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
