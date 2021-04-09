@@ -4,19 +4,10 @@
 "
 " --------- OSX ---------
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
-" brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun zsh cmake tmux sbt graphviz pandoc hub
-" pip3 install neovim --upgrade
-" brew install neovim/neovim/neovim
-" THIS nonsense fixes the python3 host load bug that shows on both vim and nvim.
-" pip install --no-cache-dir --upgrade --force-reinstall neovim
-" pip3 install --no-cache-dir --upgrade --force-reinstall neovim
-" brew install macvim --HEAD --with-override-system-vim --with-lua --with-python3
-" brew install readline xz
-" brew install pyenv pyenv-virtualenv
+" brew install exa python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun cmake tmux sbt graphviz pandoc hub neovim readline xz
+" pip3 install neovim
 "
 " --------- ALL ---------
-"  NOTE: not sure when but I started aliasing vim to nvim and didn't notice
-"  for many weeks.  must be fine to only use nvim!
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
@@ -67,14 +58,12 @@ endif
 "
 " BEGIN PYTHON:
 "
-" sudo pip install flake8 jedi
 " sudo pip3 install flake8 jedi
 " pip3 install argcomplete 
 " activate-global-python-argcomplete
 "
 " END PYTHON:
 "
-" https://scalameta.org/metals/docs/editors/vim.html
 " install https://github.com/romainl/flattened
 "
 " build ~/.vim/bundle/vimproc.vim with: make
@@ -330,15 +319,6 @@ command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-h
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
-" Configuration for vim-lsc
-" let g:lsc_enable_autocomplete = v:false
-" let g:lsc_server_commands = {
-"   \ 'scala': 'metals-vim'
-"   \}
-" let g:lsc_auto_map = {
-"     \ 'GoToDefinition': 'gd',
-"     \}
-
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
@@ -350,6 +330,4 @@ set clipboard+=unnamedplus
 
 let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
 nnoremap <Leader>] :YcmCompleter GoTo<CR>
-
-"let g:vrc_trigger = '<C-p>'
 
