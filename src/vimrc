@@ -34,8 +34,6 @@ endif
 " restart vim :BundleInstall
 " eval `ssh-agent -s`
 " ssh-add
-" clean ~/.vim/bundle/YouCompleteMe with: rm -rf third_party/ycmd/third_party/tern_runtime/node_modules 
-" build ~/.vim/bundle/YouCompleteMe with: ./install.py --clang-completer --gocode-completer --ts-completer --rust-completer
 "
 " END VUNDLE:
 "
@@ -88,24 +86,15 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-if !exists("g:ycm_semantic_triggers")
-  let g:ycm_semantic_triggers = {}
-endif
-let g:ycm_semantic_triggers['typescript'] = ['.']
-
 Plugin 'rhysd/committia.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'mlaursen/vim-react-snippets'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'flowtype/vim-flow.git'
 Plugin 'mxw/vim-jsx'
 Plugin 'prettier/prettier'
 Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/vimproc.vim.git'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'aklt/plantuml-syntax'
@@ -113,8 +102,8 @@ Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'neoclide/coc.nvim'
 Plugin 'diepm/vim-rest-console'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'ervandew/screen'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/vundle'
@@ -142,21 +131,8 @@ Plugin 'dense-analysis/ale'
 Plugin 'wannesm/wmgraphviz.vim'
 Plugin 'neovimhaskell/haskell-vim'
 
-" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-" (via http://stackoverflow.com/a/22253548/1626737)
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
-let g:UltiSnipsExpandTrigger           = '<C-j>'
-let g:UltiSnipsJumpForwardTrigger      = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger     = '<C-k>'
-let g:ycm_key_list_select_completion   = ['<tab>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<s-tab>', '<C-p>', '<Up>']
-let g:UltiSnipsSnippetDirectories      = ['~/.vim/UltiSnips', 'UltiSnips']
-
-" elixir
-let g:alchemist#elixir_erlang_src = "~/tmp/sources"
-let g:alchemist_tag_map = '<C-]>'
-let g:alchemist_tag_stack_map = '<C-T>'
 
 let NERDTreeShowHidden=1
 
