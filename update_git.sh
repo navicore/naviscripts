@@ -25,10 +25,6 @@ mkdir -p ./cargo
 cp ~/.cargo/env ./cargo/env
 cp ~/.cargo/config ./cargo/config
 
-mkdir -p ./UltiSnips
-cp ~/.vim/UltiSnips/* ./UltiSnips/
-git add ./UltiSnips/
-
 mkdir -p ./bin
 cp ~/bin/plant* ./bin/
 cp ~/bin/killz ./bin/
