@@ -35,3 +35,4 @@ cp ~/bin/killz ./bin/
 cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
 
+cp ~/.config/nvim/coc-settings.json  .

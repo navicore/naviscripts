@@ -111,7 +111,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'jalvesaq/Nvim-R'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'navicore/vis.vim'
@@ -182,7 +182,7 @@ map <C-t> :TagbarToggle<CR>
 "set the source for autocomplete
 set complete=.,w,b,u,t,i
 
-set tags=./.tags;,.tags;
+"set tags=./.tags;,.tags;
 
 set spell
 set spelllang=en_us
@@ -307,3 +307,15 @@ set clipboard+=unnamedplus
 let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
 nnoremap <Leader>] :YcmCompleter GoTo<CR>
 
+function! s:GoToDefinition()
+  if CocAction('jumpDefinition')
+    return v:true
+  endif
+
+  let ret = execute("silent! normal \<C-]>")
+  if ret =~ "Error" || ret =~ "错误"
+    call searchdecl(expand('<cword>'))
+  endif
+endfunction
+
+nmap <silent> gd :call <SID>GoToDefinition()<CR>

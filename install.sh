@@ -32,3 +32,5 @@ cp ./cargo/config ~/.cargo/config
 mkdir -p ~/.vim/UltiSnips
 cp ./UltiSnips/* ~/.vim/UltiSnips/
 
+mkdir -p ./coc-settings.json ~/.config/nvim
+cp ./coc-settings.json ~/.config/nvim/coc-settings.json 
