@@ -31,17 +31,13 @@ endif
 "
 " END R:
 "
-" BEGIN VUNDLE:
-"
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 "
 " mkdir -p ~/.vim/swapfiles
-" restart vim :BundleInstall
+" restart vim :PlugInstall
 " eval `ssh-agent -s`
 " ssh-add
-"
-" END VUNDLE:
 "
 " BEGIN RUST:
 "
@@ -99,7 +95,6 @@ Plug 'mxw/vim-jsx'
 Plug 'prettier/prettier'
 Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
-"Plug 'Shougo/vimproc.vim.git'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'aklt/plantuml-syntax'
@@ -108,7 +103,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'derekwyatt/vim-sbt'
 Plug 'derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim'
-Plug 'diepm/vim-rest-console'
 Plug 'ervandew/screen'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
@@ -123,7 +117,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'slashmili/alchemist.vim'
 Plug 'tomtom/tcomment_vim'
-"Plug 'tpope/vim-fireplace.git'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -133,6 +126,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'dense-analysis/ale'
 Plug 'wannesm/wmgraphviz.vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'diepm/vim-rest-console'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 call plug#end()
 
@@ -196,10 +191,10 @@ set spelllang=en_us
 set hlsearch
 nnoremap <CR> :nohlsearch<CR><CR>
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" map <C-h> <C-w>h
+" map <C-j> <C-w>j
+" map <C-k> <C-w>k
+" map <C-l> <C-w>l
 
 set colorcolumn=81
 
@@ -209,12 +204,12 @@ set colorcolumn=81
 xnoremap . :normal .<CR>
 
 "buble single line
-nmap <C-k> ddkP
-nmap <C-j> ddp
-
-"buble multiple lines
-vmap <C-k> xkP`[V`]
-vmap <C-j> xp`[V`]
+" nmap <C-k> ddkP
+" nmap <C-j> ddp
+"
+" "buble multiple lines
+" vmap <C-k> xkP`[V`]
+" vmap <C-j> xp`[V`]
 
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 let g:vrc_curl_opts = {
