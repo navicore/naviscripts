@@ -11,6 +11,10 @@
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
+" 
+" --------- CocInstall ---------
+" 
+" :CocInstall coc-java coc-metals coc-rls coc-rust-analyzer coc-jedi 
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 let s:uname = system("echo -n \"$(uname)\"")
@@ -29,7 +33,9 @@ endif
 "
 " BEGIN VUNDLE:
 "
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+"
 " mkdir -p ~/.vim/swapfiles
 " restart vim :BundleInstall
 " eval `ssh-agent -s`
@@ -83,53 +89,52 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/bundle')
 
-Plugin 'rhysd/committia.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ervandew/supertab'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'prettier/prettier'
-Plugin 'pangloss/vim-javascript'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'Shougo/vimproc.vim.git'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'aklt/plantuml-syntax'
-Plugin 'chrisbra/csv.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'derekwyatt/vim-sbt'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'neoclide/coc.nvim'
-Plugin 'diepm/vim-rest-console'
-Plugin 'ervandew/screen'
-Plugin 'fatih/vim-go'
-Plugin 'gmarik/vundle'
-Plugin 'godlygeek/tabular'
-Plugin 'jalvesaq/Nvim-R'
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
-"Plugin 'majutsushi/tagbar'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'navicore/vis.vim'
-Plugin 'navicore/vissort.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tpope/vim-fireplace.git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax' 
-Plugin 'dense-analysis/ale'
-Plugin 'wannesm/wmgraphviz.vim'
-Plugin 'neovimhaskell/haskell-vim'
+Plug 'rhysd/committia.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'leafgarland/typescript-vim'
+Plug 'mxw/vim-jsx'
+Plug 'prettier/prettier'
+Plug 'pangloss/vim-javascript'
+Plug 'airblade/vim-gitgutter'
+"Plug 'Shougo/vimproc.vim.git'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'aklt/plantuml-syntax'
+Plug 'chrisbra/csv.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'derekwyatt/vim-sbt'
+Plug 'derekwyatt/vim-scala'
+Plug 'neoclide/coc.nvim'
+Plug 'diepm/vim-rest-console'
+Plug 'ervandew/screen'
+Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
+Plug 'jalvesaq/Nvim-R'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'navicore/vis.vim'
+Plug 'navicore/vissort.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'slashmili/alchemist.vim'
+Plug 'tomtom/tcomment_vim'
+"Plug 'tpope/vim-fireplace.git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax' 
+Plug 'dense-analysis/ale'
+Plug 'wannesm/wmgraphviz.vim'
+Plug 'neovimhaskell/haskell-vim'
+
+call plug#end()
 
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
