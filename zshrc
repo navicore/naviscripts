@@ -7,3 +7,4 @@ source ~/naviscripts/src/zshrc
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/navicore/.nvm/versions/node/v12.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/navicore/.nvm/versions/node/v12.1.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
