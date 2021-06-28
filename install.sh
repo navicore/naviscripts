@@ -29,5 +29,5 @@ mkdir -p ~/.cargo
 cp ./cargo/env ~/.cargo/env
 cp ./cargo/config ~/.cargo/config
 
-mkdir -p ./coc-settings.json ~/.config/nvim
+mkdir -p ~/.config/nvim
 cp ./coc-settings.json ~/.config/nvim/coc-settings.json 
