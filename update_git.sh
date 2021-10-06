@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 #                                                                  #
 ####################################################################
 cp ~/.tern-config ./tern-config
+cp ~/.gitignore ./gitignore
 cp ~/.gitconfig ./gitconfig
 cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim

@@ -12,3 +12,4 @@
 	helper = cache
 [core]
 	editor = vim
+	excludesFile = ~/.gitignore

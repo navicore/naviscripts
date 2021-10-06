@@ -71,6 +71,13 @@ endif
 " nerd fonts
 " https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 "
+"
+" GIT CONFIG
+"
+" git config --global core.excludesfile '~/.gitignore'
+"
+" END GIT CONFIG
+"
 
 syntax on
 
