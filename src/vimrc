@@ -1,4 +1,4 @@
-tern-config" --------- LNX --------- (debian-based)
+" --------- LNX --------- (debian-based)
 " apt install build-essential python-dev cmake zsh
 " apt install neovim
 "
