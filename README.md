@@ -14,7 +14,7 @@ even do but I can't cope without it all.
 * tmux
 * nerd fonts
 * coc autocomplete
-* R ncom is great - I could not use R if I had to use RStudio at all
+* Nvim-R is great - I could not use R if I had to use RStudio at all
 
 
 ### INSTALL
