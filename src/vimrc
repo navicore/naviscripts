@@ -99,6 +99,7 @@ set shiftwidth=2
 
 call plug#begin('~/.vim/bundle')
 
+Plug 'mattn/calendar-vim'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
