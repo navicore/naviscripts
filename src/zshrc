@@ -169,7 +169,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
-export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin
 
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
