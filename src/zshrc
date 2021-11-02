@@ -52,7 +52,9 @@ alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print 
 alias dockerdangle='docker rmi $(docker images -q --filter dangling=true)'
 
 alias fetchupstream='git fetch upstream'
+alias mergeupstreammain='git merge upstream/main'
 alias mergeupstream='git merge upstream/master'
+alias mergeupstreammaster='git merge upstream/master'
 
 export TERM="screen-256color"
 export GIT_EDITOR="vim -f"
