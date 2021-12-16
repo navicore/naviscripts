@@ -1,7 +1,7 @@
 #!/bin/sh
 
 tmux new-session -s N -n DEVOPS -d
-
+tmux split-window -v
 tmux new-window  -t N:1 -n RUST
 tmux new-window  -t N:2 -n R
 tmux new-window  -t N:3 -n JAVA
