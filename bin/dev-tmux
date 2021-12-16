@@ -1,0 +1,10 @@
+#!/bin/sh
+
+tmux new-session -s N -n DEVOPS -d
+
+tmux new-window  -t N:1 -n RUST
+tmux new-window  -t N:2 -n R
+tmux new-window  -t N:3 -n JAVA
+
+tmux select-window -t N:1
+tmux -2 attach-session -t N

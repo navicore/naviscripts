@@ -30,5 +30,6 @@ cp ~/bin/plant* ./bin/
 cp ~/bin/killz ./bin/
 cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
+cp ~/bin/dev-tmux ./bin/
 
 cp ~/.config/nvim/coc-settings.json  .

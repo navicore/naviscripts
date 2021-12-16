@@ -30,6 +30,8 @@ set -o vi
 PAGER=more; export PAGER
 EDITOR=vim; export EDITOR
 
+alias tmux='~/bin/dev-tmux'
+
 alias busybox='kubectl run -i --tty $USER-busybox --image=busybox --restart=Never -- sh'
 alias centos='kubectl run -i --tty $USER-centos --image=centos --restart=Never -- sh'
 alias alpine='kubectl run -i --tty $USER-alpine --image=alpine --restart=Never -- sh'

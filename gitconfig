@@ -13,3 +13,5 @@
 [core]
 	editor = vim
 	excludesFile = ~/.gitignore
+[init]
+	templateDir = /home/navicore/.git-template
