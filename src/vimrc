@@ -14,7 +14,8 @@
 " 
 " --------- CocInstall ---------
 " 
-" :CocInstall coc-java coc-metals coc-rls coc-rust-analyzer coc-jedi 
+" :CocInstall coc-java coc-metals coc-rls coc-rust-analyzer coc-jedi coc-json
+" coc-sh coc-markdownlint
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 let s:uname = system("echo -n \"$(uname)\"")
@@ -130,7 +131,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'slashmili/alchemist.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-markdown'
+"Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
