@@ -14,6 +14,7 @@ cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
 cp ~/.zshrc ./zshrc
+cp ~/.scryerrc ./scryerrc
 cp ~/.tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
 cp ~/.ctags ./ctags

@@ -1,0 +1,1 @@
+:- set_prolog_flag(occurs_check, error).
