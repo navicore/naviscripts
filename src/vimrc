@@ -14,8 +14,7 @@
 " 
 " --------- CocInstall ---------
 " 
-" :CocInstall coc-java coc-metals coc-rls coc-rust-analyzer coc-jedi coc-json
-" coc-sh coc-markdownlint
+" :CocInstall coc-java coc-metals coc-rls coc-rust-analyzer coc-jedi coc-json coc-tsserver coc-prettier coc-sh coc-markdownlint
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 let s:uname = system("echo -n \"$(uname)\"")
@@ -100,13 +99,12 @@ set shiftwidth=2
 
 call plug#begin('~/.vim/bundle')
 
+Plug 'neoclide/coc-prettier'
 Plug 'mattn/calendar-vim'
 Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'prettier/prettier'
 Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -333,3 +331,4 @@ function! s:GoToDefinition()
 endfunction
 
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
