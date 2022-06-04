@@ -11,7 +11,7 @@
 [credential]
 	helper = cache
 [core]
-	editor = vim
+	editor = nvim
 	excludesFile = ~/.gitignore
 [init]
 	templateDir = /home/navicore/.git-template
