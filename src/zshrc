@@ -184,3 +184,4 @@ eval "$(jenv init -)"
 
 export KUBE_EDITOR=nvim
 
+export GPG_TTY=$(tty)
