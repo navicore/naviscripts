@@ -36,4 +36,3 @@ even do but I can't cope without it all.
 `git push`
 
 --------
-
