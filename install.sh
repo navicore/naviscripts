@@ -34,4 +34,4 @@ cp ./cargo/config ~/.cargo/config
 mkdir -p ~/.config/nvim
 cp ./coc-settings.json ~/.config/nvim/coc-settings.json 
 
-cp -pR git-template ~/.git-template
+cp -pR git-template/ ~/.git-template/
