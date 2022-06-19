@@ -20,6 +20,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 export LANG=en_US.UTF-8
+export NVM_COMPLETION=true
 
 export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 
@@ -131,6 +132,7 @@ zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
 zplug 'ryutok/rust-zsh-completions'
+zplug 'dwaynebradley/k3d-oh-my-zsh-plugin'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -180,8 +182,17 @@ fi
 
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv init -)"; fi
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+export DENO_INSTALL="/home/navicore/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 export KUBE_EDITOR=nvim
 
 export GPG_TTY=$(tty)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

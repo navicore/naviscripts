@@ -11,6 +11,9 @@
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
+"
+" --------- DENO ---------
+" curl -fsSL https://deno.land/x/install/install.sh | sh
 " 
 " --------- CocInstall ---------
 " 
