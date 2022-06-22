@@ -65,16 +65,16 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=999999
 export SAVEHIST=1000
 
-if [[ $platform == 'linux' ]]; then
-  export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
-elif [[ $platform == 'osx' ]]; then
-  setopt APPEND_HISTORY
-  export CLICOLOR=1
-  export LSCOLORS=GxFxCxDxBxegedabagaced
-  export JAVA_HOME="$(/usr/libexec/java_home)"
-  export PATH="$PATH:/usr/local/texlive/2016/bin/x86_64-darwin"
-fi 
-
+# if [[ $platform == 'linux' ]]; then
+#   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
+# elif [[ $platform == 'osx' ]]; then
+#   setopt APPEND_HISTORY
+#   export CLICOLOR=1
+#   export LSCOLORS=GxFxCxDxBxegedabagaced
+#   export JAVA_HOME="$(/usr/libexec/java_home)"
+#   export PATH="$PATH:/usr/local/texlive/2016/bin/x86_64-darwin"
+# fi 
+#
 # fix ^M issue in sbt interactive mode
 stty icrnl
 
