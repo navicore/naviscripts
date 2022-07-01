@@ -94,6 +94,8 @@ endif
 "
 " flux2 https://fluxcd.io/docs/get-started/
 "
+" install k3d
+"
 syntax on
 
 :set nu
