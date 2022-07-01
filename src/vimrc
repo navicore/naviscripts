@@ -88,7 +88,12 @@ endif
 "
 " END GIT CONFIG
 "
-
+" install more k8s stuff
+"
+" kind https://kind.sigs.k8s.io/docs/user/quick-start/
+"
+" flux2 https://fluxcd.io/docs/get-started/
+"
 syntax on
 
 :set nu
