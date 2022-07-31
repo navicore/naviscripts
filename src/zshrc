@@ -124,6 +124,7 @@ export GOPATH=~/go
 
 source $ZPLUG_HOME/init.zsh
 
+zplug "navicore/zsh-kind"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
 zplug "plugins/mix",   from:oh-my-zsh
