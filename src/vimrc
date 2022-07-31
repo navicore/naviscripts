@@ -92,9 +92,9 @@ endif
 "
 " kind https://kind.sigs.k8s.io/docs/user/quick-start/
 " 	% kind completion zsh > /usr/local/share/zsh/site-functions/_kind
-"	  % autoload -U compinit && compinit
 "
 " flux2 https://fluxcd.io/docs/get-started/
+" 	% flux completion zsh > /usr/local/share/zsh/site-functions/_flux
 "
 " install k3d
 "
