@@ -29,6 +29,8 @@ endif
 
 " BEGIN R:
 "
+" apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+"
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
