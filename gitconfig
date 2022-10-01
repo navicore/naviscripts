@@ -1,8 +1,10 @@
 [push]
 	default = simple
+	autoSetupRemote = true
 [user]
 	name = Ed Sweeney
 	email = ed@onextent.com
+	signingkey = 27AE971C9F8555F3
 [github]
 	user = navicore
 
