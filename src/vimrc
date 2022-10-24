@@ -101,7 +101,7 @@ endif
 " install k3d
 "
 syntax on
-
+set nofoldenable
 :set nu
 set nocompatible " be iMproved
 filetype off     " required!
