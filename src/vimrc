@@ -159,6 +159,9 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 call plug#end()
 
 set nofoldenable
+let g:csv_nomap_bs = 1
+let g:csv_nomap_cr = 1
+let g:csv_nomap_space = 1
 
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
