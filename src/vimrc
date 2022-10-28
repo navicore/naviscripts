@@ -101,7 +101,6 @@ endif
 " install k3d
 "
 syntax on
-set nofoldenable
 
 :set nu
 set nocompatible " be iMproved
@@ -158,6 +157,8 @@ Plug 'diepm/vim-rest-console'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 call plug#end()
+
+set nofoldenable
 
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
