@@ -87,7 +87,8 @@ endif
 " GIT CONFIG
 "
 " git config --global core.excludesfile '~/.gitignore'
-" git config --global core.pager cat
+" # for when an installation won't let git diff show colors
+" git config --global core.pager cat 
 "
 " END GIT CONFIG
 "
