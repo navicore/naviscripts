@@ -137,7 +137,7 @@ Plug 'neoclide/coc.nvim'
 Plug 'ervandew/screen'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
-Plug 'jalvesaq/Nvim-R'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/gist-vim'
