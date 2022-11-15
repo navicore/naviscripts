@@ -20,9 +20,11 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 export LANG=en_US.UTF-8
-export NVM_COMPLETION=true
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
+export NVM_COMPLETION=true
+export NVM_LAZY_LOAD=true
+
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
 
 ulimit -n 4096
 BLOCKSIZE=K;	export BLOCKSIZE
@@ -65,18 +67,8 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=999999
 export SAVEHIST=1000
 
-# if [[ $platform == 'linux' ]]; then
-#   export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))/..
-# elif [[ $platform == 'osx' ]]; then
-#   setopt APPEND_HISTORY
-#   export CLICOLOR=1
-#   export LSCOLORS=GxFxCxDxBxegedabagaced
-#   export JAVA_HOME="$(/usr/libexec/java_home)"
-#   export PATH="$PATH:/usr/local/texlive/2016/bin/x86_64-darwin"
-# fi 
-#
 # fix ^M issue in sbt interactive mode
-stty icrnl
+#stty icrnl
 
 #
 # Custom Cloud Theme with insane git prompt (really, I just want separate dirty and untracked indicators)
@@ -120,6 +112,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 alias iexvi='rlwrap -a foo iex'
 
+export PATH="$HOME/.jenv/bin:$PATH"
+
 export GOPATH=~/go
 
 source $ZPLUG_HOME/init.zsh
@@ -127,12 +121,11 @@ source $ZPLUG_HOME/init.zsh
 zplug "navicore/zsh-kind"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
-zplug "plugins/mix",   from:oh-my-zsh
-#zplug "plugins/helm",   from:oh-my-zsh
-zplug "plugins/pipenv", from:oh-my-zsh
-zplug "plugins/vi-mode",   from:oh-my-zsh
+zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
 zplug 'ryutok/rust-zsh-completions'
+zplug 'lukechilds/zsh-nvm'
+zplug 'mroth/evalcache'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -141,17 +134,7 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
-#zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-# Then, source plugins and add commands to $PATH
 zplug load
-
-# unsure why ohmy doesn't load
-if [ $commands[helm] ]; then
-  source <(helm completion zsh)
-fi
-
-autoload -U +X bashcompinit; bashcompinit
-eval "$(register-python-argcomplete az)"
 
 source $HOME/.cargo/env
 
@@ -159,31 +142,11 @@ if [ -f ~/.zshrc_local ]; then
   . ~/.zshrc_local
 fi
 
-export PYTHON_CONFIGURE_OPTS="--enable-framework"
-
-export PATH="$PATH:$HOME/.local/bin"
-export PIP_SHIMS_BASE_MODULE=pipenv.patched.notpip
-
-# --files: List files that would be searched but do not search
-# --no-ignore: Do not respect .gitignore, etc...
-# --hidden: Search hidden files and folders
-# --follow: Follow symlinks
-# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-
-export PATH=$PATH:/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin
-
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
 
-# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv init -)"; fi
-# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+_evalcache jenv init -
 
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -191,8 +154,4 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export KUBE_EDITOR=nvim
 
 export GPG_TTY=$(tty)
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
