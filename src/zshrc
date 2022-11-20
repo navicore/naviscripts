@@ -155,3 +155,5 @@ export KUBE_EDITOR=nvim
 
 export GPG_TTY=$(tty)
 
+# downside of lazyload is that nvim won't load some plugin...
+node --version > /dev/null 
