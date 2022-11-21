@@ -13,7 +13,7 @@ cp ./bin/* ~/bin/
 cp ./tern-config ~/.tern-config
 cp ./guile ~/.guile
 cp -n ./gitconfig ~/.gitconfig
-cp ./gitignore ~/.gitignore
+cp -n ./gitignore ~/.gitignore
 mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./vimrc ~/.vimrc
