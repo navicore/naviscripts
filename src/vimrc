@@ -102,6 +102,8 @@ endif
 "
 " install k3d
 "
+" tell git to use the global gitignore:
+" git config --global core.excludesfile ~/.gitignore
 "
 syntax on
 
