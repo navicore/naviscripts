@@ -17,7 +17,7 @@
 " 
 " --------- CocInstall ---------
 " 
-" :CocInstall coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-tsserver coc-prettier coc-sh coc-markdownlint
+" :CocInstall coc-clangd coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-tsserver coc-prettier coc-sh coc-markdownlint
 "
 " in each node project: npm install prettier -D --save-exact
 
