@@ -17,3 +17,4 @@
 	excludesFile = ~/.gitignore
 [init]
 	templateDir = /home/navicore/.git-template
+	defaultBranch = main
