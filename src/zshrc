@@ -155,5 +155,7 @@ export KUBE_EDITOR=nvim
 
 export GPG_TTY=$(tty)
 
+bindkey -M vicmd v edit-command-line
+
 # downside of lazyload is that nvim won't load some plugin...
 node --version > /dev/null 
