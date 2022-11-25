@@ -16,5 +16,7 @@
 	editor = nvim
 	excludesFile = ~/.gitignore
 [init]
-	templateDir = /home/navicore/.git-template
+	templateDir = /Users/navicore/.git-template
 	defaultBranch = main
+[pull]
+	rebase = false

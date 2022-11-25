@@ -120,22 +120,22 @@ set shiftwidth=2
 
 call plug#begin('~/.vim/bundle')
 
-Plug 'neoclide/coc-prettier'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/calendar-vim'
-Plug 'rhysd/committia.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'aklt/plantuml-syntax'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'derekwyatt/vim-sbt'
 Plug 'derekwyatt/vim-scala'
-Plug 'neoclide/coc.nvim'
 Plug 'ervandew/screen'
 Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
@@ -147,19 +147,14 @@ Plug 'mattn/webapi-vim'
 Plug 'navicore/vis.vim'
 Plug 'navicore/vissort.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'slashmili/alchemist.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax' 
 Plug 'dense-analysis/ale'
 Plug 'wannesm/wmgraphviz.vim'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'diepm/vim-rest-console'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 call plug#end()
 
