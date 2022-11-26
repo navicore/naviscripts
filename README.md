@@ -7,7 +7,7 @@ I've lived in text shells since the 90s.
 Messy - created slowly over many years.  I'm not sure what some of parts
 even do but I can't cope without it all.
 
-* More vim8 than nvim but I use both and the setup works for both.
+* I've fully switch to nvim but should 99% work on vim8+
 * Equally OSX and Linux - I use both and most of the setup works for both.
 * zsh
 * vim-plug
@@ -26,6 +26,7 @@ even do but I can't cope without it all.
 `./install.sh`
 
 * follow the tedious instructions at the top of `src/vimrc` to finish the setup
+* beware of any hard coded `/home` or `/Users` paths - they sneak in.
 
 ### update the repo from the installed files
 
