@@ -1,5 +1,8 @@
 " --------- LNX --------- (debian-based)
-" apt install build-essential python-dev cmake zsh
+" dnf group install "Development Tools"
+" dnf install devel
+"
+" apt install build-essential python-dev cmake zsh gmp-devel
 " apt install neovim
 "
 " --------- OSX ---------
@@ -20,6 +23,9 @@
 " :CocInstall coc-clangd coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-tsserver coc-prettier coc-sh coc-markdownlint
 "
 " in each node project: npm install prettier -D --save-exact
+
+" install zplug
+" curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 let s:uname = system("echo -n \"$(uname)\"")
@@ -54,8 +60,8 @@ endif
 " BEGIN RUST:
 "
 " curl https://sh.rustup.rs -sSf | sh
-" rustup component add rls-preview rust-analysis rust-src
-" rustup component add rustfmt-preview
+" rustup component add rust-analysis rust-src
+" rustup component add rustfmt
 " ssh-add -K ~/.ssh/id_rsa
 "
 " END RUST:
@@ -82,7 +88,7 @@ endif
 "
 " nerd fonts
 " https://github.com/ryanoasis/nerd-fonts#option-3-install-script
-"
+" cd tmp && git clone git@github.com:ryanoasis/nerd-fonts.git
 "
 " GIT CONFIG
 "
@@ -117,7 +123,6 @@ set hidden
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
 call plug#begin('~/.vim/bundle')
 
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -179,7 +184,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_rust_rls_toolchain = ''
 let g:ale_linters_explicit = 1
 let g:ale_linter_aliases = {'r': ['r', 'rmd']}
-let g:ale_linters = {'rust': ['cargo', 'rls'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8', 'pylint'], 'typescript': ['tslint'] }
+let g:ale_linters = {'rust': ['cargo', 'analyzer', 'rust-fmt'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8', 'pylint'], 'typescript': ['tslint'] }
 let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], 'r': ['styler'], 'typescript': ['tslint'] }
 
 "dot / graphiz
