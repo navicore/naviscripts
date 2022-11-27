@@ -160,6 +160,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'dense-analysis/ale'
 Plug 'wannesm/wmgraphviz.vim'
 Plug 'diepm/vim-rest-console'
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
