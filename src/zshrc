@@ -146,8 +146,6 @@ if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
 
-_evalcache jenv init -
-
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
@@ -158,4 +156,5 @@ export GPG_TTY=$(tty)
 bindkey -M vicmd v edit-command-line
 
 # downside of lazyload is that nvim won't load some plugin...
-node --version > /dev/null 
+#node --version > /dev/null 
+#_evalcache jenv init -
