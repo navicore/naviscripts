@@ -19,6 +19,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    alias vi='nvim'
 fi
 
+alias factorrl='~/tmp/git/factor/factor -run=readline-listener'
+
 export LANG=en_US.UTF-8
 
 export NVM_COMPLETION=true
