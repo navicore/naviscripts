@@ -5,8 +5,9 @@ tmux split-window -v
 
 tmux new-window  -t N:2 -n RUST
 tmux new-window  -t N:3 -n PROLOG
-tmux new-window  -t N:4 -n R
-tmux new-window  -t N:5 -n JAVA
+tmux new-window  -t N:4 -n FACTOR
+tmux new-window  -t N:5 -n R
+tmux new-window  -t N:6 -n JAVA
 
 tmux select-window -t N:1
 tmux -2 attach-session -t N
