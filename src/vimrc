@@ -301,6 +301,9 @@ let g:airline_powerline_fonts = 1
 set guifont=Fira\ Code:h12
 " END for devicons
 
+" Factor lang config
+let g:FactorRoot = "~/tmp/git/factor"
+
 "golang stuff...
 let mapleader = ","
 " save when :make is called
