@@ -5,7 +5,6 @@ tmux split-window -v
 
 tmux new-window  -t N:2 -n RUST
 tmux new-window  -t N:3 -n PROLOG
-tmux new-window  -t N:4 -n FACTOR
 tmux new-window  -t N:5 -n R
 tmux new-window  -t N:6 -n JAVA
 
