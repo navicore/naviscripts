@@ -164,7 +164,7 @@ Plug 'wannesm/wmgraphviz.vim'
 Plug 'diepm/vim-rest-console'
 Plug 'brandonbloom/vim-factor'
 " start telescope
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sharkdp/fd'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'BurntSushi/ripgrep'
@@ -172,6 +172,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 " end telescope
+Plug 'EdenEast/nightfox.nvim'
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -290,24 +291,6 @@ au BufRead,BufNewFile *.sbt set filetype=sbt
 "plantuml
 autocmd BufWritePost,FileWritePost *.uml :silent make
 
-" START color toggle
-set background=dark
-colorscheme flattened_dark
-
-map <F5> :call ToggleBg()<CR>
-function! ToggleBg()
-  if &background == 'dark'
-    set bg=light
-    colorscheme flattened_light
-  else
-    set bg=dark
-    colorscheme flattened_dark
-  endif
-endfunc
-" END color toggle
-
-" unfortunately this only helps vim.  doesn't fix the bazillion other *nix
-" shells I use VI mode with :|   not happy with post '15 apple
 inoremap jj <Esc>`^
 
 " START for devicons
@@ -378,3 +361,6 @@ endfunction
 
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
+colorscheme terafox
+
