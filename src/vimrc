@@ -33,11 +33,11 @@
 " install zplug
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-let g:python3_host_prog = '/usr/local/bin/python3'
-let s:uname = system("echo -n \"$(uname)\"")
-if !v:shell_error && s:uname == "Linux"
-  let g:python3_host_prog = "/usr/bin/python3"
-endif
+" let g:python3_host_prog = '/usr/local/bin/python3'
+" let s:uname = system("echo -n \"$(uname)\"")
+" if !v:shell_error && s:uname == "Linux"
+"   let g:python3_host_prog = "/usr/bin/python3"
+" endif
 
 " BEGIN R:
 "
@@ -132,53 +132,10 @@ set shiftwidth=2
 call plug#begin('~/.vim/bundle')
 
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'mattn/calendar-vim'
-Plug 'tpope/vim-fugitive'
-Plug 'ervandew/supertab'
-Plug 'leafgarland/typescript-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'airblade/vim-gitgutter'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'scrooloose/nerdtree'
-" Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
-" Plug 'nvim-tree/nvim-tree.lua'
-Plug 'ryanoasis/vim-devicons'
-Plug 'aklt/plantuml-syntax'
-Plug 'chrisbra/csv.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'derekwyatt/vim-sbt'
-Plug 'derekwyatt/vim-scala'
-Plug 'ervandew/screen'
-Plug 'fatih/vim-go'
-Plug 'godlygeek/tabular'
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mattn/gist-vim'
-Plug 'mattn/webapi-vim'
-Plug 'navicore/vis.vim'
-Plug 'navicore/vissort.vim'
-Plug 'rust-lang/rust.vim'
-Plug 'tomtom/tcomment_vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax' 
-Plug 'dense-analysis/ale'
-Plug 'wannesm/wmgraphviz.vim'
-Plug 'diepm/vim-rest-console'
-Plug 'brandonbloom/vim-factor'
-" start telescope
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'sharkdp/fd'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'BurntSushi/ripgrep'
-Plug 'nvim-telescope/telescope-fzf-native.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-" end telescope
-Plug 'EdenEast/nightfox.nvim'
+
+call plug#end()
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -186,7 +143,6 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-call plug#end()
 
 set nofoldenable
 let g:csv_nomap_bs = 1
@@ -202,13 +158,6 @@ set completeopt-=preview
 
 " ale airline text
 let g:airline#extensions#ale#enabled = 1
-
-"let g:ale_rust_rls_toolchain = 'stable' " this is needed, otherwise rls uses nightly toolchain
-let g:ale_rust_rls_toolchain = ''
-let g:ale_linters_explicit = 1
-let g:ale_linter_aliases = {'r': ['r', 'rmd']}
-let g:ale_linters = {'rust': ['cargo', 'analyzer', 'rust-fmt'], 'javascript': ['eslint'], 'r': ['lintr'], 'scala': ['scalafmt', 'sbtserver', 'fsc'], 'python': ['flake8', 'pylint'], 'typescript': ['tslint'] }
-let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'], 'r': ['styler'], 'typescript': ['tslint'] }
 
 "dot / graphiz
 let g:WMGraphviz_dot = 'dot'
@@ -226,9 +175,7 @@ nmap <F4> :w<CR>:make<CR>:copen<CR>
 
 function SetIDEOptions()
   if isdirectory('.git')
-    "CtrlP
     NvimTreeOpen
-    "Tagbar
   endif
 endfunction
 
@@ -237,12 +184,8 @@ map <leader>f :ALEFix<CR>
 autocmd vimenter * if !argc() | call SetIDEOptions() | endif
 map <C-n> :NvimTreeToggle<CR>
 
-map <C-t> :TagbarToggle<CR>
-
 "set the source for autocomplete
 set complete=.,w,b,u,t,i
-
-"set tags=./.tags;,.tags;
 
 set spell
 set spelllang=en_us
@@ -251,25 +194,9 @@ set spelllang=en_us
 set hlsearch
 nnoremap <CR> :nohlsearch<CR><CR>
 
-" map <C-h> <C-w>h
-" map <C-j> <C-w>j
-" map <C-k> <C-w>k
-" map <C-l> <C-w>l
-
 set colorcolumn=81
 
-"set listchars=tab:>~,nbsp:_,trail:.
-"set list
-
 xnoremap . :normal .<CR>
-
-"buble single line
-" nmap <C-k> ddkP
-" nmap <C-j> ddp
-"
-" "buble multiple lines
-" vmap <C-k> xkP`[V`]
-" vmap <C-j> xp`[V`]
 
 let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 let g:vrc_curl_opts = {
@@ -330,14 +257,14 @@ let g:go_textobj_include_function_doc = 0
 
 let g:rustfmt_autosave = 1
 
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+"command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
 " for scala
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
-vmap <Space> <Plug>RDSendSelection
-nmap <Space> <Plug>RDSendLine
+" vmap <Space> <Plug>RDSendSelection
+" nmap <Space> <Plug>RDSendLine
 
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#syntax#conceal#use = 0
@@ -363,4 +290,3 @@ nmap <silent> gd :call <SID>GoToDefinition()<CR>
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 colorscheme terafox
-
