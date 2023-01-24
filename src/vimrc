@@ -13,6 +13,10 @@
 " XXXXXXXXXXXXXXXXXXXXX not needed??? pip3 install neovim
 "
 " --------- ALL ---------
+"
+" install packer for lua migration
+" git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+"
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
@@ -22,7 +26,7 @@
 " 
 " --------- CocInstall ---------
 " 
-" :CocInstall coc-clangd coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-tsserver coc-prettier coc-sh coc-markdownlint
+" :CocInstall coc-clangd coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-prettier coc-lua
 "
 " in each node project: npm install prettier -D --save-exact
 
@@ -135,8 +139,10 @@ Plug 'ervandew/supertab'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'scrooloose/nerdtree'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'scrooloose/nerdtree'
+" Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+" Plug 'nvim-tree/nvim-tree.lua'
 Plug 'ryanoasis/vim-devicons'
 Plug 'aklt/plantuml-syntax'
 Plug 'chrisbra/csv.vim'
@@ -190,8 +196,6 @@ let g:csv_nomap_space = 1
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 
-let NERDTreeShowHidden=1
-
 filetype plugin indent on     " required!
 
 set completeopt-=preview
@@ -223,7 +227,7 @@ nmap <F4> :w<CR>:make<CR>:copen<CR>
 function SetIDEOptions()
   if isdirectory('.git')
     "CtrlP
-    NERDTree
+    NvimTreeOpen
     "Tagbar
   endif
 endfunction
@@ -231,7 +235,7 @@ endfunction
 map <leader>f :ALEFix<CR>
 
 autocmd vimenter * if !argc() | call SetIDEOptions() | endif
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NvimTreeToggle<CR>
 
 map <C-t> :TagbarToggle<CR>
 
@@ -325,10 +329,6 @@ let g:go_fmt_command = "goimports"
 let g:go_textobj_include_function_doc = 0
 
 let g:rustfmt_autosave = 1
-let g:NERDTreeGitStatusLogLevel = 3
-let g:NERDTreeGitStatusUseNerdFonts = 1
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 

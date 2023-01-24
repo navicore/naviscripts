@@ -27,6 +27,7 @@ cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
+cp -R ./lua ~/.config/nvim/lua
 mkdir -p ~/.cargo
 cp ./cargo/env ~/.cargo/env
 cp ./cargo/config ~/.cargo/config
