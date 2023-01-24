@@ -27,12 +27,12 @@ cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.vim ~/.config/nvim/
-cp -R ./lua ~/.config/nvim/lua
+cp -R ./lua ~/.config/nvim/
 mkdir -p ~/.cargo
 cp ./cargo/env ~/.cargo/env
 cp ./cargo/config ~/.cargo/config
 
-mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/lua
 cp ./coc-settings.json ~/.config/nvim/coc-settings.json 
 
 cp -npR git-template/ ~/.git-template/
