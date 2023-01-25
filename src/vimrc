@@ -158,12 +158,6 @@ endfunction
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
-let g:completion_enable_snippet = 'neosnippet'
-let g:completion_chain_complete_list = {
-      \ 'default' : [['complete_word', 'complete_fuzzy']],
-      \ 's' : [['complete_snippet', 'complete_word', 'complete_fuzzy']],
-      \ }
-"inoremap <tab> <C-x><C-u>
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
