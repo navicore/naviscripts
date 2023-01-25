@@ -25,10 +25,6 @@ return require('packer').startup(function(use)
     tag = 'release'
   }
 
-  --use 'mattn/calendar-vim'
-  --use 'ervandew/supertab'
-  --use 'leafgarland/typescript-vim'
-  --use 'pangloss/vim-javascript'
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
   use 'chrisbra/csv.vim'
@@ -36,7 +32,6 @@ return require('packer').startup(function(use)
   use 'derekwyatt/vim-sbt'
   use 'derekwyatt/vim-scala'
   use 'ervandew/screen'
-  --use 'fatih/vim-go'
   use 'godlygeek/tabular'
 
   use 'mattn/gist-vim'
