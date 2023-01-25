@@ -52,14 +52,10 @@
 "
 
 " 
-" using vim-plug plugin manager
+" using neovim packer - install it and then ":PackerInstall" everything else
 " 
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" 
-
 "
 " mkdir -p ~/.vim/swapfiles
-" restart vim :PlugInstall
 " eval `ssh-agent -s`
 " ssh-add
 "
