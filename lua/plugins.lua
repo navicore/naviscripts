@@ -44,24 +44,25 @@ return require('packer').startup(function(use)
   use 'diepm/vim-rest-console'
   use 'brandonbloom/vim-factor'
 
-use {'neoclide/coc.nvim', branch = 'release'}
-use {'jalvesaq/Nvim-R', branch = 'stable' }
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use {'jalvesaq/Nvim-R', branch = 'stable' }
 
--- start telescope
-use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-        ts_update()
-    end,
-}
-use 'sharkdp/fd'
-use 'nvim-lua/plenary.nvim'
-use 'BurntSushi/ripgrep'
-use 'nvim-telescope/telescope-fzf-native.nvim'
--- end telescope
+  -- start telescope
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
+  use { 'junegunn/fzf', run = ":call fzf#install()" }
+  use { 'junegunn/fzf.vim' }
+  use 'sharkdp/fd'
+  use 'nvim-lua/plenary.nvim'
+  use 'BurntSushi/ripgrep'
+  use 'nvim-telescope/telescope-fzf-native.nvim'
+  -- end telescope
 
-use 'EdenEast/nightfox.nvim'
-
+  use 'EdenEast/nightfox.nvim'
 
 end)
