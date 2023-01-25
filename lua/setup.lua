@@ -26,3 +26,5 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+require('gitsigns').setup()

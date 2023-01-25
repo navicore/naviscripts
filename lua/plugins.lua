@@ -18,7 +18,10 @@ return require('packer').startup(function(use)
   use 'ervandew/supertab'
   use 'leafgarland/typescript-vim'
   use 'pangloss/vim-javascript'
-  use 'airblade/vim-gitgutter'
+  use {
+    'lewis6991/gitsigns.nvim',
+    tag = 'release'
+  }
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
   use 'chrisbra/csv.vim'
