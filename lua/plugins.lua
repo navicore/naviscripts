@@ -13,15 +13,22 @@ return require('packer').startup(function(use)
     }
   }
 
-  use 'mattn/calendar-vim'
+  use 'nvim-treesitter/completion-treesitter'
+
+  use 'tpope/vim-sleuth'
+
+  -- GIT stuff --
   use 'tpope/vim-fugitive'
-  use 'ervandew/supertab'
-  use 'leafgarland/typescript-vim'
-  use 'pangloss/vim-javascript'
+  use 'tpope/vim-rhubarb'
   use {
     'lewis6991/gitsigns.nvim',
     tag = 'release'
   }
+
+  --use 'mattn/calendar-vim'
+  --use 'ervandew/supertab'
+  --use 'leafgarland/typescript-vim'
+  --use 'pangloss/vim-javascript'
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
   use 'chrisbra/csv.vim'
@@ -29,7 +36,7 @@ return require('packer').startup(function(use)
   use 'derekwyatt/vim-sbt'
   use 'derekwyatt/vim-scala'
   use 'ervandew/screen'
-  use 'fatih/vim-go'
+  --use 'fatih/vim-go'
   use 'godlygeek/tabular'
 
   use 'mattn/gist-vim'
@@ -49,6 +56,11 @@ return require('packer').startup(function(use)
 
   use {'neoclide/coc.nvim', branch = 'release'}
   use {'jalvesaq/Nvim-R', branch = 'stable' }
+
+  -- golang
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommended if need floating window support
+  use 'neovim/nvim-lspconfig'
 
   -- start telescope
   use {
