@@ -22,9 +22,10 @@ return require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use {
     'lewis6991/gitsigns.nvim',
-    tag = 'release'
+    config = function()
+      require('gitsigns').setup()
+    end
   }
-
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
   use 'chrisbra/csv.vim'
