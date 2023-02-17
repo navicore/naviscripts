@@ -31,10 +31,11 @@ export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
 
 ulimit -n 4096
 BLOCKSIZE=K;	export BLOCKSIZE
-VISUAL=vi;    export VISUAL
+#VISUAL=vi;    export VISUAL
+VISUAL=nvim;    export VISUAL
 set -o vi
 PAGER=more; export PAGER
-EDITOR=vim; export EDITOR
+EDITOR=/usr/local/bin/nvim; export EDITOR
 
 alias tmux='~/bin/dev-tmux'
 
@@ -64,7 +65,7 @@ alias mergeupstreammain='git merge upstream/main'
 alias mergeupstreammaster='git merge upstream/master'
 
 export TERM="screen-256color"
-export GIT_EDITOR="vim -f"
+export GIT_EDITOR="nvim -f"
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=999999
