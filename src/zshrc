@@ -116,6 +116,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 alias iexvi='rlwrap -a foo iex'
 
+alias evcxr='evcxr --edit-mode vi'
+
 export PATH="$HOME/.jenv/bin:$PATH"
 
 export GOPATH=~/go

@@ -17,14 +17,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-
 set nofoldenable
 let g:csv_nomap_bs = 1
 let g:csv_nomap_cr = 1
 let g:csv_nomap_space = 1
-
-" let g:SuperTabDefaultCompletionType    = '<C-n>'
-" let g:SuperTabCrMapping                = 0
 
 filetype plugin indent on     " required!
 
@@ -100,34 +96,14 @@ inoremap jj <Esc>`^
 
 " START for devicons
 set encoding=utf8
-"set guifont=DroidSansMono\ Nerd\ Font:h11
 let g:airline_powerline_fonts = 1
-"set macligatures
 set guifont=Fira\ Code:h12
 " END for devicons
-
-" Factor lang config
-let g:FactorRoot = "~/tmp/git/factor"
 
 "golang stuff...
 let mapleader = ","
 " save when :make is called
 set autowrite
-" autocmd FileType go nmap <leader>r  <Plug>(go-run)
-" autocmd FileType go nmap <leader>t  <Plug>(go-test)
-" " run :GoBuild or :GoTestCompile based on the go file
-" function! s:build_go_files()
-"   let l:file = expand('%')
-"   if l:file =~# '^\f\+_test\.go$'
-"     call go#test#Test(0, 1)
-"   elseif l:file =~# '^\f\+\.go$'
-"     call go#cmd#Build(0)
-"   endif
-" endfunction
-" autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-" autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-" let g:go_fmt_command = "goimports"
-" let g:go_textobj_include_function_doc = 0
 "
 let g:rustfmt_autosave = 1
 
@@ -139,11 +115,12 @@ let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#syntax#conceal#use = 0
 let R_assign = 0
 
+set textwidth=80
 set clipboard+=unnamedplus
 
-let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
-nnoremap <Leader>] :YcmCompleter GoTo<CR>
-
+" let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
+" nnoremap <Leader>] :YcmCompleter GoTo<CR>
+"
 function! s:GoToDefinition()
   if CocAction('jumpDefinition')
     return v:true
@@ -158,7 +135,7 @@ endfunction
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 colorscheme terafox
