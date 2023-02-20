@@ -133,9 +133,9 @@ function! s:GoToDefinition()
 endfunction
 
 nmap <silent> gd :call <SID>GoToDefinition()<CR>
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-" inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 colorscheme terafox
