@@ -1,24 +1,26 @@
 #!/usr/bin/env bash
 
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 DEPLOYMENT_NAME"
+if [ "$#" -ne 3 ]; then
+  echo "Usage: $0 NAMESPACE DEPLOYMENT_NAME CONTAINER_NAME"
   exit 1
 fi
 
-DEPLOYMENT_NAME="$1"
+NAMESPACE="$1"
+DEPLOYMENT_NAME="$2"
+CONTAINER_NAME="$3"
 LOG_DIR="./logs"
 
 # Create the logs directory if it doesn't exist
 mkdir -p "$LOG_DIR"
 
 # Get the list of pods for the deployment
-PODS=$(kubectl get pods -l "app=$DEPLOYMENT_NAME" -o jsonpath='{.items[*].metadata.name}')
+PODS=$(kubectl -n "$NAMESPACE" get pods -l "app=$DEPLOYMENT_NAME" -o jsonpath='{.items[*].metadata.name}')
 
 # Loop through each pod and get its logs
 for POD in $PODS; do
   LOG_FILE="$LOG_DIR/$POD.log"
   echo "Getting logs for pod $POD..."
-  kubectl logs "$POD" > "$LOG_FILE"
+  kubectl -n "$NAMESPACE" logs "$POD" "$CONTAINER_NAME" > "$LOG_FILE"
 done
 
 echo "Finished getting logs for all pods in deployment $DEPLOYMENT_NAME."
