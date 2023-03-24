@@ -43,7 +43,7 @@
 "
 " apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 "
-" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr")
+" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr", "pivottabler", "kableExtra")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
 " tinytex::install_tinytex() 
@@ -66,13 +66,17 @@
 " rustup component add rustfmt
 " ssh-add -K ~/.ssh/id_rsa
 "
-" END RUST:
+" END RUST:j
 "
 " BEGIN HASKELL:
 "
 " curl -sSL https://get.haskellstack.org/ | sh
+"   or
+" brew install haskell-stack
 " git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
+"
+" you now have a haskell repl ghci via 'stack repl'
 "
 " END HASKELL:
 "
