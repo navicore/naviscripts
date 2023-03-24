@@ -6,6 +6,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -39,7 +42,6 @@ return require('packer').startup(function(use)
   use 'mattn/webapi-vim'
   use 'navicore/vis.vim'
   use 'navicore/vissort.vim'
-  use 'rust-lang/rust.vim'
   use 'tomtom/tcomment_vim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
@@ -49,14 +51,19 @@ return require('packer').startup(function(use)
   use 'wannesm/wmgraphviz.vim'
   use 'diepm/vim-rest-console'
   use 'brandonbloom/vim-factor'
-
-  use {'neoclide/coc.nvim', branch = 'release'}
   use {'jalvesaq/Nvim-R', branch = 'stable' }
 
+  -- is this in conflict now with lsp?
+  use {'neoclide/coc.nvim', branch = 'release'}
+  use 'neovim/nvim-lspconfig'
+
+  -- rust
+  use 'rust-lang/rust.vim'
+  use 'simrat39/rust-tools.nvim'
+ 
   -- golang
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua' -- recommended if need floating window support
-  use 'neovim/nvim-lspconfig'
 
   -- start telescope
   use {
@@ -76,4 +83,17 @@ return require('packer').startup(function(use)
 
   use 'EdenEast/nightfox.nvim'
 
+  -- Completion framework:
+  use 'hrsh7th/nvim-cmp' 
+
+  -- LSP completion source:
+  use 'hrsh7th/cmp-nvim-lsp'
+
+  -- Useful completion sources:
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
+  use 'hrsh7th/cmp-vsnip'                             
+  use 'hrsh7th/cmp-path'                              
+  use 'hrsh7th/cmp-buffer'                            
+  use 'hrsh7th/vim-vsnip'  
 end)
