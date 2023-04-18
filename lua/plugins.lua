@@ -53,9 +53,14 @@ return require('packer').startup(function(use)
   use 'brandonbloom/vim-factor'
   use {'jalvesaq/Nvim-R', branch = 'stable' }
 
+  -- lisp repl stuff
+  use 'wlangstroth/vim-racket'
+  use 'Olical/conjure'
+
   -- is this in conflict now with lsp?
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'neovim/nvim-lspconfig'
+  use 'jlesquembre/coc-conjure'
 
   -- rust
   use 'rust-lang/rust.vim'
