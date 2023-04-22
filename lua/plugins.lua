@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
 
   -- lisp repl stuff
   use 'wlangstroth/vim-racket'
-  --use 'Olical/conjure'
+  use 'Olical/conjure'
 
   -- rust
   use 'rust-lang/rust.vim'
@@ -99,4 +99,14 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/vim-vsnip'
+  
+  use {
+    'mrcjkb/haskell-tools.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+    branch = '1.x.x', -- recommended
+  }
+
 end)
