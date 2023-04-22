@@ -9,7 +9,7 @@
 -- updatetime: set updatetime for CursorHold
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
-vim.api.nvim_set_option('updatetime', 300) 
+vim.api.nvim_set_option('updatetime', 300)
 
 -- Fixed column for diagnostics to appear
 -- Show autodiagnostic popup on cursor hover_range
@@ -236,6 +236,26 @@ cmp.setup({
     { name = 'buffer', keyword_length = 2 },        -- source current buffer
     { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip 
     { name = 'calc'},                               -- source for math calculation
+    {
+      name = 'tmux',
+      option = {
+        -- Source from all panes in session instead of adjacent panes
+        all_panes = false,
+
+        -- Completion popup label
+        label = '[tmux]',
+
+        -- Trigger character
+        trigger_characters = { '.' },
+
+        -- Specify trigger characters for filetype(s)
+        -- { filetype = { '.' } }
+        trigger_characters_ft = {},
+
+        -- Keyword patch mattern
+        keyword_pattern = [[\w\+]],
+      }
+    },
   },
   window = {
       completion = cmp.config.window.bordered(),
