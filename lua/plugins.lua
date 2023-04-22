@@ -55,7 +55,7 @@ return require('packer').startup(function(use)
 
   -- lisp repl stuff
   use 'wlangstroth/vim-racket'
-  use 'Olical/conjure'
+  --use 'Olical/conjure'
 
   -- rust
   use 'rust-lang/rust.vim'
