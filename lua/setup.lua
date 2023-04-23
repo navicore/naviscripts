@@ -1,4 +1,5 @@
---vim.g['conjure#extract#tree_sitter#enabled'] = true
+vim.g['conjure#extract#tree_sitter#enabled'] = true
+vim.g['conjure#filetype#rust'] = false
 
 vim.opt.textwidth = 80
 
