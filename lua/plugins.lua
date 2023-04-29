@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
   }
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
-  use 'chrisbra/csv.vim'
+  --use 'chrisbra/csv.vim'
   use 'christoomey/vim-tmux-navigator'
   use 'derekwyatt/vim-sbt'
   use 'derekwyatt/vim-scala'
