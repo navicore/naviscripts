@@ -20,6 +20,7 @@ cp ./vimrc ~/.vimrc
 cp ./scryerrc ~/.scryerrc
 cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc
+mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
 cp ./Renviron ~/.Renviron
