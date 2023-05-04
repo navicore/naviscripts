@@ -20,7 +20,7 @@ cp ./vimrc ~/.vimrc
 cp ./scryerrc ~/.scryerrc
 cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc
-cp -n ./tmux.conf ~/.config/tmux/tmux.conf
+cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
 cp ./Renviron ~/.Renviron
 cp ./ctags ~/.ctags
