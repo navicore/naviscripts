@@ -118,24 +118,4 @@ let R_assign = 0
 set textwidth=80
 set clipboard+=unnamedplus
 
-" let g:mapleader = '\' " ugh.  this is the default but needed setting anyway :|
-" nnoremap <Leader>] :YcmCompleter GoTo<CR>
-"
-function! s:GoToDefinition()
-  if CocAction('jumpDefinition')
-    return v:true
-  endif
-
-  let ret = execute("silent! normal \<C-]>")
-  if ret =~ "Error" || ret =~ "错误"
-    call searchdecl(expand('<cword>'))
-  endif
-endfunction
-
-nmap <silent> gd :call <SID>GoToDefinition()<CR>
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
 colorscheme terafox
