@@ -118,4 +118,3 @@ let R_assign = 0
 set textwidth=80
 set clipboard+=unnamedplus
 
-colorscheme terafox
