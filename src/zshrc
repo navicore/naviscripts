@@ -52,6 +52,7 @@ alias uvim='vim -u NONE'
 
 alias kbb='kubectl run -it busybox --image=busybox -- sh'
 alias k='kubectl'
+alias kns='kubectl config set-context --current --namespace'
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerstop='docker stop $(docker ps -a -q)'
 alias dockerkill='docker kill $(docker ps -a -q)'
