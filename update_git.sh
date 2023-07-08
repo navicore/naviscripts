@@ -9,7 +9,6 @@ cd "$(dirname "$0")"
 ####################################################################
 cp ~/.tern-config ./tern-config
 cp ~/.gitignore ./gitignore
-cp ~/.gitconfig ./gitconfig
 cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim
 cp ~/.vimrc ./vimrc
@@ -33,6 +32,7 @@ cp ~/bin/plant* ./bin/
 cp ~/bin/killz ./bin/
 cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
+cp ~/bin/klog* ./bin/
 cp ~/bin/dev-tmux ./bin/
 
 cp ~/.config/nvim/coc-settings.json  .
