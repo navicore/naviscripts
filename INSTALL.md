@@ -24,12 +24,6 @@
 " --------- DENO ---------
 " curl -fsSL https://deno.land/x/install/install.sh | sh
 " 
-" --------- CocInstall ---------
-" 
-" :CocInstall coc-clangd coc-java coc-metals coc-rust-analyzer coc-jedi coc-json coc-prettier coc-lua
-"
-" in each node project: npm install prettier -D --save-exact
-
 " install zplug
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
