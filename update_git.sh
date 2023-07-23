@@ -34,5 +34,3 @@ cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
 cp ~/bin/klog* ./bin/
 cp ~/bin/dev-tmux ./bin/
-
-cp ~/.config/nvim/coc-settings.json  .

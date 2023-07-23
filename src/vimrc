@@ -76,8 +76,6 @@ let g:vrc_curl_opts = {
   \ '-ks': '',
 \}
 
-set clipboard=unnamed
-
 if filereadable(glob('./.vimrc.local'))
      so ./.vimrc.local
 endif
@@ -116,5 +114,6 @@ let g:pandoc#syntax#conceal#use = 0
 let R_assign = 0
 
 set textwidth=80
+let g:loaded_clipboard_provider = 1
 set clipboard+=unnamedplus
 
