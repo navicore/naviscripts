@@ -42,6 +42,10 @@
 "
 " tinytex::install_tinytex() 
 "
+" update all R packages:
+"
+" update.packeges(ask=FALSE)
+"
 " END R:
 "
 " 
