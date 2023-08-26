@@ -3,19 +3,12 @@ vim.g['conjure#filetype#rust'] = false
 
 vim.opt.textwidth = 80
 
--- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.cmd("colorscheme terafox")
 
--- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
-
---vim.g.csv_default_delim=','
-
--- empty setup using defaults
---require("nvim-tree").setup()
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -86,33 +79,20 @@ local function on_attach(bufnr)
   vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
   -- END_DEFAULT_ON_ATTACH
 
-
-  -- Mappings migrated from view.mappings.list
-  --
-  -- You will need to insert "your code goes here" for any mappings with a custom action_cb
   vim.keymap.set('n', 'u', api.tree.change_root_to_parent, opts('Up'))
 
 end
 
--- OR setup with some options
 require("nvim-tree").setup({
-
-  on_attach = on_attach,
-
   sort_by = "case_sensitive",
   view = {
-    adaptive_size = true,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
-    },
+    width = 30,
   },
   renderer = {
     group_empty = true,
   },
   filters = {
-    dotfiles = false,
+    dotfiles = true,
   },
 })
 
@@ -154,28 +134,6 @@ nvim_lsp.rust_analyzer.setup{
     }
   }
 }
--- nvim_lsp.lua_ls.setup {
---   settings = {
---     Lua = {
---       runtime = {
---         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
---         version = 'LuaJIT',
---       },
---       diagnostics = {
---         -- Get the language server to recognize the `vim` global
---         globals = {'vim'},
---       },
---       workspace = {
---         -- Make the server aware of Neovim runtime files
---         library = vim.api.nvim_get_runtime_file("", true),
---       },
---       -- Do not send telemetry data containing a randomized but unique identifier
---       telemetry = {
---         enable = false,
---       },
---     },
---   },
--- }
 nvim_lsp.jedi_language_server.setup{}
 
 
