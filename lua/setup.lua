@@ -455,11 +455,10 @@ require('rust-tools').setup(opts)
 
 -- END rust stuff
 
-local ht = require('haskell-tools')
-local def_opts = { noremap = true, silent = true, }
-ht.setup {
+vim.g.haskell_tools = {
   hls = {
-    on_attach = function(client, bufnr)
+    ---@param ht is a copy of the haskell-tools module
+    on_attach = function(client, bufnr, ht)
       local opts = vim.tbl_extend('keep', def_opts, { buffer = bufnr, })
       -- haskell-language-server relies heavily on codeLenses,
       -- so auto-refresh (see advanced configuration) is enabled by default
@@ -468,4 +467,4 @@ ht.setup {
       vim.keymap.set('n', '<space>ea', ht.lsp.buf_eval_all, opts)
     end,
   },
-}
+} 
