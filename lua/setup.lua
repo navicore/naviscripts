@@ -10,6 +10,8 @@ vim.cmd("colorscheme terafox")
 
 vim.opt.termguicolors = true
 
+vim.g.R_assign = 2
+
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
 
