@@ -109,4 +109,6 @@ return require('packer').startup(function(use)
     branch = '1.x.x', -- recommended
   }
 
+  --use 'navicore/lalrpop-syntax-vim'
+
 end)
