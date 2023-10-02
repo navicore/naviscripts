@@ -283,7 +283,7 @@ set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
-local opts = {
+local rust_opts = {
   tools = { -- rust-tools options
 
     -- how to execute terminal commands
@@ -358,7 +358,7 @@ local opts = {
 
       -- whether the hover action window gets automatically focused
       -- default: false
-      auto_focus = false,
+      auto_focus = true,
     },
 
     -- settings for showing the crate graph based on graphviz and the dot
@@ -443,6 +443,7 @@ local opts = {
   -- these override the defaults set by rust-tools.nvim
   -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
   server = {
+    capabilities = require("cmp_nvim_lsp").default_capabilities(),
     standalone = true,
     on_attach = function(_, bufnr)
       -- Hover actions
@@ -453,7 +454,7 @@ local opts = {
   },
 }
 
-require('rust-tools').setup(opts)
+require('rust-tools').setup(rust_opts)
 
 -- END rust stuff
 
