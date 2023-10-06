@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-grep -roI $1 . | awk '{print $1}' | sort | uniq -c | sort -nr
