@@ -1,6 +1,6 @@
 vim.g['conjure#extract#tree_sitter#enabled'] = true
 vim.g['conjure#filetype#rust'] = false
-
+vim.o.wrap = false
 vim.opt.textwidth = 80
 
 vim.g.loaded_netrw = 1
