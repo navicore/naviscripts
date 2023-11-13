@@ -119,8 +119,6 @@ alias iexvi='rlwrap -a foo iex'
 
 alias evcxr='evcxr --edit-mode vi'
 
-export PATH="$HOME/.jenv/bin:$PATH"
-
 export GOPATH=~/go
 
 source $ZPLUG_HOME/init.zsh
@@ -161,7 +159,3 @@ export KUBE_EDITOR=nvim
 export GPG_TTY=$(tty)
 
 bindkey -M vicmd v edit-command-line
-
-# downside of lazyload is that nvim won't load some plugin...
-#node --version > /dev/null 
-#_evalcache jenv init -
