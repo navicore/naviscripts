@@ -36,4 +36,29 @@ even do but I can't cope without it all.
 
 `git push`
 
+### Local Customize
+
+Create a `~/.zshrc_local` that if present will be run after loading `zshrc`.
+
+Common things to add are jenv and other stuff:
+
+```bash
+source ~/bin/ek-complete.sh
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
+}
+
+export AWS_REGION=us-east-1    
+
+node -v > /dev/null 2>&1
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export AWS_REGION=us-east-1 
+```
+
 --------
+
