@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# get java thread dump report for each pod in a deployment
+#
+# NOTE: the file will have only the first report in the 
+
+if [ "$#" -ne 2 ]; then
+  echo "Usage: $0 DEPLOYMENT_NAME CONTAINER_NAME"
+  exit 1
+fi
+
+DEPLOYMENT_NAME="$1"
+CONTAINER_NAME="$2"
+
+# Get list of pods
+pods=$(kubectl get pods -l app=$DEPLOYMENT_NAME -o jsonpath="{.items[*].metadata.name}")
+
+for pod in $pods; do
+    echo "Capturing thread dump for pod: $pod"
+
+    # Start capturing logs in the background and filter for the thread dump
+    (
+      stdbuf -oL kubectl logs -f --tail 1 $pod $CONTAINER_NAME | 
+      awk '/Full thread dump OpenJDK/{flag=1}/^Heap/{heap=1}/^$/{if(heap) exit}flag' > "${pod}.tdump"
+    ) &
+
+    # Get the PID of the Java process
+    JAVA_PID=$(kubectl exec $pod -- ps -ef | grep java | grep -v grep | grep -v "sh -c java" | awk '{print $2}')
+
+    # Check if JAVA_PID was successfully retrieved
+    if [ -z "$JAVA_PID" ]; then
+        echo "Error: Could not identify Java PID for pod $pod. Ensure Java is running in the container."
+        exit 1
+    fi
+
+    echo "Identified Java PID as: $JAVA_PID"
+
+    # Execute a kill -3 to generate a thread dump
+    kubectl exec $pod -- kill -3 $JAVA_PID
+
+    # Wait a bit for the thread dump to be captured
+    sleep 2
+
+done
+
+echo "Completed capturing thread dumps for pods in deployment: $DEPLOYMENT_NAME"
