@@ -2,7 +2,7 @@
 
 # get java thread dump report for each pod in a deployment
 #
-# NOTE: the file will have only the first report in the 
+# NOTE: the file will have only the first report in the
 
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 DEPLOYMENT_NAME CONTAINER_NAME"
@@ -20,7 +20,7 @@ for pod in $pods; do
 
     # Start capturing logs in the background and filter for the thread dump
     (
-      stdbuf -oL kubectl logs -f --tail 1 $pod $CONTAINER_NAME | 
+      stdbuf -oL kubectl logs -f --tail 1 $pod $CONTAINER_NAME |
       awk '/Full thread dump OpenJDK/{flag=1}/^Heap/{heap=1}/^$/{if(heap) exit}flag' > "${pod}.tdump"
     ) &
 

@@ -109,6 +109,8 @@ return require('packer').startup(function(use)
     branch = '1.x.x', -- recommended
   }
 
+  use 'github/copilot.vim'
+
   --use 'navicore/lalrpop-syntax-vim'
 
 end)
