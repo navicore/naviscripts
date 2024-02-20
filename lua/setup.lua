@@ -3,6 +3,17 @@ vim.g['conjure#filetype#rust'] = false
 vim.o.wrap = false
 vim.opt.textwidth = 80
 
+-- Heighten the current pane
+vim.api.nvim_set_keymap('n', '<C-S-Down>', ':resize +5<CR>', { noremap = true, silent = true })
+-- Shorten the current pane
+vim.api.nvim_set_keymap('n', '<C-S-Up>', ':resize -5<CR>', { noremap = true, silent = true })
+
+-- Widen the current pane
+vim.api.nvim_set_keymap('n', '<C-S-Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
+-- Narrow the current pane
+vim.api.nvim_set_keymap('n', '<C-S-Left>', ':vertical resize -5<CR>', { noremap = true, silent = true })
+
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
