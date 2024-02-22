@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   --use 'vim-pandoc/vim-pandoc-syntax'
   use 'wannesm/wmgraphviz.vim'
   use 'diepm/vim-rest-console'
-  use {'jalvesaq/Nvim-R', branch = 'stable' }
+  use {'jalvesaq/Nvim-R'}
 
   -- lisp repl stuff
   use 'wlangstroth/vim-racket'
