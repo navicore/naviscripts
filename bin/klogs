@@ -1,12 +1,22 @@
 #!/usr/bin/env bash
 
+# downloads all the current logs from each pod in a deployment.
+#
+# examples:
+#
+# klogs kong-kong-acpny proxy
+# klogs dialog-web dialog-web
+# klogs dialog-admin dialog-admin
+# klogs entity entity
+#
+
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 DEPLOYMENT_NAME CONTAINER_NAME"
   exit 1
 fi
 
-DEPLOYMENT_NAME="$2"
-CONTAINER_NAME="$3"
+DEPLOYMENT_NAME="$1"
+CONTAINER_NAME="$2"
 LOG_DIR="./logs"
 
 # Create the logs directory if it doesn't exist
