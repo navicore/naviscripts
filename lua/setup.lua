@@ -150,7 +150,7 @@ nvim_lsp.rust_analyzer.setup{
 nvim_lsp.jedi_language_server.setup{}
 
 
--- LSP Diagnostics Options Setup 
+-- LSP Diagnostics Options Setup
 local sign = function(opts)
   vim.fn.sign_define(opts.name, {
     texthl = opts.name,
@@ -215,7 +215,7 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
     { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
     { name = 'buffer', keyword_length = 2 },        -- source current buffer
-    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip 
+    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip
     { name = 'calc'},                               -- source for math calculation
     {
       name = 'tmux',
@@ -257,7 +257,7 @@ cmp.setup({
   },
 })
 
--- Treesitter Plugin Setup 
+-- Treesitter Plugin Setup
 require('nvim-treesitter.configs').setup {
   ensure_installed = { "lua", "rust", "toml", "python", "r", "racket", "scheme" },
   auto_install = true,
@@ -265,7 +265,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     additional_vim_regex_highlighting=false,
   },
-  ident = { enable = true }, 
+  ident = { enable = true },
   rainbow = {
     enable = true,
     extended_mode = true,
@@ -287,8 +287,8 @@ vim.api.nvim_set_option('updatetime', 300)
 
 -- Fixed column for diagnostics to appear
 -- Show autodiagnostic popup on cursor hover_range
--- Goto previous / next diagnostic warning / error 
--- Show inlay_hints more frequently 
+-- Goto previous / next diagnostic warning / error
+-- Show inlay_hints more frequently
 vim.cmd([[
 set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
@@ -481,4 +481,16 @@ vim.g.haskell_tools = {
       vim.keymap.set('n', '<space>ea', ht.lsp.buf_eval_all, opts)
     end,
   },
-} 
+}
+
+require('snippy').setup({
+    mappings = {
+        is = {
+            ['<Tab>'] = 'expand_or_advance',
+            ['<S-Tab>'] = 'previous',
+        },
+        nx = {
+            ['<leader>x'] = 'cut_text',
+        },
+    },
+})
