@@ -187,12 +187,6 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 -- Completion Plugin Setup
 local cmp = require'cmp'
 cmp.setup({
-  -- Enable LSP snippets
-  snippet = {
-    expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
-    end,
-  },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -215,7 +209,6 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
     { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
     { name = 'buffer', keyword_length = 2 },        -- source current buffer
-    { name = 'vsnip', keyword_length = 2 },         -- nvim-cmp source for vim-vsnip
     { name = 'calc'},                               -- source for math calculation
     {
       name = 'tmux',
@@ -247,7 +240,6 @@ cmp.setup({
       format = function(entry, item)
           local menu_icon ={
               nvim_lsp = 'λ',
-              vsnip = '⋗',
               buffer = 'Ω',
               path = '🖫',
           }
@@ -482,15 +474,3 @@ vim.g.haskell_tools = {
     end,
   },
 }
-
-require('snippy').setup({
-    mappings = {
-        is = {
-            ['<Tab>'] = 'expand_or_advance',
-            ['<S-Tab>'] = 'previous',
-        },
-        nx = {
-            ['<leader>x'] = 'cut_text',
-        },
-    },
-})
