@@ -85,12 +85,6 @@ return require('packer').startup(function(use)
   -- theme
   use 'EdenEast/nightfox.nvim'
 
-  -- Completion framework:
-  use 'hrsh7th/nvim-cmp'
-
-  -- LSP completion source:
-  use 'hrsh7th/cmp-nvim-lsp'
-
   -- Useful completion sources:
   use 'andersevenrud/cmp-tmux'
   use 'hrsh7th/cmp-nvim-lua'
@@ -106,8 +100,11 @@ return require('packer').startup(function(use)
     branch = '1.x.x', -- recommended
   }
 
-  --use 'github/copilot.vim'
-
-  --use 'navicore/lalrpop-syntax-vim'
+  -- Completion framework:
+  use 'hrsh7th/nvim-cmp'
+  -- LSP completion source:
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip' -- Snippet Engine
+  use 'saadparwaiz1/cmp_luasnip' -- Snippet completions
 
 end)
