@@ -33,7 +33,6 @@ return require('packer').startup(function(use)
   }
   use 'ryanoasis/vim-devicons'
   use 'aklt/plantuml-syntax'
-  --use 'chrisbra/csv.vim'
   use 'christoomey/vim-tmux-navigator'
   use 'derekwyatt/vim-sbt'
   use 'derekwyatt/vim-scala'
@@ -47,8 +46,6 @@ return require('packer').startup(function(use)
   use 'tomtom/tcomment_vim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-  --use 'vim-pandoc/vim-pandoc'
-  --use 'vim-pandoc/vim-pandoc-syntax'
   use 'wannesm/wmgraphviz.vim'
   use 'diepm/vim-rest-console'
   use {'jalvesaq/Nvim-R'}
@@ -59,8 +56,12 @@ return require('packer').startup(function(use)
 
   -- rust
   use 'rust-lang/rust.vim'
-  use 'simrat39/rust-tools.nvim'
   use 'mfussenegger/nvim-dap'
+  use {
+  'mrcjkb/rustaceanvim',
+    version = '^4', -- Recommended
+    ft = { 'rust' },
+  }
 
   -- golang
   use 'ray-x/go.nvim'
@@ -85,12 +86,6 @@ return require('packer').startup(function(use)
   -- theme
   use 'EdenEast/nightfox.nvim'
 
-  -- Useful completion sources:
-  use 'andersevenrud/cmp-tmux'
-  use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/cmp-nvim-lsp-signature-help'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
   use {
     'mrcjkb/haskell-tools.nvim',
     requires = {
@@ -101,10 +96,14 @@ return require('packer').startup(function(use)
   }
 
   -- Completion framework:
-  use 'hrsh7th/nvim-cmp'
-  -- LSP completion source:
-  use 'hrsh7th/cmp-nvim-lsp'
   use 'L3MON4D3/LuaSnip' -- Snippet Engine
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/nvim-cmp'
   use 'saadparwaiz1/cmp_luasnip' -- Snippet completions
-
+  use 'onsails/lspkind.nvim'
 end)
