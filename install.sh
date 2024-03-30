@@ -36,4 +36,3 @@ cp ./cargo/config ~/.cargo/config
 
 cp -npR git-template/ ~/.git-template/
 mkdir -p ~/.config/nvim/snippets
-cp ./snippets/* ~/.config/nvim/snippets/
