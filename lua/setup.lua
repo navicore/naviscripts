@@ -141,8 +141,8 @@ local nvim_lsp = require('lspconfig')
 
 local bufnr = vim.api.nvim_get_current_buf()
 vim.keymap.set(
-  "n", 
-  "<leader>a", 
+  "n",
+  "<leader>a",
   function()
     vim.cmd.RustLsp('codeAction') -- supports rust-analyzer's grouping
     -- or vim.lsp.buf.codeAction() if you don't want grouping.
@@ -150,7 +150,7 @@ vim.keymap.set(
   { silent = true, buffer = bufnr }
 )
 
-nvim_lsp.rust_analyzer.setup{
+nvim_lsp.rust_analyzer.setup {
   settings = {
     ['rust-analyzer'] = {
       diagnostics = {
@@ -160,8 +160,27 @@ nvim_lsp.rust_analyzer.setup{
   }
 }
 
-nvim_lsp.jedi_language_server.setup{}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+nvim_lsp.jedi_language_server.setup {
+  capabilities = capabilities,
+}
+
+nvim_lsp.bashls.setup {
+  capabilities = capabilities,
+}
+
+nvim_lsp.r_language_server.setup {
+  capabilities = capabilities,
+}
+
+nvim_lsp.java_language_server.setup {
+  capabilities = capabilities,
+}
+
+nvim_lsp.lua_ls.setup {
+  capabilities = capabilities,
+}
 
 -- LSP Diagnostics Options Setup
 local sign = function(opts)
