@@ -183,10 +183,14 @@ set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
-
 -- Completion Plugin Setup
 local cmp = require'cmp'
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      require'luasnip'.lsp_expand(args.body) -- For `luasnip` users.
+    end,
+  },
   mapping = {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -204,6 +208,7 @@ cmp.setup({
   },
   -- Installed sources:
   sources = {
+    { name = 'luasnip' }, -- For luasnip users.
     { name = 'path' },                              -- file paths
     { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
     { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
@@ -474,3 +479,5 @@ vim.g.haskell_tools = {
     end,
   },
 }
+
+require 'snippets.lua_snippets'
