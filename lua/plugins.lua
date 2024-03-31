@@ -111,4 +111,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
   use 'onsails/lspkind.nvim'
+
+  --use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+
 end)
