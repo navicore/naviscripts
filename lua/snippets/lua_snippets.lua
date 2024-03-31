@@ -4,6 +4,7 @@ local rep = require("luasnip.extras").rep
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
+local c = ls.choice_node
 
 ls.add_snippets("lua", {
     s("mySecondSnippet",
@@ -16,7 +17,7 @@ end
 ]],
         {
             i(1, "myVar"),
-            i(2, "myArg"),
+            c(2, { t(""), t("myArg") }),
             i(3, "-- TODO: something"),
         }
     )

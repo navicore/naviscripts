@@ -235,7 +235,9 @@ cmp.setup({
   },
   -- Installed sources:
   sources = {
-    { name = 'luasnip' }, -- For luasnip users.
+    --{ name = 'luasnip', option = { use_show_condition = false } },
+    --{ name = 'luasnip' },
+    { name = 'luasnip', option = { show_autosnippets = true } },
     { name = 'path' },                              -- file paths
     { name = 'cmdline' },
     { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
