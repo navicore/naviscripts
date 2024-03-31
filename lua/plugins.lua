@@ -96,8 +96,13 @@ return require('packer').startup(function(use)
   }
 
   -- Completion framework:
-  use 'L3MON4D3/LuaSnip' -- Snippet Engine
-  use "rafamadriz/friendly-snippets" -- WARNING this is probably too much
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      "rafamadriz/friendly-snippets", -- WARNING this is probably too much
+      'saadparwaiz1/cmp_luasnip',
+    }
+  }
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
@@ -105,6 +110,5 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
-  use 'saadparwaiz1/cmp_luasnip' -- Snippet completions
   use 'onsails/lspkind.nvim'
 end)

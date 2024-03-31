@@ -13,7 +13,6 @@ vim.api.nvim_set_keymap('n', '<C-S-Right>', ':vertical resize +5<CR>', { noremap
 -- Narrow the current pane
 vim.api.nvim_set_keymap('n', '<C-S-Left>', ':vertical resize -5<CR>', { noremap = true, silent = true })
 
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
