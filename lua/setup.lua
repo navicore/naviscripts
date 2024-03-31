@@ -19,8 +19,14 @@ vim.g.loaded_netrwPlugin = 1
 vim.cmd("colorscheme terafox")
 
 vim.opt.termguicolors = true
-
 vim.g.R_assign = 2
+
+vim.cmd([[
+    :hi      NvimTreeExecFile    guifg=#ffa0a0
+    :hi      NvimTreeSpecialFile guifg=#ff80ff gui=underline
+    :hi      NvimTreeSymlink     guifg=Yellow  gui=italic
+    :hi link NvimTreeImageFile   Title
+]])
 
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -96,7 +102,9 @@ local function on_attach(bufnr)
 end
 
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
+  sort = {
+    sorter = "case_sensitive",
+  },
   view = {
     width = 30,
   },
