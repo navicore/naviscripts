@@ -97,6 +97,7 @@ return require('packer').startup(function(use)
 
   -- Completion framework:
   use 'L3MON4D3/LuaSnip' -- Snippet Engine
+  use "rafamadriz/friendly-snippets" -- WARNING this is probably too much
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'

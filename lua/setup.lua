@@ -218,6 +218,7 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 -- Completion Plugin Setup
 local lspkind = require'lspkind'
 local cmp = require'cmp'
+require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -225,7 +226,10 @@ cmp.setup({
     end,
   },
   mapping = {
-    -- Add tab support
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<CR>'] = cmp.mapping.confirm({
