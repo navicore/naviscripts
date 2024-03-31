@@ -35,3 +35,35 @@ ls.add_snippets("rust", {
     t { '}', '' },
   }),
 })
+
+ls.add_snippets("rust", {
+    s("ejs-custom-error",
+        fmt([[
+use derive_more::From;
+
+pub type Result<T> = core::result::Result<T, {}>;
+
+#[derive(Debug, From)]
+pub enum {} {{
+    #[from]
+    Custom(String),
+
+    // add a `from` for every error as you work and remove
+    // `Custom` when fully implemented.
+}}
+
+impl From<&str> for {} {{
+    fn from(val: &str) -> Self {{
+        Self::Custom(val.to_string())
+    }}
+}}
+
+]],
+        {
+            i(1, "MyError"),
+            i(2, "MyError"),
+            i(3, "MyError"),
+        }
+        )
+    )
+})
