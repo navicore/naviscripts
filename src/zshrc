@@ -159,3 +159,7 @@ export KUBE_EDITOR=nvim
 export GPG_TTY=$(tty)
 
 bindkey -M vicmd v edit-command-line
+
+function cwe() {
+  cargo watch -c -q -x "run -q --example '$1'"
+}
