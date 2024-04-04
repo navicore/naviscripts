@@ -17,7 +17,6 @@ cp -n ./racketrc ~/.racketrc
 cp -n ./gitignore ~/.gitignore
 mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
-cp ./vimrc ~/.vimrc
 cp ./scryerrc ~/.scryerrc
 cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc

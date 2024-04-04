@@ -1,1 +1,0 @@
-source ~/naviscripts/src/vimrc
