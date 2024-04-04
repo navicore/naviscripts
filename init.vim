@@ -3,8 +3,6 @@ set packpath+=~/.vim
 
 lua require('plugins')
 
-source ~/naviscripts/src/vimrc
-
 lua require('setup')
 
 
