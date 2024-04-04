@@ -35,7 +35,6 @@ return require('packer').startup(function(use)
   use 'aklt/plantuml-syntax'
   use 'christoomey/vim-tmux-navigator'
   use 'derekwyatt/vim-sbt'
-  use 'derekwyatt/vim-scala'
   use 'ervandew/screen'
   use 'godlygeek/tabular'
 

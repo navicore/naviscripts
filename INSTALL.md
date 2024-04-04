@@ -51,7 +51,7 @@
 " 
 " using neovim packer - install it and then ":PackerInstall" everything else
 " 
-" :TSInstall java scala go rust r c cpp python bash awk lua 
+" :TSInstall java go rust r c cpp python bash awk lua 
 "
 " mkdir -p ~/.vim/swapfiles
 " eval `ssh-agent -s`

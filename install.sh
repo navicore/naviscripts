@@ -18,7 +18,6 @@ cp -n ./gitignore ~/.gitignore
 mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./scryerrc ~/.scryerrc
-cp ./scalafmt ~/.scalafmt
 cp ./zshrc ~/.zshrc
 mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf

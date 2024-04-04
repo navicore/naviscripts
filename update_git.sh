@@ -9,9 +9,7 @@ cd "$(dirname "$0")"
 ####################################################################
 cp ~/.tern-config ./tern-config
 cp ~/.gitignore ./gitignore
-cp ~/.scalafmt ./scalafmt
 cp ~/.vim/scripts.vim ./scripts.vim
-cp ~/.vimrc ./vimrc
 cp ~/.zshrc ./zshrc
 cp ~/.scryerrc ./scryerrc
 cp ~/.config/tmux/tmux.conf ./tmux.conf
