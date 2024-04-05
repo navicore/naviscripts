@@ -1,3 +1,6 @@
+vim.g.mapleader = '\\'
+vim.g.maplocalleader = '\\'
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -7,9 +10,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
-vim.g.mapleader = '\\'
-vim.g.maplocalleader = '\\'
-
 -- Setting runtimepath
 vim.opt.runtimepath:append("~/.vim")
 vim.opt.runtimepath:append("~/.vim/after")
@@ -18,5 +18,5 @@ vim.opt.runtimepath:append("~/.vim/after")
 vim.opt.packpath:append("~/.vim")
 
 -- Requiring Lua modules for plugins and setup
-require('plugins')
+require('lazy').setup('plugins')
 require('setup')

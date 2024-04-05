@@ -44,7 +44,6 @@ vim.o.clipboard = "unnamedplus"
 vim.o.encoding = "utf8"
 vim.g.airline_powerline_fonts = 1
 vim.o.guifont = "Fira Code:h12"
-vim.g.mapleader = ","
 
 -- Mappings
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {noremap = true})
