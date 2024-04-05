@@ -185,21 +185,6 @@ local function on_attach(bufnr)
 
 end
 
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
-
 require('gitsigns').setup()
 
 -- golang
@@ -240,16 +225,6 @@ vim.keymap.set(
   end,
   { silent = true, buffer = bufnr }
 )
-
-nvim_lsp.rust_analyzer.setup {
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  }
-}
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -330,8 +305,6 @@ cmp.setup({
   },
   -- Installed sources:
   sources = {
-    --{ name = 'luasnip', option = { use_show_condition = false } },
-    --{ name = 'luasnip' },
     { name = 'luasnip', option = { show_autosnippets = true } },
     { name = 'path' },                              -- file paths
     { name = 'cmdline' },
