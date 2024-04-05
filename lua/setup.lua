@@ -241,16 +241,6 @@ vim.keymap.set(
   { silent = true, buffer = bufnr }
 )
 
-nvim_lsp.rust_analyzer.setup {
-  settings = {
-    ['rust-analyzer'] = {
-      diagnostics = {
-        enable = false;
-      }
-    }
-  }
-}
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 nvim_lsp.jedi_language_server.setup {
@@ -330,8 +320,6 @@ cmp.setup({
   },
   -- Installed sources:
   sources = {
-    --{ name = 'luasnip', option = { use_show_condition = false } },
-    --{ name = 'luasnip' },
     { name = 'luasnip', option = { show_autosnippets = true } },
     { name = 'path' },                              -- file paths
     { name = 'cmdline' },
