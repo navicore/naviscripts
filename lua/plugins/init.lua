@@ -53,22 +53,6 @@ return {
   'ray-x/go.nvim',
   'ray-x/guihua.lua', -- recommended if need floating window support
 
-  -- start telescope
-  {
-      'nvim-treesitter/nvim-treesitter',
-      build = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-          ts_update()
-      end,
-  },
-  { 'junegunn/fzf', build = ":call fzf#install()" },
-  'junegunn/fzf.vim',
-  'sharkdp/fd',
-  'nvim-lua/plenary.nvim',
-  'BurntSushi/ripgrep',
-  'nvim-telescope/telescope-fzf-native.nvim',
-  -- end telescope
-
   -- theme
   'EdenEast/nightfox.nvim',
 
@@ -80,22 +64,5 @@ return {
     },
     branch = '1.x.x', -- recommended
   },
-
-  -- Completion framework:
-  {
-    'L3MON4D3/LuaSnip',
-    dependencies = {
-      "rafamadriz/friendly-snippets", -- WARNING this is probably too much
-      'saadparwaiz1/cmp_luasnip',
-    }
-  },
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/cmp-nvim-lsp-signature-help',
-  'hrsh7th/cmp-nvim-lua',
-  'hrsh7th/cmp-path',
-  'hrsh7th/nvim-cmp',
-  'onsails/lspkind.nvim',
 
 }
