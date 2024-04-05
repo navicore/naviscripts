@@ -7,13 +7,6 @@ return require('lazy').setup({
 
   'nvim-treesitter/completion-treesitter',
 
-  {
-    'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    }
-  },
-
   'tpope/vim-sleuth',
 
   -- GIT stuff --
@@ -105,4 +98,25 @@ return require('lazy').setup({
   'hrsh7th/nvim-cmp',
   'onsails/lspkind.nvim',
 
+  {'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    config = function()
+      require("nvim-tree").setup({
+        sort = {
+          sorter = "case_sensitive",
+        },
+        view = {
+          width = 30,
+        },
+        renderer = {
+          group_empty = true,
+        },
+        filters = {
+          dotfiles = true,
+        },
+      })
+    end
+  },
 })
