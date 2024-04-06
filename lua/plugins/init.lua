@@ -5,8 +5,6 @@ return {
 
   'neovim/nvim-lspconfig',
 
-  'nvim-treesitter/completion-treesitter',
-
   'tpope/vim-sleuth',
 
   -- GIT stuff --
@@ -21,7 +19,6 @@ return {
   'ryanoasis/vim-devicons',
   'aklt/plantuml-syntax',
   'christoomey/vim-tmux-navigator',
-  'derekwyatt/vim-sbt',
   'ervandew/screen',
   'godlygeek/tabular',
 

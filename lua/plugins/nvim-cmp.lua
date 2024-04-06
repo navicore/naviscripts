@@ -79,6 +79,8 @@ return {
         })
       })
 
+      require 'snippets.lua_snippets'
+
     end
   },
   'onsails/lspkind.nvim',
