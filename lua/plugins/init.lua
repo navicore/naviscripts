@@ -1,10 +1,5 @@
 return {
 
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
-
-  'neovim/nvim-lspconfig',
-
   'tpope/vim-sleuth',
 
   -- GIT stuff --
@@ -40,11 +35,11 @@ return {
   -- rust
   'rust-lang/rust.vim',
   'mfussenegger/nvim-dap',
-  {
-  'mrcjkb/rustaceanvim',
-    version = '^4', -- Recommended
-    ft = { 'rust' },
-  },
+  -- {
+  -- 'mrcjkb/rustaceanvim',
+  --   version = '^4', -- Recommended
+  --   ft = { 'rust' },
+  -- },
 
   -- golang
   'ray-x/go.nvim',
