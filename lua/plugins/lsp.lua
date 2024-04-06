@@ -27,6 +27,7 @@ return {
           "java_language_server",
           "lua_ls",
           "pyright",
+          "jedi_language_server",
           "r_language_server",
           "rust_analyzer",
           "taplo",
