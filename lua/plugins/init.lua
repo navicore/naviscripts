@@ -1,11 +1,9 @@
-return require('lazy').setup({
+return {
 
   'williamboman/mason.nvim',
   'williamboman/mason-lspconfig.nvim',
 
   'neovim/nvim-lspconfig',
-
-  'nvim-treesitter/completion-treesitter',
 
   'tpope/vim-sleuth',
 
@@ -21,7 +19,6 @@ return require('lazy').setup({
   'ryanoasis/vim-devicons',
   'aklt/plantuml-syntax',
   'christoomey/vim-tmux-navigator',
-  'derekwyatt/vim-sbt',
   'ervandew/screen',
   'godlygeek/tabular',
 
@@ -53,22 +50,6 @@ return require('lazy').setup({
   'ray-x/go.nvim',
   'ray-x/guihua.lua', -- recommended if need floating window support
 
-  -- start telescope
-  {
-      'nvim-treesitter/nvim-treesitter',
-      build = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-          ts_update()
-      end,
-  },
-  { 'junegunn/fzf', build = ":call fzf#install()" },
-  'junegunn/fzf.vim',
-  'sharkdp/fd',
-  'nvim-lua/plenary.nvim',
-  'BurntSushi/ripgrep',
-  'nvim-telescope/telescope-fzf-native.nvim',
-  -- end telescope
-
   -- theme
   'EdenEast/nightfox.nvim',
 
@@ -81,42 +62,4 @@ return require('lazy').setup({
     branch = '1.x.x', -- recommended
   },
 
-  -- Completion framework:
-  {
-    'L3MON4D3/LuaSnip',
-    dependencies = {
-      "rafamadriz/friendly-snippets", -- WARNING this is probably too much
-      'saadparwaiz1/cmp_luasnip',
-    }
-  },
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/cmp-nvim-lsp-signature-help',
-  'hrsh7th/cmp-nvim-lua',
-  'hrsh7th/cmp-path',
-  'hrsh7th/nvim-cmp',
-  'onsails/lspkind.nvim',
-
-  {'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    config = function()
-      require("nvim-tree").setup({
-        sort = {
-          sorter = "case_sensitive",
-        },
-        view = {
-          width = 30,
-        },
-        renderer = {
-          group_empty = true,
-        },
-        filters = {
-          dotfiles = true,
-        },
-      })
-    end
-  },
-})
+}
