@@ -20,7 +20,17 @@ return {
     dependencies = { "mason.nvim" },
     config = function()
       require("mason-lspconfig").setup {
-        automatic_installation = true
+        automatic_installation = true,
+        ensure_installed = {
+          "awk_ls",
+          "bashls",
+          "java_language_server",
+          "lua_ls",
+          "pyright",
+          "r_language_server",
+          "rust_analyzer",
+          "taplo",
+        },
       }
       require("mason-lspconfig").setup_handlers {
           function (server_name)
