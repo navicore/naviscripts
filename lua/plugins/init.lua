@@ -56,5 +56,9 @@ return {
     },
     branch = '1.x.x', -- recommended
   },
-
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^4', -- Recommended
+    ft = { 'rust' },
+  },
 }

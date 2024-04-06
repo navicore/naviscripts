@@ -25,11 +25,10 @@ return {
           "awk_ls",
           "bashls",
           "java_language_server",
+          "jedi_language_server",
           "lua_ls",
           "pyright",
-          "jedi_language_server",
           "r_language_server",
-          "rust_analyzer",
           "taplo",
         },
       }
@@ -37,6 +36,7 @@ return {
           function (server_name)
               require("lspconfig")[server_name].setup {}
           end,
+          ['rust_analyzer'] = function() end, -- do not let mason configure rust_analyzer
       }
     end
 
