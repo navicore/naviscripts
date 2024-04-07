@@ -24,13 +24,7 @@ vim.o.autoread = true
 vim.o.statusline = "%#warningmsg#"
 vim.o.statusline = "%*"
 vim.g.ScreenImpl = 'Tmux'
-vim.g.vrc_output_buffer_name = '__VRC_OUTPUT.json'
-vim.g.vrc_curl_opts = {
-    ['--connect-timeout'] = 5,
-    ['--max-time'] = 60,
-    ['--ipv4'] = '',
-    ['-ks'] = '',
-}
+
 vim.o.undofile = true
 vim.g.rustfmt_autosave = 1
 vim.g.pandoc_modules_disabled = {"folding"}
@@ -50,25 +44,13 @@ vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {nor
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', {noremap = true})
+
 vim.api.nvim_set_keymap('n', '<F4>', ':w<CR>:make<CR>:copen<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<leader>f', ':ALEFix<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<CR>', ':nohlsearch<CR><CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
-
---Oil
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-
---Autocommands
--- vim.api.nvim_create_autocmd("VimEnter", {
---     pattern = "*",
---     callback = function()
---         if vim.fn.argc() == 0 then
---             vim.cmd('NvimTreeOpen')
---         end
---     end
--- })
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     pattern = "*.sbt",
@@ -106,3 +88,4 @@ vim.opt.packpath:append("~/.vim")
 -- Requiring Lua modules for plugins and setup
 require('lazy').setup('plugins')
 require('setup')
+
