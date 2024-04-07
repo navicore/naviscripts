@@ -57,6 +57,9 @@ vim.api.nvim_set_keymap('n', '<CR>', ':nohlsearch<CR><CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 
+--Oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 --Autocommands
 vim.api.nvim_create_autocmd("VimEnter", {
     pattern = "*",

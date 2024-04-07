@@ -44,7 +44,7 @@ return {
 
   {'neovim/nvim-lspconfig'},
 
-  { 'nvimdev/lspsaga.nvim',
+  {'nvimdev/lspsaga.nvim',
     config = function()
       require('lspsaga').setup({
         ui = {
@@ -57,5 +57,7 @@ return {
       'nvim-tree/nvim-web-devicons'
     }
   },
+
+  {'lvimuser/lsp-inlayhints.nvim'},
 
 }
