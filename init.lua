@@ -61,14 +61,14 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 --Autocommands
-vim.api.nvim_create_autocmd("VimEnter", {
-    pattern = "*",
-    callback = function()
-        if vim.fn.argc() == 0 then
-            vim.cmd('NvimTreeOpen')
-        end
-    end
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     pattern = "*",
+--     callback = function()
+--         if vim.fn.argc() == 0 then
+--             vim.cmd('NvimTreeOpen')
+--         end
+--     end
+-- })
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     pattern = "*.sbt",
