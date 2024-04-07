@@ -58,14 +58,14 @@ vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 
 -- Autocommands
-vim.api.nvim_create_autocmd("VimEnter", {
-    pattern = "*",
-    callback = function()
-        if vim.fn.argc() == 0 then
-            vim.cmd('NvimTreeOpen')
-        end
-    end
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--     pattern = "*",
+--     callback = function()
+--         if vim.fn.argc() == 0 then
+--             vim.cmd('NvimTreeOpen')
+--         end
+--     end
+-- })
 
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     pattern = "*.sbt",
