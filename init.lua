@@ -52,17 +52,7 @@ vim.api.nvim_set_keymap('n', '<CR>', ':nohlsearch<CR><CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
-    pattern = "*.sbt",
-    callback = function()
-        vim.bo.filetype = "sbt"
-    end
-})
-
--- Load .vimrc.local if exists
-if vim.fn.filereadable(vim.fn.glob('./.vimrc.local')) == 1 then
-    vim.cmd('source ./.vimrc.local')
-end
+vim.api.nvim_set_keymap('n', '<Enter>', 'o<Esc>', {noremap = true})
 
 -- end legacy config
 
