@@ -74,10 +74,4 @@ return {
     },
     branch = '1.x.x', -- recommended
   },
-  {
-    'mrcjkb/rustaceanvim',
-    event = "VeryLazy",
-    version = '^4', -- Recommended
-    ft = { 'rust' },
-  },
 }
