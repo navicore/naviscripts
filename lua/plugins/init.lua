@@ -3,7 +3,7 @@ return {
   'tpope/vim-sleuth',
 
   -- GIT stuff --
-  { 
+  {
     'tpope/vim-fugitive',
     event = "VeryLazy",
   },
