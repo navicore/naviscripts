@@ -52,9 +52,12 @@ vim.api.nvim_set_keymap('n', '<CR>', ':nohlsearch<CR><CR>', {noremap = true})
 vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 
+-- end legacy config
+
 vim.api.nvim_set_keymap('n', '<Enter>', 'o<Esc>', {noremap = true})
 
--- end legacy config
+-- Clear search highlights without losing ESC functionality in Lua
+vim.api.nvim_set_keymap('n', '<esc>', ':nohlsearch<CR><esc>', { noremap = true, silent = true })
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
