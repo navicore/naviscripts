@@ -58,7 +58,7 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
 vim.api.nvim_set_keymap('n', '<Enter>', 'o<Esc>', {noremap = true})
 
 -- Clear search highlights without losing ESC functionality in Lua
-vim.api.nvim_set_keymap('n', '<esc>', ':nohlsearch<CR><esc>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<esc>', ':nohlsearch<esc>', { noremap = true, silent = true })
 
 vim.g.mapleader = ','
 vim.g.maplocalleader = '\\'
