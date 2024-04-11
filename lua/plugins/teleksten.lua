@@ -12,6 +12,14 @@ return {
 
       require('telekasten').setup({
         home = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet"),
+        templates = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates"),
+        new_note_filename = "uuid-title",
+        filename_space_subst = '_',
+        uuid_type = '%Y-%m-%d-%H%M',
+        template_new_note = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/base_note.md"),
+        template_new_daily = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/daily.md"),
+        template_new_weekly = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/weekly.md"),
+
       })
 
       -- Launch panel if nothing is typed after <leader>z
