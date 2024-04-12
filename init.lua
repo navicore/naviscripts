@@ -76,8 +76,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 vim.opt.runtimepath:append("~/.vim")
 vim.opt.runtimepath:append("~/.vim/after")
 
--- Setting packpath
-vim.opt.packpath:append("~/.vim")
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 -- Requiring Lua modules for plugins and setup
 require('lazy').setup('plugins')
