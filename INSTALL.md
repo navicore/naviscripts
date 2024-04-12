@@ -61,6 +61,7 @@
 " curl https://sh.rustup.rs -sSf | sh
 " rustup component add rust-analysis rust-src
 " rustup component add rustfmt
+" rustup target add wasm32-wasi
 " ssh-add -K ~/.ssh/id_rsa
 "
 " END RUST:j
