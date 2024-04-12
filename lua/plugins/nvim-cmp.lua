@@ -7,7 +7,7 @@ return {
     }
   },
   'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-cmdline',
+  --'hrsh7th/cmp-cmdline',
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-nvim-lsp-signature-help',
   'hrsh7th/cmp-nvim-lua',
@@ -41,7 +41,7 @@ return {
         sources = {
           { name = 'luasnip', option = { show_autosnippets = true } },
           { name = 'path' },                              -- file paths
-          { name = 'cmdline' },
+          --{ name = 'cmdline' },
           { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
           { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
           { name = 'nvim_lua', keyword_length = 2},       -- complete neovim's Lua runtime API such vim.lsp.*
@@ -64,20 +64,20 @@ return {
       })
 
       -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-      cmp.setup.cmdline('/', {
-        sources = {
-          { name = 'buffer' }
-        }
-      })
+      -- cmp.setup.cmdline('/', {
+      --   sources = {
+      --     { name = 'buffer' }
+      --   }
+      -- })
 
-      -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-      cmp.setup.cmdline(':', {
-        sources = cmp.config.sources({
-          { name = 'path' }
-        }, {
-          { name = 'cmdline' }
-        })
-      })
+      -- -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+      -- cmp.setup.cmdline(':', {
+      --   sources = cmp.config.sources({
+      --     { name = 'path' }
+      --   }, {
+      --     { name = 'cmdline' }
+      --   })
+      -- })
 
       require 'snippets.lua_snippets'
 
