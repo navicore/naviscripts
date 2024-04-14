@@ -48,6 +48,9 @@ return {
           { name = 'buffer', keyword_length = 2 },        -- source current buffer
           { name = 'calc'},                               -- source for math calculation
         },
+        experimental = {
+            ghost_text = true,
+        },
         window = {
             completion = cmp.config.window.bordered(),
             documentation = cmp.config.window.bordered(),
