@@ -39,6 +39,7 @@ return {
         },
         -- Installed sources:
         sources = {
+          { name = "copilot", group_index = 2 },
           { name = 'luasnip', option = { show_autosnippets = true } },
           { name = 'path' },                              -- file paths
           --{ name = 'cmdline' },

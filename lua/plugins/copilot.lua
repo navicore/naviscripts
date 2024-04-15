@@ -1,13 +1,22 @@
 return {
   {
-    'github/copilot.vim',
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-        vim.keymap.set('i', '<C-L>', '<Plug>(copilot-accept-word)')
-        --vim.cmd('Copilot disable') -- Disable copilot by default and enable it when needed.
-        vim.g.copilot_filetypes = {
-            ['*'] = true,
-            ['markdown'] = false
-        }
-    end
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end,
+    dependencies = {
+      "zbirenbaum/copilot.lua",
+    },
   },
 }
