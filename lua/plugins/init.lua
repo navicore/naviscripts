@@ -58,10 +58,6 @@ return {
     event = "VeryLazy",
   },
 
-  -- golang
-  'ray-x/go.nvim',
-  'ray-x/guihua.lua', -- recommended if need floating window support
-
   -- theme
   'EdenEast/nightfox.nvim',
 

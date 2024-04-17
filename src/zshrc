@@ -120,6 +120,7 @@ alias iexvi='rlwrap -a foo iex'
 alias evcxr='evcxr --edit-mode vi'
 
 export GOPATH=~/go
+export PATH=~/go/bin
 
 source $ZPLUG_HOME/init.zsh
 
