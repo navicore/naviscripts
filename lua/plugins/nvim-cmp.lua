@@ -1,6 +1,7 @@
 return {
   {
     'L3MON4D3/LuaSnip',
+    build = "make install_jsregexp",
     dependencies = {
       "rafamadriz/friendly-snippets", -- WARNING this is probably too much
       'saadparwaiz1/cmp_luasnip',
