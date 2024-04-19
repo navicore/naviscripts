@@ -10,10 +10,9 @@ even do but I can't cope without it all.
 * I've fully switch to nvim but should 99% work on vim8+
 * Equally OSX and Linux - I use both and most of the setup works for both.
 * zsh
-* vim-plug
+* Lazy
 * tmux
 * nerd fonts
-* coc autocomplete
 * Nvim-R is great - I could not use R if I had to use RStudio at all
 
 

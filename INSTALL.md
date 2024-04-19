@@ -13,9 +13,6 @@
 " brew install --cask racket
 " --------- ALL ---------
 "
-" install packer for lua migration
-" git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-"
 " nvm install stable
 " nvm use stable
 " npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
@@ -47,9 +44,6 @@
 "
 " END R:
 "
-" 
-" using neovim packer - install it and then ":PackerInstall" everything else
-" 
 " :TSInstall java go rust r c cpp python bash awk lua 
 "
 " mkdir -p ~/.vim/swapfiles
