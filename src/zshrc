@@ -50,6 +50,8 @@ alias iex='rlwrap -a foo iex'
 alias sz='source ~/.zshrc'
 alias uvim='vim -u NONE'
 
+alias g='git'
+
 alias kbb='kubectl run -it busybox --image=busybox -- sh'
 alias k='kubectl'
 alias kns='kubectl config set-context --current --namespace'
