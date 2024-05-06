@@ -28,8 +28,6 @@ return {
           "jedi_language_server",
           "lua_ls",
           "pyright",
-          "r_language_server",
-          "taplo",
         },
       }
       require("mason-lspconfig").setup_handlers {
