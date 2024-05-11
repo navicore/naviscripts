@@ -109,3 +109,8 @@
 " tell git to use the global gitignore:
 " git config --global core.excludesfile ~/.gitignore
 "
+
+" xcode commandline tools:
+
+xcode-select --install
+
