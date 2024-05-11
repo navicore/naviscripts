@@ -17,7 +17,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    alias vim8='/usr/local/bin/vim'
    alias vim='nvim'
    alias vi='nvim'
-   #alias python='/usr/local/bin/python3'
+   alias python='/usr/local/bin/python3'
 fi
 
 alias factorrl='~/tmp/git/factor/factor -run=readline-listener'
