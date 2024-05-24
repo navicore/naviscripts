@@ -19,6 +19,8 @@ mkdir -p ~/.vim
 cp ./scripts.vim ~/.vim/scripts.vim
 cp ./scryerrc ~/.scryerrc
 cp ./zshrc ~/.zshrc
+mkdir -p ~/.config/wezterm
+cp ./wezterm.lua ~/.config/wezterm/wezterm.lua
 mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
