@@ -10,6 +10,13 @@ config.window_background_opacity = 0.9
 config.font_size = 16.0
 config.font = wezterm.font 'JetBrains Mono'
 
+config.window_padding = {
+    left = 7,
+    right = 5,
+    top = 5,
+    bottom = 5,
+}
+
 config.keys = {
     -- Resize pane mappings
     {key="DownArrow", mods="CTRL|SHIFT", action=wezterm.action{SendString="\x1b[1;6B"}},
