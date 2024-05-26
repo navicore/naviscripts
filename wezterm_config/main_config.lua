@@ -21,6 +21,7 @@ local modules = {
   'font',
   'keys',
   'padding',
+  'mouse_clipboard',  -- Ensure this line is included
 }
 
 for _, module in ipairs(modules) do
