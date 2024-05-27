@@ -20,8 +20,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    alias python='/usr/local/bin/python3'
 fi
 
-alias factorrl='~/tmp/git/factor/factor -run=readline-listener'
-
 export LANG=en_US.UTF-8
 
 export NVM_COMPLETION=true
@@ -45,12 +43,11 @@ alias alpine='kubectl run -i --tty $USER-alpine --image=alpine --restart=Never -
 alias ubuntu='kubectl run -i --tty $USER-ubuntu --image=ubuntu --restart=Never -- sh'
 alias code='/Applications/"Visual Studio Code.app"/Contents/Resources/app/bin/code'
 alias l='exa'
+alias ls='exa'
 alias ll='exa -l --header --git'
 alias iex='rlwrap -a foo iex'
 alias sz='source ~/.zshrc'
 alias uvim='vim -u NONE'
-
-alias g='git'
 
 alias kbb='kubectl run -it busybox --image=busybox -- sh'
 alias k='kubectl'
@@ -68,14 +65,14 @@ alias mergeupstreammain='git merge upstream/main'
 alias mergeupstreammaster='git merge upstream/master'
 
 export TERM="screen-256color"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 export GIT_EDITOR="nvim -f"
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=999999
 export SAVEHIST=1000
-
-# fix ^M issue in sbt interactive mode
-#stty icrnl
 
 #
 # Custom Cloud Theme with insane git prompt (really, I just want separate dirty and untracked indicators)
@@ -116,10 +113,6 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
-
-alias iexvi='rlwrap -a foo iex'
-
-alias evcxr='evcxr --edit-mode vi'
 
 export GOPATH=~/go
 export GOBIN=~/go/bin
@@ -167,3 +160,4 @@ bindkey -M vicmd v edit-command-line
 function cwe() {
   cargo watch -c -q -x "run -q --example '$1'"
 }
+

@@ -12,7 +12,9 @@
 	helper = cache
 [core]
 	editor = nvim
-	excludesfile = ~/.gitignore
-	pager = cat
+	excludesFile = ~/.gitignore
+	pager = less -F -X
 [init]
 	templateDir = /Users/navicore/.git-template
+[color]
+  ui = always
