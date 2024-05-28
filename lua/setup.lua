@@ -26,6 +26,8 @@ vim.cmd([[
     :hi link NvimTreeImageFile   Title
 ]])
 
+vim.cmd[[colorscheme no-clown-fiesta]]
+
 require('gitsigns').setup()
 
 -- golang
