@@ -59,7 +59,9 @@ return {
   },
 
   -- theme
-  'EdenEast/nightfox.nvim',
+  -- 'EdenEast/nightfox.nvim',
+  -- 'morhetz/gruvbox',
+  -- 'f4z3r/gruvbox-material.nvim',
 
   {
     'mrcjkb/haskell-tools.nvim',
