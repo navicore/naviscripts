@@ -19,6 +19,7 @@ return {
       priority = 1000,
       config = function()
         vim.cmd.colorscheme('Nordfox')
+        --vim.cmd.colorscheme('Nightfox')
       end
     },
 }
