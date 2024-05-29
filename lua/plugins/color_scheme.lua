@@ -1,22 +1,25 @@
 return {
 
-  {
-    'aktersnurra/no-clown-fiesta.nvim',
-    config = function()
-      require("no-clown-fiesta").setup({
-        transparent = false, -- Enable this to disable the bg color
-        styles = {
-          -- You can set any of the style values specified for `:h nvim_set_hl`
-          comments = {},
-          functions = {},
-          keywords = {},
-          lsp = { underline = true },
-          match_paren = {},
-          type = { bold = true },
-          variables = {},
-        },
-      })
-    end,
-  }
+    -- {
+    --   'sainnhe/sonokai',
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function()
+    --     -- Optionally configure and load the colorscheme
+    --     -- directly inside the plugin declaration.
+    --     vim.g.sonokai_enable_italic = true
+    --     vim.g.sonokai_style = 'atlantis'
+    --     vim.cmd.colorscheme('sonokai')
+    --   end
+    -- },
+
+    {
+      'EdenEast/nightfox.nvim',
+      lazy = false,
+      priority = 1000,
+      config = function()
+        vim.cmd.colorscheme('Nordfox')
+      end
+    },
 }
 
