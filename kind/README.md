@@ -12,8 +12,10 @@ networking:
 ```
 
 ```bash
+# if not installed:
+bew install colima
 #create docker env via:
-colima start --cpu 2 --memory 8 --disk 50 
+colima start --cpu 2 --memory 8 --disk 50
 
 #create k8s kind cluster via:
 kind create cluster --config cluster.yaml --name santacruze-k8s
