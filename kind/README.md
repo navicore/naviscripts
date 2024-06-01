@@ -13,7 +13,7 @@ networking:
 
 ```bash
 # if not installed:
-bew install colima
+brew install colima
 #create docker env via:
 colima start --cpu 2 --memory 8 --disk 50
 
