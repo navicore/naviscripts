@@ -25,6 +25,7 @@ return {
           "java_language_server",
           "jedi_language_server",
           "lua_ls",
+          "pyright",
           "r_language_server",
         },
       }
@@ -38,7 +39,24 @@ return {
 
   },
 
-  {'neovim/nvim-lspconfig'},
+  {'neovim/nvim-lspconfig',
+
+    config = function()
+      local nvim_lsp = require('lspconfig')
+
+      nvim_lsp.pyright.setup({
+          on_attach = function(client, bufnr)
+              local opts = { noremap=true, silent=true }
+              local buf_set_keymap = vim.api.nvim_buf_set_keymap
+              buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+              buf_set_keymap(bufnr, 'n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+              buf_set_keymap(bufnr, 'n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+              buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
+          end,
+      })
+    end,
+
+  },
 
   {'nvimdev/lspsaga.nvim',
     config = function()
@@ -55,5 +73,4 @@ return {
   },
 
   {'lvimuser/lsp-inlayhints.nvim'},
-
 }
