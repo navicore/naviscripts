@@ -162,3 +162,5 @@ function cwe() {
 }
 
 eval $(thefuck --alias)
+
+node --version > /dev/null 
