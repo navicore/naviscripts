@@ -12,6 +12,7 @@
 " brew install eza python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun cmake tmux sbt graphviz pandoc hub neovim readline xz chafa viu thefuck httpie
 " brew install --cask racket
 " brew install --cask wezterm
+" brew install jesseduffield/lazydocker/lazydocker
 " --------- ALL ---------
 "
 " nvm install stable
