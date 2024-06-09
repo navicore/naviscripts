@@ -162,6 +162,3 @@ function cwe() {
 }
 
 eval $(thefuck --alias)
-
-eval "$(zoxide init zsh)"
-alias cd='z'
