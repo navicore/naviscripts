@@ -161,3 +161,4 @@ function cwe() {
   cargo watch -c -q -x "run -q --example '$1'"
 }
 
+eval $(thefuck --alias)
