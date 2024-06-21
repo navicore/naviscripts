@@ -4,8 +4,8 @@ return {
     version = "*",
     config = function ()
       require("toggleterm").setup {
-        direction = "horizontal",
-        --direction = "float",
+        --direction = "horizontal",
+        direction = "float",
         -- use leader t to toggle terminal
         open_mapping = [[<leader>t]],
         shade_filetypes = {},
