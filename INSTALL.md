@@ -22,7 +22,7 @@
 "
 " --------- DENO ---------
 " curl -fsSL https://deno.land/x/install/install.sh | sh
-" 
+"
 " install zplug
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
@@ -39,7 +39,7 @@
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr", "pivottabler", "kableExtra")
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
-" tinytex::install_tinytex() 
+" tinytex::install_tinytex()
 "
 " update all R packages:
 "
@@ -47,7 +47,7 @@
 "
 " END R:
 "
-" :TSInstall java go rust r c cpp python bash awk lua 
+" :TSInstall java go rust r c cpp python bash awk lua
 "
 " mkdir -p ~/.vim/swapfiles
 " eval `ssh-agent -s`
@@ -78,7 +78,7 @@
 " BEGIN PYTHON:
 "
 " sudo pip3 install flake8 jedi
-" pip3 install argcomplete 
+" pip3 install argcomplete
 " activate-global-python-argcomplete
 "
 " END PYTHON:
@@ -95,7 +95,7 @@
 "
 " git config --global core.excludesfile '~/.gitignore'
 " # for when an installation won't let git diff show colors
-" git config --global core.pager cat 
+" git config --global core.pager cat
 "
 " END GIT CONFIG
 "
