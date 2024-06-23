@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+reverse=false
+if [[ "$1" == "-r" ]]; then
+    reverse=true
+    shift
+fi
+
 #
 # Ensure script is running with Bash 5 or later
 #
@@ -21,5 +27,9 @@ done
 
 # Display what we counted
 for id in "${!cnt[@]}"; do
-    printf '%d %s\n' "${cnt[$id]}" "$id"
+    if [[ "$reverse" == true ]]; then
+        printf '%s %d\n' "$id" "${cnt[$id]}"
+    else
+        printf '%d %s\n' "${cnt[$id]}" "$id"
+    fi
 done
