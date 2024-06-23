@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#
+# Ensure script is running with Bash 5 or later
+#
+if [[ "${BASH_VERSINFO:-0}" -lt 5 ]]; then
+    echo "This script requires Bash version 5 or later."
+    exit 1
+fi
+
+# sum the total of field 2 values for each unique field 1
+# Usage: summer < file
+#   input format: <name> <number>
+
+declare -A cnt   # Create an associative array
+
+while read id count
+do
+    let cnt[$id]+=$count
+done
+for id in "${!cnt[@]}"
+do
+    printf "%-15s %8d\n" "$id" "${cnt[$id]}"
+done
