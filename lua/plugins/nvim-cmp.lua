@@ -62,7 +62,7 @@ return {
               maxwidth = 50,
               ellipsis_char = '...',
               show_labelDetails = true,
-
+              symbol_map = { Copilot = "" },
             })
         },
       })
