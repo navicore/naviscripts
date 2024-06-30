@@ -27,7 +27,6 @@ mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
 cp ./Renviron ~/.Renviron
-cp ./ctags ~/.ctags
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.lua ~/.config/nvim/

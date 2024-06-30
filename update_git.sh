@@ -14,7 +14,6 @@ cp ~/.zshrc ./zshrc
 cp ~/.scryerrc ./scryerrc
 cp ~/.config/tmux/tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
-cp ~/.ctags ./ctags
 cp ~/.Rprofile ./Rprofile
 cp ~/.Renviron ./Renviron
 cp ~/.config/nvim/init.vim ./init.vim
