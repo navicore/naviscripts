@@ -9,7 +9,7 @@
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
 "   doesn't work for all idea products
-" brew install bash eza python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun cmake tmux sbt graphviz pandoc hub neovim readline xz chafa viu thefuck httpie dust ncdu
+" brew install bash eza python3 fzf ripgrep libxml2 xml2 libgit2 reattach-to-user-namespace nvm zplug zsh-history-substring-search nailgun cmake tmux sbt graphviz pandoc hub neovim readline xz chafa viu thefuck httpie dust ncdu btop htop
 " brew install --cask racket
 " brew install --cask wezterm
 " brew install jesseduffield/lazydocker/lazydocker
