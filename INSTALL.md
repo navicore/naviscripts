@@ -13,7 +13,7 @@
 " brew install --cask racket
 " brew install --cask wezterm
 " brew install jesseduffield/lazydocker/lazydocker
-" brew install yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide font-symbols-only-nerd-font doggo
+" brew install yazi ffmpegthumbnailer unar jq poppler fd ripgrep fzf zoxide font-symbols-only-nerd-font doggo fx
 " --------- ALL ---------
 "
 " nvm install stable
