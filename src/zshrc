@@ -129,7 +129,6 @@ zplug "caarlos0/git-add-remote"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
 zplug 'ryutok/rust-zsh-completions'
-zplug 'lukechilds/zsh-nvm'
 zplug 'mroth/evalcache'
 
 # Install plugins if there are plugins that have not been installed

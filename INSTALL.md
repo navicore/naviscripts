@@ -15,15 +15,11 @@
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
 "   doesn't work for all idea products
-" brew install nvm zplug font-symbols-only-nerd-font
+" brew install zplug font-symbols-only-nerd-font
 " brew install --cask racket
 " brew install --cask wezterm
 "
 " --------- ALL ---------
-"
-" nvm install stable
-" nvm use stable
-" npm i -g babel-eslint eslint eslint-config-airbnb eslint-plugin-import
 "
 " install zplug
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
@@ -52,8 +48,7 @@
 "
 " BEGIN RUST
 "
-" rustup component add rust-analysis rust-src
-" rustup component add rustfmt
+" rustup component add rust-analyzer rust-analysis rust-src rustfmt
 " rustup target add wasm32-wasi
 " ssh-add -K ~/.ssh/id_rsa
 "
