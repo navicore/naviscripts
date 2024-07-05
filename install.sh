@@ -37,3 +37,6 @@ cp ./cargo/env ~/.cargo/env
 
 cp -npR git-template/ ~/.git-template/
 mkdir -p ~/.config/nvim/snippets
+
+mkdir -p ~/.local/share/devbox/global/default
+cp devbox/global/default/devbox.json ~/.local/share/devbox/global/default/devbox.json 
