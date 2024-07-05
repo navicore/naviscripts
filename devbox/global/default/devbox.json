@@ -42,7 +42,10 @@
     "kind@latest",
     "colima@latest",
     "flux@latest",
-    "lua@latest"
+    "lua@latest",
+    "go-task@latest",
+    "nodejs@latest",
+    "yarn@latest"
   ],
   "shell": {
     "init_hook": [
