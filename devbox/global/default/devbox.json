@@ -41,7 +41,8 @@
     "hpack@latest",
     "kind@latest",
     "colima@latest",
-    "flux@latest"
+    "flux@latest",
+    "lua@latest"
   ],
   "shell": {
     "init_hook": [
