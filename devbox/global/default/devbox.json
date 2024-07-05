@@ -43,9 +43,7 @@
     "colima@latest",
     "flux@latest",
     "lua@latest",
-    "go-task@latest",
-    "nodejs@latest",
-    "yarn@latest"
+    "racket@latest"
   ],
   "shell": {
     "init_hook": [

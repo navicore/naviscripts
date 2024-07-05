@@ -16,8 +16,6 @@ cp ~/.config/tmux/tmux.conf ./tmux.conf
 cp ~/.inputrc ./inputrc
 cp ~/.Rprofile ./Rprofile
 cp ~/.Renviron ./Renviron
-mkdir -p ./cargo
-cp ~/.cargo/env ./cargo/env
 
 mkdir -p ./bin
 cp ~/bin/plant* ./bin/

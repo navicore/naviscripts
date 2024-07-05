@@ -3,6 +3,7 @@
 " curl -fsSL https://get.jetify.com/devbox | bash
 "
 " devbox completion zsh > /usr/local/share/zsh/site-functions/_devbox
+" curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
 "
 " end DEVBOX
 "
