@@ -31,7 +31,6 @@
 " apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 "
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr", "pivottabler", "kableExtra")
-
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
 " tinytex::install_tinytex()
@@ -41,8 +40,6 @@
 " update.packeges(ask=FALSE)
 "
 " END R:
-"
-" :TSInstall java go rust r c cpp python bash awk lua
 "
 " mkdir -p ~/.vim/swapfiles
 " eval `ssh-agent -s`
@@ -65,15 +62,13 @@
 "
 " END HASKELL
 "
-" install https://github.com/romainl/flattened
-"
 " build ~/.vim/bundle/vimproc.vim with: make
 "
 " nerd fonts
 " https://github.com/ryanoasis/nerd-fonts#option-3-install-script
 " cd tmp && git clone git@github.com:ryanoasis/nerd-fonts.git
 "
-" GIT CONFIG
+" BEGIN GIT CONFIG
 "
 " git config --global core.excludesfile '~/.gitignore'
 " # for when an installation won't let git diff show colors
@@ -81,13 +76,11 @@
 "
 " END GIT CONFIG
 "
-" install more k8s stuff
+" kind completions:
+" kind completion zsh > /usr/local/share/zsh/site-functions/_kind
 "
-" kind https://kind.sigs.k8s.io/docs/user/quick-start/
-" 	% kind completion zsh > /usr/local/share/zsh/site-functions/_kind
-"
-" flux2 https://fluxcd.io/docs/get-started/
-" 	% flux completion zsh > /usr/local/share/zsh/site-functions/_flux
+" flux2 completions:
+" flux completion zsh > /usr/local/share/zsh/site-functions/_flux
 "
 " tell git to use the global gitignore:
 " git config --global core.excludesfile ~/.gitignore
