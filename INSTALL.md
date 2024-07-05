@@ -4,6 +4,7 @@
 "
 " devbox completion zsh > /usr/local/share/zsh/site-functions/_devbox
 " curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
+" curl -fsSL https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task -o /usr/local/share/zsh/site-functions/_task
 "
 " end DEVBOX
 "
