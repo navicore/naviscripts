@@ -18,8 +18,7 @@
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
 "   doesn't work for all idea products
-" brew install zplug font-symbols-only-nerd-font
-" brew install --cask racket
+" brew install font-symbols-only-nerd-font
 " brew install --cask wezterm
 "
 " --------- ALL ---------
@@ -28,11 +27,11 @@
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 " BEGIN R:
-"
 " 
 " apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
 "
 " my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr", "pivottabler", "kableExtra")
+
 " install.packages(my_packages, repos = "https://cran.rstudio.com")
 "
 " tinytex::install_tinytex()

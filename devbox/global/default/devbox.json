@@ -43,6 +43,10 @@
     "colima@latest",
     "flux@latest",
     "lua@latest",
+    "go-task@latest",
+    "nodejs@latest",
+    "yarn@latest",
+    "R@latest",
     "racket@latest"
   ],
   "shell": {
