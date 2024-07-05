@@ -50,6 +50,7 @@ alias ll='eza -l --header --git'
 alias iex='rlwrap -a foo iex'
 alias sz='source ~/.zshrc'
 alias uvim='vim -u NONE'
+alias db='devbox'
 
 alias kbb='kubectl run -it busybox --image=busybox -- sh'
 alias k='kubectl'
