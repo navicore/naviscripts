@@ -31,9 +31,6 @@ cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.lua ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
-mkdir -p ~/.cargo
-cp ./cargo/env ~/.cargo/env
-#cp ./cargo/config ~/.cargo/config
 
 cp -npR git-template/ ~/.git-template/
 mkdir -p ~/.config/nvim/snippets

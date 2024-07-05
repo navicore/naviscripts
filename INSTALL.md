@@ -1,9 +1,3 @@
-" --------- LNX --------- (debian-based)
-"
-" TODO via devbox
-"
-" --------- OSX ---------
-"
 " begin DEVBOX
 "
 " curl -fsSL https://get.jetify.com/devbox | bash
@@ -11,6 +5,14 @@
 " devbox completion zsh > /usr/local/share/zsh/site-functions/_devbox
 "
 " end DEVBOX
+"
+"
+" --------- LNX --------- (debian-based)
+"
+" TODO via devbox
+"
+"
+" --------- OSX ---------
 "
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
@@ -56,7 +58,7 @@
 "
 " BEGIN HASKELL
 " (haskell stack prereq installed by devbox)
-" git clone git@github.com:olivierverdier/zsh-git-prompt.git ~/tmp/zsh-git-prompt
+" git clone git@github.com:navicore/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
 "
 " you now have a haskell repl ghci via 'stack repl'
