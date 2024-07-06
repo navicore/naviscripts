@@ -15,8 +15,6 @@ cp ./guile ~/.guile
 cp -n ./gitconfig ~/.gitconfig
 cp -n ./racketrc ~/.racketrc
 cp -n ./gitignore ~/.gitignore
-mkdir -p ~/.vim
-cp ./scripts.vim ~/.vim/scripts.vim
 cp ./scryerrc ~/.scryerrc
 cp ./zshrc ~/.zshrc
 mkdir -p ~/.config/wezterm
