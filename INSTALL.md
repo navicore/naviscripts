@@ -19,7 +19,8 @@
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
 "   doesn't work for all idea products
-" brew install zsh font-symbols-only-nerd-font
+" chsh -s /bin/zsh
+" brew install font-symbols-only-nerd-font
 " brew install --cask wezterm
 "
 " --------- ALL ---------
