@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-sudo mkdir -p /mnt/${USER}
-sudo chown -R $USER /mnt/${USER}
-echo `ls -l /mnt/${USER}`
-echo "exists: /mnt/${USER}"
-
