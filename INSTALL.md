@@ -19,14 +19,14 @@
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
 "   doesn't work for all idea products
-" brew install font-symbols-only-nerd-font
+" brew install zsh font-symbols-only-nerd-font
 " brew install --cask wezterm
 "
 " --------- ALL ---------
 "
 " install zplug
 " curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
+"
 " BEGIN R:
 " 
 " apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
