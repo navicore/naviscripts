@@ -23,4 +23,3 @@ cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
 cp ~/bin/klog* ./bin/
 cp ~/bin/dev-tmux ./bin/
-cp ~/.local/share/devbox/global/default/devbox.json devbox/global/default/devbox.json

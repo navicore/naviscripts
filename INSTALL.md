@@ -1,27 +1,18 @@
-" begin DEVBOX
-"
-" curl -fsSL https://get.jetify.com/devbox | bash
-"
-" devbox completion zsh > /usr/local/share/zsh/site-functions/_devbox
-" curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
-" curl -fsSL https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task -o /usr/local/share/zsh/site-functions/_task
-"
-" end DEVBOX
-"
-"
-" --------- LNX --------- (debian-based)
-"
-" TODO via devbox
-"
 "
 " --------- OSX ---------
 "
-" defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
-" defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
-"   doesn't work for all idea products
+" install via brew:
+"
+" brew install bash bat btop cabal-install chafa cmake cmake colima doggo dust eza flux fx fzf gettext git graphviz hpack htop httpie hub kind kubectl lazydocker libgit2 libgit2 libiconv libxml2 lua maven ncdu neovim nodejs pandoc pkg-config python3 racket readline reattach-to-user-namespace ripgrep rustup stack thefuck tmux viu xml2 xz yarn yazi zlib zsh-history-substring-search R
 " chsh -s /bin/zsh
 " brew install font-symbols-only-nerd-font
 " brew install --cask wezterm
+"
+" defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
+" defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
+"
+" curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
+" curl -fsSL https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task -o /usr/local/share/zsh/site-functions/_task
 "
 " --------- ALL ---------
 "
