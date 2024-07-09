@@ -45,9 +45,12 @@
     "lua":                          "latest",
     "nodejs":                       "latest",
     "yarn":                         "latest",
-    "R":                            "latest",
     "racket":                       "latest",
-    "maven":                        "latest"
+    "maven":                        "latest",
+    "R":                            "latest",
+    "rPackage.devtools":            "latest",
+    "rPackage.tidyverse":           "latest",
+    "rPackage.git2r":               "latest",
   },
   "shell": {
     "init_hook": [
