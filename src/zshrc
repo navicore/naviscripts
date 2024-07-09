@@ -1,4 +1,4 @@
-eval "$(devbox global shellenv --init-hook)"
+#eval "$(devbox global shellenv --init-hook)"
 platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
