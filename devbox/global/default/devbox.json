@@ -46,7 +46,8 @@
     "nodejs":                       "latest",
     "yarn":                         "latest",
     "R":                            "latest",
-    "racket":                       "latest"
+    "racket":                       "latest",
+    "maven":                        "latest"
   },
   "shell": {
     "init_hook": [
