@@ -1,12 +1,13 @@
 "
 " --------- OSX ---------
 "
+" chsh -s /bin/zsh
+"
 " install via brew:
 "
-" brew install bash bat btop cabal-install chafa cmake cmake colima doggo dust eza flux fx fzf gettext git graphviz hpack htop httpie hub kind kubectl lazydocker libgit2 libgit2 libiconv libxml2 lua maven ncdu neovim nodejs pandoc pkg-config python3 racket readline reattach-to-user-namespace ripgrep rustup stack thefuck tmux viu xml2 xz yarn yazi zlib zsh-history-substring-search R yq jq coreutils
-" chsh -s /bin/zsh
-" brew install font-symbols-only-nerd-font
-" brew install --cask wezterm
+" brew bundle
+"
+" periodically run "brew bundle dump" to maintain the Brewfile
 "
 " defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 " defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
