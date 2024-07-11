@@ -8,7 +8,7 @@
         "revision": "152e6f960a5e0745204f025476692521b8068740"
       },
       "dart-lang/dart": {
-        "revision": "ae2f866fc4ee7fb19e5e045b3641c7e3fcff0c7a"
+        "revision": "3c00766613281711fa3a2473d8cd53ffdd1023bc"
       },
       "fluxcd/tap": {
         "revision": "31d7b48df49f0a59f421aac22063e8539370347f"
@@ -42,6 +42,9 @@
       },
       "tako8ki/tap": {
         "revision": "1f26e805f39b3682c6ff3e3c778c81246638e632"
+      },
+      "mergestat/mergestat": {
+        "revision": "e8de0840ea6e68dbc32c9e5e1a4daca47d45ff5b"
       }
     },
     "brew": {
