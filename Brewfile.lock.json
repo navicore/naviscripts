@@ -2181,6 +2181,10 @@
             }
           }
         }
+      },
+      "mergestat": {
+        "version": "v0.6.2",
+        "bottle": false
       }
     },
     "cask": {
