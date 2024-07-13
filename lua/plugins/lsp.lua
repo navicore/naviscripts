@@ -26,7 +26,7 @@ return {
           "jedi_language_server",
           "lua_ls",
           "pyright",
-          "hls",
+          -- "hls",
           --"r_language_server",
         },
       }
