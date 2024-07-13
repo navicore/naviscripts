@@ -15,6 +15,8 @@
 " curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
 " curl -fsSL https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task -o /usr/local/share/zsh/site-functions/_task
 "
+" sudo luarocks install tiktoken_core
+"
 " --------- ALL ---------
 "
 " install zplug
@@ -48,7 +50,9 @@
 " END RUST
 "
 " BEGIN HASKELL
-" (haskell stack prereq installed by devbox)
+"
+" curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+"
 " git clone git@github.com:navicore/zsh-git-prompt.git ~/tmp/zsh-git-prompt
 " for haskell above: stack setup && stack build && stack install
 "

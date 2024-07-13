@@ -182,3 +182,5 @@ function yy() {
   fi
   rm -f -- "$tmp"
 }
+
+source "$HOME/.cargo/env"
