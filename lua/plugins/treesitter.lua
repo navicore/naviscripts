@@ -4,7 +4,7 @@ return {
     config = function()
       -- Treesitter Plugin Setup
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { "lua", "rust", "toml", "python", "r", "racket", "scheme", "diff", "go" },
+        ensure_installed = { "lua", "rust", "python", "diff", "go", "markdown", "rnoweb", "r" },
         auto_install = true,
         highlight = {
           enable = true,

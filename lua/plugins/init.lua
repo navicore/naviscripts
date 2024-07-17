@@ -39,7 +39,7 @@ return {
     'wannesm/wmgraphviz.vim',
     event = "VeryLazy",
   },
-  'jalvesaq/Nvim-R',
+  --'jalvesaq/Nvim-R',
 
   -- lisp repl stuff
   {
