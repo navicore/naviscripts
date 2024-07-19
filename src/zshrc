@@ -184,3 +184,8 @@ function yy() {
 }
 
 source "$HOME/.cargo/env"
+
+# eval `ssh-agent -s`
+# ssh-add
+
+autoload -U compinit && compinit
