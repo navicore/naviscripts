@@ -5,7 +5,7 @@ if [ $# -eq 0 ] || [ "$1" = "attach" ]; then
     tmux split-window -v
 
     tmux new-window  -t N:2 -n RUST
-    tmux new-window  -t N:3 -n WASM
+    tmux new-window  -t N:3 -n GO
     tmux new-window  -t N:4 -n PYTHON
     tmux new-window  -t N:5 -n R
 
