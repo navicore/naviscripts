@@ -137,6 +137,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "navicore/zsh-kind"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
 zplug "caarlos0/git-add-remote"
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "lib/completion", from:oh-my-zsh
