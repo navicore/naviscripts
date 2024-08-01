@@ -23,7 +23,6 @@ return {
         automatic_installation = true,
         ensure_installed = {
           "gopls",
-          "java_language_server",
           "jedi_language_server",
           "lua_ls",
           "pyright",
