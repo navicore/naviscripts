@@ -42,7 +42,7 @@ alias tmux='~/bin/dev-tmux'
 alias l='eza'
 alias ls='eza'
 alias ll='eza -l --header --git --tree --level 3'
-alias cat='bat'
+alias cat='bat --paging=never'
 alias fzfp='fzf --preview "bat --style numbers --color always {}"'
 
 alias kbb='kubectl run -it busybox --image=busybox -- sh'
