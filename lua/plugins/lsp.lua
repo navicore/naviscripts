@@ -22,9 +22,9 @@ return {
       require("mason-lspconfig").setup {
         automatic_installation = true,
         ensure_installed = {
+          "lua_ls",
           "gopls",
           -- "jedi_language_server",
-          -- "lua_ls",
           -- "pyright",
         },
       }
