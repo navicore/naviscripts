@@ -67,5 +67,4 @@ return {
     },
     branch = '1.x.x', -- recommended
   },
-
 }

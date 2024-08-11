@@ -21,53 +21,20 @@ return {
     },
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
-    dependencies = {
-      { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-      { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-    },
-    opts = {
-      debug = true, -- Enable debugging
-      -- See Configuration section for rest
-    },
-    -- See Commands section for default commands if you want to lazy load on them
-    -- config = function()
-    --   vim.keymap.set("n", "<leader>cp", "<cmd>CopilotChatToggle<cr>")
-    --
-    -- end
-  },
-  {
-    "navicore/codecompanion.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-telescope/telescope.nvim", -- Optional
-      {
-        "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
-        opts = {},
-      },
-    },
+    "robitx/gp.nvim",
     config = function()
-      vim.keymap.set("n", "<leader>ca", "<cmd>CodeCompanionToggle<cr>")
-      vim.keymap.set("n", "<leader>cp", "<cmd>CopilotChatToggle<cr>")
-      require("codecompanion").setup({
-        openai = function()
-          return require("codecompanion.adapters").use("openai", {
-            env = {
-              api_key = "OPENAI_API_KEY",
-            },
-          })
-        end,
-        strategies = {
-          inline = {
-            adapter = "openai",
+      vim.keymap.set("n", "<leader>cg", "<cmd>GpChatToggle<cr>")
+      local conf = {
+        -- For customization, refer to Install > Configuration in the Documentation/Readme
+        providers = {
+          openai = {
+            endpoint = "https://api.openai.com/v1/chat/completions",
+            secret = os.getenv("OPENAI_API_KEY"),
           },
-          chat = {
-            adapter = "openai",
-          },
-        },
-      })
+        }
+      }
+      require("gp").setup(conf)
+      -- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
     end,
   }
 }
