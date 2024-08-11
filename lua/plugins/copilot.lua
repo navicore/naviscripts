@@ -23,7 +23,7 @@ return {
   {
     "robitx/gp.nvim",
     config = function()
-      vim.keymap.set("n", "<leader>cg", "<cmd>GpChatToggle<cr>")
+      vim.keymap.set("n", "<leader>c", "<cmd>GpChatToggle<cr>")
       local conf = {
         -- For customization, refer to Install > Configuration in the Documentation/Readme
         providers = {
