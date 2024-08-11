@@ -70,10 +70,8 @@ return {
 
   },
 
-  {'neovim/nvim-lspconfig',
-    config = function()
-    end,
-  },
+  {'neovim/nvim-lspconfig' },
+
   {'nvimdev/lspsaga.nvim',
     config = function()
       require('lspsaga').setup({
