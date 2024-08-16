@@ -19,7 +19,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    alias vim='nvim'
    alias vi='nvim'
    alias v='nvim'
-   alias python='/usr/local/bin/python3'
 fi
 
 export LANG=en_US.UTF-8
@@ -127,6 +126,7 @@ export PATH=$PATH:$GOBIN
 
 source $ZPLUG_HOME/init.zsh
 
+zplug "ptavares/zsh-direnv"
 zplug "navicore/zsh-kind"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
@@ -180,5 +180,4 @@ source "$HOME/.cargo/env"
 
 # eval `ssh-agent -s`
 # ssh-add
-
 autoload -U compinit && compinit
