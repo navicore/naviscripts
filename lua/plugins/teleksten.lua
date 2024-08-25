@@ -41,4 +41,13 @@ return {
       vim.keymap.set("i", "[[", "<cmd>Telekasten insert_link<CR>")
     end
   },
+  {
+    'navicore/nvim-reminders',
+    dependencies = {
+      'renerocksai/calendar-vim',
+    },
+    config = function()
+      require('reminders').setup()
+    end
+  },
 }
