@@ -16,7 +16,6 @@ vim.g.csv_nomap_space = 1
 vim.filetype.plugin = "on"
 vim.filetype.indent = "on"
 vim.o.completeopt = "menuone,noselect"
-vim.g.airline_extensions_ale_enabled = 1
 vim.g.WMGraphviz_dot = 'dot'
 vim.g.WMGraphviz_output = 'png'
 vim.g.WMGraphviz_viewer = 'open'
