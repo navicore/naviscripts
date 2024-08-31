@@ -43,9 +43,6 @@ return {
   },
   {
     'navicore/nvim-reminders',
-    dependencies = {
-      'renerocksai/calendar-vim',
-    },
     config = function()
       require('reminders').setup()
     end
