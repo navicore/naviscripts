@@ -21,20 +21,26 @@ return {
     },
   },
   {
-    "robitx/gp.nvim",
-    config = function()
-      vim.keymap.set("n", "<leader>c", "<cmd>GpChatToggle<cr>")
-      local conf = {
-        -- For customization, refer to Install > Configuration in the Documentation/Readme
-        providers = {
-          openai = {
-            endpoint = "https://api.openai.com/v1/chat/completions",
-            secret = os.getenv("OPENAI_API_KEY"),
-          },
-        }
+    "jackMort/ChatGPT.nvim",
+      event = "VeryLazy",
+      config = function()
+        require("chatgpt").setup({
+          openai_params = {
+            model = "gpt-4o",
+            frequency_penalty = 0,
+            presence_penalty = 0,
+            max_tokens = 4095,
+            temperature = 0.2,
+            top_p = 0.1,
+            n = 1,
+          }
+        })
+      end,
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "folke/trouble.nvim",
+        "nvim-telescope/telescope.nvim"
       }
-      require("gp").setup(conf)
-      -- Setup shortcuts here (see Usage > Shortcuts in the Documentation/Readme)
-    end,
   }
 }
