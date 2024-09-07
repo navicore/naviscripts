@@ -5,6 +5,7 @@ return {
   {
     'renerocksai/telekasten.nvim',
     dependencies = {
+      'MeanderingProgrammer/render-markdown.nvim',
       'nvim-telescope/telescope-fzf-native.nvim',
       'renerocksai/calendar-vim',
     },
@@ -19,7 +20,6 @@ return {
         template_new_note = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/base_note.md"),
         template_new_daily = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/daily.md"),
         template_new_weekly = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/weekly.md"),
-
       })
 
       -- Launch panel if nothing is typed after <leader>z
