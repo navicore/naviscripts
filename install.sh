@@ -31,5 +31,3 @@ cp ./init.lua ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 
 cp -npR git-template/ ~/.git-template/
-mkdir -p ~/.config/nvim/snippets
-
