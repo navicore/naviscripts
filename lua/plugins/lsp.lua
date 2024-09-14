@@ -36,7 +36,8 @@ return {
         "pyright",
         "gopls",
         "lua-language-server",
-        "jedi-language-server"
+        "jedi-language-server",
+        "black"
       }
       for _, server in ipairs(servers) do
         ensure_installed(server)
