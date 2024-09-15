@@ -4,7 +4,8 @@
     "enable": true,
     "globals": [
       "vim",
-      "use"
+      "use",
+      "def_opts"
     ]
   }
 }

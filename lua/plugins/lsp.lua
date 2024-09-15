@@ -2,6 +2,13 @@ return {
 
   {
     'neovim/nvim-lspconfig',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+      'williamboman/mason.nvim',
+    },
+    config = function()
+    end
   },
 
   {'nvimdev/lspsaga.nvim',
@@ -30,12 +37,10 @@ return {
           mr.get_package(package):install()
         end
       end
-      -- pre install these but make sure you also configure
-      -- them with lspconfig as if they were manuall installed
       local servers = {
         "pyright",
         "gopls",
-        "lua-language-server",
+        "lua-language-server",  -- This is the correct name for Mason
         "jedi-language-server",
         "black"
       }
@@ -45,4 +50,18 @@ return {
     end
   },
 
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      local null_ls = require("null-ls")
+      null_ls.setup({
+        sources = {
+          null_ls.builtins.formatting.black,
+        },
+      })
+    end
+  },
+
 }
+
+

@@ -90,3 +90,62 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+local lspconfig = require('lspconfig')
+
+local on_attach
+
+print("Setting up lua_ls")
+lspconfig.lua_ls.setup {
+  on_attach = on_attach,
+  filetypes = { "lua" },
+  cmd = { "lua-language-server" },  -- This should match the executable name
+  settings = {
+    Lua = {
+      runtime = { version = 'LuaJIT' },
+      diagnostics = { globals = {'vim'} },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+      telemetry = { enable = false },
+    },
+  },
+}
+
+-- python config
+local on_attach = function(client, bufnr)
+  client.server_capabilities.documentFormattingProvider = true
+end
+
+lspconfig.jedi_language_server.setup {
+  on_attach = on_attach,
+  init_options = {
+    workspace = {
+      extraPaths = { },
+    },
+    completion = {
+      disableSnippets = false,
+      resolveEagerly = false,
+    },
+    diagnostics = {
+      enable = true,
+      didOpen = true,
+      didChange = true,
+      didSave = true,
+    },
+  },
+}
+
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  settings = {
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true,
+      },
+    },
+  },
+}
+
