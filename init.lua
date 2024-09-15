@@ -108,4 +108,5 @@ end)
 -- Requiring Lua modules for plugins and setup
 require('lazy').setup('plugins')
 require('setup')
-
+require('python')
+require('luacfg')

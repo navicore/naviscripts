@@ -38,4 +38,11 @@ return {
       }
     end
   },
+  -- rust
+  'rust-lang/rust.vim',
+  {
+    'mfussenegger/nvim-dap',
+    event = "VeryLazy",
+  },
+
 }

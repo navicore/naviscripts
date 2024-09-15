@@ -18,4 +18,24 @@ return {
        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     }
   },
+  'tpope/vim-sleuth',
+
+  -- GIT stuff --
+  {
+    'mattn/gist-vim',
+    event = "VeryLazy",
+  },
+
+  {
+    'tpope/vim-fugitive',
+    event = "VeryLazy",
+  },
+  'tpope/vim-rhubarb',
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  },
+  'ryanoasis/vim-devicons',
 }
