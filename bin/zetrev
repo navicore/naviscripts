@@ -2,7 +2,7 @@
 
 cd ~/git/$USER/zet
 
-git pull
 git add .
 git commit -a -m rev
+git pull
 git push
