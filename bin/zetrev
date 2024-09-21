@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd ~/git/$USER/zet
+
+git add .
+git commit -a -m rev
+git push
