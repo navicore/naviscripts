@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for branch in $(git branch --merged main | grep -v "main"); do
+  echo "git branch -d ${branch#* }"
+done
