@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check if an argument is provided
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <branch>"
+  echo "ie:: $0 main"
+  exit 1
+fi
+
+# The prefix to match
+TRUNK=$1
+
+for branch in $(git branch --no-color --merged $TRUNK | grep -v "$TRUNK" | cut -c3-); do
+  echo "git branch -d $branch"
+done
