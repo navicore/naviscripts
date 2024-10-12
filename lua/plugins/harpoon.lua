@@ -1,4 +1,5 @@
 return {
+  { "nvim-lua/plenary.nvim" },
   {
       "ThePrimeagen/harpoon",
       branch = "harpoon2",
@@ -26,9 +27,9 @@ return {
         end
 
         vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end)
+        vim.keymap.set("n", "<leader>hp", function() harpoon:list():prev() end)
+        vim.keymap.set("n", "<leader>hn", function() harpoon:list():next() end)
         vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-        -- vim.keymap.set("n", "<leader-h>", function() toggle_telescope(harpoon:list()) end,
-        --     { desc = "Open harpoon window" })
         vim.keymap.set("n", "<C-h>", function() toggle_telescope(harpoon:list()) end,
         { desc = "Open harpoon window" })
     end,
