@@ -30,7 +30,7 @@ return {
         end,
     },
     'nvim-lua/popup.nvim',
-    --'nvim-telescope/telescope.nvim',
     'nvim-telescope/telescope-media-files.nvim',
+    'nvim-telescope/telescope-symbols.nvim',
   -- end telescope
 }
