@@ -26,6 +26,7 @@ return {
       vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")
 
       -- Easy to remember
+      vim.keymap.set("n", "<leader>zs", "<cmd>Telekasten search_notes<CR>")
       vim.keymap.set("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>")
       vim.keymap.set("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>")
       vim.keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>")
