@@ -36,6 +36,7 @@ return {
     'navicore/nvim-reminders',
     config = function()
       require('reminders').setup()
+      vim.keymap.set("n", "<leader>zr", "<cmd>ReminderScan<CR>")
     end
   },
 }
