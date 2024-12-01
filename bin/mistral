@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Check if jq is installed
+if ! command -v jq &>/dev/null; then
+    echo "Error: jq is not installed. Install it with 'sudo apt install jq' or similar for your OS."
+    exit 1
+fi
+
+# Check for arguments
+if [ "$#" -eq 0 ]; then
+    echo "Usage: $0 \"Your command content here\""
+    exit 1
+fi
+
+# Combine all arguments into a single string
+CONTENT_INPUT="$*"
+
+# Set the API key
+if [ -z "$MISTRAL_API_KEY" ]; then
+    echo "Error: MISTRAL_API_KEY is not set. Please export it and try again."
+    exit 1
+fi
+
+# Define the output Markdown file
+MARKDOWN_FILE="/tmp/mistral_response.md"
+
+# Make the curl request and capture the response
+RESPONSE=$(curl --silent --location "https://api.mistral.ai/v1/chat/completions" \
+    --header 'Content-Type: application/json' \
+    --header 'Accept: application/json' \
+    --header "Authorization: Bearer $MISTRAL_API_KEY" \
+    --data "{
+         \"model\": \"codestral-latest\",
+         \"messages\": [{\"role\": \"user\", \"content\": \"$CONTENT_INPUT\"}]
+     }")
+
+# Extract the content field
+CONTENT=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
+
+if [[ -n "$CONTENT" ]]; then
+    # If the content is non-empty, append it to the Markdown file
+    echo "$CONTENT" >> "$MARKDOWN_FILE"
+    echo "Markdown content appended to $MARKDOWN_FILE"
+else
+    # If the content is empty, pretty-print the whole JSON response
+    echo "No content found. Full JSON response:"
+    echo "$RESPONSE" | jq '.'
+fi
