@@ -6,7 +6,7 @@ return {
     config = function()
 
       require('render-markdown').setup({
-          file_types = { 'markdown', 'telekasten', 'rmarkdown', 'rmd' },
+          file_types = { 'markdown', 'telekasten', 'rmarkdown', 'rmd', 'copilot-chat' },
       })
 
       vim.treesitter.language.register('markdown', 'telekasten')
