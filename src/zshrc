@@ -181,3 +181,9 @@ source "$HOME/.cargo/env"
 # eval `ssh-agent -s`
 # ssh-add
 autoload -U compinit && compinit
+
+# for running examples in cargo watch
+# the arg is the base of the filename in the examples directory - no path
+function cwe() {
+  cargo watch -q -c -x "run -q --example '$1'"
+}
