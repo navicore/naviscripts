@@ -49,16 +49,11 @@
 "
 " END RUST
 "
-" BEGIN HASKELL
+" START PROMPT
 "
-" curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+" install https://github.com/navicore/zsh-git-prompt-rs
 "
-" git clone git@github.com:navicore/zsh-git-prompt.git ~/tmp/zsh-git-prompt
-" for haskell above: stack setup && stack build && stack install
-"
-" you now have a haskell repl ghci via 'stack repl'
-"
-" END HASKELL
+" END PROMPT
 "
 " build ~/.vim/bundle/vimproc.vim with: make
 "
