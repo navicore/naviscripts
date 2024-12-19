@@ -87,13 +87,14 @@ fi
 #
 # BEGIN PROMPT
 #
+
+if command -v gitstatus >/dev/null 2>&1; then
+  source <(gitstatus --script)
+fi
+
 PROMPT_PRE=''
 if [[ $SESSION_TYPE == 'remote/ssh' ]]; then
   PROMPT_PRE='%n@%m '
-fi
-
-if [ -f ~/git/navicore/zsh-git-prompt-rs/scripts/zshrc.sh ]; then
-  source ~/git/navicore/zsh-git-prompt-rs/scripts/zshrc.sh
 fi
 
 PROMPT='${PROMPT_PRE}%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX %{$fg[green]%}%p %{$fg[green]%}%c %{$fg[cyan]%}$(git_super_status)%{$fg_bold[red]%}% %{$reset_color%}'
