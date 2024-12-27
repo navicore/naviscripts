@@ -1,16 +1,5 @@
 require('gitsigns').setup()
 
-vim.g.haskell_tools = {
-  hls = {
-    on_attach = function(_, _bufnr, ht)
-      local opts = vim.tbl_extend('keep', def_opts, { buffer = _bufnr, })
-      vim.keymap.set('n', '<space>ca', vim.lsp.codelens.run, opts)
-      vim.keymap.set('n', '<space>hs', ht.hoogle.hoogle_signature, opts)
-      vim.keymap.set('n', '<space>ea', ht.lsp.buf_eval_all, opts)
-    end,
-  },
-}
-
 -- LSP Diagnostics Options Setup
 local sign = function(opts)
   vim.fn.sign_define(opts.name, {
