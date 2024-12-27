@@ -1,5 +1,4 @@
 return {
-  "lvimuser/lsp-inlayhints.nvim",
   {
     'mrcjkb/rustaceanvim',
     event = "VeryLazy",

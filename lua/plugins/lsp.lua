@@ -36,4 +36,10 @@ return {
 
     { 'lvimuser/lsp-inlayhints.nvim' },
 
+    {
+      "j-hui/fidget.nvim",
+        opts = {
+        -- options
+        },
+    },
 }
