@@ -91,7 +91,8 @@ return {
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim"
+      --"nvim-telescope/telescope-fzf-native.nvim",
+      "nvim-telescope/telescope.nvim",
     }
   }
 }
