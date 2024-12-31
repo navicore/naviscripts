@@ -28,6 +28,7 @@ cp ./Renviron ~/.Renviron
 cp ./Rprofile ~/.Rprofile
 mkdir -p ~/.config/nvim
 cp ./init.lua ~/.config/nvim/
+cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 
 cp -npR git-template/ ~/.git-template/
