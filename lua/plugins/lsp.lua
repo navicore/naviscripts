@@ -26,14 +26,6 @@ return {
             -- Configure Jedi Language Server
             lspconfig.jedi_language_server.setup{}
 
-            -- vim.cmd [[
-            --   augroup FormatAutogroup
-            --     autocmd!
-            --     autocmd BufWritePost *.py lua vim.lsp.buf.formatting_sync()
-            --   augroup END
-            -- ]]
-            -- end python
-
         end
     },
 
