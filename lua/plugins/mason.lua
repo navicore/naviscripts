@@ -10,7 +10,7 @@ return {
         end
       end
       local servers = {
-        "pyright",
+        --"pyright",
         "gopls",
         "lua-language-server",  -- This is the correct name for Mason
         "jedi-language-server",
