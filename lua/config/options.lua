@@ -4,6 +4,8 @@
 
 -- TODO these are NOT loaded automatically as we are not using lazyvim plugin configs -- see the file above for an example of how to load lazy
 
+vim.o.wrap = false
+
 vim.o.syntax = "on"
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
