@@ -139,10 +139,6 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
-if [ -f ~/.zshrc_local ]; then
-  . ~/.zshrc_local
-fi
-
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
