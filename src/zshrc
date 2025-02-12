@@ -14,8 +14,7 @@ elif [[ "$unamestr" == 'FreeBSD' ]]; then
    source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
-   export ZPLUG_HOME=/usr/local/opt/zplug
-   alias vim8='/usr/local/bin/vim'
+   #export ZPLUG_HOME=/usr/local/opt/zplug
    alias vim='nvim'
    alias vi='nvim'
    alias v='nvim'
