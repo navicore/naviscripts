@@ -3,21 +3,17 @@ platform='unknown'
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
-   export ZPLUG_HOME=$HOME/.zplug
-   alias vim8='/usr/bin/vim'
+   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=$HOME/.zplug
    alias vim='nvim'
-   alias vi='nvim'
    source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
    platform='freebsd'
-   export ZPLUG_HOME=$HOME/.zplug
+   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=$HOME/.zplug
    source $ZPLUG_HOME/init.zsh
 elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='osx'
-   #export ZPLUG_HOME=/usr/local/opt/zplug
+   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=/usr/local/opt/zplug
    alias vim='nvim'
-   alias vi='nvim'
-   alias v='nvim'
 fi
 
 export LANG=en_US.UTF-8
@@ -33,7 +29,8 @@ BLOCKSIZE=K;	export BLOCKSIZE
 VISUAL=nvim;    export VISUAL
 set -o vi
 PAGER=more; export PAGER
-EDITOR=/usr/local/bin/nvim; export EDITOR
+
+[ -z "$EDITOR" ] && export EDITOR=/usr/local/bin/nvim
 
 alias tmux='~/bin/dev-tmux'
 
