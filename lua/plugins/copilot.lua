@@ -5,7 +5,7 @@ return {
     branch = "main",
     dependencies = {
       { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim" },
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
       { 'MeanderingProgrammer/render-markdown.nvim' },
     },
     build = "make tiktoken", -- Only on MacOS or Linux
@@ -18,14 +18,9 @@ return {
         separator = '---',
         error_header = '> [!ERROR] Error',
       })
+      vim.keymap.set('n', '<leader>cc', '<CMD>CopilotChatToggle<CR>', { desc = 'Open Copilot Chat' })
     end,
     keys = {
-      {
-        "<leader>cc",
-        function()
-          require("CopilotChat").ask()
-        end,
-      },
       -- Show quick chat prompt
       {
         "<leader>ccq",

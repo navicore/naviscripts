@@ -32,10 +32,12 @@ return {
                         '--column',
                         '--smart-case'
                     },
-                    layout_strategy = 'horizontal',
-                    layout_config = {
-                        preview_width = 0.6,
-                    },
+                    layout_strategy = 'flex',
+                    layout_config = { flex = { flip_columns = 120 } },
+                    -- layout_strategy = 'horizontal',
+                    -- layout_config = {
+                    --     preview_width = 0.6,
+                    -- },
                     file_ignore_patterns = {},
                     path_display = { "truncate" },
                     dynamic_preview_title = true, -- Better debug information
