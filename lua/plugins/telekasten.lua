@@ -38,6 +38,7 @@ return {
     config = function()
       require('reminders').setup()
       vim.keymap.set("n", "<leader>zr", "<cmd>ReminderScan<CR>")
+      vim.keymap.set("n", "<leader>zre", "<cmd>ReminderEdit<CR>")
     end
   },
 }
