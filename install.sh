@@ -32,3 +32,5 @@ cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 
 cp -npR git-template/ ~/.git-template/
+mkdir -p  ~/.config/ghostty/
+cp -R ./ghostty ~/.config/
