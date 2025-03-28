@@ -8,6 +8,9 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = function()
+      if vim.lsp.inlay_hint then
+        vim.lsp.inlay_hint.enable(true, { 0 })
+      end
       vim.g.rustaceanvim = {
         tools = {
           hover_actions = {
