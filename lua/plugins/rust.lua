@@ -1,8 +1,8 @@
 return {
   {
     'mrcjkb/rustaceanvim',
-    event = "VeryLazy",
-    version = '^4', -- Recommended
+    lazy = false,
+    version = '^5',
     ft = { 'rust' },
     dependencies = {
       "nvim-lua/plenary.nvim",
