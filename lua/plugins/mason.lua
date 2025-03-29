@@ -14,7 +14,7 @@ return {
         "awk-language-server",
         "pyright",
         "gopls",
-        "remark-language-server",
+        "yaml-language-server",
         "lua-language-server",
         "jedi-language-server",
       }
