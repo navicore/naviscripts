@@ -10,10 +10,12 @@ return {
         end
       end
       local servers = {
+        "r-languageserver",
+        "awk-language-server",
         "pyright",
         "gopls",
-        "remark-language-server",  -- This is the correct name for Mason
-        "lua-language-server",  -- This is the correct name for Mason
+        "remark-language-server",
+        "lua-language-server",
         "jedi-language-server",
       }
       for _, server in ipairs(servers) do

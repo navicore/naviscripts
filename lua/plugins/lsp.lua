@@ -22,6 +22,13 @@ return {
             lspconfig.jedi_language_server.setup{}
             lspconfig.pyright.setup{}
 
+            lspconfig.r_language_server.setup{
+                filetypes = { "r", "rmd" },
+            }
+            lspconfig.awk_ls.setup{
+                cmd = { "awk-language-server" },
+                filetypes = { "awk" },
+            }
         end
     },
 
