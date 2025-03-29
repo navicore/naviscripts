@@ -15,7 +15,6 @@ even do but I can't cope without it all.
 * nerd fonts
 * Nvim-R is great - I could not use R if I had to use RStudio at all
 
-
 ### INSTALL
 
 `git clone git@github.com:navicore/naviscripts.git`
@@ -49,14 +48,14 @@ timezsh() {
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
 
-export AWS_REGION=us-east-1    
+export AWS_REGION=us-east-1
 
 node -v > /dev/null 2>&1
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-export AWS_REGION=us-east-1 
+export AWS_REGION=us-east-1
 ```
 
 --------

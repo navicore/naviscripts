@@ -10,11 +10,11 @@ return {
         end
       end
       local servers = {
-        --"pyright",
+        "pyright",
         "gopls",
+        "remark-language-server",  -- This is the correct name for Mason
         "lua-language-server",  -- This is the correct name for Mason
         "jedi-language-server",
-        "black"
       }
       for _, server in ipairs(servers) do
         ensure_installed(server)

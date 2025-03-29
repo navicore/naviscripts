@@ -17,14 +17,10 @@ return {
                 },
             }
 
-            -- begin python
+            -- python
             local lspconfig = require('lspconfig')
-
-            -- Configure Pyright
-            lspconfig.pyright.setup{}
-
-            -- Configure Jedi Language Server
             lspconfig.jedi_language_server.setup{}
+            lspconfig.pyright.setup{}
 
         end
     },
