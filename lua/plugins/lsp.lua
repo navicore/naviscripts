@@ -22,6 +22,7 @@ return {
             lspconfig.jedi_language_server.setup{}
             lspconfig.pyright.setup{}
 
+            -- other languages
             lspconfig.yamlls.setup{
                 filetypes = { "yaml" },
             }
