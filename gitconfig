@@ -1,20 +1,35 @@
 [push]
 	default = simple
+	autoSetupRemote = true
 [user]
 	name = Ed Sweeney
 	email = ed@onextent.com
+	signingkey = 27AE971C9F8555F3
 [github]
 	user = navicore
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [credential]
-	helper = cache
+	helper = store
 [core]
 	editor = nvim
 	excludesFile = ~/.gitignore
 	pager = less -F -X
+	compression = 0
 [init]
 	templateDir = /Users/navicore/.git-template
+	defaultBranch = main
+[pull]
+	rebase = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 [color]
-  ui = always
+    ui = always
+[http]
+	postBuffer = 157286400
+[help]
+	autocorrect = 10
