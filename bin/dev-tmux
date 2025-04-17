@@ -4,8 +4,8 @@ if [ $# -eq 0 ] || [ "$1" = "attach" ]; then
     tmux new-session -s N -n DEVOPS -d
     tmux split-window -v
 
-    tmux new-window  -t N:2 -n "RUST 1"
-    tmux new-window  -t N:3 -n "RUST 2"
+    tmux new-window  -t N:2 -n "RUST"
+    tmux new-window  -t N:3 -n "RUST"
     tmux new-window  -t N:4 -n GO
     tmux new-window  -t N:5 -n R
 
