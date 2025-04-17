@@ -17,10 +17,11 @@ return {
         "yaml-language-server",
         "lua-language-server",
         "jedi-language-server",
+        "python-lsp-server",
       }
       for _, server in ipairs(servers) do
         ensure_installed(server)
       end
-    end
+    end,
   },
 }
