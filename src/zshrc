@@ -116,15 +116,17 @@ export PATH=$PATH:$GOBIN
 
 source $ZPLUG_HOME/init.zsh
 
-zplug "navicore/zsh-kind"
-zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
-zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "lib/completion", from:oh-my-zsh
-zplug 'ryutok/rust-zsh-completions'
-zplug 'mroth/evalcache'
-zplug "zsh-users/zsh-syntax-highlighting"
 zplug "cmuench/zsh-jenv"
+zplug "lib/completion", from:oh-my-zsh
+zplug "navicore/zsh-kind"
+zplug "plugins/vi-mode", from:oh-my-zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug 'junegunn/fzf'
+zplug 'junegunn/fzf.vim'
+zplug 'mroth/evalcache'
+zplug 'ryutok/rust-zsh-completions'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
