@@ -116,7 +116,6 @@ export PATH=$PATH:$GOBIN
 
 source $ZPLUG_HOME/init.zsh
 
-zplug "ptavares/zsh-direnv"
 zplug "navicore/zsh-kind"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "caarlos0/git-add-remote"
@@ -125,6 +124,7 @@ zplug "lib/completion", from:oh-my-zsh
 zplug 'ryutok/rust-zsh-completions'
 zplug 'mroth/evalcache'
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "cmuench/zsh-jenv"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -173,3 +173,4 @@ autoload -U compinit && compinit
 function cwe() {
   cargo watch -q -c -x "run -q --example '$1'"
 }
+
