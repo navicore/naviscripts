@@ -13,9 +13,10 @@ return {
           -- Your repl definitions come here
           repl_definition = {
             sh = {
-              -- Can be a table or a function that
-              -- returns a table (see below)
               command = { "zsh" },
+            },
+            lua = {
+              command = { "lua" },
             },
             python = {
               command = { "python3" }, -- or { "ipython", "--no-autoindent" }
