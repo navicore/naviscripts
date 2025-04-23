@@ -1,22 +1,22 @@
 return {
   {
-      'nvim-treesitter/nvim-treesitter',
-      event = "VeryLazy",
-      build = function()
-          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-          ts_update()
-      end,
+    "nvim-treesitter/nvim-treesitter",
+    event = "VeryLazy",
+    build = function()
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
+    end,
   },
   {
-  'nvim-treesitter/completion-treesitter',
+    "nvim-treesitter/completion-treesitter",
     config = function()
       -- Treesitter Plugin Setup
-      require('nvim-treesitter.configs').setup {
+      require("nvim-treesitter.configs").setup({
         ensure_installed = { "lua", "rust", "python", "diff", "go", "markdown", "rnoweb", "r", "yaml" },
         auto_install = true,
         highlight = {
           enable = true,
-          additional_vim_regex_highlighting=false,
+          additional_vim_regex_highlighting = false,
         },
         ident = { enable = true },
         rainbow = {
@@ -50,9 +50,9 @@ return {
             -- and should return the mode ('v', 'V', or '<c-v>') or a table
             -- mapping query_strings to modes.
             selection_modes = {
-              ['@parameter.outer'] = 'v', -- charwise
-              ['@function.outer'] = 'V', -- linewise
-              ['@class.outer'] = '<c-v>', -- blockwise
+              ["@parameter.outer"] = "v", -- charwise
+              ["@function.outer"] = "V", -- linewise
+              ["@class.outer"] = "<c-v>", -- blockwise
             },
             -- If you set this to `true` (default is `false`) then any textobject is
             -- extended to include preceding or succeeding whitespace. Succeeding
@@ -66,8 +66,8 @@ return {
             include_surrounding_whitespace = true,
           },
         },
-      }
-    end
+      })
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
@@ -78,6 +78,7 @@ return {
   {
     "folke/flash.nvim",
     event = "VeryLazy",
+    ---@diagnostic disable-next-line: undefined-doc-name
     ---@type Flash.Config
     opts = {},
     -- stylua: ignore
@@ -85,5 +86,5 @@ return {
       { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
     },
-  }
+  },
 }
