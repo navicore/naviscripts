@@ -15,6 +15,9 @@ return {
             sh = {
               command = { "zsh" },
             },
+            scheme = {
+              command = { "guile" },
+            },
             lua = {
               command = { "lua" },
             },
