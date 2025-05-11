@@ -31,6 +31,7 @@ cp ./init.lua ~/.config/nvim/
 cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 cp -npR git-template/ ~/.git-template/
+# warning: or ~/Library/Application\ Support/com.mitchellh.ghostty/config
 mkdir -p  ~/.config/ghostty/
 cp -R ./ghostty ~/.config/
 mkdir -p  ~/.config/zed/
