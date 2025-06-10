@@ -33,17 +33,6 @@ return {
         cmd = { "awk-language-server" },
         filetypes = { "awk" },
       })
-      lspconfig.pylsp.setup({
-        settings = {
-          pylsp = {
-            plugins = {
-              pylint = { enabled = true },
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-            },
-          },
-        },
-      })
     end,
   },
 
