@@ -127,6 +127,7 @@ zplug 'junegunn/fzf'
 zplug 'junegunn/fzf.vim'
 zplug 'mroth/evalcache'
 zplug 'ryutok/rust-zsh-completions'
+zplug 'Katrovsky/zsh-ollama-completion'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
