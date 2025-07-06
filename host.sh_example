@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo scutil --set ComputerName "boston"
+sudo scutil --set HostName "boston"
+sudo scutil --set LocalHostName "boston"
+
