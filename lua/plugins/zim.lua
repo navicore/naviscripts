@@ -7,4 +7,16 @@ return {
       require("sequencer").setup()
     end,
   },
+  {
+    "voldikss/vim-floaterm",
+  },
+  {
+    "navicore/zim-studio-nvim",
+    dependencies = {
+      "voldikss/vim-floaterm", -- or 'akinsho/toggleterm.nvim'
+    },
+    config = function()
+      require("zim-studio").setup()
+    end,
+  },
 }
