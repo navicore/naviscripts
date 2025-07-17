@@ -1,3 +1,5 @@
+export ZPLUG_PROTOCOL="https"
+
 #eval "$(devbox global shellenv --init-hook)"
 platform='unknown'
 unamestr=`uname`
