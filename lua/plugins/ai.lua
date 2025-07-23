@@ -6,19 +6,19 @@ return {
     dependencies = {
       { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
-      { 'MeanderingProgrammer/render-markdown.nvim' },
+      { "MeanderingProgrammer/render-markdown.nvim" },
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
       -- See Configuration section for options
     },
     config = function()
-      require('CopilotChat').setup({
+      require("CopilotChat").setup({
         highlight_headers = false,
-        separator = '---',
-        error_header = '> [!ERROR] Error',
+        separator = "---",
+        error_header = "> [!ERROR] Error",
       })
-      vim.keymap.set('n', '<leader>cc', '<CMD>CopilotChatToggle<CR>', { desc = 'Open Copilot Chat' })
+      vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>", { desc = "Open Copilot Chat" })
     end,
     keys = {
       -- Show quick chat prompt
@@ -57,11 +57,11 @@ return {
   },
   {
     "zbirenbaum/copilot-cmp",
-    config = function ()
+    config = function()
       require("copilot_cmp").setup()
     end,
     dependencies = {
       "zbirenbaum/copilot.lua",
     },
-  }
+  },
 }
