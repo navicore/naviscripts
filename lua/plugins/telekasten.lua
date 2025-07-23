@@ -6,7 +6,7 @@ return {
     'renerocksai/telekasten.nvim',
     dependencies = {
       'MeanderingProgrammer/render-markdown.nvim',
-      --'nvim-telescope/telescope-fzf-native.nvim',
+      'nvim-telescope/telescope-fzf-native.nvim',
       'nvim-telescope/telescope.nvim',
       'renerocksai/calendar-vim',
     },

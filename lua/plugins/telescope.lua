@@ -2,11 +2,9 @@ return {
   "nvim-lua/popup.nvim",
   "nvim-telescope/telescope-media-files.nvim",
   "nvim-telescope/telescope-symbols.nvim",
-  "junegunn/fzf.vim",
   "sharkdp/fd",
   "nvim-lua/plenary.nvim",
   "BurntSushi/ripgrep",
-  { "junegunn/fzf", build = ":call fzf#install()" },
   {
     "nvim-telescope/telescope-file-browser.nvim",
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
