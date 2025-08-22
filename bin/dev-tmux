@@ -7,7 +7,7 @@ if [ $# -eq 0 ] || [ "$1" = "attach" ]; then
     tmux new-window  -t N:2 -n "RUST"
     tmux new-window  -t N:3 -n "RUST"
     tmux new-window  -t N:4 -n GO
-    tmux new-window  -t N:5 -n R
+    tmux new-window  -t N:5 -n Music
 
     tmux select-window -t N:1
     tmux -2 attach-session -t N
