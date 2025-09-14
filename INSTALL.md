@@ -19,8 +19,10 @@
 "
 " --------- ALL ---------
 "
-" install zplug
-" curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+" install zinit
+" bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+"
+" then move your ~/.zshrc stuff to follow the stuff the above added
 "
 " BEGIN R:
 " 

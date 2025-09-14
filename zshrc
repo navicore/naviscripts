@@ -1,3 +1,5 @@
+# put this after zinit init is done in ~/.zshrc
+
 if [ -f ~/.zshrc_pre ]; then
   . ~/.zshrc_pre
 fi

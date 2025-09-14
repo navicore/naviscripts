@@ -1,29 +1,22 @@
-export ZPLUG_PROTOCOL="https"
+# run this after the zinit has created your changes to ~/.zshrc - no before
 
-#eval "$(devbox global shellenv --init-hook)"
-platform='unknown'
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
-   platform='linux'
-   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=$HOME/.zplug
-   alias vim='nvim'
-   source $ZPLUG_HOME/init.zsh
-elif [[ "$unamestr" == 'FreeBSD' ]]; then
-   platform='freebsd'
-   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=$HOME/.zplug
-   source $ZPLUG_HOME/init.zsh
-elif [[ "$unamestr" == 'Darwin' ]]; then
-   platform='osx'
-   [ -z "$ZPLUG_HOME" ] && export ZPLUG_HOME=/usr/local/opt/zplug
-   alias vim='nvim'
-fi
+#
+# begin plugins
+#
 
-export LANG=en_US.UTF-8
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light caarlos0/git-add-remote
+zinit light cmuench/zsh-jenv
+zinit ice depth=1 zinit light jeffreytse/zsh-vi-mode
 
-export NVM_COMPLETION=true
-export NVM_LAZY_LOAD=true
+autoload -U compinit && compinit
 
-export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
+#
+# end plugins
+#
+
+#export PATH="/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH"
 
 ulimit -n 4096
 BLOCKSIZE=K;	export BLOCKSIZE
@@ -40,23 +33,16 @@ alias l='eza'
 alias ls='eza'
 alias ll='eza -l --header --git --tree --level 3'
 alias cat='bat --paging=never'
-alias fzfp='fzf --preview "bat --style numbers --color always {}"'
 
-alias kbb='kubectl run -it busybox --image=busybox -- sh'
 alias k='kubectl'
 alias dockerrm='docker rm $(docker ps -a -q)'
-alias dockerstop='docker stop $(docker ps -a -q)'
-alias dockerkill='docker kill $(docker ps -a -q)'
 alias dockerrmi='docker rmi $(docker images -q)'
 alias dockerrmif='docker rmi -f $(docker images -q)'
-alias dockeruntagged='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
-alias dockerdangle='docker rmi $(docker images -q --filter dangling=true)'
 
 alias fetchupstream='git fetch upstream'
 alias mergeupstreammain='git merge upstream/main'
 alias mergeupstreammaster='git merge upstream/master'
 
-#export TERM="screen-256color"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -82,13 +68,24 @@ else
   esac
 fi
 
+export KUBE_EDITOR=nvim
+
+export GPG_TTY=$(tty)
+
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 #
 # BEGIN PROMPT
 #
 
+# enable prompt
+
 if command -v gitstatus >/dev/null 2>&1; then
   source <(gitstatus --script)
 fi
+
+# customize prompt
 
 PROMPT_PRE=''
 if [[ $SESSION_TYPE == 'remote/ssh' ]]; then
@@ -108,74 +105,7 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
 #
 # END PROMPT
 #
-
-export GOPATH=~/go
-export GOBIN=~/go/bin
-export PATH=$PATH:$GOBIN
-
-source $ZPLUG_HOME/init.zsh
-
-zplug "caarlos0/git-add-remote"
-zplug "cmuench/zsh-jenv"
-zplug "lib/completion", from:oh-my-zsh
-zplug "navicore/zsh-kind"
-zplug "plugins/vi-mode", from:oh-my-zsh
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug 'junegunn/fzf'
-zplug 'junegunn/fzf.vim'
-zplug 'mroth/evalcache'
-zplug 'ryutok/rust-zsh-completions'
-zplug 'Katrovsky/zsh-ollama-completion'
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-zplug load
-
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
-
-export KUBE_EDITOR=nvim
-
-export GPG_TTY=$(tty)
-
-bindkey -M vicmd v edit-command-line
-
-function cwe() {
-  cargo watch -c -q -x "run -q --example '$1'"
-}
-
-eval $(thefuck --alias)
-
-node --version > /dev/null
-
-function yy() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-}
-
-source "$HOME/.cargo/env"
-
-# eval `ssh-agent -s`
-# ssh-add
-autoload -U compinit && compinit
-
-# for running examples in cargo watch
-# the arg is the base of the filename in the examples directory - no path
-function cwe() {
-  cargo watch -q -c -x "run -q --example '$1'"
-}
-
