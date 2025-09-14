@@ -29,6 +29,9 @@ PAGER=more; export PAGER
 
 alias tmux='~/bin/dev-tmux'
 
+alias vim='nvim'
+alias vi='nvim'
+
 alias l='eza'
 alias ls='eza'
 alias ll='eza -l --header --git --tree --level 3'
@@ -74,6 +77,8 @@ export GPG_TTY=$(tty)
 
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+source ~/.local/bin/env
 
 #
 # BEGIN PROMPT
