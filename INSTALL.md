@@ -20,7 +20,7 @@
 " --------- ALL ---------
 "
 " install zinit
-" bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+" see zinit on gh - the install command doesn't survive md
 "
 " then move your ~/.zshrc stuff to follow the stuff the above added
 "
