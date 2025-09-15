@@ -11,6 +11,8 @@ zinit light cmuench/zsh-jenv
 zinit ice depth=1 zinit light jeffreytse/zsh-vi-mode
 
 autoload -U compinit && compinit
+zinit light Aloxaf/fzf-tab
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'r:|=*' 'l:|=* r:|=*'
 
 #
 # end plugins
