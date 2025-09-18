@@ -1,48 +1,57 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    on_attach = function(buffer)
-      -- LSP Diagnostics Options Setup
-      local sign = function(opts)
-        vim.fn.sign_define(opts.name, {
-          texthl = opts.name,
-          text = opts.text,
-          numhl = "",
-        })
-      end
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      signs = {
+        add = { text = "▎" },
+        change = { text = "▎" },
+        delete = { text = "" },
+        topdelete = { text = "" },
+        changedelete = { text = "▎" },
+        untracked = { text = "▎" },
+      },
+      on_attach = function(buffer)
+        local gs = package.loaded.gitsigns
 
-      sign({ name = "DiagnosticSignError", text = "" })
-      sign({ name = "DiagnosticSignWarn", text = "" })
-      sign({ name = "DiagnosticSignHint", text = "" })
-      sign({ name = "DiagnosticSignInfo", text = "" })
+        local function map(mode, l, r, desc)
+          vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
+        end
 
-      vim.diagnostic.config({
-        virtual_text = false,
-        signs = true,
-        update_in_insert = true,
-        underline = true,
-        severity_sort = false,
-        float = {
-          border = "rounded",
-          source = "always",
-          header = "",
-          prefix = "",
-        },
-      })
+        -- Navigation
+        map("n", "]h", gs.next_hunk, "Next Hunk")
+        map("n", "[h", gs.prev_hunk, "Prev Hunk")
 
-      vim.cmd([[
-    set signcolumn=yes
-    autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-    ]])
+        -- Actions
+        map("n", "<leader>hs", gs.stage_hunk, "Stage Hunk")
+        map("n", "<leader>hr", gs.reset_hunk, "Reset Hunk")
+        map("v", "<leader>hs", function()
+          gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+        end, "Stage Hunk")
+        map("v", "<leader>hr", function()
+          gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+        end, "Reset Hunk")
 
-      vim.opt.completeopt = { "popup" }
-      vim.opt.shortmess = vim.opt.shortmess + { c = true }
-      vim.api.nvim_set_option("updatetime", 300)
+        map("n", "<leader>hS", gs.stage_buffer, "Stage Buffer")
+        map("n", "<leader>hR", gs.reset_buffer, "Reset Buffer")
 
-      vim.cmd([[
-    set signcolumn=yes
-    autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
-    ]])
-    end,
+        map("n", "<leader>hu", gs.undo_stage_hunk, "Undo Stage Hunk")
+
+        map("n", "<leader>hp", gs.preview_hunk, "Preview Hunk")
+
+        map("n", "<leader>hb", function()
+          gs.blame_line({ full = true })
+        end, "Blame Line")
+        map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle Line Blame")
+
+        map("n", "<leader>hd", gs.diffthis, "Diff This")
+        map("n", "<leader>hD", function()
+          gs.diffthis("~")
+        end, "Diff This ~")
+
+        -- Text object
+        map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+      end,
+    },
   },
 }

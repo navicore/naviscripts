@@ -1,23 +1,14 @@
 return {
-  "nvim-lua/popup.nvim",
-  "nvim-telescope/telescope-media-files.nvim",
-  "nvim-telescope/telescope-symbols.nvim",
-  "sharkdp/fd",
-  "nvim-lua/plenary.nvim",
-  "BurntSushi/ripgrep",
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-  },
-
   {
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "MeanderingProgrammer/render-markdown.nvim",
       "nvim-telescope/telescope-media-files.nvim",
       "nvim-telescope/telescope-symbols.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
+      "sharkdp/fd",
+      "BurntSushi/ripgrep",
     },
     config = function()
       require("telescope").setup({
@@ -33,10 +24,6 @@ return {
           },
           layout_strategy = "flex",
           layout_config = { flex = { flip_columns = 120 } },
-          -- layout_strategy = 'horizontal',
-          -- layout_config = {
-          --     preview_width = 0.6,
-          -- },
           file_ignore_patterns = {},
           path_display = { "truncate" },
           dynamic_preview_title = true, -- Better debug information

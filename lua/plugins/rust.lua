@@ -1,9 +1,8 @@
 return {
   {
     'mrcjkb/rustaceanvim',
-    lazy = false,
+    lazy = false, -- Must load immediately for rust-analyzer
     version = '^5',
-    ft = { 'rust' },
     dependencies = {
       "nvim-lua/plenary.nvim",
     },

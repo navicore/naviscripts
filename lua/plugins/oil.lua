@@ -1,6 +1,8 @@
 return {
   {
     'stevearc/oil.nvim',
+    lazy = false, -- Load immediately as default file explorer
+    priority = 1000, -- Load very early
     opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()

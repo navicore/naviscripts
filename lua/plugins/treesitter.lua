@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     build = function()
       local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
       ts_update()
@@ -97,8 +97,7 @@ return {
           -- e.g. hide_cursor = false
         },
       })
-      vim.keymap.set("n", ",s", "<cmd>Symbols<CR>")
-      vim.keymap.set("n", ",S", "<cmd>SymbolsClose<CR>")
+      -- Keymaps are defined in lua/config/keymaps.lua
     end,
   },
 }

@@ -1,36 +1,47 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
--- TODO these are NOT loaded lazy as we are not using lazyvim plugin configs -- see the file above for an example of how to load lazy
+-- Better window navigation
+vim.keymap.set("n", "<C-S-Down>", ":resize +5<CR>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-S-Left>", ":vertical resize -5<CR>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-S-Right>", ":vertical resize +5<CR>", { desc = "Increase window width" })
+vim.keymap.set("n", "<C-S-Up>", ":resize -5<CR>", { desc = "Decrease window height" })
 
-vim.api.nvim_set_keymap("n", "<C-S-Down>", ":resize +5<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Left>", ":vertical resize -5<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Right>", ":vertical resize +5<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-S-Up>", ":resize -5<CR>", { noremap = true, silent = true })
+-- LSP
+vim.keymap.set("n", "<Leader>a", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
 
-vim.api.nvim_set_keymap("n", "<Leader>a", "<cmd>Lspsaga code_action<CR>", { noremap = true, silent = true })
+-- Quick escape
+vim.keymap.set("i", "jj", "<Esc>`^", { desc = "Quick escape to normal mode" })
 
-vim.api.nvim_set_keymap('i', 'jj', '<Esc>`^', {noremap = true})
+-- File explorer
+vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true})
+-- Search
+vim.keymap.set("n", "<CR>", ":nohlsearch<CR><CR>", { desc = "Clear search highlight" })
+vim.keymap.set("n", "<Enter>", "o<Esc><CR>", { desc = "Insert new line below" })
+vim.keymap.set("n", "<esc>", ":nohlsearch<esc>", { silent = true, desc = "Clear search highlight" })
 
-vim.api.nvim_set_keymap('n', '<CR>', ':nohlsearch<CR><CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Enter>', 'o<Esc><CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<F4>', ':w<CR>:make<CR>:copen<CR>', {noremap = true})
+-- Build
+vim.keymap.set("n", "<F4>", ":w<CR>:make<CR>:copen<CR>", { desc = "Save, build, and open quickfix" })
 
-vim.api.nvim_set_keymap('n', '<esc>', ':nohlsearch<esc>', { noremap = true, silent = true })
+-- Telescope
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffers" })
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope media_files<cr>", { desc = "Media files" })
 
-vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>fm', '<cmd>Telescope media_files<cr>', {noremap = true})
+-- Visual mode repeat
+vim.keymap.set("x", ".", ":normal .<CR>", { desc = "Repeat last command" })
 
-vim.api.nvim_set_keymap('x', '.', ':normal .<CR>', {noremap = true})
+-- Cellular Automaton (fun animations)
+vim.keymap.set("n", "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", { desc = "Game of Life animation" })
+vim.keymap.set("n", "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", { desc = "Make it rain animation" })
+vim.keymap.set("n", "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", { desc = "Scramble animation" })
 
-vim.keymap.set("n", "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>")
-vim.keymap.set("n", "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>")
-vim.keymap.set("n", "<leader>cs", "<cmd>CellularAutomaton scramble<CR>")
+-- Indent Blankline
+vim.keymap.set("n", "<leader>i", ":IBLToggle<CR>", { silent = true, desc = "Toggle indent lines" })
 
-vim.api.nvim_set_keymap('n', '<leader>i', ':IBLToggle<CR>', { noremap = true, silent = true })
-
+-- Symbols outline
+vim.keymap.set("n", "<leader>s", "<cmd>Symbols<CR>", { desc = "Show symbols outline" })
+vim.keymap.set("n", "<leader>S", "<cmd>SymbolsClose<CR>", { desc = "Close symbols outline" })
