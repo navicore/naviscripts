@@ -1,52 +1,68 @@
 -- Options are automatically loaded before lazy.nvim startup
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
 
--- TODO these are NOT loaded automatically as we are not using lazyvim plugin configs -- see the file above for an example of how to load lazy
-
-vim.o.wrap = false
-
-vim.o.syntax = "on"
+-- Leader keys
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
 
+-- Editor behavior
+vim.opt.wrap = false
+vim.opt.number = true
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 300
+vim.opt.autoread = true
+vim.opt.hidden = true
+vim.opt.foldenable = false
+vim.opt.encoding = "utf8"
+vim.opt.clipboard = "unnamedplus"
+
+-- Indentation
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.textwidth = 80
+
+-- Search and completion
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.shortmess:append({ c = true })
+
+-- Spelling
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
 
-vim.o.nu = true
-vim.wo.foldenable = false
-vim.filetype.off = true
-vim.o.directory = vim.fn.expand("~/.vim/swapfiles")
-vim.o.undodir = vim.fn.expand("~/.undodir/")
-vim.o.hidden = true
-vim.o.expandtab = true
-vim.o.tabstop = 2
-vim.o.shiftwidth = 2
+-- Files and backup
+vim.opt.swapfile = true
+vim.opt.directory = vim.fn.expand("~/.vim/swapfiles")
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.expand("~/.undodir/")
+
+-- Appearance
+vim.opt.guifont = "Fira Code:h12"
+
+-- Plugin-specific settings
 vim.g.csv_nomap_bs = 1
 vim.g.csv_nomap_cr = 1
 vim.g.csv_nomap_space = 1
-vim.filetype.plugin = "on"
-vim.filetype.indent = "on"
-vim.o.completeopt = "popup"
+
 vim.g.WMGraphviz_dot = "dot"
 vim.g.WMGraphviz_output = "png"
 vim.g.WMGraphviz_viewer = "open"
-vim.o.autoread = true
-vim.o.statusline = "%#warningmsg#"
-vim.o.statusline = "%*"
-vim.g.ScreenImpl = "Tmux"
 
-vim.o.undofile = true
+vim.g.ScreenImpl = "Tmux"
 vim.g.rustfmt_autosave = 1
+
 vim.g.pandoc_modules_disabled = { "folding" }
 vim.g.pandoc_syntax_conceal_use = 0
+
 vim.g.R_assign = 0
-vim.o.textwidth = 80
-if vim.fn.has("unix") and not vim.fn.has("macunix") then
+
+vim.g.airline_powerline_fonts = 1
+
+-- Disable clipboard provider on Unix (non-macOS)
+if vim.fn.has("unix") == 1 and vim.fn.has("macunix") == 0 then
   vim.g.loaded_clipboard_provider = 1
 end
 
-vim.o.clipboard = "unnamedplus"
-vim.o.encoding = "utf8"
-vim.g.airline_powerline_fonts = 1
-vim.o.guifont = "Fira Code:h12"
+-- Enable filetype plugins and indentation
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax on")
