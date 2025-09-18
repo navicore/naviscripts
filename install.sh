@@ -16,7 +16,7 @@ cp -n ./gitconfig ~/.gitconfig
 cp -n ./racketrc ~/.racketrc
 cp -n ./gitignore ~/.gitignore
 cp ./scryerrc ~/.scryerrc
-cp ./zshrc ~/.zshrc
+cp -n ./zshrc ~/.zshrc
 mkdir -p ~/.config/wezterm
 cp ./wezterm.lua ~/.config/wezterm/wezterm.lua
 mkdir -p ~/.config/wezterm_config
