@@ -7,7 +7,11 @@ return {
       "williamboman/mason.nvim",
     },
     config = function()
-      require("lspconfig").lua_ls.setup({
+      -- Using the new vim.lsp.config API (Neovim 0.11+)
+      -- Configure servers using vim.lsp.config() then enable with vim.lsp.enable()
+
+      -- Lua
+      vim.lsp.config('lua_ls', {
         settings = {
           Lua = {
             format = {
@@ -16,23 +20,30 @@ return {
           },
         },
       })
+      vim.lsp.enable('lua_ls')
 
-      -- python
-      local lspconfig = require("lspconfig")
-      lspconfig.jedi_language_server.setup({})
-      lspconfig.pyright.setup({})
+      -- Python
+      vim.lsp.enable('jedi_language_server')
+      vim.lsp.enable('pyright')
 
-      -- other languages
-      lspconfig.yamlls.setup({
+      -- YAML
+      vim.lsp.config('yamlls', {
         filetypes = { "yaml" },
       })
-      lspconfig.r_language_server.setup({
+      vim.lsp.enable('yamlls')
+
+      -- R
+      vim.lsp.config('r_language_server', {
         filetypes = { "r", "rmd" },
       })
-      lspconfig.awk_ls.setup({
+      vim.lsp.enable('r_language_server')
+
+      -- AWK
+      vim.lsp.config('awk_ls', {
         cmd = { "awk-language-server" },
         filetypes = { "awk" },
       })
+      vim.lsp.enable('awk_ls')
     end,
   },
 
