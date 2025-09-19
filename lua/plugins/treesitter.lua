@@ -12,8 +12,9 @@ return {
     config = function()
       -- Treesitter Plugin Setup
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "lua", "rust", "python", "diff", "go", "markdown", "rnoweb", "r", "yaml" },
+        ensure_installed = { "lua", "rust", "python", "diff", "go", "markdown", "rnoweb", "r", "yaml", "vim", "vimdoc", "bash", "javascript", "typescript", "json", "toml", "html", "css", "c", "cpp" },
         auto_install = true,
+        ignore_install = {}, -- List of parsers to ignore installing
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = false,

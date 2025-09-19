@@ -1,7 +1,8 @@
 return {
   {
     "eandrju/cellular-automaton.nvim",
-    event = "VeryLazy",
+    cmd = { "CellularAutomaton" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     -- Keymaps are defined in lua/config/keymaps.lua
   },
 }
