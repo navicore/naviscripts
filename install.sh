@@ -17,10 +17,6 @@ cp -n ./racketrc ~/.racketrc
 cp -n ./gitignore ~/.gitignore
 cp ./scryerrc ~/.scryerrc
 cp -n ./zshrc ~/.zshrc
-mkdir -p ~/.config/wezterm
-cp ./wezterm.lua ~/.config/wezterm/wezterm.lua
-mkdir -p ~/.config/wezterm_config
-cp -R ./wezterm_config ~/.config/wezterm/
 mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc

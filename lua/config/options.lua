@@ -66,3 +66,6 @@ end
 -- Enable filetype plugins and indentation
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
+
+vim.keymap.set("n", "<leader>b", "<cmd>CellularAutomaton make_it_rain<CR>")
+
