@@ -1,38 +1,22 @@
 return {
-  'hrsh7th/cmp-buffer',
-  'hrsh7th/cmp-path',
-  'hrsh7th/cmp-cmdline',
-  'hrsh7th/cmp-nvim-lsp',
-  'hrsh7th/cmp-nvim-lsp-signature-help',
-  'hrsh7th/cmp-nvim-lua',
-  {'hrsh7th/nvim-cmp',
+  {
+    'hrsh7th/nvim-cmp',
+    event = { "InsertEnter", "CmdlineEnter" }, -- Load for insert and command mode
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
+      'hrsh7th/cmp-nvim-lua',
+      'onsails/lspkind.nvim',
+    },
     config = function()
       -- Completion Plugin Setup
       local lspkind = require'lspkind'
       local cmp = require'cmp'
 
-      -- `/` cmdline setup.
-      cmp.setup.cmdline('/', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = 'buffer' }
-        }
-      })
-      -- `:` cmdline setup.
-      cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = 'path' }
-        }, {
-          {
-            name = 'cmdline',
-            option = {
-              ignore_cmds = { 'Man', '!' }
-            }
-          }
-        })
-      })
-
+      -- Main completion setup
       cmp.setup({
         mapping = {
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -67,12 +51,33 @@ return {
               maxwidth = 50,
               ellipsis_char = '...',
               show_labelDetails = true,
-              symbol_map = { Copilot = "" },
+              symbol_map = { Copilot = "" },
             })
         },
       })
 
+      -- `/` cmdline setup.
+      cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        }
+      })
+
+      -- `:` cmdline setup - This is what handles command completion
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = 'path' }
+        }, {
+          {
+            name = 'cmdline',
+            option = {
+              ignore_cmds = { 'Man', '!' }
+            }
+          }
+        })
+      })
     end
   },
-  'onsails/lspkind.nvim',
 }
