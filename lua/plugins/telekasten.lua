@@ -1,9 +1,11 @@
 return {
   {
     "renerocksai/calendar-vim",
+    lazy = false,
   },
   {
     "navicore/telekasten.nvim",
+    lazy = false, -- Load immediately for leader z commands
     dependencies = {
       "MeanderingProgrammer/render-markdown.nvim",
       "nvim-telescope/telescope-fzf-native.nvim",
@@ -41,6 +43,7 @@ return {
   },
   {
     "navicore/nvim-reminders",
+    lazy = false, -- Load immediately for leader zr commands
     config = function()
       -- require('reminders').setup({
       --   paths = { '~/git/navicore/zet' },
