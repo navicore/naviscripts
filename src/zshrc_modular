@@ -1,0 +1,64 @@
+#!/usr/bin/env zsh
+# Modular Zsh Configuration Loader
+# This is the main entry point that loads all zsh modules in order
+
+# Safety check - ensure we're running in zsh
+if [ -z "$ZSH_VERSION" ]; then
+    echo "This configuration requires Zsh. Please install zsh and try again."
+    return 1
+fi
+
+# Define the base directory for our configuration
+NAVISCRIPTS_DIR="${NAVISCRIPTS_DIR:-$HOME/naviscripts}"
+ZSH_CONFIG_DIR="$NAVISCRIPTS_DIR/src/zsh"
+
+# Check if configuration directory exists
+if [[ ! -d "$ZSH_CONFIG_DIR" ]]; then
+    echo "Warning: Configuration directory not found at $ZSH_CONFIG_DIR"
+    echo "Please ensure naviscripts is properly installed."
+    return 1
+fi
+
+# Load pre-configuration if it exists (for very early customization)
+[[ -f "$HOME/.zshrc_pre" ]] && source "$HOME/.zshrc_pre"
+
+# Function to source a module with error handling
+load_module() {
+    local module="$1"
+    local required="${2:-false}"
+
+    if [[ -f "$module" ]]; then
+        source "$module"
+        return 0
+    elif [[ "$required" == "true" ]]; then
+        echo "Error: Required module not found: $module" >&2
+        return 1
+    fi
+    return 0
+}
+
+# Load configuration modules in order
+# The numbering ensures proper load order
+for module in "$ZSH_CONFIG_DIR"/*.zsh; do
+    # Skip the template file
+    [[ "$module" == *.template ]] && continue
+
+    # Skip backup files
+    [[ "$module" == *~ ]] && continue
+    [[ "$module" == *.bak ]] && continue
+
+    # Load the module
+    load_module "$module" true || echo "Warning: Failed to load $module"
+done
+
+# Load local environment variables if they exist
+[[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
+
+# Load local machine-specific configuration (overrides)
+[[ -f "$HOME/.zshrc_local" ]] && source "$HOME/.zshrc_local"
+
+# Optional: Show that configuration loaded successfully
+if [[ -n "$ZSH_DEBUG" ]]; then
+    echo "Zsh configuration loaded successfully from $ZSH_CONFIG_DIR"
+    echo "Loaded modules: $(ls -1 "$ZSH_CONFIG_DIR"/*.zsh 2>/dev/null | wc -l)"
+fi

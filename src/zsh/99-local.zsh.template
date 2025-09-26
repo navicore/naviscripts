@@ -1,0 +1,31 @@
+#!/usr/bin/env zsh
+# 99-local.zsh.template - Template for machine-specific settings
+# Copy this to 99-local.zsh and customize for your local machine
+
+# Example: Machine-specific paths
+# export JAVA_HOME=/path/to/java
+# export ANDROID_HOME=/path/to/android-sdk
+
+# Example: API keys (never commit these!)
+# export GITHUB_TOKEN="your-token-here"
+# export AWS_ACCESS_KEY_ID="your-key-here"
+
+# Example: Local development servers
+# export DATABASE_URL="postgresql://localhost/mydb"
+
+# Example: Company/project specific settings
+# export DOCKER_REGISTRY="company.registry.io"
+
+# Example: Local tool configurations
+# if [[ -f /usr/local/bin/special-tool ]]; then
+#     source /usr/local/bin/special-tool.env
+# fi
+
+# Example: Override default settings
+# export EDITOR=vim  # Override the default nvim
+
+# Example: Machine-specific aliases
+# alias deploy-prod='echo "Are you sure?" && sleep 3 && ./deploy.sh production'
+
+# Example: Load local scripts
+# [[ -f ~/.local/scripts/work-helpers.sh ]] && source ~/.local/scripts/work-helpers.sh

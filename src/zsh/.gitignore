@@ -1,0 +1,7 @@
+# Local machine-specific configuration
+99-local.zsh
+
+# Temporary files
+*.bak
+*~
+*.swp
