@@ -10,7 +10,16 @@ zinit light caarlos0/git-add-remote
 zinit light cmuench/zsh-jenv
 zinit ice depth=1 zinit light jeffreytse/zsh-vi-mode
 
+# Load cargo env early if it exists (for rust completions)
+[[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
+# Load rust completions using dedicated plugin BEFORE compinit
+zinit light ryutok/rust-zsh-completions
+
+# Initialize completions
 autoload -U compinit && compinit
+
+# Load fzf-tab AFTER all completions are set up
 zinit light Aloxaf/fzf-tab
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'r:|=*' 'l:|=* r:|=*'
 
