@@ -39,8 +39,8 @@ zinit light ryutok/rust-zsh-completions
 #zinit light cmuench/zsh-jenv
 
 # Vi mode improvements (load before syntax highlighting)
-zinit ice depth=1
-zinit light jeffreytse/zsh-vi-mode
+# zinit ice depth=1
+# zinit light jeffreytse/zsh-vi-mode
 
 # Initialize completion system
 autoload -U compinit && compinit
