@@ -1,7 +1,7 @@
 return {
   {
     'hrsh7th/nvim-cmp',
-    event = { "InsertEnter", "CmdlineEnter" }, -- Load for insert and command mode
+    event = "InsertEnter", -- Load on insert mode
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
@@ -12,9 +12,20 @@ return {
       'onsails/lspkind.nvim',
     },
     config = function()
+
+      -- Set highlight for Copilot icon
+      vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
+
       -- Completion Plugin Setup
       local lspkind = require'lspkind'
       local cmp = require'cmp'
+
+      -- Initialize lspkind with Copilot icon
+      lspkind.init({
+        symbol_map = {
+          Copilot = vim.fn.nr2char(0xf408),  -- GitHub nerd font icon (codepoint F408)
+        }
+      })
 
       -- Main completion setup
       cmp.setup({
@@ -30,16 +41,17 @@ return {
             select = true,
           })
         },
-        -- Installed sources:
-        sources = {
-          { name = "copilot", group_index = 2 },
+        -- Installed sources (in priority order)
+        sources = cmp.config.sources({
+          { name = "copilot" },                           -- AI suggestions
+          { name = 'nvim_lsp' },                          -- from language server
+          { name = 'nvim_lsp_signature_help'},            -- display function signatures
           { name = 'path' },                              -- file paths
-          { name = 'nvim_lsp', keyword_length = 3 },      -- from language server
-          { name = 'nvim_lsp_signature_help'},            -- display function signatures with current parameter emphasized
-          { name = 'buffer', keyword_length = 2 },        -- source current buffer
-        },
+        }, {
+          { name = 'buffer', keyword_length = 3 },        -- fallback to buffer
+        }),
         experimental = {
-            ghost_text = true,
+            ghost_text = false,  -- Disable ghost text to avoid shadow suggestions
         },
         window = {
             completion = cmp.config.window.bordered(),
@@ -47,11 +59,23 @@ return {
         },
         formatting = {
             format = lspkind.cmp_format({
-              mode = 'symbol',
-              maxwidth = 50,
-              ellipsis_char = '...',
-              show_labelDetails = true,
-              symbol_map = { Copilot = "" },
+              mode = "symbol_text",
+              max_width = 50,
+              menu = {
+                copilot = "[AI]",
+                nvim_lsp = "[LSP]",
+                buffer = "[Buf]",
+                path = "[Path]",
+                nvim_lsp_signature_help = "[Sig]",
+              },
+              before = function(entry, vim_item)
+                -- Make sure Copilot uses the correct kind
+                if entry.source.name == "copilot" then
+                  vim_item.kind = "Copilot"
+                  vim_item.kind_hl_group = "CmpItemKindCopilot"
+                end
+                return vim_item
+              end,
             })
         },
       })
