@@ -1,13 +1,13 @@
 return {
   {
-    "navicore/footnode.nvim",
+    "navicore/footnote.nvim",
     lazy = false, -- Load immediately for status line
     dependencies = {
       "nvim-telescope/telescope.nvim",
       "nvim-lua/plenary.nvim",
     },
     config = function()
-      require("footnode").setup({
+      require("footnote").setup({
         -- Optional configuration
         sources = {
           dictionary = {
