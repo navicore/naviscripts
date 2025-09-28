@@ -1,17 +1,38 @@
 return {
+  -- Copilot base - must load before copilot-cmp
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    event = "VeryLazy",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+
+  -- Copilot-cmp integration
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    event = "VeryLazy",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
+
+  -- CopilotChat kept separate as it's working fine
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     event = "VeryLazy",
     branch = "main",
     dependencies = {
-      { "zbirenbaum/copilot.lua" },
-      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+      { "nvim-lua/plenary.nvim", branch = "master" },
       { "MeanderingProgrammer/render-markdown.nvim" },
     },
-    build = "make tiktoken", -- Only on MacOS or Linux
-    opts = {
-      -- See Configuration section for options
-    },
+    build = "make tiktoken",
     config = function()
       require("CopilotChat").setup({
         highlight_headers = false,
@@ -21,7 +42,6 @@ return {
       vim.keymap.set("n", "<leader>cc", "<CMD>CopilotChatToggle<CR>", { desc = "Open Copilot Chat" })
     end,
     keys = {
-      -- Show quick chat prompt
       {
         "<leader>ccq",
         function()
@@ -32,7 +52,6 @@ return {
         end,
         desc = "CopilotChat - Quick chat",
       },
-      -- Show prompts actions with telescope
       {
         "<leader>ccp",
         function()
@@ -41,34 +60,6 @@ return {
         end,
         desc = "CopilotChat - Prompt actions",
       },
-    },
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({
-        -- Disable suggestion and panel since we're using copilot-cmp
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-        filetypes = {
-          telekasten = false,
-          markdown = true,
-          help = false,
-        },
-      })
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    event = "InsertEnter", -- Load when entering insert mode
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-    dependencies = {
-      "zbirenbaum/copilot.lua",
-      "hrsh7th/nvim-cmp",
     },
   },
 }
