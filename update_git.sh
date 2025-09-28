@@ -22,7 +22,6 @@ cp ~/bin/killz ./bin/
 cp ~/bin/pg* ./bin/
 cp ~/bin/mntdir ./bin/
 cp ~/bin/klog* ./bin/
-cp ~/bin/dev-tmux ./bin/
 
 cp ~/.config/zed/settings.json ./zed/
 
