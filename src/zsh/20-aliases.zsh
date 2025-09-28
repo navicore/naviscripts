@@ -40,9 +40,6 @@ fi
 alias vim='nvim'
 alias vi='nvim'
 
-# Tmux
-alias tmux='~/bin/dev-tmux'
-
 # Git shortcuts
 alias g='git'
 alias gs='git status'

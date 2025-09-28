@@ -29,8 +29,14 @@ zinit light-mode for \
 #
 
 # Essential plugins - loaded immediately
+# Load completions and add to fpath
+zinit ice blockf atpull'zinit creinstall -q .'
 zinit light zsh-users/zsh-completions
+
 zinit light ryutok/rust-zsh-completions
+
+# Add the completions directory to fpath before compinit
+fpath=(~/.local/share/zinit/plugins/zsh-users---zsh-completions/src $fpath)
 
 # Git helpers
 #zinit light caarlos0/git-add-remote

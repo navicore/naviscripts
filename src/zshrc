@@ -39,8 +39,6 @@ PAGER=more; export PAGER
 
 [ -z "$EDITOR" ] && export EDITOR=/usr/local/bin/nvim
 
-alias tmux='~/bin/dev-tmux'
-
 alias vim='nvim'
 alias vi='nvim'
 
