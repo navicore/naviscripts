@@ -33,10 +33,10 @@ zinit light zsh-users/zsh-completions
 zinit light ryutok/rust-zsh-completions
 
 # Git helpers
-zinit light caarlos0/git-add-remote
+#zinit light caarlos0/git-add-remote
 
 # Java version management
-zinit light cmuench/zsh-jenv
+#zinit light cmuench/zsh-jenv
 
 # Vi mode improvements (load before syntax highlighting)
 zinit ice depth=1
@@ -56,7 +56,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'r:|=*' 'l:|=*
 zinit light Aloxaf/fzf-tab
 
 # Syntax highlighting - should be loaded last
-zinit light zsh-users/zsh-syntax-highlighting
+#zinit light zsh-users/zsh-syntax-highlighting
 
 #
 # Lazy-loaded plugins (loaded when shell is idle)
