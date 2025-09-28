@@ -19,7 +19,7 @@ vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { desc = "Toggle file explor
 -- Search
 vim.keymap.set("n", "<CR>", ":nohlsearch<CR><CR>", { desc = "Clear search highlight" })
 vim.keymap.set("n", "<Enter>", "o<Esc><CR>", { desc = "Insert new line below" })
-vim.keymap.set("n", "<esc>", ":nohlsearch<esc>", { silent = true, desc = "Clear search highlight" })
+-- Removed escape mapping that was interfering with command-line mode
 
 -- Build
 vim.keymap.set("n", "<F4>", ":w<CR>:make<CR>:copen<CR>", { desc = "Save, build, and open quickfix" })
