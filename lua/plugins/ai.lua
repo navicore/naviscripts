@@ -49,19 +49,26 @@ return {
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
+        -- Disable suggestion and panel since we're using copilot-cmp
         suggestion = { enabled = false },
         panel = { enabled = false },
-        filetypes = { telekasten = false },
+        filetypes = {
+          telekasten = false,
+          markdown = true,
+          help = false,
+        },
       })
     end,
   },
   {
     "zbirenbaum/copilot-cmp",
+    event = "InsertEnter", -- Load when entering insert mode
     config = function()
       require("copilot_cmp").setup()
     end,
     dependencies = {
       "zbirenbaum/copilot.lua",
+      "hrsh7th/nvim-cmp",
     },
   },
 }
