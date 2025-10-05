@@ -88,7 +88,7 @@ export GPG_TTY=$(tty)
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-source ~/.local/bin/env
+[[ -f "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
 
 #
 # BEGIN PROMPT
