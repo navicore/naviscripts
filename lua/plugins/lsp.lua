@@ -64,6 +64,8 @@ return {
       })
       vim.lsp.enable("r_language_server")
 
+      vim.lsp.enable("zls")
+
       -- AWK
       if not vim.lsp.config.awk_ls then
         local lspconfig_configs = require("lspconfig.configs")

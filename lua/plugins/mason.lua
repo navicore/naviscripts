@@ -17,6 +17,7 @@ return {
         "yaml-language-server",
         "lua-language-server",
         "jedi-language-server",
+        "zls",
       }
       for _, server in ipairs(servers) do
         ensure_installed(server)
