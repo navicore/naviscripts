@@ -76,6 +76,17 @@ return {
         filetypes = { "awk" },
       })
       vim.lsp.enable("awk_ls")
+
+      -- C/C++
+      if not vim.lsp.config.clangd then
+        local lspconfig_configs = require("lspconfig.configs")
+        vim.lsp.config("clangd", lspconfig_configs.clangd.default_config)
+      end
+      vim.lsp.config("clangd", {
+        cmd = { "clangd", "--background-index", "--clang-tidy" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+      })
+      vim.lsp.enable("clangd")
     end,
   },
 
