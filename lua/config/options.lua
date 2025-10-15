@@ -67,5 +67,48 @@ end
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax on")
 
+-- Diagnostic configuration (show messages inline like Rust)
+-- Helper function to strip gopls analyzer prefixes
+local function format_diagnostic(diagnostic)
+  local message = diagnostic.message
+  -- Strip known gopls analyzer prefixes if present
+  local prefixes = { "shadow", "nilness", "unusedwrite", "unusedparams", "useany" }
+  for _, prefix in ipairs(prefixes) do
+    local pattern = "^" .. prefix .. ":%s*"
+    if message:match(pattern) then
+      return message:gsub(pattern, "")
+    end
+  end
+  return message
+end
+
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 4,
+    source = false,
+    prefix = "●",
+    format = format_diagnostic,
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = false,
+    header = "",
+    prefix = "",
+    format = format_diagnostic,
+  },
+})
+
+-- Override open_float to ensure format is applied
+local orig_open_float = vim.diagnostic.open_float
+vim.diagnostic.open_float = function(opts, ...)
+  opts = opts or {}
+  opts.format = format_diagnostic
+  return orig_open_float(opts, ...)
+end
+
 vim.keymap.set("n", "<leader>b", "<cmd>CellularAutomaton make_it_rain<CR>")
 
