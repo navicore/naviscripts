@@ -87,6 +87,30 @@ return {
         filetypes = { "c", "cpp", "objc", "objcpp" },
       })
       vim.lsp.enable("clangd")
+
+      -- Go
+      if not vim.lsp.config.gopls then
+        local lspconfig_configs = require("lspconfig.configs")
+        vim.lsp.config("gopls", lspconfig_configs.gopls.default_config)
+      end
+      vim.lsp.config("gopls", {
+        settings = {
+          gopls = {
+            analyses = {
+              unusedparams = true,
+              shadow = true,
+              nilness = true,
+              unusedwrite = true,
+              useany = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+            usePlaceholders = true,
+            completeUnimported = true,
+          },
+        },
+      })
+      vim.lsp.enable("gopls")
     end,
   },
 
