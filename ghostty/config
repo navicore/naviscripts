@@ -31,3 +31,4 @@ palette = 13=#b06698
 palette = 14=#acbbd0
 palette = 15=#f7f7f7
 font-size = 18
+keybind = shift+enter=text:\x1b\r
