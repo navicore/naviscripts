@@ -124,3 +124,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 #
 # END PROMPT
 #
+
+alias fresh-completions='rm -f ~/.zcompdump* && source <(./target/debug/release-kit completions zsh)'
+
