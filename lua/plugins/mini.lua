@@ -6,7 +6,7 @@ return {
       require("mini.ai").setup({})
       vim.ui.select = require("mini.pick").ui_select
       require("mini.move").setup({})
-      -- require("mini.surround").setup { } -- s conflicts with search
+      require("mini.surround").setup({})
       -- require("mini.operators").setup { }
       -- require("mini.pairs").setup { }
       -- require("mini.bracketed").setup { }
