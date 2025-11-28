@@ -21,7 +21,9 @@ return {
         vim.api.nvim_create_autocmd("VimEnter", {
             pattern = "*",
             callback = function()
-                if vim.fn.argc() == 0 then
+                -- Only open Oil if no files and no startup commands were given
+                local has_startup_commands = vim.tbl_contains(vim.v.argv, "-c") or vim.tbl_contains(vim.v.argv, "+")
+                if vim.fn.argc() == 0 and not has_startup_commands then
                     vim.defer_fn(function()
                         vim.cmd('Oil')
                     end, 0)
