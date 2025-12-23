@@ -1,2 +1,3 @@
 bin/
 *.zwc
+.claude/
