@@ -46,9 +46,6 @@ alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log --oneline --graph --decorate'
-alias fetchupstream='git fetch upstream'
-alias mergeupstreammain='git merge upstream/main'
-alias mergeupstreammaster='git merge upstream/master'
 
 # Docker shortcuts
 alias dockerrm='docker rm $(docker ps -a -q)'

@@ -23,3 +23,11 @@ git-set-upstream() {
   git remote add upstream "$url"
 }
 
+alias fetchupstream='git fetch upstream' #deprecated
+alias git-fetch-upstream='git fetch upstream'
+
+alias mergeupstreammain='git merge upstream/main' #deprecated
+alias git-add-upstream-main='git merge upstream/main'
+
+#peek at the above for syntax by 'which' when upstream is not using 'main'
+
