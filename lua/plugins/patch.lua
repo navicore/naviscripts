@@ -14,5 +14,11 @@ return {
         buf_set_keymap(bufnr, 'n', '<leader>q', '<Cmd>Telescope diagnostics<CR>', opts) -- Show diagnostics in a Telescope window
       end
     },
+  },
+  {
+    "navicore/seq-lisp.nvim",
+    lazy = false, -- Load immediately as default file explorer
+    event = "BufReadPre *.slisp",
+    opts = {},
   }
 }
