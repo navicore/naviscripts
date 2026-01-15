@@ -39,19 +39,21 @@ if [[ $SESSION_TYPE == 'remote/ssh' ]]; then
 fi
 
 # Main prompt
-PROMPT='${PROMPT_PRE}%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX %{$fg[green]%}%p %{$fg[green]%}%c %{$fg[cyan]%}$(git_super_status)%{$fg_bold[red]%}% %{$reset_color%}'
+PROMPT='${PROMPT_PRE}%{$fg_bold[cyan]%}$ZSH_THEME_CLOUD_PREFIX %{$fg[green]%}%p %{$fg[green]%}%c %{$reset_color%}$(git_super_status)%{$fg_bold[red]%}% %{$reset_color%}'
 
 # Git prompt symbols
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[cyan]%}] "
+ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX=" "
 ZSH_THEME_GIT_PROMPT_SEPARATOR=""
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_BRANCH_SYMBOL="%{$fg_bold[cyan]%}%{%G%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[blue]%}%{ ●%G%}"
 ZSH_THEME_GIT_PROMPT_CONFLICTS="%{$fg[red]%}%{ ✖%G%}"
 ZSH_THEME_GIT_PROMPT_CHANGED="%{$fg[yellow]%}%{ ✚%G%}"
 ZSH_THEME_GIT_PROMPT_BEHIND="%{ ↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{ ↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}%{ …%G%}"
+ZSH_THEME_GIT_PROMPT_STASH="%{$fg[yellow]%}%{ 󰏗%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # Alternative: Simple prompt without git-prompt dependency
