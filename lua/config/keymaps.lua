@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-S-Right>", ":vertical resize +5<CR>", { desc = "Increase
 vim.keymap.set("n", "<C-S-Up>", ":resize -5<CR>", { desc = "Decrease window height" })
 
 -- LSP
-vim.keymap.set("n", "<Leader>a", "<cmd>Lspsaga code_action<CR>", { desc = "Code action" })
+vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, { desc = "Code action" })
 
 -- Quick escape
 vim.keymap.set("i", "jj", "<Esc>`^", { desc = "Quick escape to normal mode" })
