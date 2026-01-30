@@ -1,6 +1,7 @@
 return {
   {
     "navicore/patch-seq.nvim",
+    lazy = false,
     ft = "seq",
     opts = {
       on_attach = function(_, bufnr)
@@ -17,7 +18,7 @@ return {
   },
   {
     "navicore/seq-lisp.nvim",
-    lazy = false, -- Load immediately as default file explorer
+    lazy = false,
     event = "BufReadPre *.slisp",
     opts = {},
   }
