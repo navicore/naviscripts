@@ -32,19 +32,6 @@ return {
           "~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates/weekly.md"
         ),
       })
-
-      -- Launch panel if nothing is typed after <leader>z
-      vim.keymap.set("n", "<leader>z", "<cmd>Zettlekast panel<CR>")
-
-      vim.keymap.set("n", "<leader>zs", "<cmd>Zettlekast search_notes<CR>")
-      vim.keymap.set("n", "<leader>zf", "<cmd>Zettlekast find_notes<CR>")
-      vim.keymap.set("n", "<leader>zc", "<cmd>Zettlekast show_calendar<CR>")
-      vim.keymap.set("n", "<leader>zd", "<cmd>Zettlekast goto_today<CR>")
-      vim.keymap.set("n", "<leader>zn", "<cmd>Zettlekast new_note<CR>")
-
-      vim.keymap.set("n", "<leader>zr", "<cmd>ReminderScan<CR>")
-      vim.keymap.set("n", "<leader>zre", "<cmd>ReminderEdit<CR>")
-
     end,
   },
   {
