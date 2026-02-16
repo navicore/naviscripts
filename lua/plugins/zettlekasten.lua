@@ -4,16 +4,18 @@ return {
     lazy = false,
   },
   {
-    "navicore/telekasten.nvim",
-    lazy = false, -- Load immediately for leader z commands
+    "navicore/zettlekast.nvim",
+    lazy = false,
     dependencies = {
       "MeanderingProgrammer/render-markdown.nvim",
       "nvim-telescope/telescope-fzf-native.nvim",
       "nvim-telescope/telescope.nvim",
-      "renerocksai/calendar-vim",
+      "nvim-lua/plenary.nvim",
+      "mattn/calendar-vim", -- optional
     },
     config = function()
-      require("telekasten").setup({
+      require("zettlekast").setup({
+            -- see Configuration below
         media_previewer = "chafa-previewer",
         home = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet"),
         templates = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet/templates"),
@@ -32,26 +34,17 @@ return {
       })
 
       -- Launch panel if nothing is typed after <leader>z
-      vim.keymap.set("n", "<leader>z", "<cmd>Telekasten panel<CR>")
+      vim.keymap.set("n", "<leader>z", "<cmd>Zettlekast panel<CR>")
 
-      vim.keymap.set("n", "<leader>zs", "<cmd>Telekasten search_notes<CR>")
-      vim.keymap.set("n", "<leader>zf", "<cmd>Telekasten find_notes<CR>")
-      vim.keymap.set("n", "<leader>zc", "<cmd>Telekasten show_calendar<CR>")
-      vim.keymap.set("n", "<leader>zd", "<cmd>Telekasten goto_today<CR>")
-      vim.keymap.set("n", "<leader>zn", "<cmd>Telekasten new_note<CR>")
-    end,
-  },
-  {
-    "navicore/nvim-reminders",
-    lazy = false, -- Load immediately for leader zr commands
-    config = function()
-      -- require('reminders').setup({
-      --   paths = { '~/git/navicore/zet' },
-      --   --recursive_scan = true,
-      -- })
-      require("reminders").setup()
+      vim.keymap.set("n", "<leader>zs", "<cmd>Zettlekast search_notes<CR>")
+      vim.keymap.set("n", "<leader>zf", "<cmd>Zettlekast find_notes<CR>")
+      vim.keymap.set("n", "<leader>zc", "<cmd>Zettlekast show_calendar<CR>")
+      vim.keymap.set("n", "<leader>zd", "<cmd>Zettlekast goto_today<CR>")
+      vim.keymap.set("n", "<leader>zn", "<cmd>Zettlekast new_note<CR>")
+
       vim.keymap.set("n", "<leader>zr", "<cmd>ReminderScan<CR>")
       vim.keymap.set("n", "<leader>zre", "<cmd>ReminderEdit<CR>")
+
     end,
   },
   {
