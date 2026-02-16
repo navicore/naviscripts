@@ -35,17 +35,17 @@ return {
     end,
   },
   {
-    "navicore/navireader",
+    "navicore/zet-rss.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
     build = "make install",  -- Automatically builds Rust binary
     lazy = false,  -- Load immediately to register commands
     config = function()
-      require("navireader").setup({
+      require("zetrss").setup({
         -- Optional: override zet path (auto-detects ~/git/USERNAME/zet by default)
         -- zet_path = vim.fn.expand("~/my-custom-path/zet"),
       })
       -- Load Telescope extension separately to avoid conflicts
-      require("telescope").load_extension("navireader")
+      require("telescope").load_extension("zetrss")
     end,
   }
 }
