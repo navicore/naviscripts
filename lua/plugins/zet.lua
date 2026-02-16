@@ -4,7 +4,7 @@ return {
     lazy = false,
   },
   {
-    "navicore/zettlekast.nvim",
+    "navicore/zet.nvim",
     lazy = false,
     dependencies = {
       "MeanderingProgrammer/render-markdown.nvim",
@@ -14,7 +14,7 @@ return {
       "mattn/calendar-vim", -- optional
     },
     config = function()
-      require("zettlekast").setup({
+      require("zet").setup({
             -- see Configuration below
         media_previewer = "chafa-previewer",
         home = vim.fn.expand("~/git/" .. io.popen("whoami"):read("*a"):gsub("\n", "") .. "/zet"),
