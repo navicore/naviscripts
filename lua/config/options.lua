@@ -12,7 +12,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 300
 vim.opt.autoread = true
 vim.opt.hidden = true
-vim.opt.foldenable = false
 vim.opt.encoding = "utf8"
 vim.opt.clipboard = "unnamedplus"
 
