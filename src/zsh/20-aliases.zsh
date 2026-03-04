@@ -92,6 +92,7 @@ update-naviscripts() {
 alias zshconfig='$EDITOR ~/naviscripts/src/zsh/'
 alias vimconfig='$EDITOR ~/.config/nvim/'
 alias tmuxconfig='$EDITOR ~/.config/tmux/tmux.conf'
+alias tmux-tmp='tmux new-session -s "One Off"'
 
 # System-specific aliases
 if [[ "$IS_MACOS" == true ]]; then
