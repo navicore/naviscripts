@@ -41,10 +41,6 @@ alias vim='nvim'
 alias vi='nvim'
 
 # Git shortcuts
-alias g='git'
-alias gs='git status'
-alias gd='git diff'
-alias gdc='git diff --cached'
 alias gl='git log --oneline --graph --decorate'
 
 # Docker shortcuts
@@ -54,17 +50,6 @@ alias dockerrmif='docker rmi -f $(docker images -q)'
 
 # Kubernetes
 alias k='kubectl'
-alias kctx='kubectx'
-alias kns='kubens'
-
-#
-# Helper Functions
-#
-
-# Create directory and cd into it
-mkcd() {
-    mkdir -p "$1" && cd "$1"
-}
 
 # Quick navigation
 alias ..='cd ..'
@@ -74,45 +59,5 @@ alias ....='cd ../../..'
 # Show path in readable format
 alias path='echo $PATH | tr ":" "\n"'
 
-# Reload zsh configuration
-alias reload='source ~/.zshrc && echo "Reloaded zsh configuration"'
-
-# Update naviscripts from git
-update-naviscripts() {
-    (
-        cd ~/naviscripts || return 1
-        echo "Updating naviscripts..."
-        git pull
-        source ~/.zshrc
-        echo "✓ Updated naviscripts"
-    )
-}
-
-# Quick edit configs
-alias zshconfig='$EDITOR ~/naviscripts/src/zsh/'
-alias vimconfig='$EDITOR ~/.config/nvim/'
-alias tmuxconfig='$EDITOR ~/.config/tmux/tmux.conf'
 alias tmux-tmp='tmux new-session -s "One Off"'
 
-# System-specific aliases
-if [[ "$IS_MACOS" == true ]]; then
-    # macOS specific aliases
-    alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
-    alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
-    alias flushdns='sudo dscacheutil -flushcache'
-
-    # Open current directory in Finder
-    alias finder='open .'
-elif [[ "$IS_LINUX" == true ]]; then
-    # Linux specific aliases
-    alias open='xdg-open'
-
-    # System updates
-    if command -v apt >/dev/null 2>&1; then
-        alias update='sudo apt update && sudo apt upgrade'
-    elif command -v dnf >/dev/null 2>&1; then
-        alias update='sudo dnf upgrade'
-    elif command -v pacman >/dev/null 2>&1; then
-        alias update='sudo pacman -Syu'
-    fi
-fi
