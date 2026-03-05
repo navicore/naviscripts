@@ -40,6 +40,8 @@ fi
 alias vim='nvim'
 alias vi='nvim'
 
+alias c='clear'
+
 # Git shortcuts
 alias gl='git log --oneline --graph --decorate'
 
