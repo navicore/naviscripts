@@ -49,6 +49,7 @@ alias gl='git log --oneline --graph --decorate'
 alias dockerrm='docker rm $(docker ps -a -q)'
 alias dockerrmi='docker rmi $(docker images -q)'
 alias dockerrmif='docker rmi -f $(docker images -q)'
+alias myspec=' mkdir -p .claude/commands && cp -R ~/git/navicore/myspec/.claude/commands/* .claude/commands/'
 
 # Kubernetes
 alias k='kubectl'
