@@ -20,7 +20,7 @@ bindkey -M vicmd v edit-command-line
 #
 
 # Modern replacements for standard tools (if available)
-if command -v eza >/dev/null 2>&1; then
+if (( $+commands[eza] )); then
     alias l='eza'
     alias ls='eza'
     alias ll='eza -l --header --git --tree --level 3'
@@ -31,7 +31,7 @@ else
     alias la='ls -lahG'
 fi
 
-if command -v bat >/dev/null 2>&1; then
+if (( $+commands[bat] )); then
     alias cat='bat --paging=never'
     export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi

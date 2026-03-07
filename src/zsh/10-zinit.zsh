@@ -14,8 +14,8 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Load important annexes
-zinit light-mode for \
+# Load annexes after prompt (only needed for plugin install/update)
+zinit wait lucid light-mode for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
@@ -28,11 +28,11 @@ zinit light-mode for \
 # 3. UI enhancement plugins (fzf-tab)
 #
 
-# Essential plugins - loaded immediately
-# Load completions and add to fpath
-zinit ice blockf atpull'zinit creinstall -q .'
+# Completions plugins - turbo-loaded
+zinit ice wait lucid blockf atpull'zinit creinstall -q .'
 zinit light zsh-users/zsh-completions
 
+zinit ice wait lucid
 zinit light ryutok/rust-zsh-completions
 
 # Add the completions directory to fpath before compinit
@@ -48,8 +48,13 @@ fpath=(~/.local/share/zinit/plugins/zsh-users---zsh-completions/src $fpath)
 # zinit ice depth=1
 # zinit light jeffreytse/zsh-vi-mode
 
-# Initialize completion system
-autoload -U compinit && compinit
+# Initialize completion system (cached — only rebuild once per day)
+autoload -Uz compinit
+if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
 
 # Completion caching configuration
 zstyle ':completion::complete:*' use-cache on
@@ -58,7 +63,8 @@ zstyle ':completion::complete:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'r:|=*' 'l:|=* r:|=*'
 
-# Enhanced completion UI - must be loaded AFTER compinit
+# Enhanced completion UI - turbo-loaded AFTER compinit
+zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
 
 # Syntax highlighting - should be loaded last

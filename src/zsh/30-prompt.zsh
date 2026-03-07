@@ -11,7 +11,7 @@ autoload -U colors && colors
 autoload -Uz vcs_info
 
 # Git prompt configuration (if using gitstatus)
-if command -v gitstatus >/dev/null 2>&1; then
+if (( $+commands[gitstatus] )); then
     source <(gitstatus --script)
 fi
 
@@ -24,12 +24,8 @@ if [[ -z $ZSH_THEME_CLOUD_PREFIX ]]; then
 fi
 
 # Detect SSH session
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+if [[ -n "$SSH_CLIENT" || -n "$SSH_TTY" ]]; then
     SESSION_TYPE=remote/ssh
-else
-    case $(ps -o comm= -p $PPID) in
-        sshd|*/sshd) SESSION_TYPE=remote/ssh;;
-    esac
 fi
 
 # Build the prompt
@@ -58,7 +54,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # Alternative: Simple prompt without git-prompt dependency
 # This is a fallback if git_super_status is not available
-if ! command -v git_super_status >/dev/null 2>&1; then
+if ! (( $+functions[git_super_status] )); then
     # Simple git branch display
     git_branch() {
         local branch
