@@ -9,6 +9,9 @@ return {
       require("copilot").setup({
         suggestion = { enabled = false },
         panel = { enabled = false },
+        filetypes = {
+          zet = false,
+        },
       })
     end,
   },
