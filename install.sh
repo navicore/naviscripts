@@ -27,8 +27,15 @@ cp ./init.lua ~/.config/nvim/
 cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 [ -d ~/.git-template ] || cp -pR git-template/ ~/.git-template/
-# warning: or ~/Library/Application\ Support/com.mitchellh.ghostty/config
 mkdir -p  ~/.config/ghostty/
-cp -R ./ghostty ~/.config/
+if [ "$(uname)" = "Darwin" ]; then
+  cp ./ghostty-macos/config ~/.config/ghostty/config
+else
+  cp ./ghostty-linux/config ~/.config/ghostty/config
+fi
+if [ "$(uname)" != "Darwin" ]; then
+  mkdir -p ~/.config/hypr
+  cp ./hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+fi
 mkdir -p  ~/.config/zed/
 cp ./zed/* ~/.config/zed/

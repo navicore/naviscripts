@@ -57,10 +57,6 @@ vim.g.R_assign = 0
 
 vim.g.airline_powerline_fonts = 1
 
--- Disable clipboard provider on Unix (non-macOS)
-if vim.fn.has("unix") == 1 and vim.fn.has("macunix") == 0 then
-  vim.g.loaded_clipboard_provider = 1
-end
 
 -- Enable filetype plugins and indentation
 vim.cmd("filetype plugin indent on")
