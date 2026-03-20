@@ -2,11 +2,6 @@
 
 cd "$(dirname "$0")"
 
-####################################################################
-#                                                                  #
-# remember to edit install.sh, update_git.sh, and tar_dot_files.sh #
-#                                                                  #
-####################################################################
 
 mkdir -p ~/bin/
 cp ./bin/* ~/bin/
@@ -16,7 +11,7 @@ cp ./guile ~/.guile
 [ -f ~/.racketrc ] || cp ./racketrc ~/.racketrc
 [ -f ~/.gitignore ] || cp ./gitignore ~/.gitignore
 cp ./scryerrc ~/.scryerrc
-[ -f ~/.zshrc ] || cp ./zshrc ~/.zshrc
+cp ./zshrc ~/.zshrc
 mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
@@ -37,5 +32,3 @@ if [ "$(uname)" != "Darwin" ]; then
   mkdir -p ~/.config/hypr
   cp ./hypr/hyprland.conf ~/.config/hypr/hyprland.conf
 fi
-mkdir -p  ~/.config/zed/
-cp ./zed/* ~/.config/zed/
