@@ -1,85 +1,151 @@
-"
-" --------- OSX ---------
-"
-" chsh -s /bin/zsh
-"
-" install via brew:
-"
-" brew bundle
-"
-" periodically run "brew bundle dump" to maintain the Brewfile
-"
-" defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
-" defaults write -g ApplePressAndHoldEnabled -bool false # global fix when the above
-"
-" curl -fsSL https://raw.githubusercontent.com/ogham/exa/master/completions/zsh/_exa -o /usr/local/share/zsh/site-functions/_eza
-" curl -fsSL https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task -o /usr/local/share/zsh/site-functions/_task
-"
-" sudo luarocks install tiktoken_core
-"
-" --------- ALL ---------
-"
-" install zinit
-" see zinit on gh - the install command doesn't survive md
-"
-" then move your ~/.zshrc stuff to follow the stuff the above added
-"
-" BEGIN R:
-"
-" apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
-"
-" my_packages <- c("tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally", "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins", "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales", "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr", "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver", "ggpubr", "pivottabler", "kableExtra")
-" install.packages(my_packages, repos = "https://cran.rstudio.com")
-"
-" tinytex::install_tinytex()
-"
-" update all R packages:
-"
-" update.packeges(ask=FALSE)
-"
-" END R:
-"
-" mkdir -p ~/.vim/swapfiles
-" eval `ssh-agent -s`
-" ssh-add
-"
-" BEGIN RUST
-"
-" rustup component add rust-analyzer rust-analysis rust-src rustfmt
-" rustup target add wasm32-wasi
-" ssh-add -K ~/.ssh/id_rsa
-"
-" END RUST
-"
-" START PROMPT
-"
-" install https://github.com/navicore/zsh-git-prompt-rs
-"
-" END PROMPT
-"
-" build ~/.vim/bundle/vimproc.vim with: make
-"
-" nerd fonts
-" https://github.com/ryanoasis/nerd-fonts#option-3-install-script
-" cd tmp && git clone git@github.com:ryanoasis/nerd-fonts.git
-"
-" BEGIN GIT CONFIG
-"
-" git config --global core.excludesfile '~/.gitignore'
-" # for when an installation won't let git diff show colors
-" git config --global core.pager cat
-"
-" END GIT CONFIG
-"
-" kind completions:
-" kind completion zsh > /usr/local/share/zsh/site-functions/_kind
-"
-" flux2 completions:
-" flux completion zsh > /usr/local/share/zsh/site-functions/_flux
-"
-" tell git to use the global gitignore:
-" git config --global core.excludesfile ~/.gitignore
-"
-" xcode commandline tools:
-" xcode-select --install
+# Naviscripts Install Guide
 
+## All Platforms
+
+### Prerequisites
+
+1. **Zinit** (zsh plugin manager):
+
+   ```sh
+   bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+   ```
+
+   After zinit modifies `~/.zshrc`, ensure the naviscripts source line comes
+   after zinit's block. If `~/.zshrc` doesn't exist yet, `install.sh` will
+   copy the default one.
+
+2. **Nerd Fonts** (for airline/powerline glyphs):
+
+   ```sh
+   cd /tmp && git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
+   cd nerd-fonts && ./install.sh FiraCode
+   ```
+
+3. **Git prompt** (optional — for the custom git status prompt):
+
+   Install [zsh-git-prompt-rs](https://github.com/navicore/zsh-git-prompt-rs)
+
+### Install dotfiles
+
+```sh
+git clone git@github.com:navicore/naviscripts.git ~/naviscripts
+cd ~/naviscripts
+./install.sh
+```
+
+This copies config files for zsh, neovim, tmux, ghostty, git, and zed.
+Files that should not be overwritten (gitconfig, zshrc, gitignore, racketrc)
+are only copied if they don't already exist.
+
+### Post-install
+
+```sh
+mkdir -p ~/.vim/swapfiles
+mkdir -p ~/.undodir
+
+git config --global core.excludesfile '~/.gitignore'
+git config --global core.pager cat
+```
+
+Start a new shell and let zinit install plugins on first launch.
+
+### Rust
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer rust-src rustfmt
+rustup target add wasm32-wasi
+```
+
+### R (optional)
+
+System libraries (Linux):
+
+```sh
+sudo apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev \
+  libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+```
+
+R packages:
+
+```r
+my_packages <- c(
+  "tidyverse", "broom", "coefplot", "cowplot", "gapminder", "GGally",
+  "ggrepel", "ggridges", "gridExtra", "here", "interplot", "margins",
+  "maps", "mapproj", "mapdata", "MASS", "quantreg", "rlang", "scales",
+  "survey", "srvyr", "viridis", "viridisLite", "devtools", "lintr",
+  "plumber", "rmarkdown", "ggthemes", "httr", "gert", "languageserver",
+  "ggpubr", "pivottabler", "kableExtra"
+)
+install.packages(my_packages, repos = "https://cran.rstudio.com")
+tinytex::install_tinytex()
+```
+
+---
+
+## macOS
+
+### Homebrew packages
+
+```sh
+brew bundle
+```
+
+To update the Brewfile after installing new packages:
+
+```sh
+brew bundle dump --force
+```
+
+### macOS-specific settings
+
+Disable press-and-hold for key repeat (useful for vim):
+
+```sh
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Xcode command line tools:
+
+```sh
+xcode-select --install
+```
+
+---
+
+## Linux (Pop!_OS / Ubuntu)
+
+### System packages
+
+```sh
+sudo apt install fzf wl-clipboard eza bat neovim tmux zsh ripgrep fd-find
+```
+
+### Set default shell
+
+```sh
+chsh -s $(which zsh)
+```
+
+### Ghostty
+
+Install [Ghostty](https://ghostty.org) — the Linux config disables the GTK
+title bar. Use **Super + drag** to move windows.
+
+### Hyprland (optional)
+
+The install script places a starter `hyprland.conf` in `~/.config/hypr/`.
+If you want to use Hyprland, also install:
+
+```sh
+sudo apt install waybar wofi hyprpaper hypridle
+```
+
+---
+
+## SSH
+
+```sh
+eval "$(ssh-agent -s)"
+ssh-add
+```
