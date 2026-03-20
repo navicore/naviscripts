@@ -12,11 +12,11 @@ mkdir -p ~/bin/
 cp ./bin/* ~/bin/
 cp ./tern-config ~/.tern-config
 cp ./guile ~/.guile
-cp -n ./gitconfig ~/.gitconfig
-cp -n ./racketrc ~/.racketrc
-cp -n ./gitignore ~/.gitignore
+[ -f ~/.gitconfig ] || cp ./gitconfig ~/.gitconfig
+[ -f ~/.racketrc ] || cp ./racketrc ~/.racketrc
+[ -f ~/.gitignore ] || cp ./gitignore ~/.gitignore
 cp ./scryerrc ~/.scryerrc
-cp -n ./zshrc ~/.zshrc
+[ -f ~/.zshrc ] || cp ./zshrc ~/.zshrc
 mkdir -p ~/.config/tmux
 cp ./tmux.conf ~/.config/tmux/tmux.conf
 cp ./inputrc ~/.inputrc
@@ -26,7 +26,7 @@ mkdir -p ~/.config/nvim
 cp ./init.lua ~/.config/nvim/
 cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
-cp -npR git-template/ ~/.git-template/
+[ -d ~/.git-template ] || cp -pR git-template/ ~/.git-template/
 # warning: or ~/Library/Application\ Support/com.mitchellh.ghostty/config
 mkdir -p  ~/.config/ghostty/
 cp -R ./ghostty ~/.config/
