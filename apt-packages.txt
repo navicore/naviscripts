@@ -1,0 +1,37 @@
+# Core dev tools
+build-essential
+clang
+cmake
+ninja-build
+pkg-config
+just
+lua5.4
+
+# Shell and terminal
+zsh
+tmux
+fzf
+bat
+eza
+wl-clipboard
+
+# Docker
+docker-ce
+docker-ce-cli
+containerd.io
+docker-buildx-plugin
+docker-compose-plugin
+
+# Services
+openssh-server
+
+# R
+r-base-core
+
+# 1Password
+1password
+
+# Editors/libs needed by neovim plugins
+libedit-dev
+libssl-dev
+libudev-dev

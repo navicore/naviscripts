@@ -118,8 +118,11 @@ xcode-select --install
 ### System packages
 
 ```sh
-sudo apt install fzf wl-clipboard eza bat neovim tmux zsh ripgrep fd-find clang libedit-dev
+grep -v '^#' ~/naviscripts/apt-packages.txt | grep -v '^$' | xargs sudo apt install -y
 ```
+
+The full package list is maintained in `apt-packages.txt` (similar to Brewfile on macOS).
+To see what's in it: `cat apt-packages.txt`
 
 ### Set default shell
 
