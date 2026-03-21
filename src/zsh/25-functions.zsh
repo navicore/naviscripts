@@ -2,7 +2,7 @@
 # 25-functions.zsh - Custom shell functions
 
 # Tmux workspace function - replaces dev-tmux script
-tmux-new() {
+tmux-M1() {
     if [[ $# -eq 0 ]] || [[ "$1" = "attach" ]]; then
         # Check if session M1 exists
         if ! command tmux has-session -t M1 2>/dev/null; then

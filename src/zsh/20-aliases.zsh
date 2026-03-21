@@ -63,5 +63,5 @@ alias ....='cd ../../..'
 # Show path in readable format
 alias path='echo $PATH | tr ":" "\n"'
 
-alias tmux-tmp='tmux new-session -s "1Off"'
+alias tmux-1Off='tmux new-session -s "1Off"'
 
