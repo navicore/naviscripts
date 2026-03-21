@@ -118,7 +118,7 @@ xcode-select --install
 ### System packages
 
 ```sh
-sudo apt install fzf wl-clipboard eza bat neovim tmux zsh ripgrep fd-find
+sudo apt install fzf wl-clipboard eza bat neovim tmux zsh ripgrep fd-find clang libedit-dev
 ```
 
 ### Set default shell
