@@ -22,6 +22,9 @@ cp ./init.lua ~/.config/nvim/
 cp ./stylua.toml ~/.config/nvim/
 cp -R ./lua ~/.config/nvim/
 [ -d ~/.git-template ] || cp -pR git-template/ ~/.git-template/
+mkdir -p ~/.claude
+cp ./claude/CLAUDE.md ~/.claude/CLAUDE.md
+cp ./claude/settings.json ~/.claude/settings.json
 mkdir -p  ~/.config/ghostty/
 if [ "$(uname)" = "Darwin" ]; then
   cp ./ghostty-macos/config ~/.config/ghostty/config

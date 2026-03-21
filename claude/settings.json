@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [],
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git stash:*)"
+    ],
+    "ask": [
+      "Bash(gh:*)",
+      "Bash(git:*)"
+    ]
+  },
+  "model": "opus[1m]"
+}
