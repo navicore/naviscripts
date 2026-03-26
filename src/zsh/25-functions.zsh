@@ -6,7 +6,7 @@ tmux-M1() {
     if [[ $# -eq 0 ]] || [[ "$1" = "attach" ]]; then
         # Check if session M1 exists
         if ! command tmux has-session -t M1 2>/dev/null; then
-            command tmux new-session -s M1 -n DEVOPS -d
+            command tmux new-session -s M1 -n HOME -d
             command tmux split-window -v -t M1:1
             command tmux new-window -t M1:2 -n "RUST"
             command tmux new-window -t M1:3 -n "RUST"
