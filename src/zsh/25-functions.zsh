@@ -10,7 +10,7 @@ tmux-M1() {
             command tmux split-window -v -t M1:1
             command tmux new-window -t M1:2 -n "RUST"
             command tmux new-window -t M1:3 -n "RUST"
-            command tmux new-window -t M1:4 -n GO
+            command tmux new-window -t M1:4 -n Patch SEQ
             command tmux new-window -t M1:5 -n Music
             command tmux select-window -t M1:1
         fi
