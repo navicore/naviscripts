@@ -1,5 +1,5 @@
 return {
-  -- Copilot base - must load before copilot-cmp
+  -- Copilot LSP backend (suggestions handled by blink.cmp via blink-copilot)
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -16,17 +16,7 @@ return {
     end,
   },
 
-  -- Copilot-cmp integration
-  {
-    "zbirenbaum/copilot-cmp",
-    dependencies = { "zbirenbaum/copilot.lua" },
-    event = "VeryLazy",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
-
-  -- CopilotChat kept separate as it's working fine
+  -- CopilotChat
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     event = "VeryLazy",

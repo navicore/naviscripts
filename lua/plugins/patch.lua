@@ -6,7 +6,7 @@ return {
       -- Enable inlay hints (off by default)
       inlay_hints = true,
       -- LSP capabilities (optional, for completion plugins)
-      capabilities = require("cmp_nvim_lsp").default_capabilities(),
+      capabilities = require("blink.cmp").get_lsp_capabilities(),
       -- on_attach callback (optional)
       on_attach = function(_, bufnr)
         local opts = { noremap=true, silent=true }

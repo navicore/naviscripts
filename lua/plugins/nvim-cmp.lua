@@ -1,108 +1,74 @@
 return {
   {
-    'hrsh7th/nvim-cmp',
-    event = "InsertEnter", -- Load on insert mode
+    "saghen/blink.cmp",
+    version = "1.*",
     dependencies = {
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-cmdline',
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lsp-signature-help',
-      'hrsh7th/cmp-nvim-lua',
-      'onsails/lspkind.nvim',
+      "fang2hou/blink-copilot",
     },
-    config = function()
+    event = "InsertEnter",
+    opts = {
+      keymap = {
+        preset = "none",
+        ["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+        ["<CR>"] = { "accept", "fallback" },
+        ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
+        ["<C-e>"] = { "cancel", "fallback" },
+        ["<C-b>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+      },
 
-      -- Set highlight for Copilot icon
-      vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg ="#6CC644"})
-
-      -- Completion Plugin Setup
-      local lspkind = require'lspkind'
-      local cmp = require'cmp'
-
-      -- Initialize lspkind with Copilot icon
-      lspkind.init({
-        symbol_map = {
-          Copilot = vim.fn.nr2char(0xf408),  -- GitHub nerd font icon (codepoint F408)
-        }
-      })
-
-      -- Main completion setup
-      cmp.setup({
-        mapping = {
-          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-          ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete(),
-          ['<C-e>'] = cmp.mapping.abort(),
-          ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-          ['<Tab>'] = cmp.mapping.select_next_item(),
-          ['<CR>'] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Insert,
-            select = true,
-          })
+      completion = {
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 200,
+          window = {
+            border = "rounded",
+          },
         },
-        -- Installed sources (in priority order)
-        sources = cmp.config.sources({
-          { name = "copilot" },                           -- AI suggestions
-          { name = 'nvim_lsp' },                          -- from language server
-          { name = 'nvim_lsp_signature_help'},            -- display function signatures
-          { name = 'path' },                              -- file paths
-        }, {
-          { name = 'buffer', keyword_length = 3 },        -- fallback to buffer
-        }),
-        experimental = {
-            ghost_text = false,  -- Disable ghost text to avoid shadow suggestions
-        },
-        window = {
-            completion = cmp.config.window.bordered(),
-            documentation = cmp.config.window.bordered(),
-        },
-        formatting = {
-            format = lspkind.cmp_format({
-              mode = "symbol_text",
-              max_width = 50,
-              menu = {
-                copilot = "[AI]",
-                nvim_lsp = "[LSP]",
-                buffer = "[Buf]",
-                path = "[Path]",
-                nvim_lsp_signature_help = "[Sig]",
+        menu = {
+          border = "rounded",
+          draw = {
+            columns = {
+              { "kind_icon" },
+              { "label", "label_description", gap = 1 },
+              { "source_name" },
+            },
+            components = {
+              source_name = {
+                width = { max = 30 },
+                text = function(ctx)
+                  local map = {
+                    LSP = "[LSP]",
+                    copilot = "[AI]",
+                    Buffer = "[Buf]",
+                    Path = "[Path]",
+                    Snippets = "[Snip]",
+                  }
+                  return map[ctx.source_name] or ("[" .. ctx.source_name .. "]")
+                end,
+                highlight = "BlinkCmpSource",
               },
-              before = function(entry, vim_item)
-                -- Make sure Copilot uses the correct kind
-                if entry.source.name == "copilot" then
-                  vim_item.kind = "Copilot"
-                  vim_item.kind_hl_group = "CmpItemKindCopilot"
-                end
-                return vim_item
-              end,
-            })
+            },
+          },
         },
-      })
+      },
 
-      -- Disable nvim-cmp for command-line to preserve native vim behavior
-      -- Comment out to re-enable if you want nvim-cmp command completion
-
-      -- cmp.setup.cmdline('/', {
-      --   mapping = cmp.mapping.preset.cmdline(),
-      --   sources = {
-      --     { name = 'buffer' }
-      --   }
-      -- })
-
-      -- cmp.setup.cmdline(':', {
-      --   mapping = cmp.mapping.preset.cmdline(),
-      --   sources = cmp.config.sources({
-      --     { name = 'path' }
-      --   }, {
-      --     {
-      --       name = 'cmdline',
-      --       option = {
-      --         ignore_cmds = { 'Man', '!' }
-      --       }
-      --     }
-      --   })
-      -- })
-    end
+      sources = {
+        default = { "copilot", "lsp", "path", "snippets", "buffer" },
+        providers = {
+          copilot = {
+            name = "copilot",
+            module = "blink-copilot",
+            score_offset = 100,
+            async = true,
+            opts = {
+              max_completions = 3,
+              max_attempts = 4,
+            },
+          },
+        },
+      },
+    },
   },
 }
