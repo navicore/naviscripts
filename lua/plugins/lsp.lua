@@ -64,6 +64,34 @@ return {
       })
       vim.lsp.enable("r_language_server")
 
+      -- Zig
+      if not vim.lsp.config.zls then
+        local lspconfig_configs = require("lspconfig.configs")
+        vim.lsp.config("zls", lspconfig_configs.zls.default_config)
+      end
+      vim.lsp.config("zls", {
+        settings = {
+          zls = {
+            enable_build_on_save = false,
+            semantic_tokens = "full",
+          },
+        },
+        on_attach = function(client, bufnr)
+          if vim.lsp.inlay_hint then
+            vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+          end
+
+          local opts = { noremap = true, silent = true }
+          local buf_set_keymap = vim.api.nvim_buf_set_keymap
+
+          buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+          buf_set_keymap(bufnr, 'n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+          buf_set_keymap(bufnr, 'n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+          buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
+          buf_set_keymap(bufnr, 'n', '<leader>e', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+          buf_set_keymap(bufnr, 'n', '<leader>q', '<Cmd>Telescope diagnostics<CR>', opts)
+        end,
+      })
       vim.lsp.enable("zls")
 
       -- AWK
