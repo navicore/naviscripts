@@ -9,9 +9,9 @@ tmux-M1() {
             command tmux new-session -s M1 -n HOME -d
             command tmux split-window -v -t M1:1
             command tmux new-window -t M1:2 -n "RUST"
-            command tmux new-window -t M1:3 -n "RUST"
-            command tmux new-window -t M1:4 -n Patch SEQ
-            command tmux new-window -t M1:5 -n Music
+            command tmux new-window -t M1:3 -n "ZIG"
+            command tmux new-window -t M1:4 -n "SEQ"
+            command tmux new-window -t M1:5 -n "Music"
             command tmux select-window -t M1:1
         fi
         command tmux -2 attach-session -t M1
