@@ -32,9 +32,11 @@ regen-completions() {
 
 # Tools present on all systems
 cached_completion zim      zim completions zsh
-cached_completion zimhide  zimhide completions zsh
-cached_completion navipod  navipod generate-completion zsh
 cached_completion seqc     seqc completions zsh
+
+#these should be in ~/.zshrc_local
+#cached_completion zimhide  zimhide completions zsh
+#cached_completion navipod  navipod generate-completion zsh
 
 # Dynamic completions (context-dependent, must not be cached)
 (( $+commands[just] )) && source <(just --completions zsh)
