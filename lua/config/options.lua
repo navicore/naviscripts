@@ -36,7 +36,9 @@ vim.opt.undofile = true
 vim.opt.undodir = vim.fn.expand("~/.undodir/")
 
 -- Appearance
-vim.opt.guifont = "Fira Code:h12"
+if vim.g.neovide then
+  vim.opt.guifont = "FiraCode Nerd Font Mono:h18"
+end
 
 -- Plugin-specific settings
 vim.g.csv_nomap_bs = 1
