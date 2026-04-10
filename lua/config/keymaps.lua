@@ -13,9 +13,6 @@ vim.keymap.set("n", "<Leader>a", vim.lsp.buf.code_action, { desc = "Code action"
 -- Quick escape
 vim.keymap.set("i", "jj", "<Esc>`^", { desc = "Quick escape to normal mode" })
 
--- File explorer
-vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-
 -- Search
 vim.keymap.set("n", "<CR>", ":nohlsearch<CR><CR>", { desc = "Clear search highlight" })
 vim.keymap.set("n", "<Enter>", "o<Esc><CR>", { desc = "Insert new line below" })
