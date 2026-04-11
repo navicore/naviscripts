@@ -2,13 +2,13 @@ return {
   {
     'mrcjkb/rustaceanvim',
     lazy = false, -- Must load immediately for rust-analyzer
-    version = '^5',
+    version = '^9',
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
     config = function()
       if vim.lsp.inlay_hint then
-        vim.lsp.inlay_hint.enable(true, { 0 })
+        vim.lsp.inlay_hint.enable(true, { bufnr = 0 })
       end
       vim.g.rustaceanvim = {
         tools = {
@@ -31,8 +31,6 @@ return {
       }
     end
   },
-  -- rust
-  'rust-lang/rust.vim',
   {
     'mfussenegger/nvim-dap',
     event = "VeryLazy",
