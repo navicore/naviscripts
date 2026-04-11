@@ -52,3 +52,9 @@ require("lazy").setup({
     },
   },
 })
+
+-- Must come AFTER lazy.setup() so our autocmds are registered after
+-- lazy.nvim's ft/cmd/event handlers. FileType autocmds fire in registration
+-- order, and several of ours (e.g., csv :CsvViewEnable) depend on lazy's ft
+-- trigger having run first to load the plugin and register its commands.
+require("config.autocmds")
