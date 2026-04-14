@@ -10,7 +10,6 @@ return {
         end
       end
       local servers = {
-        "r-languageserver",
         "awk-language-server",
         "pyright",
         "gopls",
