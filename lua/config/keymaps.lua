@@ -42,3 +42,7 @@ vim.keymap.set("n", "<leader>i", ":IBLToggle<CR>", { silent = true, desc = "Togg
 -- Symbols outline
 vim.keymap.set("n", "<leader>s", "<cmd>Symbols<CR>", { desc = "Show symbols outline" })
 vim.keymap.set("n", "<leader>S", "<cmd>SymbolsClose<CR>", { desc = "Close symbols outline" })
+
+-- Paragraph navigation (no shift needed)
+vim.keymap.set({ "n", "v" }, "<Tab>", "}", { desc = "Next blank line" })
+vim.keymap.set({ "n", "v" }, "<S-Tab>", "{", { desc = "Prev blank line" })
