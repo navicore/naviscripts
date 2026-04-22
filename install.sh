@@ -36,13 +36,3 @@ if [ "$(uname)" != "Darwin" ]; then
   cp ./hypr/hyprland.conf ~/.config/hypr/hyprland.conf
 fi
 
-# Install pi configuration
-if [ -d ./pi ]; then
-  echo "Installing pi configuration..."
-  (cd ./pi && find . -type f -name "*.ts" -o -name "*.json" -o -name "*.md" | while read -r file; do
-    dest="$HOME/.pi/$file"
-    mkdir -p "$(dirname "$dest")"
-    cp -v "$file" "$dest"
-  done)
-  echo "Pi configuration installed."
-fi

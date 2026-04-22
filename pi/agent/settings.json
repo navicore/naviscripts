@@ -1,9 +1,0 @@
-{
-  "prompts": [
-    "$HOME/git/navicore/myspec/.claude/commands",
-    "$HOME/git/navicore/myrust/.claude/commands"
-  ],
-  "lastChangelogVersion": "0.68.0",
-  "defaultProvider": "openrouter",
-  "defaultModel": "deepseek/deepseek-v3.2"
-}
