@@ -1,0 +1,11 @@
+{
+  "prompts": [
+    "~/git/navicore/myspec/.claude/commands",
+    "~/git/navicore/myrust/.claude/commands"
+  ],
+  "defaultProvider": "openrouter",
+  "defaultModel": "anthropic/claude-opus-4.6",
+  "packages": [
+    "npm:pi-vim"
+  ]
+}

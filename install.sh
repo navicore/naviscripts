@@ -25,14 +25,21 @@ cp -R ./lua ~/.config/nvim/
 mkdir -p ~/.claude
 cp ./claude/CLAUDE.md ~/.claude/CLAUDE.md
 cp ./claude/settings.json ~/.claude/settings.json
+
+mkdir -p ~/.pi/agent/extensions
+mkdir -p ~/.pi/agent/prompts
+[ -f ~/.pi/agent/settings.json ] || cp ./pi/agent/settings.json ~/.pi/agent/settings.json
+# copy prompts and extensions only if they don't already exist
+[ -d ./pi/agent/prompts ] && find ./pi/agent/prompts -name '*.md' -exec sh -c 'for f; do dest="$HOME/.pi/agent/prompts/$(basename "$f")"; [ -f "$dest" ] || cp "$f" "$dest"; done' _ {} +
+[ -d ./pi/agent/extensions ] && find ./pi/agent/extensions -name '*.ts' -exec sh -c 'for f; do dest="$HOME/.pi/agent/extensions/$(basename "$f")"; [ -f "$dest" ] || cp "$f" "$dest"; done' _ {} +
+# install pi packages from settings
+if command -v pi >/dev/null 2>&1; then
+  pi update 2>/dev/null || true
+fi
+
 mkdir -p  ~/.config/ghostty/
 if [ "$(uname)" = "Darwin" ]; then
   cp ./ghostty-macos/config ~/.config/ghostty/config
 else
   cp ./ghostty-linux/config ~/.config/ghostty/config
 fi
-if [ "$(uname)" != "Darwin" ]; then
-  mkdir -p ~/.config/hypr
-  cp ./hypr/hyprland.conf ~/.config/hypr/hyprland.conf
-fi
-
