@@ -4,12 +4,13 @@
     "deny": [
       "Bash(git commit:*)",
       "Bash(git push:*)",
+      "Bash(git pull:*)",
       "Bash(git checkout:*)",
       "Bash(git add:*)",
-      "Bash(git mv:*)",
-      "Bash(git stash:*)"
+      "Bash(git mv:*)"
     ],
     "ask": [
+      "Bash(git stash:*)",
       "Bash(gh:*)",
       "Bash(git:*)"
     ]
