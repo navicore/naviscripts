@@ -34,6 +34,10 @@ return {
         buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
         buf_set_keymap(bufnr, 'n', '<leader>e', '<Cmd>lua vim.diagnostic.open_float(nil, { border = "rounded" })<CR>', opts) -- Floating window with rounded borders
         buf_set_keymap(bufnr, 'n', '<leader>q', '<Cmd>Telescope diagnostics<CR>', opts) -- Show diagnostics in a Telescope window
+
+        local seq_hover = require("util.seq_hover")
+        vim.keymap.set('n', '<leader>H', function() seq_hover.toggle(bufnr) end,
+          { buffer = bufnr, noremap = true, silent = true, desc = "Toggle pinned seq hover panel" })
       end
     },
   },
