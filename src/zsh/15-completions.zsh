@@ -33,6 +33,7 @@ regen-completions() {
 # Tools present on all systems
 cached_completion zim      zim completions zsh
 cached_completion seqc     seqc completions zsh
+cached_completion seqlings seqlings completions zsh
 
 #these should be in ~/.zshrc_local
 #cached_completion zimhide  zimhide completions zsh

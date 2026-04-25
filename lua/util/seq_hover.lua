@@ -32,7 +32,15 @@ local function ensure_buf()
 end
 
 local function win_config()
-  local width = math.min(60, math.max(30, math.floor(vim.o.columns * 0.35)))
+  -- Width policy: aim for 40% of editor width, but ensure at least ~60 chars
+  -- of content where possible, and never exceed 60% of editor width. So wide
+  -- windows settle near 40%, medium windows hold a 60-char floor, and narrow
+  -- windows clamp at the 60% ceiling.
+  local cols = vim.o.columns
+  local floor_chars = math.min(60, math.floor(cols * 0.60))
+  local ceiling = math.floor(cols * 0.60)
+  local width = math.max(floor_chars, math.floor(cols * 0.40))
+  width = math.min(width, ceiling)
   local height = math.min(20, math.max(8, math.floor(vim.o.lines * 0.35)))
   return {
     relative = "editor",
@@ -185,7 +193,7 @@ function M.enable(bufnr)
     end,
   })
 
-  vim.api.nvim_create_autocmd({ "BufWipeout", "BufDelete" }, {
+  vim.api.nvim_create_autocmd({ "BufHidden", "BufWipeout", "BufDelete" }, {
     group = state.augroup,
     buffer = bufnr,
     callback = function()
