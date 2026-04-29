@@ -1,3 +1,8 @@
+<!-- ghmig:moved -->
+> **This repository has moved to [https://git.navicore.tech/navicore/naviscripts](https://git.navicore.tech/navicore/naviscripts).**
+>
+> The GitHub copy is archived and no longer maintained.
+
 Personal scripts and dot files for vim and tmux and anything else I use.
 ============
 
